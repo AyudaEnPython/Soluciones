@@ -25,5 +25,5 @@ Queremos que toda solución sea legible para todos; por eso, te sugerimos y alen
 - Usa nombres descriptivos, por ejemplo `usuarios` en vez de `lista_usuarios` (evita la redundancia).
 - Remueve comentarios redundantes.
 - Se recomienda usar [f-strings](https://docs.python.org/es/3/tutorial/inputoutput.html#tut-f-strings) para mejorar la legibilidad.
-- De ser posible incluye `docstrings`.
+- De ser posible incluye [docstrings](https://www.python.org/dev/peps/pep-0257/).
 - Las __listas de comprensión__ y __generadores__ son preferidos sobre `lambda`, `map`, `filter` y `reduce`.
