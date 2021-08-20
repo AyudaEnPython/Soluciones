@@ -1,2 +1,3 @@
 # Soluciones
-Repositorio de soluciones en Python
+
+Repositorio de soluciones de la comunidad [Ayuda en Python](www.facebook.com/groups/ayudaenpython/).
