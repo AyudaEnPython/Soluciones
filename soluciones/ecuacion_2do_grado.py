@@ -1,16 +1,20 @@
 from cmath import sqrt
-from typing import Tuple
+from typing import Tuple, Union
 from unittest import main, TestCase
 
-def solucion(a: int, b: int, c: int) -> Tuple[float, float]:
+def solucion(
+    a: Union[int, float], 
+    b: Union[int, float], 
+    c: Union[int, float]
+) -> Tuple[float, float]:
     """Resuelve ecuaciones de 2do grado
 
     :param a: Coeficiente de la variable cuadrática
-    :type a: int
+    :type a: Union[int, float]
     :param b: Coeficiente de la variable lineal
-    :type b: int
+    :type b: Union[int, float]
     :param c: Término independiente
-    :type c: int
+    :type c: Union[int, float]
     :return: Tupla de raices.s
     :rtype: Tuple[float, float]
     """
@@ -27,8 +31,8 @@ def solucion(a: int, b: int, c: int) -> Tuple[float, float]:
 class TestSolucion(TestCase):
 
     def test_solucion(self):
-        self.assertEqual(solucion(1, -5, 6), (3.0, 2.0))
-        self.assertEqual(solucion(2, -7, 3), (3.0, 0.5))
+        self.assertEqual(solucion(1, -5, 6.0), (3.0, 2.0))
+        self.assertEqual(solucion(2.0, -7, 3), (3.0, 0.5))
         self.assertEqual(solucion(1, -2, 5), ((1+2j), (1-2j)))
 
 
