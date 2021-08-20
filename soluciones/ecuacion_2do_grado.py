@@ -11,7 +11,7 @@ def solucion(a: int, b: int, c: int) -> Tuple[float, float]:
     :type b: int
     :param c: Término independiente
     :type c: int
-    :return: Tupla de raices.
+    :return: Tupla de raices.s
     :rtype: Tuple[float, float]
     """
     d = b*b - 4*a*c

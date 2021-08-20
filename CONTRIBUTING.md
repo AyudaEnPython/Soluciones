@@ -2,7 +2,7 @@
 
 ## Antes de Contribuir
 
-Bienvenido a la comunidad [Ayuda en Python](www.facebook.com/groups/ayudaenpython/)! Antes de hacer un pull request, asegurate que has leído esta guía.
+Bienvenido a la comunidad [Ayuda en Python](https://www.facebook.com/groups/ayudaenpython/)! Antes de hacer un pull request, asegurate que has leído esta guía.
 
 ## Contribuyendo
 
