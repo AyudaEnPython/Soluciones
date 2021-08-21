@@ -36,6 +36,8 @@ class TestSolucion(TestCase):
         self.assertEqual(solucion(1, -5, 6.0), (3.0, 2.0))
         self.assertEqual(solucion(2.0, -7, 3), (3.0, 0.5))
         self.assertEqual(solucion(1, -2, 1), (1.0, 1))
+        self.assertEqual(solucion(1, 0, 1), ((1j), (-1j)))
+        self.assertEqual(solucion(1, 0, 4), ((2j), (-2j)))
         self.assertEqual(solucion(1, -2, 5), ((1+2j), (1-2j)))
 
 
