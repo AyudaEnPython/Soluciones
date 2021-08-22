@@ -21,6 +21,7 @@ def es_primo(n: int) -> bool:
     impares = range(3, int(sqrt(n) + 1), 2)
     return not any(not n % i for i in impares)
 
+
 class Test(TestCase):
 
     def test_primos(self):
@@ -29,7 +30,7 @@ class Test(TestCase):
         self.assertTrue(es_primo(5))
         self.assertTrue(es_primo(7))
         self.assertTrue(es_primo(11))
-
+    
     def test_no_primos(self):
         self.assertFalse(es_primo(-19))
         self.assertFalse(es_primo(0))
