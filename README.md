@@ -5,7 +5,7 @@
 
 Repositorio de soluciones de la comunidad [Ayuda en Python](https://www.facebook.com/groups/ayudaenpython/).
 
-Conforme se vayan agregando mas soluciones, la estructura del repositorio irá cambiando. 
+Conforme se vayan agregando más soluciones, la estructura del repositorio irá cambiando. 
 
 ## Guía de Contribuciones
 
