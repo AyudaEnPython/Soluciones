@@ -7,7 +7,7 @@ def solucion(
     b: Union[int, float], 
     c: Union[int, float]
 ) -> Tuple[float, float]:
-    """Resuelve ecuaciones de 2do grado
+    """Resuelve ecuaciones de 2do grado.
 
     :param a: Coeficiente de la variable cuadrática
     :type a: Union[int, float]
@@ -15,7 +15,7 @@ def solucion(
     :type b: Union[int, float]
     :param c: Término independiente
     :type c: Union[int, float]
-    :return: Tupla de raices.s
+    :return: Tupla de raices
     :rtype: Tuple[float, float]
     """
     d = b*b - 4*a*c

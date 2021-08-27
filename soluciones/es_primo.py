@@ -1,4 +1,5 @@
 from math import sqrt
+from typing import Iterable
 from unittest import main, TestCase
 
 def es_primo(n: int) -> bool:
@@ -18,7 +19,7 @@ def es_primo(n: int) -> bool:
         return True
     elif n < 2 or not n % 2:
         return False
-    impares = range(3, int(sqrt(n) + 1), 2)
+    impares: Iterable = range(3, int(sqrt(n) + 1), 2)
     return not any(not n % i for i in impares)
 
 
