@@ -12,10 +12,11 @@ cuya longitud esté comprendida en el rango de 1.20 y 1.50 son aptas. Imprimir
 por pantalla la cantidad de piezas aptas que hay en el lote.
 """
 
-aptas = 0
-MINIMO, MAXIMO = 1.2, 1.5
+aptas: int = 0
+MINIMO: float = 1.2
+MAXIMO: float = 1.5
 
-piezas = int(input("Ingresar cantidad de piezas: "))
+piezas: int = int(input("Ingresar cantidad de piezas: "))
 
 for n in range(piezas):
     pieza = float(input(f"[Perfil N° {n+1}] Ingresar longitud: "))
