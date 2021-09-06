@@ -77,9 +77,9 @@ class Test(TestCase):
 
     def test_soluciones(self):
         self.assertEqual(solucion_a(18.42), "Underweight")
-        self.assertEqual(solucion_a(23.00), "Normal")
+        self.assertEqual(solucion_b(23.00), "Normal")
         self.assertEqual(solucion_a(25.24), "Overweight")
-        self.assertEqual(solucion_a(31.04), "Obesity")
+        self.assertEqual(solucion_b(31.04), "Obesity")
 
 
 if __name__ == "__main__":
