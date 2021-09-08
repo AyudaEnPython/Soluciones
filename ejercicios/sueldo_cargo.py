@@ -63,6 +63,7 @@ class Sueldo:
 
 
 def _sueldo(cargo):
+    cargo = cargo.lower()
     sueldo = Sueldo()
     return asdict(sueldo).get(cargo, None)
 
