@@ -26,7 +26,7 @@ correcto o a través de la implementación de un menú.
 from random import uniform, shuffle
 from prototools.entradas import entrada_float
 from prototools.menu import EzMenu
-from prototools.utils import caja
+from prototools.utils import boxln, caja
 
 PESO, MARGEN = 8.1, 0.8
 monedas = []
@@ -43,7 +43,7 @@ def cargar_monedas():
     for _ in range(7):
         monedas.append(round(uniform(PESO-MARGEN, PESO+MARGEN), 1))
     shuffle(monedas)
-    print("Monedas cargadas")
+    boxln("Monedas cargadas")
 
 def imprimir_monedas():
     for n, moneda in enumerate(monedas):
@@ -65,7 +65,7 @@ if __name__ == "__main__":
         "cargar monedas",
         "ver monedas",
         "encontrar moneda falsa",
-        "salir"
+        "salir",
     )
     menu.agregar_funciones(
         cargar_monedas,
