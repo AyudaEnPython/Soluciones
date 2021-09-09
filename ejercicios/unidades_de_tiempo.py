@@ -15,7 +15,7 @@ def en_segundos(tiempo: str) -> int:
     :return: Tiempo en segundos
     :rtype: int
 
-    .. nota::
+    .. Nota::
         u: unidad
         t: tiempo(int)
     
