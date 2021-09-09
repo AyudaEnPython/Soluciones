@@ -28,7 +28,7 @@ from prototools.entradas import entrada_float
 from prototools.menu import EzMenu
 from prototools.utils import boxln, caja
 
-PESO, MARGEN = 8.1, 0.8
+TAMAÑO, PESO, MARGEN = 8, 8.1, 0.8
 monedas = []
 
 def _balanza(moneda):
@@ -38,9 +38,9 @@ def _balanza(moneda):
 
 def cargar_monedas():
     monedas.clear()
-    falsa = entrada_float("Peso: ", menor=7.3)
+    falsa = entrada_float("Peso: ", menor=PESO-MARGEN)
     monedas.append(falsa)
-    for _ in range(7):
+    for _ in range(TAMAÑO-1):
         monedas.append(round(uniform(PESO-MARGEN, PESO+MARGEN), 1))
     shuffle(monedas)
     boxln("Monedas cargadas")
