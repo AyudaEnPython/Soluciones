@@ -16,6 +16,7 @@ def en_segundos(tiempo: str) -> int:
     :rtype: int
 
     .. Nota::
+    
         u: unidad
         t: tiempo(int)
     
