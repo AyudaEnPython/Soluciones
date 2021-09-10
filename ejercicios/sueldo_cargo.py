@@ -11,7 +11,9 @@ para los cargos de sus trabajadores.
 +-----------+--------+
 """
 from dataclasses import asdict, dataclass, field, fields
+from os import pardir
 from unittest import main, TestCase
+
 
 def sueldo(cargo: str) -> int:
     """Devuelve el sueldo acorde al cargo del trabajador.
@@ -32,6 +34,17 @@ def sueldo(cargo: str) -> int:
         dinero = 90
     elif cargo == "Jefe":
         dinero = 100
+    return dinero
+
+
+def sueldo_naive(cargo: str) -> int:
+    dinero = 0
+    if cargo == "externo":
+        dinero = 50
+    if cargo == "jefe":
+        dinero = 100
+    if cargo == "ejecutivo":
+        dinero = 90
     return dinero
 
 
@@ -69,8 +82,22 @@ def _sueldo(cargo):
 
 
 class Test(TestCase):
+    entradas = [
+        ("Externo", 50),
+        ("Ejecutivo", 90),
+        ("Jefe", 100),
+    ]
+    funciones = [
+        sueldo,
+        sueldo_,
+        sueldo_naive,
+    ]
 
     def test_sueldo(self):
+        self.assertEqual(sueldo_naive("jefe"), 100)
+        self.assertEqual(sueldo_naive("ejecutivo"), 90)
+        self.assertEqual(sueldo_naive("externo"), 50)
+
         self.assertEqual(sueldo("jefe"), 100)
         self.assertEqual(sueldo("Ejecutivo"), 90)
         self.assertEqual(sueldo("EXTERNO"), 50)
@@ -85,6 +112,15 @@ class Test(TestCase):
         self.assertEqual(fields(s)[0].metadata["unit"], "dollars")
         self.assertEqual(fields(s)[1].metadata["unit"], "dollars")
         self.assertEqual(fields(s)[2].metadata["unit"], "dollars")
+
+
+    def test_sueldos(self):
+        for funcion in self.funciones:
+            for cargo, dinero in self.entradas:
+                try:
+                    self.assertEqual(funcion(cargo), dinero)
+                except AssertionError:
+                    self.assertEqual(funcion.__name__, sueldo_naive.__name__)
 
 
 if __name__ == "__main__":
