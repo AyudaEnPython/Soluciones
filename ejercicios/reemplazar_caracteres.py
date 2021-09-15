@@ -81,6 +81,18 @@ def solucion_c(fuente: str, analizador: dict, n: int = 2) -> str:
 
 
 def solucion_d(fuente: str, analizador: dict, n: int = 2) -> str:
+    """Reemplaza 'n' caracteres si son encontrados en el 
+    analizador.
+
+    :param fuente: Texto fuente
+    :fuente type: str
+    :param analizador: Mapeo de caracteres a reemplazar
+    :analizador type: dict
+    :param n: Cantidad de caracteres a analizar
+    :type n: int
+    :returns: Texto modificado
+    :rtype: str
+    """
     from itertools import zip_longest
     
     salida = ""
