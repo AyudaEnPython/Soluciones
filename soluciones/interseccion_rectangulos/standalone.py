@@ -1,4 +1,4 @@
-"""Standalone version (7 lines of code without ';').
+"""Standalone version (7 lines of code without ';', 1 line with ';').
 """
 
 h = lambda m, n=2: tuple([m[x:x+n] for x in range(0, len(m), n)])
