@@ -56,16 +56,12 @@ def solver_alt_helpers(data: List[tuple]) -> float:
 
 
 def solver_alt(data: List[tuple]) -> float:
-    r1_p, r2_p = data
+    points = lambda m, n=2: tuple([m[x:x+n] for x in range(0, len(m), n)])
     area = lambda a, b: (b[0] - a[0]) * (b[1] - a[1])
-    max_ = lambda a, b: (max(a[0], b[0]), max(a[1], b[1]))
-    min_ = lambda a, b: (min(a[0], b[0]), min(a[1], b[1]))
-
-    p1, p2 = tuple([r1_p[x:x+2] for x in range(0, len(r1_p), 2)])
-    p3, p4 = tuple([r2_p[x:x+2] for x in range(0, len(r1_p), 2)])
-    x, y = max_(p1, p3), min_(p2, p4)
-    if max(x) > min(y):
-        x, y = (0, 0), (0, 0)
+    f = lambda a, b, g: (g(a[0], b[0]), g(a[1], b[1]))
+    (p1, p2), (p3, p4) = points(data[0]), points(data[1])
+    x, y = f(p1, p3, max), f(p2, p4, min)
+    (x, y) = ((0, 0), (0, 0)) if max(x) > min(y) else (x, y)
     return area(p1, p2) + area(p3, p4) - area(x, y)
 
 
