@@ -1,5 +1,5 @@
 from collections import namedtuple
-from typing import List, Type
+from typing import Tuple, Type
 from dataclasses import dataclass
 
 Point_ = namedtuple("Point_", "x y")
@@ -11,11 +11,11 @@ class Point:
     y: float
 
     @staticmethod
-    def max_(a, b) -> tuple:
+    def max_(a, b) -> Tuple[float, float]:
         return max(a.x, b.x), max(a.y, b.y)
 
     @staticmethod
-    def min_(a, b) -> tuple:
+    def min_(a, b) -> Tuple[float, float]:
         return min(a.x, b.x), min(a.y, b.y)
 
     def __sub__(self, other: Type["Point"]) -> Type["Point"]:
