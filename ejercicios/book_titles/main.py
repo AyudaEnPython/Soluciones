@@ -29,16 +29,19 @@ from textwrap import dedent
 from unittest import main, TestCase
 from unittest.mock import patch
 
+
 def solution_1():
     with open("books.txt", "r") as f: #change to "/usercode/files/books.txt"
         for book in f.read().splitlines():
             print(f"{book[0]}{len(book)}")
+
 
 def solution_2():
     with open("books.txt", "r") as f: #change to "/usercode/files/books.txt"
         for book in f:
             book = book.replace("\n", "")
             print(f"{book[0]}{len(book)}")
+
 
 def solution_3():
     file = open("books.txt", "r")  #change to "/usercode/files/books.txt"
@@ -47,7 +50,9 @@ def solution_3():
         print(f"{book[0]}{len(book)}")
     file.close()
 
+
 class Test(TestCase):
+    
     books = """\
     H12
     T16
