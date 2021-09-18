@@ -2,6 +2,7 @@ from cmath import sqrt
 from typing import Tuple, Union
 from unittest import main, TestCase
 
+
 def solucion(
     a: Union[int, float], 
     b: Union[int, float], 

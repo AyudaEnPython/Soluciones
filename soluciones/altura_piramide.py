@@ -19,6 +19,7 @@ completar la siguiente capa, terminan su trabajo inmediatamente.
 """
 from unittest import main, TestCase
 
+
 def solucion_a(bloques: int) -> int:
     """Devuelve la altura de la piramide
 
@@ -43,6 +44,7 @@ def solucion_a(bloques: int) -> int:
         capas += 1
         bloques -= capas
     return capas
+
 
 def solucion_b(bloques: int) -> int:
     """Devuelve la altura de la piramide
