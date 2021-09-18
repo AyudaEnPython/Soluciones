@@ -24,7 +24,9 @@ from textwrap import dedent
 from unittest import main, TestCase
 from unittest.mock import patch
 
+
 data = [1, 2, 88, -100, 49]
+
 
 def solution():
     s = 0
@@ -36,6 +38,7 @@ def solution():
 
 
 class Test(TestCase):
+    
     output = """\
     1
     2
