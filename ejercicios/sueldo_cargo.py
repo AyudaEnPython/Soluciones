@@ -11,7 +11,6 @@ para los cargos de sus trabajadores.
 +-----------+--------+
 """
 from dataclasses import asdict, dataclass, field, fields
-from os import pardir
 from unittest import main, TestCase
 
 
@@ -82,16 +81,9 @@ def _sueldo(cargo):
 
 
 class Test(TestCase):
-    entradas = [
-        ("Externo", 50),
-        ("Ejecutivo", 90),
-        ("Jefe", 100),
-    ]
-    funciones = [
-        sueldo,
-        sueldo_,
-        sueldo_naive,
-    ]
+
+    entradas = [("Externo", 50), ("Ejecutivo", 90), ("Jefe", 100)]
+    funciones = [sueldo, sueldo_, sueldo_naive]
 
     def test_sueldo(self):
         self.assertEqual(sueldo_naive("jefe"), 100)
@@ -112,7 +104,6 @@ class Test(TestCase):
         self.assertEqual(fields(s)[0].metadata["unit"], "dollars")
         self.assertEqual(fields(s)[1].metadata["unit"], "dollars")
         self.assertEqual(fields(s)[2].metadata["unit"], "dollars")
-
 
     def test_sueldos(self):
         for funcion in self.funciones:
