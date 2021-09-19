@@ -1,5 +1,6 @@
-from typing import Optional, Tuple, Union
+from typing import Optional, Tuple
 from unittest import main, TestCase
+
 
 def solucion(
     a:int , d: int, n: int, t: Optional[int] = None

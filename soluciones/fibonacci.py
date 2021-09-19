@@ -38,6 +38,7 @@ def fibo_itw(n: int) -> int:
 
 
 class Test(TestCase):
+    
     funciones = (fibo_rn, fibo_rc, fibo_itr, fibo_itw)
     datos = (
         (0, 0),

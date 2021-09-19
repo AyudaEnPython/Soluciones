@@ -1,5 +1,6 @@
 from unittest import main, TestCase
 
+
 def solucion(source: str, target: str, steps: int = 6, take: int = 2) -> str:
     """Toma una cantidad determinada de valores de una cadena fuente
     y las inserta en un número determinado de posiciones de la cadena 
