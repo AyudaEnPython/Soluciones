@@ -7,6 +7,7 @@ cadena sin letras en mayúscula.
 """
 from unittest import main, TestCase
 
+
 mensaje = "Nuestro planeta debe cuidarse. Hagámoslo HOY."
 
 
