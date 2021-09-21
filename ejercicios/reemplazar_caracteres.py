@@ -15,6 +15,7 @@ TODO: add complete description of the exercise (current description is
 """
 from unittest import main, TestCase
 
+
 analizador = {
     "30": "a",
     "55": "b",

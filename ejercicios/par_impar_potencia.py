@@ -6,6 +6,7 @@ Por ejemplo, para 4 deberá retornar 64 y para 3 retornar 9.
 """
 from unittest import main, TestCase
 
+
 def solucion(n: int) -> int:
     """Devuelve n^3 si 'n' es par y n^2 si 'n' es impar.
 
