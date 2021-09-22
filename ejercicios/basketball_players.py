@@ -22,8 +22,10 @@ Nota:
 from statistics import mean, pstdev, stdev
 from unittest import main, TestCase
 
+
 players = [180, 172, 178, 185, 190, 195, 192, 200, 210, 190]
 dataset = [-2, 0, -1, 4, 0, -1, 3, 0, -2]
+
 
 def _mean_std_dev(data, sample=True):
     u = sum(data) / len(data)
@@ -31,9 +33,11 @@ def _mean_std_dev(data, sample=True):
         (x - u)**2 for x in data)/(len(data)+(-1 if sample else 0))
         )**0.5
 
+
 def solucion_a(datos):
     u, d = _mean_std_dev(datos, sample=False)
     return len([dato for dato in datos if u - d <= dato <= u + d])
+
 
 def solucion_b(datos):
     u, d, i = mean(datos), pstdev(datos), 0
@@ -42,9 +46,11 @@ def solucion_b(datos):
             i += 1
     return i
 
+
 def solucion_c(datos):
     u, s = _mean_std_dev(datos, sample=True)
     return len([dato for dato in datos if u - s <= dato <= u + s])
+
 
 def solucion_d(datos):
     u, s = mean(datos), stdev(datos)
