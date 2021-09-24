@@ -15,6 +15,7 @@ categoría de IMC correspondiente.
 """
 from unittest import main, TestCase
 
+
 def imc(peso: float, estatura: float) -> float:
     """Devuele el IMC
 
@@ -29,6 +30,7 @@ def imc(peso: float, estatura: float) -> float:
     23.29
     """
     return round(peso/(estatura**2), 2)
+
 
 def solucion_a(imc: float) -> str:
     """Devuelve una categoría de acuerdo al imc
@@ -47,6 +49,7 @@ def solucion_a(imc: float) -> str:
     else:
         return "Obesity"
 
+
 def solucion_b(imc):
     """Devuelve una categoría de acuerdo al imc
 
@@ -62,6 +65,7 @@ def solucion_b(imc):
         30 < imc         : "Obesity",
     }
     return categories[True]
+
 
 def solver():
     peso = float(input("Peso: "))
