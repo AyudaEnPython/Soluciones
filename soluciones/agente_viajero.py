@@ -1,3 +1,5 @@
+"""Travelling Salesperson Problem (TSP)
+"""
 from itertools import permutations
 from unittest import main, TestCase
 
