@@ -23,18 +23,24 @@ sentencias if y elif como herramienta.
 El programa deberá de llamar cada una de estas funciones en el flujo
 correcto o a través de la implementación de un menú.
 """
+# Biblioteca necesaria:
+# pip install prototools
+
 from random import uniform, shuffle
 from prototools.entradas import entrada_float
 from prototools.menu import EzMenu
 from prototools.utils import boxln, caja
 
+
 TAMAÑO, PESO, MARGEN = 8, 8.1, 0.8
 monedas = []
+
 
 def _balanza(moneda):
     if PESO-MARGEN <= moneda <= PESO+MARGEN:
         return True
     return False
+
 
 def cargar_monedas():
     monedas.clear()
@@ -45,9 +51,11 @@ def cargar_monedas():
     shuffle(monedas)
     boxln("Monedas cargadas")
 
+
 def imprimir_monedas():
     for n, moneda in enumerate(monedas):
         print(f"Posicion {n}: {moneda} gr.")
+
 
 @caja
 def encontrar_moneda_falsa():
