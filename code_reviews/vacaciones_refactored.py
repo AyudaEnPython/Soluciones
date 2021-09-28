@@ -26,7 +26,7 @@ def tiempo_servicio():
             print("Digitar nuevamente los años de servicios")
 
 
-def dias(años: int):
+def dias(años):
     vacaciones = {1 < años <= 5: 10, 5 < años <= 10: 15, 10 < años <= 20: 30}
     return vacaciones[True]
 
