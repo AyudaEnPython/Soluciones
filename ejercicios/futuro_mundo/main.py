@@ -52,7 +52,7 @@ def process(data, countries):
 
 
 def main():
-    data = get_data("futuro.mundo")
+    data = get_data("futuro.mundo") # ejercicios/futuro_mundo/
     results = process(*data)
     categories = ("Nuevo mundo", "Transicion", "Origen")
     for cat, result in zip(categories, results):
