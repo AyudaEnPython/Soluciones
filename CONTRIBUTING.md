@@ -28,3 +28,8 @@ Queremos que toda solución sea legible para todos; por eso, te sugerimos y alen
 - Las __listas de comprensión__ y __generadores__ son preferidos sobre `lambda`, `map`, `filter` y `reduce`.
 - De ser posible incluye [docstrings](https://www.python.org/dev/peps/pep-0257/) y anotaciones ([typing](https://docs.python.org/es/3/library/typing.html)).
 - De ser posible incluye [doctests](https://docs.python.org/3/library/doctest.html) para ilustrar y verificar la solución.
+
+
+---
+Al momento de realizar tu primer pull request y empezar a contribuir,
+asegurate de agregar tu informacion en la [lista de colaboradores](colaboradores/colaboradores.md).
