@@ -30,6 +30,17 @@ Queremos que toda solución sea legible para todos; por eso, te sugerimos y alen
 - De ser posible incluye [doctests](https://docs.python.org/3/library/doctest.html) para ilustrar y verificar la solución.
 
 
----
+> **Nota**
 Al momento de realizar tu primer pull request y empezar a contribuir,
-asegurate de agregar tu informacion en la [lista de colaboradores](colaboradores/colaboradores.md).
+asegurate de agregar tu informacion en la lista de contribuidores.
+
+
+## Lista de Contribuidores
+
+Apreciamos a todas las personas que de una u otra forma contribuyen
+en este repositorio, gracias!
+
+| N° | Nombre | Github |
+| -: | ------ | ------ |
+| 1 | Miguel Kanashiro Mansilla | [leugimkm](https://github.com/leugimkm) |
+| 2 | <colaborador> | [<username>](https://github.com/<username>) |
