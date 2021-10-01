@@ -8,18 +8,23 @@ Bienvenido a la comunidad [Ayuda en Python](https://www.facebook.com/groups/ayud
 
 ### Contribuidor
 
-Estamos encantados de que hayas considerado contribuir! Este repositorio tiene como finalidad brindar ayuda a todo aquel que lo accese. Ser un contribuyente implica que estas de acuerdo a lo siguiente:
+Estamos encantados de que hayas considerado contribuir! Este repositorio tiene
+como finalidad brindar ayuda a todo aquel que lo accese. Ser un contribuyente
+implica que estas de acuerdo a lo siguiente:
 
 - Tu contribución será distribuida bajo la [Licencia MIT](LICENSE.md).
 - Tu contribución deberá estar ceñida al estándar [PEP8](https://www.python.org/dev/peps/pep-0008/).
 
 ### Contribución
 
-Apreciamos cualquier tipo de contribución, desde ortografía (sobre todo en los acentos) hasta la implementación de algoritmos complejos (la comunidad abarca todos los niveles).
+Apreciamos cualquier tipo de contribución, desde ortografía (sobre todo en los
+acentos) hasta la implementación de algoritmos complejos (la comunidad abarca
+todos los niveles).
 
 ### Estilo de codificación
 
-Queremos que toda solución sea legible para todos; por eso, te sugerimos y alentamos a seguir las siguientes notas:
+Queremos que toda solución sea legible para todos; por eso, te sugerimos y
+alentamos a seguir las siguientes notas:
 
 - De preferencia usa Python 3.7 o una versión superior.
 - Usa nombres descriptivos, por ejemplo `usuarios = ['John', 'Jane']` en vez de `lista_usuarios = ['John', 'Jane']` (evita la redundancia).
