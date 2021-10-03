@@ -38,6 +38,7 @@ def es_primo(n: int) -> bool:
             return False
     return True
 
+
 def es_primo_(n: int) -> bool:
     """Verifica si el número es primo o no.
 

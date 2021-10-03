@@ -3,7 +3,6 @@ fibo_rn : Fibonacci recursivo (naive)
 fibo_rc : Fibonacci recursivo (cache)
 fibo_itr: Fiboanacci iterativo (range)
 fibo_itw: Fiboanacci iterativo (while)
-
 """
 from unittest import main, TestCase
 

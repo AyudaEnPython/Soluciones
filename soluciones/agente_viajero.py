@@ -33,7 +33,6 @@ class Test(TestCase):
         ],
     )
 
-
     def test_tsp(self):
         self.assertEqual(tsp(self.data[0]), 80)
 
