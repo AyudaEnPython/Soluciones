@@ -21,15 +21,15 @@ Ejemplo:
 
     Output:
     17
-    El numero es magico
+    El numero no es magico
 
 Explicación: Los números primos que se encuentran dentro del rango 1 a
     10 son 2, 3, 5, 7. Estos números se suman y dan como resultado 17.
     Si se divide 17 entre 3 da como residuo 2, por lo que no es un
     número mágico.
-
-TODO: add testcases.
 """
+from unittest import main, TestCase
+
 
 # Mejores implementaciones de la función es_primo en:
 # https://github.com/AyudaEnPython/Soluciones/blob/main/soluciones/es_primo.py
@@ -42,7 +42,20 @@ def es_primo(n: int) -> bool:
     return True
 
 
-def main():
+def _main() -> None:
+    N = int(input("N: "))
+    suma = 0
+    for x in range(N+1):
+        if es_primo(x):
+            suma += x
+    print(suma)
+    if suma % 3 == 0:
+        print("El número es mágico")
+    else:
+        print("El número no es mágico")
+
+
+def main_() -> None:
     total = []
     N = int(input("N: "))
     for x in range(N+1):
@@ -56,11 +69,41 @@ def main():
         print("El número no es mágico")
 
 
-def main_alt():
+def main_alt() -> None:
     N = int(input("N: "))
     R = sum([x for x in range(N+1) if es_primo(x)])
     print(R)
     print("El número es mágico" if R % 3 == 0 else "El número no es mágico")
+
+
+def is_magic_number(n: int) -> str: # for testing purposes only
+    r = sum([x for x in range(n+1) if es_primo(x)])
+    return r, True if r % 3 == 0 else False
+
+
+class Test(TestCase):
+
+    true_cases = [2, 3, 5, 7, 11, 13]
+    false_cases = [1, 10, 33, -19, 0, 3*5]
+    data = (
+        (10, (17, False)),
+        (29, (129, True)),
+        (55, (381, True)),
+        (62, (501, True)),
+        (80, (791, False)),
+    )
+
+    def test_primes(self):
+        for n in self.true_cases:
+            self.assertTrue(es_primo(n))
+
+    def test_no_primes(self):
+        for n in self.false_cases:
+            self.assertFalse(es_primo(n))
+
+    def test_main(self):
+        for number, result in self.data:
+            self.assertEqual(is_magic_number(number), result)
 
 
 if __name__ == "__main__":
