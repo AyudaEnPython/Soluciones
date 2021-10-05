@@ -7,9 +7,10 @@ El usuario tendrá 3 posibilidades de registrarse y el programa debe
 informarle si puede ingresar o no.
 El programa debe funcionar para varios usuarios. Todos los datos
 ingresados por el usuario deben ser validados.
-
-TODO: add testcases and more ways to resolve it.
 """
+from unittest import main, TestCase
+from unittest.mock import patch
+
 
 PASSWORD = ("x5y4", "a1b2")
 USUARIOS = 3
@@ -21,7 +22,7 @@ def _validar_password(password: str) -> bool:
     return False
 
 
-def validar_entrada(msg, intentos: int = 3) -> bool:
+def validar_entrada(msg: str, intentos: int = 3) -> bool:
     while intentos >= 1:
         print(f"Restan {intentos} intentos")
         password = input(msg)
@@ -43,9 +44,28 @@ def ingresar(usuario: int) -> str:
         return "No puede ingresar!"
 
 
-def main() -> None:
+def main_() -> None:
     for i in range(1, USUARIOS+1):
         print(ingresar(i))
+
+
+class Test(TestCase):
+
+    def test_validar_password(self):
+        self.assertTrue(_validar_password("x5y4"))
+        self.assertTrue(_validar_password("a1b2"))
+        self.assertFalse(_validar_password("1234"))
+        self.assertFalse(_validar_password("admin"))
+
+    @patch("builtins.input", side_effect=("1234", "user", "a1b2"))
+    def test_validar_entrada(self, mocked_input):
+        response = validar_entrada("")
+        self.assertEqual(response, True)
+
+    @patch("builtins.input", side_effect=("aLb2", "a1b2"))
+    def test_ingresar(self, mocked_input):
+        response = ingresar(1)
+        self.assertEqual(response, "Puede ingresar!")
 
 
 if __name__ == "__main__":
