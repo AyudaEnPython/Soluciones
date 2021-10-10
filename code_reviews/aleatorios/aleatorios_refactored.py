@@ -1,3 +1,7 @@
+"""Solución completa en:
+https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/generar_aleatorios.py
+"""
+
 from random import randint
 from typing import List
 
