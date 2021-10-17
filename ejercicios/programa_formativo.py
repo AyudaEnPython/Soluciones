@@ -88,6 +88,14 @@ NOTA_MINIMA_IMPAR = 16
 
 
 def validar_numero(numero: int) -> bool:
+    """Valida un numero si es positivo o negativo
+
+    :param numero: Numero a validar
+    :numero type: int
+    :return: True si el numero es menor igual a cero, de lo contrario
+        False
+    :rtype: bool
+    """
     return True if numero <= 0 else False
 
 
