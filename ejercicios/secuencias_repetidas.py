@@ -21,10 +21,10 @@ debería retornar 2 puesto que la segunda secuencia se repite dos veces
 en la primera secuencia.
 
     +-----------------------------------------------------------+
-    | Nota: No es necesario recibir los numeros enteros del     |
+    | Nota: No es necesario recibir los números enteros del     |
     | enunciado original, es redundante (son los tamaños de las |
     | secuencias). Diseño modular es demasiado general, por lo  |
-    | que se opta plantearlo como función que seria importada   |
+    | que se opta plantearlo como función que sería importada   |
     | desde otro módulo.                                        |
     +-----------------------------------------------------------+
 
