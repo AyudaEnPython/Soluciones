@@ -20,7 +20,7 @@ TODO: add testcases
 from typing import List
 
 
-def validar_códigos(n: int) -> List[int]:
+def validar_codigos(n: int) -> List[int]:
     """Valida que los códigos a ingresar no contengan duplicados.
     Retorna una lista de códigos sin duplicados.
 
@@ -43,7 +43,7 @@ def validar_códigos(n: int) -> List[int]:
 
 def main():
     n = int(input("Ingrese total de códigos: "))
-    codigos = validar_códigos(n)
+    codigos = validar_codigos(n)
     print(codigos)
 
 
