@@ -15,7 +15,7 @@ error adecuado y salga. Para probar el código, ingrese un puntaje de
 0.85
 """
 
-score = input("Puntaje: ")
+score = float(input("Puntaje: "))
 
 if 0.0 <= score <= 1.0:
     if score >= 0.9:
