@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Diseñe e implemente un algoritmo que calcule la suma de cubos de los
 dígitos de un número divisible por 3. Para ello, ingrese un número
 entero y determine si es divisible por 3. En caso no lo sea, pida otro
