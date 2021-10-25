@@ -19,5 +19,5 @@ while True:
         print("Valor inválido")
         continue
 
-print("Máximo es ", max(numeros))
-print("Mínimo es ", min(numeros))
+print("Máximo es", max(numeros))
+print("Mínimo es", min(numeros))
