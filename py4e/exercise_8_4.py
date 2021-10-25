@@ -5,12 +5,22 @@ programa debe construir una lista de palabras. Para cada palabra en
 cada línea, verifique si la palabra ya está en la lista y, si no,
 añádala a la lista. Cuando el programa se complete, ordene e imprima
 las palabras resultantes en orden alfabético.
-"""
-resultado = []
-with open("py4e/romeo.txt") as f:
-    for linea in f:
-        for palabra in linea.split():
-            if palabra not in resultado:
-                resultado.append(palabra)
 
+    +---------------------------------------------------------------+
+    | ['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and',     |
+    | 'breaks', 'east', 'envious', 'fair', 'grief', 'is', 'kill',   |
+    | 'light', 'moon', 'pale', 'sick', 'soft', 'sun', 'the',        |
+    | 'through', 'what', 'window', 'with', 'yonder']                |
+    +---------------------------------------------------------------+
+
+"""
+
+resultado = []
+archivo = input("Nombre de archivo: ") # romeo.txt
+f = open(archivo)
+for linea in f:
+    for palabra in linea.split():
+        if palabra not in resultado:
+            resultado.append(palabra)
+f.close()
 print(sorted(resultado))
