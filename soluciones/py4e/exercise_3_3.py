@@ -11,8 +11,14 @@ Score      Grado
 < 0.6      E
 
 Si el usuario ingresa un valor fuera de rango, imprima un mensaje de
-error adecuado y salga. Para probar el código, ingrese un puntaje de
-0.85
+error adecuado y salga.
+
+Para probar el código, ingrese un puntaje de 0.85.
+
+    +---+
+    | B |
+    +---+
+
 """
 
 score = float(input("Puntaje: "))

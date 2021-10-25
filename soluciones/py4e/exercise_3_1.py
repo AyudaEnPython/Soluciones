@@ -2,9 +2,14 @@
 Escriba un programa para pedirle al usuario las horas y la tarifa por
 hora usando la entrada para calcular el salario bruto. Paga la tarifa
 por hora por las horas hasta 40 y 1.5 veces la tarifa por hora para
-todas las horas que se trabajaron por encima de las 40 horas. Use 45
-horas y una tasa de 10.50 por hora para probar el programa (la paga
-debe ser 498.75).
+todas las horas que se trabajaron por encima de las 40 horas.
+
+Use 45 horas y una tasa de 10.50 por hora para probar el programa (la
+paga debe ser 498.75).
+
+    +--------+
+    | 498.75 |
+    +--------+
 
 Debes utilizar "input" para leer una cadena y "float" para convertir la
 cadena en un número.

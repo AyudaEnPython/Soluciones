@@ -5,8 +5,14 @@ la tarifa normal por horas hasta 40 y 1.5 veces la tarifa por hora
 para todas las horas trabajadas por encima de las 40 horas. Ponga la
 lógica para hacer el cálculo de la paga en una función llamada
 "computepay()" y use la función para hacer el cálculo. La función debe
-devolver un valor. Use 45 horas y una tasa de 10.50 por hora para
-probar el programa (la paga debe ser 498.75).
+devolver un valor.
+
+Use 45 horas y una tasa de 10.50 por hora para probar el programa (la
+paga debe ser 498.75).
+
+    +--------+
+    | 498.75 |
+    +--------+
 
 Debes utilizar "input" para leer una cadena y "float" para convertir la
 cadena en un número.
