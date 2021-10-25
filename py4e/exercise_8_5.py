@@ -51,6 +51,6 @@ f = open(archivo)
 i = 0
 for linea in f:
     if linea.startswith("From "):
-        print(linea.split(" ")[1])
+        print(linea.split()[1])
         i += 1
 print("Hay", str(i), "lineas en el archivo con From como la primer palabra")
