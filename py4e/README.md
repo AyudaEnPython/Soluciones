@@ -15,3 +15,4 @@ pueden colocar sus opiniones en "issue".
 >
 > * py4e no acepta "f-strings" por lo que se optará por concatenación y/o format()
 > * py4e no acepta "with open()" por lo que se optará por open()/close()
+> * py4e no acepta "key" para la función "max()" por lo que se optará por otra solución
