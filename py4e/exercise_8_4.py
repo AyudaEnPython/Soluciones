@@ -13,6 +13,8 @@ las palabras resultantes en orden alfabético.
     | 'through', 'what', 'window', 'with', 'yonder']                |
     +---------------------------------------------------------------+
 
+En http://es.py4e.com/code3/romeo.txt puedes descargar los datos de
+muestra.
 """
 
 resultado = []
