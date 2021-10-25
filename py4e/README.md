@@ -14,3 +14,4 @@ pueden colocar sus opiniones en "issue".
 >   de este directorio irá cambiando.
 >
 > * py4e no acepta "f-strings" por lo que se optará por concatenación y/o format()
+> * py4e no acepta "with open()" por lo que se optará por open()/close()
