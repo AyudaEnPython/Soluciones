@@ -7,12 +7,24 @@ la dirección de correo del remitente a un recuento de la cantidad de
 veces que aparece en el archivo. Después de que se produce el
 diccionario, el programa lee a través del diccionario utilizando un
 bucle máximo para encontrar la dirección que más envíos tuvo.
+
+    +------------------+
+    | cwen@iupui.edu 5 |
+    +------------------+
+
 """
 
-# archivo = input("Nombre de archivo: ")
-archivo = "py4e/mbox-short.txt"
-
+archivo = input("Nombre de archivo: ") # mbox-short.txt
 f = open(archivo)
+correos = []
 for linea in f:
     if linea.startswith("From "):
-        print(linea.split()[1])
+        correos.append(linea.split()[1])
+f.close()
+resultado = dict([(i, correos.count(i)) for i in correos])
+
+mayor, correo = 0, None
+for k, v in resultado.items():
+    if v > mayor:
+        correo, mayor = k, v
+print(correo, mayor)
