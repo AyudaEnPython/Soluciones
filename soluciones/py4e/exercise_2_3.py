@@ -9,4 +9,4 @@ comprobación de errores o los datos de usuario incorrectos.
 
 horas = float(input("Ingresar horas: "))
 tarifa = float(input("Ingresar tarifa: "))
-print("Pago: ", horas * tarifa)
+print("Paga:", horas * tarifa)
