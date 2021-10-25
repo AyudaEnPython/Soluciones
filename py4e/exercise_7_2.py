@@ -21,5 +21,14 @@ En http://es.py4e.com/code3/mbox-short.txt puedes descargar los datos
 muestra para probar la función, ingrese mbox-short.txt como el nombre
 del archivo.
 """
-with open("py4e/mbox-short.txt") as f:
-    print(f)
+
+resultado = 0
+cantidad = 0
+archivo = input("Nombre de archivo: ")
+f = open(archivo)
+for linea in f:
+    if linea.startswith("X-DSPAM-Confidence:"):
+        cantidad += 1
+        resultado += float(linea[linea.find(":")+1:])
+f.close()
+print("Average spam confidence:", resultado/cantidad)

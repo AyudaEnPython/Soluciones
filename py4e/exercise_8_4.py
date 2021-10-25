@@ -7,7 +7,7 @@ añádala a la lista. Cuando el programa se complete, ordene e imprima
 las palabras resultantes en orden alfabético.
 """
 resultado = []
-with open("romeo.txt") as f:
+with open("py4e/romeo.txt") as f:
     for linea in f:
         for palabra in linea.split():
             if palabra not in resultado:
