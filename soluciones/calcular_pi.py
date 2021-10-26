@@ -32,17 +32,11 @@ def pi_b(n: int) -> float:
     return sum([j*(1/i) for i, j in zip(range(1, n*2, 2), cycle((1, -1)))])*4
 
 
-# calculate pi using formula
-def pi_c(n: int) -> float:
-    return sum([j*(1/i) for i, j in zip(range(1, n*2, 2), cycle((1, -1)))])*4
-
-
 class Test(TestCase):
 
     def test_pi(self):
         self.assertEqual(pi_a(5), 3.3396825396825403)
         self.assertEqual(pi_b(5), 3.3396825396825403)
-        self.assertEqual(pi_c(5), 3.3396825396825403)
 
 
 if __name__ == "__main__":
