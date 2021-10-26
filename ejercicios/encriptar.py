@@ -10,7 +10,7 @@ En mensaje solo tiene letras y no tienen ñ.
     | CunadelaLibertad      | FXQDGHODOLEHUWDG      |
     +-----------------------+-----------------------+
 
-TODO: add more implementations
+TODO: review it later for possible changes
 
 NOTE: c and d are fully implemented, a and b aren't (intentionally).
     Possibly change later (maybe using comments to point out it).
@@ -19,33 +19,33 @@ from string import ascii_lowercase
 from unittest import main, TestCase
 
 
-def encriptar_a(s):
-    def lookup(v):
+def encriptar_a(s: str, k: int = 3) -> str:
+    return "".join(map(lambda x: chr(ord(x) + k), s)).upper()
+
+
+def encriptar_b(s: str, k: int = 3, alpha: str = ascii_lowercase) -> str:
+    def lookup(v, alpha=alpha):
         o, c = ord(v), v.lower()
-        if c in ascii_lowercase:
-            return chr(o + 3)
+        if c in alpha:
+            return chr(o + k)
         return v
     return "".join(map(lookup, s)).upper()
 
 
-def encriptar_b(s):
-    return "".join(map(lambda x: chr(ord(x) + 3), s)).upper()
-
-
-def encriptar_c(s, k=3, ss=ascii_lowercase):
+def encriptar_c(s: str, k: int = 3, ss: str = ascii_lowercase) -> str:
     shift = ss[k:] + ss[:k]
     table = str.maketrans(ss, shift)
     return s.lower().translate(table).upper()
 
 
-def encriptar_d(ss, k=3, a=ascii_lowercase):
+def encriptar_d(ss: str, k: int = 3, alpha: str = ascii_lowercase) -> str:
     r = ""
     for s in ss.lower():
-        i = a.find(s)
+        i = alpha.find(s)
         j = i + k
         if j >= 26:
             j -= 26
-        r += a[j]
+        r += alpha[j]
     return r.upper()
 
 
