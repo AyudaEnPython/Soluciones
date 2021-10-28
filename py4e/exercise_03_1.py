@@ -7,14 +7,15 @@ todas las horas que se trabajaron por encima de las 40 horas.
 Use 45 horas y una tasa de 10.50 por hora para probar el programa (la
 paga debe ser 498.75).
 
-    +--------+
-    | 498.75 |
-    +--------+
+    Salida deseada
+    +------------+
+    | 498.75     |
+    +------------+
 
 Debes utilizar "input" para leer una cadena y "float" para convertir la
-cadena en un número.
-No se preocupe por la comprobación de errores en la entrada del
-usuario: suponga que el usuario escribe los números correctamente.
+cadena en un número. No se preocupe por la comprobación de errores en
+la entrada del usuario: suponga que el usuario escribe los números 
+correctamente.
 """
 
 horas = float(input("Horas: "))

@@ -9,6 +9,7 @@ Analiza la línea From utilizando split () e imprime la segunda palabra
 en la línea (es decir, la dirección completa de la persona que envió el
 mensaje). A continuación, imprime un recuento al final.
 
+    Salida deseada
     +-------------------------------------------------------------+
     | stephen.marquard@uct.ac.za                                  |
     | louis@media.berkeley.edu                                    |

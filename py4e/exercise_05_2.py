@@ -7,12 +7,12 @@ try/except y envíe un mensaje apropiado e ignore el número.
 
 Ingrese 7, 2, bob, 10 y 4 y haga coincidir la salida a continuación:
 
+    Salida deseada
     +-------------------+
     | Valor inválido    |
     | Máximo es 10      |
     | Mínimo es 2       |
     +-------------------+
-
 """
 
 numeros = []

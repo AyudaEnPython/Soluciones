@@ -10,16 +10,16 @@ devolver un valor.
 Use 45 horas y una tasa de 10.50 por hora para probar el programa (la
 paga debe ser 498.75).
 
-    +--------+
-    | 498.75 |
-    +--------+
+    Salida deseada
+    +------------+
+    | 498.75     |
+    +------------+
 
 Debes utilizar "input" para leer una cadena y "float" para convertir la
-cadena en un número.
-No se preocupe por la comprobación de errores en la entrada de usuario
-a menos que desee: Usted puede asumir que el usuario escribe los
-números correctamente.
-No nombre su variable "sum" o use la función "sum()".
+cadena en un número. No se preocupe por la comprobación de errores en
+la entrada de usuario a menos que desee: Usted puede asumir que el
+usuario escribe los números correctamente. No nombre su variable "sum"
+o use la función "sum()".
 """
 
 def computepay(horas, tasa):

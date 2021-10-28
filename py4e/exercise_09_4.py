@@ -8,10 +8,10 @@ veces que aparece en el archivo. Después de que se produce el
 diccionario, el programa lee a través del diccionario utilizando un
 bucle máximo para encontrar la dirección que más envíos tuvo.
 
+    Salida deseada
     +------------------+
     | cwen@iupui.edu 5 |
     +------------------+
-
 """
 
 archivo = input("Nombre de archivo: ") # mbox-short.txt

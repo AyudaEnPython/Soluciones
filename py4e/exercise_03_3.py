@@ -15,10 +15,10 @@ error adecuado y salga.
 
 Para probar el código, ingrese un puntaje de 0.85.
 
-    +---+
-    | B |
-    +---+
-
+    Salida deseada
+    +------------+
+    | B          |
+    +------------+
 """
 
 score = float(input("Puntaje: "))

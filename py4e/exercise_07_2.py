@@ -11,6 +11,7 @@ Cuenta estas líneas y extrae los valores de coma flotante de cada una
 de las líneas y calcula el promedio de esos valores y produce una
 salida como se muestra a continuación:
 
+    Salida deseada
     +-----------------------------------------+
     | Average spam confidence: 0.750718518519 |
     +-----------------------------------------+

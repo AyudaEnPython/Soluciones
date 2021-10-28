@@ -11,21 +11,21 @@ luego dividir la cadena por segunda vez con dos puntos.
 Una vez que haya acumulado los recuentos de cada hora, imprima los
 recuentos, ordenados por hora como se muestra a continuación.
 
-    +------+
-    | 04 3 |
-    | 06 1 |
-    | 07 1 |
-    | 09 2 |
-    | 10 3 |
-    | 11 6 |
-    | 14 1 |
-    | 15 2 |
-    | 16 4 |
-    | 17 2 |
-    | 18 1 |
-    | 19 1 |
-    +------+
-
+    Salida deseada
+    +------------+
+    | 04 3       |
+    | 06 1       |
+    | 07 1       |
+    | 09 2       |
+    | 10 3       |
+    | 11 6       |
+    | 14 1       |
+    | 15 2       |
+    | 16 4       |
+    | 17 2       |
+    | 18 1       |
+    | 19 1       |
+    +------------+
 """
 
 archivo = input("Nombre de archivo: ") # mbox-short.txt

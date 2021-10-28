@@ -6,6 +6,7 @@ cada línea, verifique si la palabra ya está en la lista y, si no,
 añádala a la lista. Cuando el programa se complete, ordene e imprima
 las palabras resultantes en orden alfabético.
 
+    Salida deseada
     +---------------------------------------------------------------+
     | ['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and',     |
     | 'breaks', 'east', 'envious', 'fair', 'grief', 'is', 'kill',   |
