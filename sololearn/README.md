@@ -18,11 +18,11 @@ es así, pueden colocar sus opiniones en "issues".
 > * Dado que la mayor parte de los ejercicios necesitan desbloquearse o
 >     contar con una cuenta PRO, estos serán resueltos 
 
-# Cursos
+# Soluciones de Cursos
 
-* [Python Core](/python_core)
-* [Python for Beginners](/python_for_beginners)
-* [Python for Data Science](/python_for_data_science)
-* [Python for Finance](/python_for_finance)
-* [Intermediate Python](/intermediate_python)
-* [Python Data Structures](/python_data_structures)
+* [Python Core](sololearn/python_core)
+* [Python for Beginners](sololearn/python_for_beginners)
+* [Python for Data Science](sololearn/python_for_data_science)
+* [Python for Finance](sololearn/python_for_finance)
+* [Intermediate Python](sololearn/intermediate_python)
+* [Python Data Structures](sololearn/python_data_structures)
