@@ -18,7 +18,7 @@ es así, pueden colocar sus opiniones en "issues".
 > * Dado que la mayor parte de los ejercicios necesitan desbloquearse o
 >     contar con una cuenta PRO, estos serán resueltos 
 
-# Soluciones de Cursos
+# Soluciones por Curso
 
 * [Python Core](python_core/)
 * [Python for Beginners](python_for_beginners/)
