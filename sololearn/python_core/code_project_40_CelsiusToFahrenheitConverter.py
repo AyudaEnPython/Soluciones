@@ -17,9 +17,9 @@ NOTE: the following equation is used to calculate the Fahrenheit value:
 
 celsius = int(input())
 
-def conv(c):
+def converter(c):
     return 9/5*c+32
 
 
-fahrenheit = conv(celsius)
+fahrenheit = converter(celsius)
 print(fahrenheit)
