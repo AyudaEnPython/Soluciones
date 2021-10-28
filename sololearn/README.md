@@ -13,6 +13,7 @@ es así, pueden colocar sus opiniones en "issues".
 
 > **NOTA**
 >
+> * Ejercicios tomados de [SoloLearn](https://www.sololearn.com)
 > * Los ejercicios están divididos por cursos
 > * Se les da prioridad a los proyectos
 > * Dado que la mayor parte de los ejercicios necesitan desbloquearse o
