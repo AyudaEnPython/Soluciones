@@ -64,8 +64,10 @@ def solver_d(data: List[float]) -> int:
 
 class Test(TestCase):
 
-    def test_solver(self):
+    def test_solvers(self):
         for solver in (solver_a, solver_b, solver_c, solver_d):
+            self.assertEqual(solver([1, 1, 1]), 0)
+            self.assertEqual(solver([1, 2, 3]), 1)
             self.assertEqual(solver([4, 5, 6]), 1)
             self.assertEqual(solver([10, 11, 12, 13, 14]), 2)
             self.assertEqual(solver([6.5, 2.1, 2, 2.2, 6.1]), 2)
