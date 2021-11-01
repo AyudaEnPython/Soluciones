@@ -74,6 +74,7 @@ Aspectos a implementar:
 - ColaLLena: nos dice si una cola está llena.
 - ColaVacia: nos dice si una cola está vacía.
 
+NOTE: needs to be tested.
 """
 
 def llegar_persona_parada(cola_personas, cola_autobuses):
