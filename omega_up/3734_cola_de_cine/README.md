@@ -1,4 +1,4 @@
-# 3734. Cola de Cine
+# 3734. [Cola de Cine](https://omegaup.com/arena/problem/Cola-de-cine)
 
 <table style="margin-left: auto; margin-right: auto;">
 <tbody>
