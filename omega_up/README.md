@@ -23,9 +23,7 @@
 </tbody>
 </table>
 
-
-
-# Descripción
+## Descripción
 
 Debes escribir un programa que conociendo el número de personas
 formadas en el tiempo cero, y el número de personas que llegan en el
@@ -33,7 +31,7 @@ tiempo i, calcule cual es el tiempo total que tardará la señorita de la
 taquilla en atender a todos los clientes, y cual será la longitud
 máxima que llegará a tener la cola.
 
-# Entrada
+## Entrada
 
 Tu programa deberá leer del teclado los siguientes datos:
 
@@ -47,7 +45,7 @@ Tu programa deberá leer del teclado los siguientes datos:
   en el que tu programa reciba un "-1" esto indica que ya no habrá más
   personas que se vayan a formar.
 
-# Salida
+## Salida
 
 Tu programa deberá escribir en la pantalla los siguientes datos:
 
@@ -58,7 +56,7 @@ señorita atiende únicamente a 1 cliente por tiempo.
 En la segunda línea tu programa deberá escribir el largo máximo que
 llegó a tener la cola al terminar un instante de tiempo.
 
-# Ejemplo
+## Ejemplo
 
 |Entrada|Salida|
 |-------|------|
@@ -73,22 +71,21 @@ llegó a tener la cola al terminar un instante de tiempo.
 |1      |      |
 |-1     |      |
 
-# Límites
+## Límites
 
 El número de tiempos nunca excederá a 100,000.
 
 ---
 
-> **main.py**
-> 
-> ```python
-> #!/usr/bin/python3
-> 
-> def _main() -> None:
->     # TODO: fixme.
->     pass
-> 
-> if __name__ == '__main__':
->     _main()
-> ```
->
+
+`main.py`
+```python
+#!/usr/bin/python3
+
+def _main() -> None:
+    # TODO: fixme.
+    pass
+
+if __name__ == '__main__':
+    _main()
+```
