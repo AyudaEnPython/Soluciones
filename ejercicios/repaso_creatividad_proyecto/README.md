@@ -39,7 +39,6 @@
 - Implemente el método __mul__ para la clase Vector, de forma que la
   expresión u*v devuelva un escalar que represente el producto punto de
   los vectores, esto es <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=1}^{d} u_{i}.v_{i}">
-  $$\sum_{i=1}^{d} u_{i}.v_{i}$$
 
 - La clase Vector proporciona un constructor que toma un entero d, y
   produce un vector d-dimensional con todas las coordenadas iguales a 0.
