@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-"""
 *    Estatus    : AC 
 *    Porcentaje : 100.00%
 *    Memoria    : 10.20 MB
