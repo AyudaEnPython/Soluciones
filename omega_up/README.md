@@ -19,10 +19,11 @@
     <td>10 KiB</td>
     <td></td>
     <td></td>
-    <td></td>
   </tr>
 </tbody>
 </table>
+
+
 
 # Descripción
 
