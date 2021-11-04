@@ -2,6 +2,7 @@
 Se opta por mejorar la clase TarjetaCredito, tanto en el docstring como
 en otros aspectos (property, typing, etc.).
 """
+from typing import List
 from prototools.validaciones import validar_float
 
 
@@ -104,3 +105,29 @@ class TarjetaCredito:
             monto, min=0, custom="El monto debe ser mayor a cero."
         )
         self._balance -= monto
+
+
+if __name__ == "__main__":
+    from dataclasses import dataclass, field
+    from prototools.utils import boxln
+
+    @dataclass
+    class Billetera:
+        tarjetas: List[TarjetaCredito] = field(default_factory=list)
+
+    billetera = Billetera([
+        TarjetaCredito("John Wick", "BCP", "4301 0751 1942 4455", 2500),
+        TarjetaCredito("John Wick", "BBVA", "3901 1236 1264 0112", 3500),
+        TarjetaCredito("John Wick", "BN", "4501 6426 9468 0135", 5000),
+    ])
+
+    for tarjeta in billetera.tarjetas:
+        tarjeta.cargar(1000)
+    
+    for tarjeta in billetera.tarjetas:
+        boxln(f"{tarjeta.cliente} | {tarjeta.banco} | {tarjeta.cuenta}")
+        print(f"Limite: {tarjeta.limite} | Balance: {tarjeta.balance}")
+        while tarjeta.balance > 100:
+            tarjeta.pagar(100)
+            print(f"Nuevo balance: {tarjeta.balance}")
+        print()
