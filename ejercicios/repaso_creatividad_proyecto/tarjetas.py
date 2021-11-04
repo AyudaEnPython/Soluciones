@@ -70,6 +70,14 @@ class TarjetaCredito:
     def limite(self, limite: float) -> None:
         self._limite = limite
 
+    @property
+    def balance(self) -> float:
+        return self._balance
+    
+    @balance.setter
+    def balance(self, balance: float) -> None:
+        self._balance = balance
+
     def cargar(self, precio: float) -> bool:
         """Carga el precio dado a la tarjeta de credito asumiendo que
         tiene saldo.
