@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 En una tienda por departamento, se desea realizar un estadística de las
 horas de atención del del personal de caja por mes. Debe solicitar el
 ingreso de los nombres de los cajeros (hasta que el usuario responda
@@ -37,6 +38,7 @@ from typing import Iterable, List
 
 from matplotlib import pyplot as plt
 import pandas as pd
+# pip install prototools
 from prototools.entradas import entrada_float
 from prototools.utils import continuar
 from prototools.constantes import MESES

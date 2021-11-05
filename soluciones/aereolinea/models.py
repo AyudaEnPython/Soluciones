@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython"""
+
 from abc import ABC
 from dataclasses import dataclass, field
 from typing import List, Optional
