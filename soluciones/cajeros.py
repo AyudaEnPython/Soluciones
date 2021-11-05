@@ -148,7 +148,7 @@ def load_random_data() -> Tienda:
 
 
 def main():
-    tienda = cargar_personal()# load_random_data() 
+    tienda = cargar_personal() # load_random_data() 
     menu = EzMenu()
     menu.agregar_opciones(
         "Mostrar datos",
