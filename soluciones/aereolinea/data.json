@@ -1,0 +1,87 @@
+{
+    "aerolinea": "Macross",
+    "avion": {
+        "modelo": "SDF-1",
+        "fabricante": "Airbus"
+    },
+    "piloto": {
+        "nombre": "Henry",
+        "apellido": "Global",
+        "edad": "49",
+        "dni": "14582365",
+        "cargo": "Piloto"
+    },
+    "copiloto": {
+        "nombre": "Lisa",
+        "apellido": "Hayes",
+        "edad": "21",
+        "dni": "09584264",
+        "cargo": "Copiloto"
+    },
+    "pasajeros": [
+        {
+            "nombre": "Rick",
+            "apellido": "Hunter",
+            "edad": "19",
+            "dni": "12345678",
+            "destino": "Marte",
+            "categoria": "N"
+        },
+        {
+            "nombre": "Roy",
+            "apellido": "Focker",
+            "edad": "30",
+            "dni": "48951456",
+            "destino": "Venus",
+            "categoria": "V"
+        },
+        {
+            "nombre": "Max",
+            "apellido": "Sterling",
+            "edad": "19",
+            "dni": "68951326",
+            "destino": "Jupiter",
+            "categoria": "N"
+        },
+        {
+            "nombre": "Ben",
+            "apellido": "Dixon",
+            "edad": "21",
+            "dni": "66551326",
+            "destino": "Mercurio",
+            "categoria": "N"
+        },
+        {
+            "nombre": "Kyle",
+            "apellido": "Lynn",
+            "edad": "24",
+            "dni": "66556826",
+            "destino": "Saturno",
+            "categoria": "V"
+        },
+        {
+            "nombre": "Minmay",
+            "apellido": "Lynn",
+            "edad": "19",
+            "dni": "66556844",
+            "destino": "Saturno",
+            "categoria": "V"
+        },
+        {
+            "nombre": "Minmay",
+            "apellido": "Lynn",
+            "edad": "19",
+            "dni": "66556844",
+            "destino": "Saturno",
+            "categoria": "V"
+        },
+        {
+            "nombre": "Miriya",
+            "apellido": "Parina",
+            "edad": "19",
+            "dni": "66556844",
+            "destino": "Saturno",
+            "categoria": "V"
+        }
+    ] 
+}
