@@ -9,7 +9,6 @@ from random import sample
 from collections import Counter
 from typing import List
 
-
 MAX = 10
 JUGADORES = 100
 
