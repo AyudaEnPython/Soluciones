@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Desarrolle un programa para estimar el valor de pi usando la siguiente
 suma infinita:
 

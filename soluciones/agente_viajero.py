@@ -1,4 +1,6 @@
-"""Travelling Salesperson Problem (TSP)
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+Travelling Salesperson Problem (TSP)
 """
 from itertools import permutations
 from unittest import main, TestCase

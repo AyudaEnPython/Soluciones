@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Diseñe e implemente un algoritmo que imprima todas las posibles
 descomposiciones de un número natural como suma de números menores
 que él.

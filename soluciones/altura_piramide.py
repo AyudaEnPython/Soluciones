@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Una pirámide se apila de acuerdo con un principio simple: cada capa
 inferior contiene un bloque más que la capa superior.
 #           +---+

@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Asume s is a string of lower case characters. Write a program that
 prints the longest substring of s in which the letters occur in
 alphabetical order.

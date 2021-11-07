@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Simulador de dado simple
 
 ┌────────-┬-─────┬────────-┬──────┬─────────┬──────┐

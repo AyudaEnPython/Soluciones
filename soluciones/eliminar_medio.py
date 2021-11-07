@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Eliminar de una lista o arreglo, el elemento que está en la posición
 media. Si la dimensión del arreglo es par, sacar el elemento previo
 al punto medio.

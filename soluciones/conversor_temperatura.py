@@ -1,4 +1,6 @@
-"""Conversor de temperatura
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+Conversor de temperatura
 
 TODO: add docstrings and typing.
 """

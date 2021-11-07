@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 from math import sqrt
 from typing import Iterable
 from unittest import main, TestCase
