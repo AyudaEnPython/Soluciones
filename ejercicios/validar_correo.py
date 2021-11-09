@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Escriba un programa mediante una función valide si es una dirección de 
 correo electrónico pertenece al dominio calufa.com, debe pedir al
 usuario que ingrese el correo, si pertenece a calufa le enviará un
