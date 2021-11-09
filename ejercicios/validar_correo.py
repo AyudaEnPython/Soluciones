@@ -4,6 +4,8 @@ correo electrónico pertenece al dominio calufa.com, debe pedir al
 usuario que ingrese el correo, si pertenece a calufa le enviará un
 mensaje "Valido", sino "Inválido". Además, incorpore un ciclo de modo
 que el usuario pueda decidir si desea ingresar otro correo electrónico.
+
+TODO: add more implementations and testcases
 """
 
 
