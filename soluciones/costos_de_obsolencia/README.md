@@ -18,6 +18,10 @@ Utilizar el costo inicial simulado según criterio.
     <td>5</td><td>6</td><td>7</td><td>8</td>
   </tr>
   <tr>
+    <td>Pieza 1</td><td>S/.</td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td><td></td><td>S/.</td>
+  </tr>
+  <tr>
     <td>Pieza 2</td><td>S/.</td><td></td><td></td><td></td>
     <td></td><td></td><td></td><td></td><td></td><td>S/.</td>
   </tr>
