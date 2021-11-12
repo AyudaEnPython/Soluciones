@@ -1,4 +1,11 @@
-#Escribir un programa que solicite ingresar la nota de 10 alumnos, el programa, debe informar de cuantos han aprobado, cuantos han reprobado, nota promedio, la mayor y la menor
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+Solución completa en:
+https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/aprobados_desaprobados.py
+"""
+
+#Escribir un programa que solicite ingresar la nota de 10 alumnos, el programa, debe
+# informar de cuantos han aprobado, cuantos han reprobado, nota promedio, la mayor y la menor
 # faltan realizar comprobaciones del tipo de dato ingresado 
 print("Escriba 0 para terminar el programa")
 notas = []
