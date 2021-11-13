@@ -6,6 +6,11 @@
 ![Github last-commit](https://img.shields.io/github/last-commit/AyudaEnPython/soluciones)
 ![maintenance](https://img.shields.io/maintenance/yes/2021)
 
+     _____           _        _____        _____     _   _           
+    |  _  |_ _ _ _ _| |___   |   __|___   |  _  |_ _| |_| |_ ___ ___ 
+    |     | | | | | . | .'|  |   __|   |  |   __| | |  _|   | . |   |
+    |__|__|_  |___|___|__,|  |_____|_|_|  |__|  |_  |_| |_|_|___|_|_|
+          |___|                                 |___|                
 
 Repositorio de soluciones de la comunidad [Ayuda en Python](https://www.facebook.com/groups/ayudaenpython/).
 
