@@ -4,13 +4,13 @@ from typing import Dict, List, Optional
 from models import Carrera, Estudiante, Materia, Material, BancoMateriales
 from prototools.entradas import entrada_choices, entrada_int, entrada_str, entrada_choice, entrada_fecha
 
-CARRERAS = {
+CARRERAS: Dict[str, Carrera] = {
     "C01": Carrera("C01", "Informática", "Ciencias"),
     "C02": Carrera("C02", "Economía", "Ciencias"),
     "C03": Carrera("C03", "Electrónica", "Ciencias"),
     "C04": Carrera("C04", "Sociales", "Letras"),
 }
-MATERIAS = {
+MATERIAS: Dict[str, Materia] = {
     "M01": Materia("M01", "M001", "I", CARRERAS["C01"]),
     "M02": Materia("M02", "M002", "II", CARRERAS["C02"]),
     "M03": Materia("M03", "M003", "III", CARRERAS["C03"]),
@@ -18,7 +18,7 @@ MATERIAS = {
 }
 
 
-def registrar_datos_estudiante(datos):
+def registrar_datos_estudiante(datos: Dict[str, Estudiante]) -> Estudiante:
     f = lambda x: True if x == "si" else False
     codigo = entrada_str("Ingresar código: ")
     if codigo in datos:
@@ -33,7 +33,7 @@ def registrar_datos_estudiante(datos):
     )
 
 
-def registrar_material(datos):
+def registrar_material(datos: List[Material]) -> Material:
     codigo = entrada_str("Ingresar código: ")
     for data in datos:
         if data.codigo == codigo:
