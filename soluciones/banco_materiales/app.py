@@ -89,14 +89,14 @@ class App(BancoMateriales):
     def aportantes(self) -> None:
         self._materiales.ver_gestores()
 
-    def save(self) -> None:
-        with open('soluciones/banco_materiales/data/materiales.pickle', 'wb') as f:
+    def save(self) -> None: # 'soluciones/banco_materiales/'
+        with open('data/materiales.pickle', 'wb') as f:
             pickle.dump(self._materiales, f)
-        with open('soluciones/banco_materiales/data/estudiantes.pickle', 'wb') as f:
+        with open('data/estudiantes.pickle', 'wb') as f:
             pickle.dump(self._estudiantes, f)
 
-    def load(self) -> None:
-        with open('soluciones/banco_materiales/data/materiales.pickle', 'rb') as f:
+    def load(self) -> None: # 'soluciones/banco_materiales/'
+        with open('data/materiales.pickle', 'rb') as f:
             self._materiales = pickle.load(f)
-        with open('soluciones/banco_materiales/data/estudiantes.pickle', 'rb') as f:
+        with open('data/estudiantes.pickle', 'rb') as f:
             self._estudiantes = pickle.load(f)
