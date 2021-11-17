@@ -24,3 +24,11 @@ es así, pueden colocar sus opiniones en "issues".
 >     por otra solución
 
 [1]: https://es.py4e.com/lessons
+
+## Tabla de contenido
+
+* ¿Por qué programar? [exercise_01_1.py](exercise_01_1.py)
+* Variables, expresiones y declaraciones [exercise_02_3.py](exercise_02_3.py)
+* Ejecución Condicional
+  * [exercise_03_1.py](exercise_03_1.py)
+  * [exercise_03_2.py](exercise_03_3.py)
