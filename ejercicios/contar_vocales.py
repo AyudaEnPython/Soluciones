@@ -5,9 +5,31 @@ cuántas letras "a" tiene, cuantas letras "e" tiene y así hasta
 completar todas las vocales. Se puede hacer que el usuario sea quien
 elija la palabra.
 """
+import io
 from collections import Counter
+from textwrap import dedent
 from typing import Dict
 from unittest import main, TestCase
+from unittest.mock import patch
+
+def naive_contar_vocales(s: str) -> None:
+    a = e = i = o = u = 0
+    for letra in s.lower():
+        if letra == "a":
+            a += 1
+        elif letra == "e":
+            e += 1
+        elif letra == "i":
+            i += 1
+        elif letra == "o":
+            o += 1
+        elif letra == "u":
+            u += 1
+    print(f"Vocal a: {a} veces")
+    print(f"Vocal e: {e} veces")
+    print(f"Vocal i: {i} veces")
+    print(f"Vocal o: {o} veces")
+    print(f"Vocal u: {u} veces")
 
 
 def contar_vocales(s: str) -> Dict[str, int]:
@@ -44,6 +66,26 @@ def main_():
 
 
 class Test(TestCase):
+
+    @patch("sys.stdout", new_callable=io.StringIO)
+    def assert_stdout(self, expected_output, mock_output, function=None):
+        if function:
+            function()
+        self.assertEqual(mock_output.getvalue(), expected_output)
+
+    def test_naive_contar_vocales(self):
+        self.assert_stdout(
+            dedent(
+                """\
+                Vocal a: 2 veces
+                Vocal e: 2 veces
+                Vocal i: 1 veces
+                Vocal o: 2 veces
+                Vocal u: 1 veces
+                """
+            ),
+            function=lambda: naive_contar_vocales("sexagesimocuarto"),
+        )
 
     def test_contar_vocales(self):
         self.assertEqual(
@@ -87,5 +129,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    #main() # uncomment and comment the next line to run tests
-    main_()
+    main() # uncomment and comment the next line to run tests
+    #main_()
