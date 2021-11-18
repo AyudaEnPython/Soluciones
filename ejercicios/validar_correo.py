@@ -11,9 +11,8 @@ TODO: add more implementations and testcases
 
 
 def validar_correo(usuario: str, dominio: str = '@calufa.com') -> bool:
-    """
-    Función que valida si un correo electrónico pertenece al dominio
-    calufa.com.
+    """Función que valida si un correo electrónico pertenece al dominio
+    calufa.com
 
     :param usuario: correo electrónico a validar
     :type usuario: str
