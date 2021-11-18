@@ -12,6 +12,7 @@ from typing import Dict
 from unittest import main, TestCase
 from unittest.mock import patch
 
+
 def naive_contar_vocales(s: str) -> None:
     a = e = i = o = u = 0
     for letra in s.lower():
