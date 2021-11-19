@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 from collections import namedtuple
 from typing import Tuple, Type
 from dataclasses import dataclass

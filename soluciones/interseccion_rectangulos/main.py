@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Escribe un programa que dadas las coodenadas de un par de esquinas
 opuestas de cada cancha calcule el área total por ambas canchas.
 

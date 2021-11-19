@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Problema Planteado
 
 Un banco les ha encargado que generen un simulador de cuotas y

@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Elabora un programa en Python que estime el tipo de cambio en el
 futuro. El programa debe solicitar al usuario: el tipo de cambio
 actual, la tasa de interés local, la tasa de interés extranjero y los

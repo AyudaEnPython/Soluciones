@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 

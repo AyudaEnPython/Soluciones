@@ -1,4 +1,6 @@
-"""Standalone version (7 lines of code without ';', 1 line with ';').
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+Standalone version (7 lines of code without ';', 1 line with ';').
 """
 h = lambda m, n=2: tuple([m[x:x+n] for x in range(0, len(m), n)])
 t = lambda a, b: (b[0] - a[0]) * (b[1] - a[1])

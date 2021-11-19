@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 from prototools.menu import EzMenu
 from app import App
 
