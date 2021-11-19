@@ -23,7 +23,8 @@ class Point:
 points = [Point(random(), random()) for _ in range(6)]
 pprint.pprint(points)
 
-# output:
+# output: (numbers vary between runs)
+#
 # [Point(0.0936581990985863, 0.7656646716638154),
 #  Point(0.8876376436791956, 0.5291663094799327),
 #  Point(0.431149343848124, 0.09748661733209496),
