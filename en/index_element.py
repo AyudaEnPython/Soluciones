@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 Even though the group is only for spanish speakers, english
-speak
+speakers are welcome.
 """
 
 numbers = [50, 30, 20, 50, 50, 62, 70, 50]

@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 Even though the group is only for spanish speakers, english
-speak
+speakers are welcome.
 """
 
 numbers = [-402, 451, 7, -26, 365, -12, 11, -666, -1, 36]
