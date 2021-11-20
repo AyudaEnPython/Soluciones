@@ -1,4 +1,6 @@
-"""Dada una lista con la altura de varios jugadores de baloncesto, calcular 
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+Dada una lista con la altura de varios jugadores de baloncesto, calcular 
 cuantos jugadores estan en el rango de 1 desviación estándar desde el promedio.
 .                                              
 .                                             +------------------------------+
