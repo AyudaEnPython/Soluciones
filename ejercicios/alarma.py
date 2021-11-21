@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Crear una aplicación de consola que permita al usuario programar alarmas
 de tiempo. Para realizar esta aplicación deberá presentarle al usuario
 las siguientes opciones: ver alarmas activas, agregar nueva alarma,

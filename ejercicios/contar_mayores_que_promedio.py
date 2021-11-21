@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Desarrolla un programa que pregunte al usuario cuántos datos ingresará,
 a continuación le pida que ingrese los datos uno por uno, y finalmente
 entregue como salida cuántos de los datos ingresados fueron mayores que

@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Queremos guardar los nombres y las edades de los alumnos de un curso.
 Realiza un programa que introduzca el nombre y la edad de cada alumno.
 El proceso de lectura de datos determinará cuando se introduzca como

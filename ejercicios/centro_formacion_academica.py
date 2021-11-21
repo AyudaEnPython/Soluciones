@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 #------------------------- ENUNCIADO ORIGINAL -------------------------
 Crear una aplicación para el siguiente proceso.
 

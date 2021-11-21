@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Consumo de oxígeno de buceadores.
 
 Se debe diseñar un programa que calcule la tasa de consumo de aire
