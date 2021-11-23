@@ -1,9 +1,9 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from typing import List
+from typing import List, Generator
 
 
-def _read_data(file: str) -> None:
+def _read_data(file: str) -> Generator[str, None, None]:
     with open(file, 'r', encoding="utf-8") as f:
         for line in f:
             yield line.strip()
