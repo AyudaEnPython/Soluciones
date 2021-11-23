@@ -13,3 +13,11 @@ dentro del archivo original.
 > three times faster than its main competitors, merge sort and heapsort."*
 
 Algunos ejemplos de diálogo de este programa serían:
+
+> resumen.txt
+
+    a 16
+    e 29
+    i 27
+    o 22
+    u 5
