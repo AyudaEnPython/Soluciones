@@ -10,11 +10,18 @@ texto = "El 23 de mayo de 1973 se inauguró el edificio CPM, el cual" \
 
 Resultado: 23 + 1773 + 1300 = 3296
 """
+import re
 from unittest import main, TestCase
+
+REGEX = re.compile(r'\d+(?:\.\d+)?')
 
 
 def solver(s: str) -> int:
     return sum(int(x) for x in s.split() if x.isdigit())
+
+
+def regex_solver(s: str) -> int:
+    return sum(float(x) for x in REGEX.findall(s))
 
 
 def main_():
@@ -29,12 +36,19 @@ class Test(TestCase):
             " se encontraba en la calle Rawson al 1300", 3296),
         ("La última versión estable fue el 4 de octubre del 2021", 2025),
     )
+    data_decimals = (
+        ("Hoy es 11.33 de lo que sea 2021..", 2032.33),
+    )
 
     def test_solver(self):
         for text, expected in self.data:
             self.assertEqual(solver(text), expected)
 
+    def test_regex_solver(self):
+        for text, expected in self.data_decimals:
+            self.assertEqual(regex_solver(text), expected)
+
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
+    #main() # uncomment this line and comment the next one to run tests
     main_()
