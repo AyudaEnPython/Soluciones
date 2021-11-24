@@ -13,7 +13,7 @@ Resultado: 23 + 1773 + 1300 = 3296
 import re
 from unittest import main, TestCase
 
-REGEX = re.compile(r'\d+(?:\.\d+)?')
+REGEX = re.compile(r"[-+]?\d*\.?\d+|[-+]?\d+")
 
 
 def solver(s: str) -> int:
@@ -38,6 +38,7 @@ class Test(TestCase):
     )
     data_decimals = (
         ("Hoy es 11.33 de lo que sea 2021..", 2032.33),
+        ("Un 10.5 en -20 +15 del test #3", 8.5),
     )
 
     def test_solver(self):
