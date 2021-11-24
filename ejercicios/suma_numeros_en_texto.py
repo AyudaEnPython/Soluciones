@@ -39,6 +39,7 @@ class Test(TestCase):
     data_decimals = (
         ("Hoy es 11.33 de lo que sea 2021..", 2032.33),
         ("Un 10.5 en -20 +15 del test #3", 8.5),
+        ("t3xT0#&_+A1I3n4d0..-1 *-2-0", 8),
     )
 
     def test_solver(self):
@@ -51,5 +52,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    #main() # uncomment this line and comment the next one to run tests
+    # main() # uncomment this line and comment the next one to run tests
     main_()
