@@ -39,7 +39,7 @@ cur = conn.cursor()
 cur.execute('DROP TABLE IF EXISTS Counts')
 cur.execute('CREATE TABLE Counts (org TEXT, count INTEGER)')
 
-fn = "py4e/mbox.txt"
+fn = "py4e/data/mbox.txt"
 
 fh = open(fn)
 for line in fh:

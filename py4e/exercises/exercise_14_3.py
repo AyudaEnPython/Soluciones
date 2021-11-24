@@ -101,7 +101,7 @@ CREATE TABLE Track (
 );
 ''')
 
-fn = "py4e/Library.xml"
+fn = "py4e/data/Library.xml"
 
 def lookup(d, key):
     found = False

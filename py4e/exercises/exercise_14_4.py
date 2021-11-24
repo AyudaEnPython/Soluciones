@@ -57,7 +57,7 @@ CREATE TABLE Member (
 )
 ''')
 
-fn = "py4e/roster_data.json"
+fn = "py4e/data/roster_data.json"
 
 str_data = open(fn).read()
 json_data = json.loads(str_data)
