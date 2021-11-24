@@ -44,8 +44,7 @@ Ejemplo estimación tipo de cambio:
 from dataclasses import dataclass
 from unittest import main, TestCase
 # pip install prototools
-from prototools.entradas import entrada_float
-from prototools.menu import EzMenu
+from prototools import float_input, Menu
 
 
 def cambio_a_futuro(tc, tiL, tiE, n):
@@ -73,35 +72,28 @@ class Conversor:
 
 
 def tasa_interes(conversor: Conversor) -> None:
-    conversor.til = entrada_float("Tasa de interés local: ")
-    conversor.tie = entrada_float("Tasa de interés extranjera: ")
+    conversor.til = float_input("Tasa de interés local: ")
+    conversor.tie = float_input("Tasa de interés extranjera: ")
     print(conversor.calcular())
 
 
 def tipo_cambio(conversor: Conversor) -> None:
-    conversor.tc = entrada_float("Tipo de cambio: ")
+    conversor.tc = float_input("Tipo de cambio: ")
     print(conversor.calcular())
 
 
 def dias_futuro(conversor: Conversor) -> None:
-    conversor.n = entrada_float("Días a futuro: ")
+    conversor.n = float_input("Días a futuro: ")
     print(conversor.calcular())
 
 
 def main_loop():
     conversor = Conversor(20.4833, 4.25, 0.25, 200)
-    menu = EzMenu()
-    menu.titulo("Tipo de cambio en el futuro")
-    menu.agregar_opciones(
-        "Tasas de interés",
-        "Tipo de cambio actual",
-        "Número de días a futuro",
-        "Salir",
-    )
-    menu.agregar_funciones(
-        lambda: tasa_interes(conversor),
-        lambda: tipo_cambio(conversor),
-        lambda: dias_futuro(conversor),
+    menu = Menu("Tipo de cambio en el futuro")
+    menu.add_options(
+        ("Tasas de interés", lambda: tasa_interes(conversor)),
+        ("Tipo de cambio actual", lambda: tipo_cambio(conversor)),
+        ("Número de días a futuro", lambda: dias_futuro(conversor)),
     )
     menu.run()
 

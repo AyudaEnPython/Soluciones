@@ -1,34 +1,32 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
-
-Conversor de temperatura
-
-TODO: add docstrings and typing.
 """
-from prototools import menu
-from prototools.menu import EzMenu
-from prototools.entradas import entrada_float
+from prototools import Menu, float_input
+from typing import Callable
 
 
-def _fahrenheit_to_celsius(F):
+def datos(msg: str, f: Callable):
+    data = float_input(msg)
+    print(f(data))
+
+
+def fahrenheit_to_celsius(F: float) -> float:
     return (F - 32)*(5/9)
 
 
-def _celsius_to_fahrenheit(C):
+def celsius_to_fahrenheit(C: float) -> float:
     return (C * 9/5)+32
 
 
-def f_c():
-    grados = entrada_float("Temperatura (°F): ")
-    print(_fahrenheit_to_celsius(grados))
-
-
-def c_f():
-    grados = entrada_float("Temperatura (°C): ")
-    print(_celsius_to_fahrenheit(grados))
+def main():
+    menu = Menu("Conversor de Temperatura")
+    menu.add_options(
+        ("Fahrenheit a Celsius",
+        lambda: datos("Temperatura (°F): ", fahrenheit_to_celsius)),
+        ("Celsius a Fahrenheit",
+        lambda: datos("Temperatura (°C): ", celsius_to_fahrenheit)),
+    )
+    menu.run()
 
 
 if __name__ == "__main__":
-    menu = EzMenu()
-    menu.agregar_opciones("De F° a °C", "De °C a °F", "Salir")
-    menu.agregar_funciones(f_c, c_f)
-    menu.run()
+    main()
