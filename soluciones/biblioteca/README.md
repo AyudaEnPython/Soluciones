@@ -1,37 +1,23 @@
 Según el diagrama, los volúmenes de una biblioteca *Volumen* pueden ser
 de dos tipos: *Book* o *Newspaper*
 
-                      ,-------------------------------.                       
-                      |Library                        |                       
-                      |-------------------------------|                       
-                      |- name                         |                       
-                      |- address                      |                       
-                      |- volumens: Volumen[0..*]      |                       
-                      |+ __init__(self, name, address)|                       
-                      |+ __str__(self)                |                       
-                      |+ add_volumen(self, volumen)   |                       
-                      |+ remove_volumen(self, id)     |                       
-                      |+ save_volumens(self)          |                       
-                      `-------------------------------'                       
-                                       |                                      
-                                       |                                      
-                       ,------------------------------.                       
-                       |Volumen                       |                       
-                       |------------------------------|                       
-                       |- id                          |                       
-                       |- name                        |                       
-                       |+ __init__(self, name, number)|                       
-                       |+ __str__(self)               |                       
-                       `------------------------------'                       
-                                   /           \                             
-    ,------------------------------------.  ,------------------------------------.
-    |Book                                |  |Newspaper                           |
-    |------------------------------------|  |------------------------------------|
-    |- isbn_code                         |  |- issn_code                         |
-    |+ __init__(self, name, number, isbn)|  |+ __init__(self, name, number, issn)|
-    |+ __str__(self)                     |  |+ __str__(self)                     |
-    `------------------------------------'  `------------------------------------' 
-
+                     ,----------------------------.
+                     |Library                     |
+         ,-------.   |----------------------------|
+         |Volumen|   |- name                      |
+         |-------|   |- address                   |
+         |- id   |---|- volumens: Volumen[0..*]   |
+         |- name |   |+ add_volumen(self, volumen)|
+         `-------'   |+ remove_volumen(self, id)  |
+           /    \    |+ save_volumens(self)       |
+          /      \   `----------------------------'
+         /        \                               
+        /          \                             
+    ,-----------.  ,-----------.                       
+    |Book       |  |Newspaper  |                       
+    |-----------|  |-----------|                       
+    |- isbn_code|  |- issn_code|                       
+    `-----------'  `-----------' 
 
 Se pide lo siguiente:
 
