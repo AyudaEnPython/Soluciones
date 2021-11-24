@@ -39,10 +39,8 @@ from typing import Iterable, List
 from matplotlib import pyplot as plt
 import pandas as pd
 # pip install prototools
-from prototools.entradas import entrada_float
-from prototools.utils import continuar
-from prototools.constantes import MESES
-from prototools.menu import EzMenu
+from prototools import int_input, Menu, MESES
+from prototools.utils import ask_to_finish
 
 
 def _histograma(
@@ -125,7 +123,7 @@ def _cargar_cajero() -> Cajero:
     data = {}
     nombre = input("Ingrese el nombre del cajero: ")
     for mes in MESES:
-        data[mes] = entrada_float(
+        data[mes] = int_input(
             f"Horas trabajadas en {mes}: ", min=0, max=240,
         )
     return Cajero(nombre, data)
@@ -136,7 +134,7 @@ def cargar_personal() -> Tienda:
     personal = []
     while True:
         personal.append(_cargar_cajero())
-        if not continuar():
+        if not ask_to_finish(lang="es"):
             break
     return Tienda(personal)
 
@@ -150,23 +148,20 @@ def load_random_data() -> Tienda:
 
 
 def main():
-    tienda = cargar_personal() # load_random_data() 
-    menu = EzMenu()
-    menu.agregar_opciones(
-        "Mostrar datos",
-        "Mejor cajero",
-        "Mes con mayor horas trabajadas",
-        "Histograma frecuencias total mensual",
-        "Histograma frecuencias total por cajero",
-        "Salir",
-    )
-    menu.agregar_funciones(
-        lambda: print(tienda.mostrar()),
-        lambda: print(tienda.cajero_mas_trabajador()),
-        lambda: print(tienda.mes_con_mas_horas()),
-        lambda: tienda.histograma_frecuencias_total_mensual(),
-        lambda: tienda.histograma_frecuencias_total_por_cajero(),
-        lambda: exit(),
+    #tienda = load_random_data()
+    tienda = cargar_personal()
+    menu = Menu()
+    menu.add_options(
+        ("Mostrar datos",
+        lambda: print(tienda.mostrar())),
+        ("Mejor cajero",
+        lambda: print(tienda.cajero_mas_trabajador())),
+        ("Mes con mayor horas trabajadas",
+        lambda: print(tienda.mes_con_mas_horas())),
+        ("Histograma frecuencias total mensual",
+        lambda: tienda.histograma_frecuencias_total_mensual()),
+        ("Histograma frecuencias total por cajero",
+        lambda: tienda.histograma_frecuencias_total_por_cajero()),
     )
     menu.run()
 
