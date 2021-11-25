@@ -2,8 +2,7 @@
 """
 from cmath import sqrt
 # pip install prototools
-from prototools.menu import EzMenu
-from prototools.entradas import entrada_int
+from prototools import Menu, int_input
 
 sol1 = lambda a, b, c: (-b + sqrt(b ** 2 - 4 * a * c)) / (2 * a)
 sol2 = lambda a, b, c: (-b - sqrt(b ** 2 - 4 * a * c)) / (2 * a)
@@ -12,25 +11,21 @@ area, sum_sqrt = lambda b, h: b * h / 2, lambda x, y: (x + y) ** 0.5
 
 
 def main():
-    menu = EzMenu(ancho=80)
-    menu.titulo("Menu de opciones")
-    menu.agregar_opciones(
-        "Raíz cuadrada de la suma de dos números",
-        "Solución de ecuación de 2° grado",
-        "Área de un triángulo",
-        "Salir",
-    )
-    menu.agregar_funciones(
+    menu = Menu()
+    menu.add_options(
+        ("Raíz cuadrada de la suma de dos números",
         lambda: print(sum_sqrt(
-            entrada_int("Primer número: "),
-            entrada_int("Segundo número: "))),
+            int_input("Primer número: "),
+            int_input("Segundo número: ")))),
+        ("Solución de ecuación de 2° grado",
         lambda: print(sol(
-            entrada_int("Coeficiente a: "),
-            entrada_int("Coeficiente b: "),
-            entrada_int("Coeficiente c: "))),
+            int_input("a: "),
+            int_input("b: "),
+            int_input("c: ")))),
+        ("Área de un triángulo",
         lambda: print(area(
-            entrada_int("Base: "),
-            entrada_int("Altura: "))),
+            int_input("Base: "),
+            int_input("Altura: ")))),
     )
     menu.run()
 
