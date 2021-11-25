@@ -1,4 +1,6 @@
-"""Solucion completa en:
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+Solucion completa en:
 https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/vacaciones.py
 """
 
