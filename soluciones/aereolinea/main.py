@@ -1,6 +1,8 @@
-"""AyudaEnPython: https://www.facebook.com/groups/ayudapython"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-from prototools.menu import EzMenu
+NOTE: If there's a bug, report it asap.
+"""
+from prototools import Menu
 
 from models import Avion, Pasajero, Tripulante, Vuelo
 from utils import load_data
@@ -25,21 +27,15 @@ def _informacion():
 
 def main():
     vuelo = _informacion()
-    menu = EzMenu()
-    menu.agregar_opciones(
-        "Mostrar información",
-        "Listar pasajeros",
-        "Listar tripulantes",
-        "Buscar pasajero",
-        "Bajar pasajero",
-        "Salir"
-    )
-    menu.agregar_funciones(
-        lambda: vuelo.mostrar_informacion(),
-        lambda: vuelo.avion.mostrar_pasajeros(),
-        lambda: vuelo.avion.mostrar_tripulantes(),
-        lambda: print(vuelo.avion.buscar_pasajero(input("dni: "))),
-        lambda: vuelo.avion.bajar_pasajero(input("dni: ")),
+    menu = Menu()
+    menu.add_options(
+        ("Mostrar información", lambda: vuelo.mostrar_informacion()),
+        ("Listar pasajeros", lambda: vuelo.avion.mostrar_pasajeros()),
+        ("Listar tripulantes", lambda: vuelo.avion.mostrar_tripulantes()),
+        ("Buscar pasajero",
+            lambda: print(vuelo.avion.buscar_pasajero(input("DNI: ")))),
+        ("Bajar pasajero",
+            lambda: vuelo.avion.bajar_pasajero(input("DNI: "))),
     )
     menu.run()
 
