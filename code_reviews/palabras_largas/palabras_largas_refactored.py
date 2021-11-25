@@ -3,7 +3,8 @@
 Solución completa en:
 https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/palabras_largas.py
 """
-from prototools.entradas import entrada_int
+# pip install prototools
+from prototools import int_input
 
 
 def solver(s: str, n: int) -> bool:
@@ -12,7 +13,7 @@ def solver(s: str, n: int) -> bool:
 
 def main():
     s = input("Ingresar cadena: ")
-    n = entrada_int("k: ", min=1) # pip install prototools
+    n = int_input("k: ", min=1)
     print("Hay palabras largas" if solver(s, n) else "No hay palabras largas")
 
 
