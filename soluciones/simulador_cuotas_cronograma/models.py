@@ -3,11 +3,9 @@
 from dataclasses import dataclass, field
 from typing import Any, List
 
-from prototools.experimental import partir
-
 from utils import _tem, _cuota_mensual, diferencia_dias, convertir_fecha, sumar_mes
 # pip install prototools
-from prototools.utils import RangeDict
+from prototools import RangeDict
 
 DATA = RangeDict(
     {
