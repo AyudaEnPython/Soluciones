@@ -57,16 +57,15 @@ El capital en la primera cuota es el monto del préstamo:
 amortizacion = cuota - intereses de la cuota
 Desde la segunda cuota:
 capital = capital de cuota anterior - amortizacion de cuota anterior
+
+NOTE: If there's a bug, please report it asap.
 """
 
 from models import Cliente, Cuota, Cronograma
 
 from utils import convertir_fecha, show
 # pip install prototools
-from prototools.entradas import entrada_float, entrada_choice, entrada_fecha
-from prototools.experimental import main_loop
-from prototools.utils import continuar
-
+from prototools import float_input, choice_input, date_input, main_loop
 
 def _registrar_cliente():
     cliente = Cliente(
@@ -79,9 +78,9 @@ def _registrar_cliente():
 
 def _registrar_cuota():
     cuota = Cuota(
-        monto_prestamo=entrada_float("Préstamo: ", min=5_000, max=30_000),
-        dias_pago=entrada_choice(("15", "25"), "Días de pago: "),
-        fecha=convertir_fecha(entrada_fecha("de desembolso", "-")),
+        monto_prestamo=float_input("Préstamo: ", min=5_000, max=30_000),
+        dias_pago=choice_input(("15", "25"), "Días de pago: "),
+        fecha=convertir_fecha(date_input("de desembolso", "-")),
     )
     return cuota
 
@@ -94,4 +93,4 @@ def procesar():
 
 
 if __name__ == "__main__":
-    main_loop(procesar, continuar)
+    main_loop(procesar)

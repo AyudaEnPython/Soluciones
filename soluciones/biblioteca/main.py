@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from typing import Dict
 from pandas import DataFrame
 from random import choices

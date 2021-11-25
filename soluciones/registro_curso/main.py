@@ -18,12 +18,12 @@ estudiante en forma privada, implemente todos los métodos o
 comportamientos necesarios para que se permita el buen trabajao de este
 mini-sistema.
 
-TODO: still needs some work
+TODO: still needs some work, if there's a bug, report it asap.
 """
 from dataclasses import dataclass, field
 from typing import List
-
-from prototools.menu import EzMenu
+# pip install prototools
+from prototools import Menu
 
 
 @dataclass
@@ -135,30 +135,25 @@ class Sistema:
 
 if __name__ == "__main__":
     sistema = Sistema()
-    menu = EzMenu()
-    menu.agregar_opciones(
-        "Crear curso",
-        "Buscar curso",
-        "Eliminar curso",
-        "Agregar estudiante",
-        "Informacion de estudiante",
-    )
-    menu.agregar_funciones(
+    menu = Menu()
+    menu.add_options(
+        ("Crear curso",
         lambda: sistema.agregar_curso(
-            Curso(input("Codigo: "), input("Nombre: "), input("Semestre: "))),
-        lambda: print(sistema.buscar_curso(input("Codigo: "))),
-        lambda: sistema.eliminar_curso(input("Codigo: ")),
+            Curso(input("Código: "), input("Nombre: "), input("Semestre: ")))),
+        ("Buscar curso",
+        lambda: print(sistema.buscar_curso(input("Código: ")))),
+        ("Eliminar curso",
+        lambda: sistema.eliminar_curso(input("Código: "))),
+        ("Agregar estudiante",
         lambda: sistema.agregar_estudiante(
-            input("Codigo: "),
+            input("Código: "),
             Estudiante(input("DNI: "),
             input("Nombre: "),
-            input("Direccion: "),
-            input("Telefono: "))
-        ),
+            input("Dirección: "),
+            input("Teléfono: ")))),
+        ("Información de estudiante", 
         lambda: print(
             sistema.buscar_curso(
-                input("Codigo: ")).buscar_estudiante(input("DNI: ")
-            )
-        )
+                input("Código: ")).buscar_estudiante(input("DNI: ")))),
     )
     menu.run()

@@ -1,35 +1,22 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from prototools.menu import EzMenu
+from prototools import Menu
 from app import App
 
 
 def main():
     app = App()
-    menu = EzMenu()
-    menu.titulo('Banco de materiales')
-    menu.agregar_opciones(
-        "Registrar alumno",
-        "Registrar material",
-        "Materiales disponibles por materia",
-        "Ver documento",
-        "Materiales disponibles por carrera",
-        "Materiales por calificación",
-        "Aportantes",
-        "Guadar datos",
-        "Cargar datos",
-        "Salir",
-    )
-    menu.agregar_funciones(
-        app.registrar_estudiante,
-        app.registrar_material,
-        app.materiales_disponibles,
-        app.ver_documento,
-        app.materiales_por_carrera,
-        app.materiales_por_calificacion,
-        app.aportantes,
-        app.save,
-        app.load,
+    menu = Menu("Banco de Materiales")
+    menu.add_options(
+        ("Registrar alumno", app.registrar_estudiante),
+        ("Registrar material", app.registrar_material),
+        ("Materiales disponibles por materia", app.materiales_disponibles),
+        ("Ver documento", app.ver_documento),
+        ("Materiales disponibles por carrera",
+            app.materiales_disponibles_carrera),
+        ("Aportantes", app.aportantes),
+        ("Guardar datos", app.save),
+        ("Cargar datos", app.load),
     )
     menu.run()
 
