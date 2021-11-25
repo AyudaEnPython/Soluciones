@@ -8,7 +8,6 @@ la operación.
 En caso se ingrese un cadena que no se puede operar imprimir un mensaje
 de error.
 """
-
 from typing import Callable, Dict
 
 from operadores import suma, resta, multiplicacion, division
