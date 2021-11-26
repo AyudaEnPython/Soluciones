@@ -24,14 +24,27 @@ def calcular_nota(
     :return: Nota del alumno.
     :rtype: int
     """
-    return sum(puntos if r == a else 0 for r, a in zip(respuestas, alumno))
+    nota = correctas = incorrectas = 0
+    for r, a in zip(respuestas, alumno):
+        if r == a:
+            correctas += 1
+            nota += puntos
+        else:
+            incorrectas += 1
+        
+    return correctas, incorrectas, nota
 
 
 def main_():
-    respuestas = [True, False, True, False, True, True, False, True, False, False]
-    alumno     = [True, False, True, True, False, True, False, False, False, False]
-
-    nota = calcular_nota(respuestas, alumno)
+    respuestas = [
+        True, False, True, False, True, True, False, True, False, False
+    ]
+    alumno = [
+        True, False, True, True, False, True, False, False, False, False
+    ]
+    correctas, incorrectas, nota = calcular_nota(respuestas, alumno)
+    print(f"Correctas: {correctas}")
+    print(f"Incorrectas: {incorrectas}")
     print(f"Nota: {nota}")
 
 
@@ -43,23 +56,24 @@ class Test(TestCase):
                 [True, False, True, False, True, True, False, True, False, False],
                 [True, False, True, True, False, True, False, False, False, False]
             ),
-            14
+            (7, 3, 14),
         )
         self.assertEqual(
             calcular_nota(
                 [True, False, True, False, True, True, False, True, False, False],
                 [True, False, True, False, True, True, False, True, False, False],
             ),
-            20
+            (10, 0, 20),
         )
         self.assertEqual(
             calcular_nota(
                 [True, False, True, False, True, True, False, True, False, False],
                 [False, True, False, True, False, False, True, False, True, True],
             ),
-            0
+            (0, 10, 0),
         )
 
 
 if __name__ == '__main__':
-    main()
+    # main() # uncomment this line and comment the next one to run the tests
+    main_()
