@@ -4,7 +4,7 @@ segundos. Calcular y mostrar el número total de segundos representados
 por esta duración.
 """
 import doctest
-from random import randint
+from random import randint as rnd
 
 
 def en_segundos(tiempo: str) -> int:
@@ -39,7 +39,7 @@ def obtener_tiempo_usuario(dias: int = 7) -> str:
     :return: Tiempo aleatorio
     :rtype: str
     """
-    return f"{randint(0, dias)}:{randint(0, 24)}:{randint(0, 12)}:{randint(0, 60)}"
+    return f"{rnd(0, dias)}:{rnd(0, 24)}:{rnd(0, 12)}:{rnd(0, 60)}"
 
 
 def main():
