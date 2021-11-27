@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Escribir un progrma para ayudar a una empresa que desea asignar sueldos
 para los cargos de sus trabajadores.
 
