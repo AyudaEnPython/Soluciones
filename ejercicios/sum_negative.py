@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Given a list of numbers, stop processing input after the cumulative sum
 of all the input becomes negative.
 
@@ -23,7 +24,6 @@ import io
 from textwrap import dedent
 from unittest import main, TestCase
 from unittest.mock import patch
-
 
 data = [1, 2, 88, -100, 49]
 
