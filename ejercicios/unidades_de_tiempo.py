@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Leer una duración del usuario como un número de días, horas, minutos y
 segundos. Calcular y mostrar el número total de segundos representados
 por esta duración.
