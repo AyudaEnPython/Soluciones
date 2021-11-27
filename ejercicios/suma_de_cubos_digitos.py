@@ -23,7 +23,7 @@ E.g., para el número 333:
 from unittest import main, TestCase
 
 # > pip install prototools
-from prototools.entradas import entrada_int
+from prototools import int_input
 
 
 def es_divisible(a: int, b: int) -> bool:
@@ -55,9 +55,9 @@ def suma_de_cubos(n: int) -> int:
     return r
 
 
-def calcular(): # it uses entrada_int from prototools library
+def calcular(): # it uses int_input from prototools library
     while True:
-        n = entrada_int("Ingresar un número: ")
+        n = int_input("Ingresar un número: ")
         if es_divisible(n, 3):
             break
         print("Ingresar un número divisible entre 3")
