@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Números pares / impares
 Nota: No esta permitido usar ningún método de Python para manipulación
 de listas/tuplas excepto el uso de len.

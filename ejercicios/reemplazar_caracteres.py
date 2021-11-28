@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Reemplaza pares de caracteres.
 '30' -> 'a'
 '55' -> 'b'
@@ -14,7 +15,6 @@ TODO: add complete description of the exercise (current description is
     based on assumptions)
 """
 from unittest import main, TestCase
-
 
 analizador = {
     "30": "a",

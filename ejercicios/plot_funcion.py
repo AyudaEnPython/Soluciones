@@ -12,8 +12,7 @@ Nota: El enunciado es muy general, debería ser más específico el
 from matplotlib import pyplot as plt
 
 
-def f(x):
-    return x**2
+def f(x): return x**2
 
 
 x = range(-10, 11)

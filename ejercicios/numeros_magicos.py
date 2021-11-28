@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 El profesor Xyoby del área de matemáticas está pidiendo tu ayuda para
 encontrar números mágicos. Un número mágico (N) es aquel que la suma de
 todos los numeros primos entre 1 y N (incluyendo N) es divisible entre

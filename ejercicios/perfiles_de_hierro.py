@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Una fabrica dedicada a la producción de perfiles de hierro posee una linea 
 de producción donde se deben garantizar la calidad de los perfiles, una 
 forma de garantizar la calidad es el uso de sensores tipo barrera que

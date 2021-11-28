@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Implementar un algoritmo que reciba números enteros hasta que se
 ingrese el valor cero (0) y los guarde en una lista.
 

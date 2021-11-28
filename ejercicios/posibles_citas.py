@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Wally busca novia y quiere que alguien que sea mayor de 30, que le
 interese el arte y que viva en Mendoza. Escribir un programa que le
 permita, dada la siguiente informacion, buscar y encontrar quienes

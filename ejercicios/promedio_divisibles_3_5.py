@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Elaborar un algoritmo que imprima el promedio de los primeros N números
 positivos que son divisibles entre 3 y 5 comenzando con el número 0.
 Recuerde validadr N. Recuerde que puede utilizar el operador %.

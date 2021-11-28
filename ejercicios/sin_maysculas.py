@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Desarrollar una función que reciba una cadena de texto y que retorne la misma
 cadena sin letras en mayúscula.
 
@@ -6,7 +7,6 @@ cadena sin letras en mayúscula.
 'uestro planeta debe cuidarse. agámoslo .'
 """
 from unittest import main, TestCase
-
 
 mensaje = "Nuestro planeta debe cuidarse. Hagámoslo HOY."
 

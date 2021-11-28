@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Tu labor en esta ocasión es ayudar a Eren Jaeger. Para ello, debes
 determinar por él si ha aprobado el Programa Formativo como soldado
 o no para poder formar parte de la Legión de Reconocimiento. La única

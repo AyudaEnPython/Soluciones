@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Calcular el cuadrado de un número si este es impar o el cubo
 si el número es par.
 

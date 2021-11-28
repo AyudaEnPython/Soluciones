@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 # ---------------------------------------------------------------------
 Enunciado original:
 Utilizando diseño modular, escribe un módulo que recibe dos números

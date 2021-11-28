@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Escribir un código que solicite:
     - El nombre completo de una persona.
     - Un número entero.
