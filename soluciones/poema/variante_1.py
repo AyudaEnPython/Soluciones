@@ -26,9 +26,9 @@ def analizar(data: Generator[str, None, None]) -> str:
 
 
 def main():
-    data = _read_data('poema.txt')
+    data = _read_data('poema_1.txt')
     data = analizar(data)
-    _write_data('palabras.txt', data)
+    _write_data('palabras_1.txt', data)
 
 
 if __name__ == '__main__':
