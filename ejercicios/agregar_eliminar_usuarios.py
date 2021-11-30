@@ -17,9 +17,8 @@ mensaje indicando que la entrada es incorrecta.
 from dataclasses import dataclass, field
 from typing import Dict
 # pip install prototools
-from prototools.menu import EzMenu
-from prototools.experimental import main_loop
-from prototools.utils import continuar, boxln
+from prototools import Menu, main_loop, text_align
+
 
 # https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/validar_correo.py
 def _validar_correo(usuario: str, dominio: str = '@calufa.com') -> bool:
@@ -54,13 +53,13 @@ class Sistema:
             print('Usuario no encontrado')
 
     def add_users(self) -> None:
-        main_loop(self._add_user, continuar)
-        boxln("Lista de usuarios", ancho=80)
+        main_loop(self._add_user)
+        text_align("Lista de usuarios")
         self._show_users()
 
     def delete_users(self) -> None:
-        main_loop(self._delete_user, continuar)
-        boxln("Lista de usuarios actualizada", ancho=80)
+        main_loop(self._delete_user)
+        text_align("Lista de usuarios actualizada")
         self._show_users()    
 
     def _show_users(self) -> None:
@@ -70,16 +69,10 @@ class Sistema:
 
 def main():
     sistema = Sistema()
-    menu = EzMenu(ancho=80)
-    menu.titulo("Bienvenidos al CTPN CALUFA")
-    menu.agregar_opciones(
-        "Agregar usuarios",
-        "Eliminar usuarios",
-        "Salir",
-    )
-    menu.agregar_funciones(
-        sistema.add_users,
-        sistema.delete_users,
+    menu = Menu("Bienvenidos al CTPN CALUFA")
+    menu.add_options(
+        ("Agregar usuarios", sistema.add_users),
+        ("Eliminar usuarios", sistema.delete_users),
     )
     menu.run()
 
