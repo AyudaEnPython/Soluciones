@@ -30,11 +30,14 @@ La salida de este programa sería:
     | Bronce: 1370                        |
     | La medalla más repartida fue: Plata |
     +-------------------------------------+
+
+TODO: add testcases
 """
 # pip install prototools
 from prototools import tabulate
+from typing import List, Dict
 
-m = [
+m: List[List[int, int, int]] = [
     [40, 35, 29],
     [39, 32, 28],
     [26, 33, 27],
@@ -42,9 +45,9 @@ m = [
     [22, 31, 27],
 ]
 
-medallas = ["Oro", "Plata", "Bronce"]
-max_ = [sum([i[j] for i in m]) for j in range(len(m[0]))]
-result = {k:v for k,v in zip(medallas, max_)}
+medallas: List[str, str, str] = ["Oro", "Plata", "Bronce"]
+max_: List[int, int, int] = [sum([i[j] for i in m]) for j in range(len(m[0]))]
+result: Dict[str, int] = {k:v for k,v in zip(medallas, max_)}
 
 # Opcional ===================================================================
 paises = ("Estados Unidos", "Rusia", "Inglaterra", "China", "Alemania")
