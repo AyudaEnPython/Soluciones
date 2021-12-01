@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Desarrolle herencia jerárquica en baase a una clase Poligono que tiene
 métodos abstractos area() y perimetro(). Implemente la clase Triangulo,
 Cuadrilatero, Pentagono, Hexagono y Octagono que extienda esta clase
