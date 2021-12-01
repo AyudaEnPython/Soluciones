@@ -39,14 +39,14 @@ es así, pueden colocar sus opiniones en "issues".
 * Bucles e Iteraciones
   * [Ejercicio 5.2](exercises/exercise_05_2.py)
 * Cadenas
-  * [Ejercicio 6.5](exercises/exercise_6_5.py)
+  * [Ejercicio 6.5](exercises/exercise_06_5.py)
 * Archivos
-  * [Ejercicio 7.2](exercises/exercise_7_2.py)
+  * [Ejercicio 7.2](exercises/exercise_07_2.py)
 * Listas
-  * [Ejercicio 8.4](exercises/exercise_8_4.py)
-  * [Ejercicio 8.5](exercises/exercise_8_5.py)
+  * [Ejercicio 8.4](exercises/exercise_08_4.py)
+  * [Ejercicio 8.5](exercises/exercise_08_5.py)
 * Diccionario
-  * [Ejercicio 9.4](exercises/exercise_9_4.py)
+  * [Ejercicio 9.4](exercises/exercise_09_4.py)
 * Tuplas
   * [Ejercicio 10.2](exercises/exercise_10_2.py)
 * Expresiones Regulares
