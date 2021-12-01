@@ -19,7 +19,7 @@ Considere ahora al función
 <img src="https://render.githubusercontent.com/render/math?math=\f(x) = x^2 %2B 6x %2B 3"> y
 que se desea calcular el área bajo la curva en
 <img src="https://render.githubusercontent.com/render/math?math=\ a {\leq} x {\leq} b">. Escribir
-programa con dos funciones:
+un programa con dos funciones:
 
 * `f()` que reciba un número real `x` y devuelva el resultado de evaluar dicho
   número en la función _*f*(x)_ de acuerdo con su definición.
