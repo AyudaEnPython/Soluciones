@@ -16,7 +16,7 @@ el tamaño de las particiones y
 un punto en cada partición.
 
 Considere ahora al función
-<img src="https://render.githubusercontent.com/render/math?math=f(x) = x^2 + 6x + 3"> y
+<img src="https://render.githubusercontent.com/render/math?math=\f(x) = x^2 %2B 6x %2B 3"> y
 que se desea calcular el área bajo la curva en
 <img src="https://render.githubusercontent.com/render/math?math=\ a {\leq} x {\leq} b">. Escribir
 programa con dos funciones:
