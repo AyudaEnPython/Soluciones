@@ -1,16 +1,16 @@
 # pip install prototools
 from typing import Any
-from prototools.entradas import entrada_float
+from prototools import float_input
 
 
 def ingresar_datos_lado(class_: type) -> None:
-    lado: float = entrada_float("Ingresar el lado: ")
+    lado: float = float_input("Ingresar el lado: ")
     _calcular(class_, lado)
 
 
 def ingresar_datos_base_altura(class_: type) -> None:
-    b: float = entrada_float("Ingresar la base: ")
-    h: float = entrada_float("Ingresar la altura: ")
+    b: float = float_input("Ingresar la base: ")
+    h: float = float_input("Ingresar la altura: ")
     _calcular(class_, b, h)
 
 

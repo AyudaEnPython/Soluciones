@@ -21,33 +21,30 @@ from models import (
     Rectangulo
 )
 from utils import ingresar_datos_base_altura, ingresar_datos_lado
-from prototools.menu import EzMenu
+from prototools import Menu
 
 
 def main():
-    menu = EzMenu()
-    menu.agregar_opciones(
-        "Triangulo",
-        "Cuadrilatero",
-        "Pentagono",
-        "Hexagono",
-        "Octagono",
-        "TrianguloIsoceles",
-        "TrianguloEquilatero",
-        "Cuadrado",
-        "Rectangulo",
-        "Salir"
-    )
-    menu.agregar_funciones(
-        lambda: ingresar_datos_base_altura(Triangulo),
-        lambda: ingresar_datos_base_altura(Cuadrilatero),
-        lambda: ingresar_datos_lado(Pentagono),
-        lambda: ingresar_datos_lado(Hexagono),
-        lambda: ingresar_datos_lado(Octagono),
-        lambda: ingresar_datos_base_altura(TrianguloIsoceles),
-        lambda: ingresar_datos_lado(TrianguloEquilatero),
-        lambda: ingresar_datos_lado(Cuadrado),
-        lambda: ingresar_datos_base_altura(Rectangulo),
+    menu = Menu()
+    menu.add_options(
+        ("Triángulo",
+            lambda: ingresar_datos_base_altura(Triangulo)),
+        ("Cuadrilátero",
+            lambda: ingresar_datos_base_altura(Cuadrilatero)),
+        ("Pentágono",
+            lambda: ingresar_datos_lado(Pentagono)),
+        ("Hexágono",
+            lambda: ingresar_datos_lado(Hexagono)),
+        ("Octágono",
+            lambda: ingresar_datos_lado(Octagono)),
+        ("Triángulo Isósceles",
+            lambda: ingresar_datos_base_altura(TrianguloIsoceles)),
+        ("Triángulo Equilátero",
+            lambda: ingresar_datos_lado(TrianguloEquilatero)),
+        ("Cuadrado",
+            lambda: ingresar_datos_lado(Cuadrado)),
+        ("Rectángulo",
+            lambda: ingresar_datos_base_altura(Rectangulo))
     )
     menu.run()
 
