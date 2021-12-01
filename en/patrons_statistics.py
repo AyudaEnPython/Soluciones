@@ -6,7 +6,7 @@ speakers are welcome.
 
 MONTHS = (
     "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    "July", "August", "September", "October", "November", "December",
 )
 
 data = []
@@ -18,6 +18,6 @@ most = max(data)
 least = min(data)
 average = sum(data) / len(data)
 
-print(f"{MONTHS[data.index(most)]} had the most patrons")
-print(f"{MONTHS[data.index(least)]} had the least patrons")
-print(f"The average monthly visitors are {average:.2f}")
+print(f"{MONTHS[data.index(most)]} had the most patrons.")
+print(f"{MONTHS[data.index(least)]} had the least patrons.")
+print(f"Average monthly visitors are {average:.2f}.")
