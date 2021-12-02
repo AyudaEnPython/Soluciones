@@ -18,8 +18,9 @@ se representa por el arreglo de números <img src="https://render.githubusercont
 <p align="center" width="100%">
 <img src="https://render.githubusercontent.com/render/math?math=a = [-5, 0, 10, 2, -3]">
 </p>
-Nótese que el número de coeficientes, es decir, la longuitud del arreglo es
-<img src="https://render.githubusercontent.com/render/math?math=n %2B 1"> (el grado del polinomio más uno)
+
+Nótese que el número de coeficientes, es decir, la longuitud del arreglo
+es <img src="https://render.githubusercontent.com/render/math?math=n %2B 1"> (el grado del polinomio más uno)
 y que <img src="https://render.githubusercontent.com/render/math?math=a_{k}"> es el
 cociente de <img src="https://render.githubusercontent.com/render/math?math=x^k">.
 
