@@ -90,48 +90,40 @@ http://tagangadives.blogspot.com/2011/03/sabes-cual-es-tu-tasa-de-consumo-de.htm
 
 TODO: needs to be change to last version of prototools.
 """
-from prototools.menu import EzMenu
-from prototools.entradas import entrada_float
-from prototools.utils import boxln
+from prototools import Menu, float_input, textbox
 
 
 def atmosferas():
-    profundidad = entrada_float("Ingresar profundidad: ", min=0)
-    boxln((profundidad/10) + 1, 40)
+    profundidad = float_input("Ingresar profundidad: ", min=0)
+    textbox((profundidad/10) + 1, 40)
 
 
 def sca():
-    capacidad = entrada_float("Ingresar capacidad: ", min=0)
-    profundidad = entrada_float("Ingresar profundidad: ", min=0)
-    tiempo = entrada_float("Ingresar tiempo: ", min=0)
-    bar = entrada_float("Ingresar bar: ", min=0)
-    boxln(round((bar * capacidad )/tiempo / ((profundidad/10) + 1), 1), 40)
+    capacidad = float_input("Ingresar capacidad: ", min=0)
+    profundidad = float_input("Ingresar profundidad: ", min=0)
+    tiempo = float_input("Ingresar tiempo: ", min=0)
+    bar = float_input("Ingresar bar: ", min=0)
+    textbox(round((bar * capacidad )/tiempo / ((profundidad/10) + 1), 1), 40)
 
 
 def consumo():
-    capacidad = entrada_float("Ingresar capacidad: ", min=0)
-    bar = entrada_float("Ingresar bar: ", min=0)
-    reserva = entrada_float("Ingresar reserva: ", min=0)
-    profundidad = entrada_float("Ingresar profundidad: ", min=0)
-    tiempo = entrada_float("Ingresar tiempo: ", min=0, max=180)
-    sca = entrada_float("Ingresar sca: ", min=0)
+    capacidad = float_input("Ingresar capacidad: ", min=0)
+    bar = float_input("Ingresar bar: ", min=0)
+    reserva = float_input("Ingresar reserva: ", min=0)
+    profundidad = float_input("Ingresar profundidad: ", min=0)
+    tiempo = float_input("Ingresar tiempo: ", min=0, max=180)
+    sca = float_input("Ingresar sca: ", min=0)
     
     disponible = capacidad * (bar - reserva)
     requerido = (((profundidad/10) + 1) * sca) * tiempo
-    boxln(f"Disponible: {disponible}\nRequerido: {requerido}", 40)
+    textbox(f"Disponible: {disponible}\nRequerido: {requerido}", 40)
 
 
 if __name__ == "__main__":
-    menu = EzMenu()
-    menu.agregar_opciones(
-        "Ley de Boyle",
-        "Calcular el SCA",
-        "Calcular el aire consumido",
-        "Salir"
-    )
-    menu.agregar_funciones(
-        atmosferas,
-        sca,
-        consumo,
+    menu = Menu()
+    menu.add_options(
+        ("Ley de Boyle", atmosferas),
+        ("Calcular el SCA", sca),
+        ("Calcular el aire consumido", consumo),
     )
     menu.run()
