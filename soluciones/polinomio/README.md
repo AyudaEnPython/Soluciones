@@ -1,9 +1,8 @@
 Un polinomio de una variable tiene la forma siguiente:
-<p align="center" width="100%">
+
 <img src="https://render.githubusercontent.com/render/math?math=P(x) = a_{n}x^n %2B a_{n-1}x^{n-1} %2B \ldots %2B a_{1}x %2B a_{0}, (a_{n} \gt 0)">
-</p>
-Si el exponente más grande de
-<img src="https://render.githubusercontent.com/render/math?math=x">
+
+Si el exponente más grande de <img src="https://render.githubusercontent.com/render/math?math=x">
 es
 <img src="https://render.githubusercontent.com/render/math?math=x^n">,
 se dice que el polinomio es de grado
