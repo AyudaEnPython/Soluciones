@@ -15,10 +15,11 @@ cada categoría.
 NOTE: No es tan claro el enunciado, se opta por implementar dos
     soluciones distintas (sin ingresar pesos e ingresándolos).
 """
+from typing import Dict, List, Tuple
 from prototools import int_input, float_input
 
 
-labels = (
+labels: Tuple[str] = (
     "menos de 40 kg",
     "entre 40 a 50 kg",
     "más de 50 kg y menos de 60 kg",
@@ -27,21 +28,23 @@ labels = (
 
 
 def main_sin_ingresar_pesos():
-    data = [0, 0, 0, 0]
-    n = int_input("Ingrese la cantidad de alumnos: ", min=0)
+    data: List[int] = [0, 0, 0, 0]
+    n: int = int_input("Ingrese la cantidad de alumnos: ", min=0)
     for i in range(len(labels)):
-        data[i] = float_input(f"Ingresar la cantidad de alumnos de {labels[i]}: ")
-    porcentajes = [data[i] / n * 100 for i in range(len(data))]
+        data[i] = float_input(
+            f"Ingresar la cantidad de alumnos de {labels[i]}: "
+        )
+    porcentajes: List[float] = [data[i] / n * 100 for i in range(len(data))]
     for i in range(len(labels)):
         if porcentajes[i] > 0:
             print(f"El {porcentajes[i]:.2f}% pesa {labels[i]}")
 
 
 def main_ingresando_pesos():
-    data = {k:v for k, v in zip(range(4), [0, 0, 0, 0])}
-    n = int_input("Ingrese la cantidad de alumnos: ", min=0)
+    data: Dict[int, float] = {k:v for k, v in zip(range(4), [0, 0, 0, 0])}
+    n: int = int_input("Ingrese la cantidad de alumnos: ", min=0)
     for _ in range(n):
-        peso = float_input("Ingrese el peso del alumno: ")
+        peso: float = float_input("Ingrese el peso del alumno: ")
         if peso < 40:
             data[0] += 1
         elif peso < 50:
@@ -51,7 +54,7 @@ def main_ingresando_pesos():
         else:
             data[3] += 1
     for k, v in data.items():
-        porcentaje = v / n * 100
+        porcentaje: float = v / n * 100
         if porcentaje > 0:
             print(f"El {porcentaje:.2f}% pesa {labels[k]}")
 
