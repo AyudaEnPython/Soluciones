@@ -15,7 +15,7 @@ def f(grado: int, coeficientes: List[int], x: float) -> float:
     :param x: valor de x
     :x type: float
     :return: valor del polinomio
-    :return type: float
+    :rtype: float
     """
     return sum(coeficientes[i] * x**i for i in range(grado + 1))
 
