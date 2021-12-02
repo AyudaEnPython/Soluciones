@@ -39,7 +39,7 @@ def alt():
         print("*"*i)
 
 
-def draw(n: int = 5, c: str = "*") -> None:
+def draw(n: int = 5, c: str = "* ") -> None:
     """Imprime una pirámide (rotada)
 
     :param n: Altura máxima de la pirámide
@@ -61,4 +61,4 @@ class Test(TestCase):
 
 if __name__ == "__main__":
     # main()
-    draw(5, "*")
+    draw(5)
