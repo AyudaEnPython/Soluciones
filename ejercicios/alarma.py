@@ -36,8 +36,8 @@ de los atributos al momento de añadir tiempo.
             +----------------------------------------+
 """
 from random import randint
-from prototools.menu import EzMenu
-from prototools.entradas import entrada_int
+from prototools import Menu, int_input
+
 
 
 class Reloj:
@@ -63,9 +63,9 @@ alarma = Reloj()
 alarmas = []
 
 def _entradas():
-    horas = entrada_int("Ingrese la hora: ", min=0, max=24)
-    minutos = entrada_int("Ingrese los minutos: ", min=0, max=59)
-    segundos = entrada_int("Ingrese los segundos: ", min=0, max=59)
+    horas = int_input("Ingrese la hora: ", min=0, max=24)
+    minutos = int_input("Ingrese los minutos: ", min=0, max=59)
+    segundos = int_input("Ingrese los segundos: ", min=0, max=59)
     return horas, minutos, segundos
 
 
@@ -109,21 +109,12 @@ def quitar_alarma():
 
 
 if __name__ == "__main__":
-    menu = EzMenu(ancho=40)
-    menu.titulo("Alarmas")
-    menu.agregar_opciones(
-        "ver alarmas activas",
-        "agregar nueva alarma",
-        "agregar alarma aleatoria",
-        "editar alarmas existente", 
-        "quitar alarma",
-        "salir",
-    )
-    menu.agregar_funciones(
-        ver_alarmas,
-        nueva_alarma,
-        alarma_aleatorio,
-        editar_alarma,
-        quitar_alarma,
+    menu = Menu("Alarmas")
+    menu.add_options(
+        ("Ver alarmas activas", ver_alarmas),
+        ("Agregar nueva alarma", nueva_alarma),
+        ("Agregar alarma aleatoria", alarma_aleatorio),
+        ("Editar alarma existente", editar_alarma),
+        ("Quitar alarma", quitar_alarma),
     )
     menu.run()
