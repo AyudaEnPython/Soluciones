@@ -21,7 +21,7 @@ def imc(peso: float, estatura: float) -> float:
 
     :param peso: Peso en kg
     :peso type: float
-    :param estatura: Estatura en cm
+    :param estatura: Estatura en m
     :estatura type: float
     :return: IMC
     :rtype: float
@@ -50,7 +50,7 @@ def solucion_a(imc: float) -> str:
         return "Obesity"
 
 
-def solucion_b(imc):
+def solucion_b(imc: float) -> str:
     """Devuelve una categoría de acuerdo al imc
 
     :param imc: Índice de masa corporal
@@ -67,6 +67,27 @@ def solucion_b(imc):
     return categories[True]
 
 
+def solucion_c(imc: float) -> str:
+    """Devuelve una categoría de acuerdo al imc
+
+    :param imc: Índice de masa corporal
+    :imc type: float
+    :return: Categoría
+    :rtype: str
+    """
+    categorias = {
+        imc < 16       : "criterio de ingreso hospitalario",
+        16 <= imc < 17 : "infrapeso",
+        17 <= imc < 18   : "bajo peso",
+        18 <= imc < 25   : "saludable",
+        25 <= imc < 30   : "sobrepeso",
+        30 <= imc < 35   : "sobrepeso crónico",
+        35 <= imc < 40   : "sobrepeso premórbida",
+        40 <= imc         : "obesidad mórbida",
+    }
+    return categorias[True]
+
+
 def solver():
     peso = float(input("Peso: "))
     estatura = float(input("Estatura: "))
@@ -74,11 +95,19 @@ def solver():
 
 
 def main_():
+    data = []
     n = int(input("Cantidad de personas: "))
     for _ in range(n):
         nombre = input("Nombre: ")
-        resultado = solver()
-        print(f"{nombre} -> {resultado}")
+        peso = float(input("Peso: "))
+        altura = float(input("Altura: "))
+        resultado = solucion_c(imc(peso, altura))
+        data.append((nombre, peso, altura, resultado))
+    for nombre, peso, altura, resultado in data:
+        print(
+            f"{nombre} pesa {peso}kg y mide {altura}m,",
+            f"tiene un IMC de {resultado}",
+        )
 
 
 class Test(TestCase):
