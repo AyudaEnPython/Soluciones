@@ -70,8 +70,15 @@ def solucion_b(imc):
 def solver():
     peso = float(input("Peso: "))
     estatura = float(input("Estatura: "))
-    salida = solucion_b(imc(peso, estatura))
-    print(salida)
+    return solucion_b(imc(peso, estatura))
+
+
+def main_():
+    n = int(input("Cantidad de personas: "))
+    for _ in range(n):
+        nombre = input("Nombre: ")
+        resultado = solver()
+        print(f"{nombre} -> {resultado}")
 
 
 class Test(TestCase):
@@ -87,7 +94,8 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    import doctest
+    #import doctest
 
-    doctest.testmod()
-    main()
+    #doctest.testmod()
+    #main()             # Uncomment the lines to run tests
+    main_()
