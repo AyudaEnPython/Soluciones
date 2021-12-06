@@ -15,6 +15,8 @@ que tome el peso y la altura de una persona como entrada y genere la
 categoría de IMC correspondiente.
 """
 from unittest import main, TestCase
+# pip install prototools
+from prototools import int_input, float_input
 
 
 def imc(peso: float, estatura: float) -> float:
@@ -79,12 +81,12 @@ def solucion_c(imc: float) -> str:
     categorias = {
         imc < 16       : "criterio de ingreso hospitalario",
         16 <= imc < 17 : "infrapeso",
-        17 <= imc < 18   : "bajo peso",
-        18 <= imc < 25   : "saludable",
-        25 <= imc < 30   : "sobrepeso",
-        30 <= imc < 35   : "sobrepeso crónico",
-        35 <= imc < 40   : "sobrepeso premórbida",
-        40 <= imc         : "obesidad mórbida",
+        17 <= imc < 18 : "bajo peso",
+        18 <= imc < 25 : "saludable",
+        25 <= imc < 30 : "sobrepeso",
+        30 <= imc < 35 : "sobrepeso crónico",
+        35 <= imc < 40 : "sobrepeso premórbida",
+        40 <= imc      : "obesidad mórbida",
     }
     return categorias[True]
 
@@ -95,19 +97,38 @@ def solver():
     return solucion_b(imc(peso, estatura))
 
 
-def main_():
+def _datos():
+    nombre = input("Nombre: ")
+    peso = float_input("Peso: ")
+    altura = float_input("Altura: ")
+    return nombre, peso, altura
+
+
+def main_list():
     data = []
-    n = int(input("Cantidad de personas: "))
+    n = int_input("Cantidad de personas: ", min=1)
     for _ in range(n):
-        nombre = input("Nombre: ")
-        peso = float(input("Peso: "))
-        altura = float(input("Altura: "))
+        nombre, peso, altura = _datos()
         resultado = solucion_c(imc(peso, altura))
         data.append((nombre, peso, altura, resultado))
     for nombre, peso, altura, resultado in data:
         print(
             f"{nombre} pesa {peso}kg y mide {altura}m,",
-            f"tiene un IMC de {resultado}",
+            f"tiene un IMC de {resultado}.",
+        )
+
+
+def main_dict():
+    data = {}
+    n = int_input("Cantidad de personas: ", min=1)
+    for _ in range(n):
+        nombre, peso, altura = _datos()
+        resultado = solucion_c(imc(peso, altura))
+        data[nombre] = (peso, altura, resultado)
+    for nombre, (peso, altura, resultado) in data.items():
+        print(
+            f"{nombre} pesa {peso}kg y mide {altura}m,",
+            f"tiene un IMC de {resultado}.",
         )
 
 
@@ -127,5 +148,6 @@ if __name__ == "__main__":
     #import doctest
 
     #doctest.testmod()
-    #main()             # Uncomment the lines to run tests
-    main_()
+    #main()             # Uncomment the above lines to run tests
+    #print(solver())    # for single solution without name
+    main_dict()         # or use main_list()
