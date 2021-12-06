@@ -33,6 +33,25 @@ def promedio(a: List[int], b: List[int], c: List[int]) -> List[int]:
     return list(map(avg, zip_longest(a, b, c)))
 
 
+# without typing, list comprehension, floor, map and zip_longest
+def promedio_(a, b, c): 
+    result = []
+    max_ = max(len(a), len(b), len(c))
+    while len(a) < max_:
+        a.append(None)
+    while len(b) < max_:
+        b.append(None)
+    while len(c) < max_:
+        c.append(None)
+    for i in range(max_):
+        aux = []
+        for j in (a[i], b[i], c[i]):
+            if j is not None:
+                aux.append(j)
+        result.append(int((sum(aux) / len(aux)) + 0.5))
+    return result
+
+
 def main_():
     a = random_list()
     b = random_list()
@@ -61,7 +80,10 @@ class Test(TestCase):
         for a, b, c, expected in self.data:
             self.assertEqual(promedio(a, b, c), expected)
 
+    def test_promedio_(self):
+        for a, b, c, expected in self.data:
+            self.assertEqual(promedio_(a, b, c), expected)
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run the test
-    main_()
+    main() # uncomment this line and comment the next one to run the test
+    # main_()
