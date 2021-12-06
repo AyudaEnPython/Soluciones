@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Escriba una clase Flowers que tiene tres propiedades, de tipo int, str
 y float, que respectivamente representa el nombre de la flor, su
 cantidad de pétalos y su precio. La clase debe incluir un método

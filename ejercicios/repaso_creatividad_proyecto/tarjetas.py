@@ -1,9 +1,10 @@
-"""
-Se opta por mejorar la clase TarjetaCredito, tanto en el docstring como
-en otros aspectos (property, typing, etc.).
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+NOTE: Se opta por mejorar la clase TarjetaCredito, tanto en el
+    docstring como en otros aspectos (property, typing, etc.).
 """
 from typing import List
-from prototools.validaciones import validar_float
+from prototools.validators import validate_float
 
 
 class TarjetaCredito:
@@ -88,7 +89,7 @@ class TarjetaCredito:
         :return: True si se pudo cargar, False en caso contrario.
         :rtype: bool
         """
-        precio = validar_float(precio)
+        precio = validate_float(precio)
         if precio + self._balance > self._limite:
             return False
         else:
@@ -101,7 +102,7 @@ class TarjetaCredito:
         :param monto: Monto a pagar.
         :monto type: float
         """
-        monto = validar_float(
+        monto = validate_float(
             monto, min=0, custom="El monto debe ser mayor a cero."
         )
         self._balance -= monto

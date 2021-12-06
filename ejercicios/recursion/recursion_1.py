@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Evaluar la siguiente función con un código que tome como valor inicial
 de “n” un valor dado por el usuario (recursividad)
 

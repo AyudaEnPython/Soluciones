@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 En un torneo de fútbol participan K equipos . El torneo se juega con el
 sistema de todos contra todos. Por cada partido disputado de dispone de
 la siguiente información.
@@ -13,7 +14,7 @@ por nro de equipo. Desarrollar un programa que imprima:
         solo uno).
 
 ---
-Nota: Los partidos ganados deben de ser igual a la cantidad de partidos
+NOTE: Los partidos ganados deben de ser igual a la cantidad de partidos
     perdidos y ambas cantidades sumadas deber ser igual a k(k-1):
     G + P + E = k(k-1) -> E = k(k-1) - (G + P)
 

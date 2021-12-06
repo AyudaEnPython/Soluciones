@@ -1,4 +1,6 @@
-"""Al igual que TarjetaCredito, se opta por mejorar la clase.
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+NOTE: Al igual que TarjetaCredito, se opta por mejorar la clase.
 """
 from tarjetas import TarjetaCredito
 

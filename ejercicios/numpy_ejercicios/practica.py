@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 1. Escribir el código necesario para crear un vector (Array Numpy) con
     los siguientes valores:
     [1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9]
