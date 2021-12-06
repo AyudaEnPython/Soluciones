@@ -84,6 +84,7 @@ class Test(TestCase):
         for a, b, c, expected in self.data:
             self.assertEqual(promedio_(a, b, c), expected)
 
+
 if __name__ == '__main__':
-    main() # uncomment this line and comment the next one to run the test
-    # main_()
+    # main() # uncomment this line and comment the next one to run the test
+    main_()
