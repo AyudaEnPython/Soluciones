@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Original
 --------
 Generar una lista (el tamaño de la lista debe de generarse de manera

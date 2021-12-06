@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Lee la hora actual del ordenador y la devuelve en un formato legible.
 """
 

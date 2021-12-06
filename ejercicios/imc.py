@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 El seguimiento del IMC es una forma útil de comprobar si se mantiene un
 peso saludable. Se calcula a partir del peso y la altura de una persona,
 utilizando esta fórmula: peso / altura²

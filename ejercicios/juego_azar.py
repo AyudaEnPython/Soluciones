@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Elaborar un programa que simule un juego, donde se generen los 6
 números al azar, y se generen hasta 100 jugadores. El programa debe
 indicar si alguno ganó el premio principal, o cuántos consiguieron 5 o
