@@ -5,33 +5,69 @@ from typing import List
 
 
 def grado(p: int) -> int:
-    """Calcula el grado de un polinomio"""
+    """Calcula el grado de un polinomio
+    
+    :param p: polinomio
+    :p type: list
+    :return: grado del polinomio
+    :rtype: int
+    """
     return len(p)-1
 
 
 def evaluar(p: List[float], x: float) -> float:
-    """Evalua un polinomio en x"""
+    """Evalua un polinomio en x
+    
+    :param p: polinomio
+    :p type: list
+    :param x: valor a evaluar
+    :x type: float
+    :return: valor del polinomio en x
+    :rtype: float
+    """
     return round(sum(p[i]*x**i for i in range(len(p))), 5)
 
 
 def sumar_polinomios(p: List[float], q: List[float]) -> List[float]:
-    """Suma dos polinomios"""
-    max_ = max(len(p), len(q))
+    """Suma dos polinomios
+    
+    :param p: polinomio
+    :p type: list
+    :param q: polinomio
+    :q type: list
+    :return: polinomio resultante
+    :rtype: list
+    """
+    max_: int = max(len(p), len(q))
     p += [0]*(max_ - len(p))
     q += [0]*(max_ - len(q))
     return [p[i]+q[i] for i in range(max_)]
 
 
 def derivar_polinomio(p: List[float]) -> List[float]:
-    """Deriva un polinomio"""
+    """Deriva un polinomio
+    
+    :param p: polinomio
+    :p type: list
+    :return: polinomio derivado
+    :rtype: list
+    """
     return [p[i]*i for i in range(1, len(p))]
 
 
 def multiplicar_polinomios(p: List[float], q: List[float]) -> List[float]:
-    """Multiplica dos polinomios"""
+    """Multiplica dos polinomios
+    
+    :param p: polinomio
+    :p type: list
+    :param q: polinomio
+    :q type: list
+    :return: polinomio resultante
+    :rtype: list
+    """
     if len(q) > len(p):
         p, q = q, p
-    result = [0] * (len(p) + len(q) - 1)
+    result: List[float] = [0] * (len(p) + len(q) - 1)
     for i in range(len(p)):
         for j in range(len(q)):
             result[i + j] += p[i] * q[j]
