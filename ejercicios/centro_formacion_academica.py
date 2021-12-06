@@ -43,11 +43,9 @@ NOTE: add testcases
 """
 from dataclasses import dataclass, field
 from typing import List
+# pip install prototools
+from prototools import Menu, int_input, choice_input, ask_to_finish
 
-from prototools.entradas import entrada_int, entrada_choice
-from prototools.experimental import main_loop, partir
-from prototools.menu import EzMenu
-from prototools.utils import continuar
 
 NUMERO_CALIFICACIONES = 5
 AULAS = ("alfa", "beta", "delta", "gamma")
@@ -106,10 +104,10 @@ def registrar_estudiante(aula: Aula):
     """Registra un estudiante en una aula."""
     estudiante = Estudiante(
         nombre=input("Nombre del estudiante: "),
-        edad=entrada_int("Edad del estudiante: ", min=18, max=25),
-        sexo=entrada_choice(SEXOS, "Sexo del estudiante: "),
+        edad=int_input("Edad del estudiante: ", min=18, max=25),
+        sexo=choice_input(SEXOS),
         calificaciones=[
-            entrada_int(f"Calificación {i+1}: ", min=0, max=20)
+            int_input(f"Calificación {i+1}: ", min=0, max=20)
             for i in range(NUMERO_CALIFICACIONES)
             ]
         )
@@ -117,15 +115,13 @@ def registrar_estudiante(aula: Aula):
 
 
 def registrar():
-    """
-    Registra estudiantes en las aulas del taller.
-    """
+    """Registra estudiantes en las aulas del taller."""
     taller = Taller()
     for aula in taller.aulas:
         print(f"Aula: {aula.nombre}")
         while True:
             registrar_estudiante(aula)
-            if not continuar():
+            if not ask_to_finish():
                 break
     return taller
 
@@ -185,20 +181,17 @@ def mostrar_informacion_por_aula():
 
 
 if __name__ == "__main__":
-    menu = EzMenu()
-    menu.agregar_opciones(
-        "Promedios generales de cada aula.",
-        "Informacion del mejor alumno",
-        "Porcentaje de varones y mujeres por aula.",
-        "Estudiante que tiene la mayor y menor edad de todos.",
-        "Informacion de aula",
-        "Salir.",
-    )
-    menu.agregar_funciones(
-        mostrar_promedio_generales,
-        mostrar_mejor_alumno,
-        mostrar_porcentaje_sexo,
-        mostrar_estudiantes_por_edad,
-        mostrar_informacion_por_aula,
+    menu = Menu()
+    menu.add_options(
+        ("Promedios generales por cada aula",
+            mostrar_promedio_generales),
+        ("Información del mejor alumno",
+            mostrar_mejor_alumno),
+        ("Porcentaje de varones y mujeres por aula",
+            mostrar_porcentaje_sexo),
+        ("Estudiantes que tienen la mayor y menor edad de todos",
+            mostrar_estudiantes_por_edad),
+        ("Información por aula",
+            mostrar_informacion_por_aula),
     )
     menu.run()
