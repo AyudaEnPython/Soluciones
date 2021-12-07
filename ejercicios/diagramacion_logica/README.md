@@ -1,4 +1,6 @@
-# 2.7. Problemas: Diagramación lógica - Estructura de control de decisión
+# Problemas y Algoritmos - Un Enfoque Práctico
+
+## 2.7. Problemas: Diagramación lógica - Estructura de control de decisión
 
 
 19. Realice un algoritmo para mostrar un cartel que indique si un triángulo es «escaleno»,
@@ -26,7 +28,7 @@ según el resultado.
   la forma: P(x) = ax^2 + bx + c
 27. Probar con: a) P(x) = x^2 + 3x + 2 b) P(x) = 2x^2 + 4x + 2 c) P(x) = 3x^2 + 2
 
-# 2.8.5. Problemas: Diagramación lógica - Estructura de control de repetición "for"
+## 2.8.5. Problemas: Diagramación lógica - Estructura de control de repetición "for"
 
 28. Mostrar por pantalla los números del 10 al 1.
 29. Mostrar por pantalla las tres primeras potencias de los números del 
