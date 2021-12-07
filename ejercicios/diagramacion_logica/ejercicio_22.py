@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 
-# del ejercicio 21 y 22
+# del ejercicio 21
 while True:
     try:
         n = input("Ingrese un número: ")
@@ -15,13 +15,8 @@ while True:
         print("Error: debe ingresar un número entero")
         continue
 
-
 m = n // 1000
 d = n % 1000 // 100
 c = n % 100 // 10
 u = n % 10
-t = m + d + c + u
-print(t)
-
-# alternativamente usando list comprehension
-#print(sum([int(s) for s in str(n)]))
+print(f"d1 = {m}, d2 = {d}, d3 = {c}, d4 = {u}")
