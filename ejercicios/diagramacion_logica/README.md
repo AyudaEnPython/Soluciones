@@ -1,4 +1,4 @@
-# Problemas: Diagramación lógica - Estructura de control de decisión
+# 2.7. Problemas: Diagramación lógica - Estructura de control de decisión
 
 
 19. Realice un algoritmo para mostrar un cartel que indique si un triángulo es «escaleno»,
