@@ -5,7 +5,7 @@ mayor = menor = 0
 
 n = int(input("Ingrese cantidad de personas: "))
 
-for _ in range(n+1):
+for _ in range(n):
     edad = int(input("Ingrese edad: "))
     if edad >= 18:
         mayor += 1
