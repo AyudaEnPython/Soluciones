@@ -19,5 +19,5 @@ else:
     x1 = (-b + d**0.5)/(2*a)
     x2 = (-b - d**0.5)/(2*a)
 
-print("X1: ", x1)
-print("X2: ", x2)
+print(f"x1 = {x1}")
+print(f"x2 = {x2}")
