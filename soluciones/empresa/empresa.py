@@ -8,7 +8,7 @@ from typing import List
 class Empresa:
     emplados: List[object] = field(default_factory=list)
 
-    def buscar_empleado(self, id_=None, nombre=None):
+    def buscar_empleado(self, id_=None, nombre=None) -> object:
         if id_ is not None:
             for empleado in self.emplados:
                 if empleado.id == id_:
@@ -19,11 +19,11 @@ class Empresa:
                     return empleado
         return None
     
-    def mostrar_empleados(self):
+    def mostrar_empleados(self) -> None:
         for empleado in self.emplados:
             empleado.datos()
         
-    def mostrar_por_tipo(self, tipo):
+    def mostrar_por_tipo(self, tipo) -> None:
         for empleado in self.emplados:
             if empleado.__class__.__name__ == tipo:
                 empleado.datos()

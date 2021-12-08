@@ -12,12 +12,12 @@ class Empleado:
     id_: int
     antiguedad: int
 
-    def aumentrar_sueldo(self, aumento):
+    def aumentrar_sueldo(self, aumento) -> None:
         if aumento < 0:
             print("No se puede aumentar el sueldo")
         self.sueldo += aumento
 
-    def datos(self):
+    def datos(self) -> None:
         print(f"Nombre: {self.nombre}")
         print(f"Apellidos: {self.apellidos}")
         print(f"Edad: {self.edad}")
@@ -31,10 +31,10 @@ class Supervisor(Empleado):
     licenciatura: str
     area_supervisada: str
 
-    def supervisar(self):
-        pass
+    def supervisar(self) -> None:
+        ...
 
-    def datos(self):
+    def datos(self) -> None:
         super().datos()
         print(f"Licenciatura: {self.licenciatura}")
 
@@ -49,13 +49,13 @@ class Administrativo(Empleado):
 class Analista(Administrativo):
     habilidades: str
 
-    def analizar(self):
-        pass
+    def analizar(self) -> None:
+        ...
 
-    def optimizar(self):
-        pass
+    def optimizar(self) -> None:
+        ...
 
-    def datos(self):
+    def datos(self) -> None:
         super().datos()
         print(f"Nivel de estudios: {self.nivel_estudios}")
         print(f"Habilidades: {self.habilidades}")
@@ -66,13 +66,13 @@ class Analista(Administrativo):
 class Operativo(Administrativo):
     habilidades: str
 
-    def tecnicas(self):
-        pass
+    def tecnicas(self) -> None:
+        ...
     
-    def ejecutar(self):
-        pass
+    def ejecutar(self) -> None:
+        ...
 
-    def datos(self):
+    def datos(self) -> None:
         super().datos()
         print(f"Habilidades: {self.habilidades}")
         print(f"Supervisor: {self.supervisor.nombres}")
