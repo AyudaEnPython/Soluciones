@@ -12,7 +12,7 @@ def main():
     )
     menu.add_options(
         ("Dar de alta a emplado", lambda: print()),
-        ("Aumentar sueldo a empleado", lambda: print()),
+        ("Aumentar sueldo a empleado", empresa.aumentar_sueldo),
         ("Lista de empleados", lambda: print()),
         ("Buscar empleado", lambda: print()),
         ("Mostrar empleados por tipo", lambda: print()),
