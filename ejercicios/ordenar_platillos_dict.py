@@ -20,8 +20,8 @@ basado en la cantidad de personas que consumen cada platillo.
     | }                                                    |
     +------------------------------------------------------+
 # ---------------------------------------------------------------------
-NOTE: Se mejoro el ejemplo y se opta por usar otro nombre para la
-    función (PEP8)
+NOTE: Se mejoro el ejemplo y se optó por usar otro nombre para la
+    función (PEP8).
 """
 from typing import Dict, List
 from unittest import main, TestCase
