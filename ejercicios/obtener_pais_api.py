@@ -18,7 +18,7 @@ esperado.
 NOTE: se opta a cambiar el nombre de la función (PEP8).
 """
 import requests
-
+from unittest import main, TestCase
 
 # or get_country (PEP8)
 def obtener_pais(codigo: str) -> str:
@@ -38,5 +38,11 @@ def obtener_pais(codigo: str) -> str:
         return "No se encontró el país"
 
 
+class Test(TestCase):
+
+    def test_obtener_pais(self):
+        self.assertEqual(obtener_pais("co"), "República de Colombia")
+
+
 if __name__ == "__main__":
-    print(obtener_pais("co"))
+    main()
