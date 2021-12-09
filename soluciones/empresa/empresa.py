@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from typing import ClassVar, List, Union
+from typing import List, Union
 # pip install prototools
 from prototools import menu_input, float_input, int_input, textbox
 from prototools.colorize import cyan, red
@@ -58,7 +58,7 @@ class Empresa:
             if empleado.__class__.__name__ == tipo:
                 empleado.datos()
 
-    def asignar_supervisor(self) -> None:
+    def asignar_supervisor(self) -> None: # TODO: split it in more methods
         id_ = int_input(cyan("Ingresar id del empleado: "))
         empleado = self._buscar(id_)
         if empleado is None:
