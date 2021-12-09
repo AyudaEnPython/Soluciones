@@ -5,7 +5,7 @@ from empresa import Empresa
 
 
 def main():
-    empresa = Empresa()
+    empresa = Empresa(True) # Delete "True" to disable dummy data
     menu = Menu(
         yellow("Ayuda En Python"),
         prologue_text=cyan("Gestión de Empleados"),
