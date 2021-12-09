@@ -1,6 +1,5 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from dataclasses import dataclass, field
 from typing import ClassVar, List, Union
 # pip install prototools
 from prototools import menu_input, float_input, int_input, textbox
@@ -9,28 +8,25 @@ from nomina import Supervisor, Analista, Operativo
 from utils import ingresar_datos, TIPOS, dummy_data
 
 
-@dataclass
 class Empresa:
-    dummy: bool = False
-    id_: ClassVar[int] = 1
-    empleados: List[Union[Supervisor, Analista, Operativo]] = field(
-        default_factory=list
-    )
+    id_: int = 1
+    empleados: List[Union[Supervisor, Analista, Operativo]] = []
 
-    def __post_init__(self):
+    def __init__(self, dummy: bool = False):
+        self.dummy = dummy
         if self.dummy:
             self._load_employees()
 
     def _load_employees(self):
         for empleado in dummy_data():
-            self.empleados.append(empleado)
+            __class__.empleados.append(empleado)
         __class__.id_ = 4
 
     def agregar_empleado(self) -> None:
         obj_ = ingresar_datos()
         obj_.id_ = self.id_
         __class__.id_ += 1
-        self.empleados.append(obj_)
+        __class__.empleados.append(obj_)
 
     def aumentar_sueldo(self) -> None:
         id_ = int_input(cyan("Ingresar id del empleado: "))
