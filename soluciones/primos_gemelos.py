@@ -48,6 +48,12 @@ def primos_gemelos(n1: int, n2: int) -> List[Tuple[int, int]]:
     return [(i, i + 2) for i in primos if es_primo(i + 2)]
 
 
+def main_():
+    a = int(input("a: "))
+    b = int(input("b: "))
+    print(primos_gemelos(a, b))
+
+
 class Test(TestCase):
 
     data = (
@@ -63,4 +69,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main()
+    # main() # umcomment this line and comment the next one to run tests
+    main_()
