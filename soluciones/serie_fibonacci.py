@@ -44,9 +44,9 @@ def fibonacci_for(n: int) -> List[int]:
     return secuencia
 
 
-def main_():
+def main_(): # comment/uncomment to switch between while and for versions
     print(", ".join(str(x) for x in fibonacci_while(10)))
-    print(", ".join(str(x) for x in fibonacci_for(10)))
+    #print(", ".join(str(x) for x in fibonacci_for(10)))
 
 
 class Test(TestCase):
