@@ -43,4 +43,12 @@ estructura:
   – Clave: "habilidad"; Valor: Ability del Pokémon.
 
 
+> _**NOTA**_: Segun el enunciado original una de las llaves es "Nombre" pero
+> al ser evaluado en un _grader_ (de la institución) este realiza tests
+> esperando la llave "nombre".
+> El instructor debería corredir el enunciado original o modificar los tests
+> del grader.
+>
+> Se opta por modificar la llaver en la solución.
+
 > _**TODO**_: finish the description later
