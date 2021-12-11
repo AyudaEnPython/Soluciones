@@ -1,5 +1,7 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Book Titles
+-----------
 
 You have been asked to make a special book categorization program, which assigns
 each book a special code based on its title.
