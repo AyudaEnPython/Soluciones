@@ -53,7 +53,7 @@ class Solution:
                 linea = linea.replace("\n", "").split(";")
                 name, id_, attack, defense, speed, ability = linea
                 pokemones[int(id_)] = {
-                    "Nombre": name,
+                    "nombre": name,
                     "puntos_ataque": int(attack),
                     "puntos_defensa": int(defense),
                     "puntos_velocidad": int(speed),
@@ -81,7 +81,7 @@ class Solution:
         for v in pokemones.values():
             if v["puntos_velocidad"] > max_:
                 max_ = v["puntos_velocidad"]
-                result = v["Nombre"], max_
+                result = v["nombre"], max_
         # SU SOLUCION TERMINA AQUI
         return result
 
@@ -90,7 +90,7 @@ class Solution:
         result = []
         # SU SOLUCION EMPIEZA AQUI
         for id_, v in pokemones.items():
-            result.append((v["Nombre"], id_))
+            result.append((v["nombre"], id_))
         result = merge_sort(result)
         # SU SOLUCION TERMINA AQUI
         return result
