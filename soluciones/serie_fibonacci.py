@@ -57,5 +57,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main() # uncomment this line and comment the next one to run the tests
-    #main_()
+    # main() # uncomment this line and comment the next one to run the tests
+    main_()
