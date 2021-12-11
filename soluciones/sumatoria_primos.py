@@ -43,6 +43,12 @@ def sumatoria_primos(a: int, b: int) -> int:
     return sum(i for i in range(a, b + 1) if es_primo(i))
 
 
+def main_():
+    a = int(input("a: "))
+    b = int(input("b: "))
+    print(sumatoria_primos(a, b))
+
+
 class Test(TestCase):
 
     def test_sumatoria_primos(self):
@@ -52,4 +58,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main()
+    # main() # uncomment this line and comment the next one to run the tests
+    main_()
