@@ -54,6 +54,15 @@ def mcd_for(a: int, b: int) -> int:
     return 1
 
 
+def main_(): # comment/uncomment to swtiches between mcd versions
+    a = int(input('a: '))
+    b = int(input('a: '))
+    mcd = mcd_recursivo(a, b)
+    # mcd = mcd_while(a, b)
+    # mcd = mcd_for(a, b)
+    print(f'MCD de {a} y {b} es {mcd}')
+
+
 class Test(TestCase):
 
     data = (
@@ -71,4 +80,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    # main() # uncomment this line and comment the next one to run tests
+    main_()
