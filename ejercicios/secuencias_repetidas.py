@@ -1,7 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-# ---------------------------------------------------------------------
-Enunciado original:
+# ------------------------- Enunciado Original ------------------------
 Utilizando diseño modular, escribe un módulo que recibe dos números
 enteros positivos "x" y "z",  en donde "x" > "z", y dos secuencias de
 letras "a1a2...ax" y "b1b2...bz", y que devuelva el número de veces
@@ -11,8 +10,7 @@ Por ejemplo, cuando x=12 y z=3 y las secuencias de letras son
 "afertdeafetk" y "afe", el módulo deberia devolver 2 ya que la segunda
 secuencia se repite dos veces en la primera secuencia.
 
-# ---------------------------------------------------------------------
-Enunciado modificado:
+# ------------------------ Enunciado Modificado -----------------------
 Escribe una función que reciba dos secuencias de letras "a1a2a3...am" y
 "b1b2b3..bn" (siendo m > n) y que devuelva el número de veces que la 
 segunda secuencia aparece en la primera.
@@ -28,7 +26,7 @@ en la primera secuencia.
     | que se opta plantearlo como función que sería importada   |
     | desde otro módulo.                                        |
     +-----------------------------------------------------------+
-
+# ---------------------------------------------------------------------
 TODO: add docstring
 """
 from unittest import main, TestCase

@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 Una empresa necesita un programa el cual los empleados se puedan
 registrar con un nombre y una contraseña, tambien que introduzcan los
 años que llevan trabajando, y si lleva de 1 a 5 años puede tomar 10
