@@ -16,9 +16,10 @@ Algunos ejemplos de diálogo de este programa serían:
     +-----------------------------------------+
 """
 from unittest import main, TestCase
+from typing import List
 
 
-def suma_impares(arr):
+def suma_impares(arr: List[int]) -> int:
     if len(arr) == 0:
         return 0
     if arr[0] % 2 == 1:
