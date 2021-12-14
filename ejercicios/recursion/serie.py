@@ -15,6 +15,9 @@ Por lo tanto si n = 3, el resultado de la función sería:
 O el caso en que n = 4, el resultado de la función sería:
 
     suma = (1^3 + 5) + (2^3 + 5) + (3^3 + 5) + (4^3 + 5) = 120
+
+NOTE: Se opta por cambiar el nombre de la función sumaSerie por
+    suma_serie (PEP8).
 """
 from unittest import main, TestCase
 
