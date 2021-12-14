@@ -30,6 +30,9 @@ y realize el siguiente proceso:
 - Buscar en la lista de diccionarios por año, utilizando la función
     implementada.
 - Imprimir los nombres de los ganadores.
+
+NOTE: En el enunciado original la lista se llama 'peliculas', cuando el
+    mejor nombre para esa lista debería de ser 'ganadores'.
 """
 from unittest import main, TestCase
 
