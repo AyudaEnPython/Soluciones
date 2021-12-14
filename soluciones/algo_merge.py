@@ -17,11 +17,11 @@ def merge(left, right):
     return merged_list
 
 
-def merge_sort(lista):
-    length = len(lista)
+def merge_sort(arr):
+    length = len(arr)
     if length <= 1:
-        return lista
+        return arr
     mid = length // 2
-    left = merge_sort(lista[:mid])
-    right = merge_sort(lista[mid:])
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
     return merge(left, right)
