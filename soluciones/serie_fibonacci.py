@@ -45,8 +45,9 @@ def fibonacci_for(n: int) -> List[int]:
 
 
 def main_(): # comment/uncomment to switch between while and for versions
-    print(", ".join(str(x) for x in fibonacci_while(10)))
-    #print(", ".join(str(x) for x in fibonacci_for(10)))
+    n = int(input("Ingrese la cantidad de elementos de la secuencia: "))
+    print(", ".join(str(x) for x in fibonacci_while(n)))
+    #print(", ".join(str(x) for x in fibonacci_for(n)))
 
 
 class Test(TestCase):
