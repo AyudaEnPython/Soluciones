@@ -80,7 +80,7 @@ def main_():
     anio = input("Ingresar año: ")
     pos = binary_search(peliculas, int(anio))
     if pos != -1:
-        print(peliculas[pos]["nombre"])
+        print("Ganadores:", peliculas[pos]["nombre"])
     else:
         print("No se encontró el año")
 
