@@ -25,8 +25,6 @@ Algunos ejemplos del diálogo de este programa serían:
     +-----------------------------------------+
 """
 from unittest import main, TestCase
-# pip install prototools
-from prototools import int_input
 
 
 def K(n: int, p: int) -> int:
@@ -37,9 +35,9 @@ def K(n: int, p: int) -> int:
 
 
 def main_():
-    n = int_input("Input n: ")
-    p = int_input("Input p: ")
-    print("Output:", K(n, p))
+    n = int(input("Input n: "))
+    p = int(input("Input p: "))
+    print(f"Output: {K(n, p)}")
 
 
 class Test(TestCase):
