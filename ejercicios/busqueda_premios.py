@@ -31,6 +31,16 @@ y realize el siguiente proceso:
     implementada.
 - Imprimir los nombres de los ganadores.
 
+    +----------------------------------------------+
+    | Ingrese año: 2011                            |
+    | Ganadores: Perlmutter, Schmidt y Adasm Riess |
+    +----------------------------------------------+
+
+    +----------------------------------------------+
+    | Ingrese año: 2018                            |
+    | Ganadores: Donna Strickland, Mourou y Ashkin |
+    +----------------------------------------------+
+
 NOTE: En el enunciado original la lista se llama 'peliculas', cuando el
     mejor nombre para esa lista debería de ser 'ganadores'.
 """
