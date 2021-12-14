@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-Desarrollá un código que comience con una lista de diez “0” (lista =
+Desarrolla un código que comience con una lista de diez “0” (lista =
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) y que pida dos números N y M. Si N está
 entre 1 y 10, se deberá poner el número M en la posición N
 correspondiente. Si N es 0, se le sumará el número M a todas las celdas
