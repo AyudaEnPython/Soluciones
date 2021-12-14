@@ -10,7 +10,8 @@ F(2)= 1
 """
 from unittest import main, TestCase
 
-def f(n):
+
+def f(n: int) -> int:
     if n == 1:
         return 3
     elif n == 2:
