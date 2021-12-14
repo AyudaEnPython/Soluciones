@@ -2,51 +2,70 @@
 
 Implemente una función, utilizando el algoritmo de búsqueda binaria,
 para buscar datos que están en una lista de diccionarios sobre
-ganadores de premios nobel, con la siguiente estructura año y
-ganadores. La función debe tomar un parámetro: el año a buscar y debe
-devolver los ganadores.
+películas, con la siguiente estructura: título y año. Note que la lista
+no esta ordenada. La función debe tomar un parámetro (el año a buscar)
+y debe devolver el título de la película.
 
-Un ejemplo sería, la lista de ganadores de premios noble de Física:
+Un ejemplo de la lista sería:
 
-+----------------------------------------------------------------------+
-| peliculas = [                                                        |
-|     {"anio": 2010, "nombre": "Andre Geim y Konstantín Novosiólov"},  |
-|     {"anio": 2011, "nombre": "Perlmutter, Schmidt y Adasm Riess"},   |
-|     {"anio": 2012, "nombre": "Serge Haroche y David Wineland"},      |
-|     {"anio": 2013, "nombre": "Peter Higgs y François Englert"},      |
-|     {"anio": 2014, "nombre": "Akasaki, Hiroshi Amano y Nakamura"},   |
-|     {"anio": 2015, "nombre": "Takaaki Kajita y Arthur B. McDonald"}, |
-|     {"anio": 2016, "nombre": "Thoulesss, Haldane y Kosterlitz"},     |
-|     {"anio": 2017, "nombre": "Rainer Weiss, Barry Barish y Thorne"}, |
-|     {"anio": 2018, "nombre": "Donna Strickland, Mourou y Ashkin"},   |
-|     {"anio": 2019, "nombre": "James Peebles, Mayor y Queloz"},       |
-| ]                                                                    |
-+----------------------------------------------------------------------+
+    +------------------------------------------------------+
+    | peliculas = [                                        |
+    |     {"titulo": "Shrek", "anio": 2001},               |
+    |     {"titulo": "El viaje de Chihiro", "anio": 2002}, |
+    |     {"titulo": "WALL-E", "anio": 2008},              |
+    |     {"titulo": "Up", "anio": 2009},                  |
+    |     {"titulo": "Buscando a Nemo", "anio": 2003},     |
+    |     {"titulo": "Los Increíbles", "anio": 2004},      |
+    |     {"titulo": "Wallace y Gromit", "anio": 2005},    |
+    |     {"titulo": "Valiente", "anio": 2012},            |
+    |     {"titulo": "Frozen", "anio": 2013},              |
+    |     {"titulo": "Grandes Héroes", "anio": 2014},      |
+    |     {"titulo": "Happy Feet", "anio": 2006},          |
+    |     {"titulo": "Ratatouille", "anio": 2007},         |
+    |     {"titulo": "Toy Story 3", "anio": 2010},         |
+    |     {"titulo": "Rango", "anio": 2011},               |
+    | ]                                                    |
+    +------------------------------------------------------+
 
 Considere, que los datos ya están en el programa, no necesita la lista
-y realize el siguiente proceso:
+de películas y realize el siguiente proceso:
 
 - Solicite al usuario que ingrese un año.
-- Buscar en la lista de diccionarios por año, utilizando la función
-    implementada.
-- Imprimir los nombres de los ganadores.
+- Buscar la película por el año, utilizando la función implementada.
+- Imprimir el título de la película.
+
+    +----------------------------------------------+
+    | Ingrese año: 2002                            |
+    | Película: El viaje de Chihiro                |
+    +----------------------------------------------+
+
+    +----------------------------------------------+
+    | Ingrese año: 2013                            |
+    | Película: Frozen                             |
+    +----------------------------------------------+
 
 NOTE: En el enunciado original la lista se llama 'peliculas', cuando el
     mejor nombre para esa lista debería de ser 'ganadores'.
 """
+# Mismo ejercicio que:
+# https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/busqueda_premios.py
 from unittest import main, TestCase
 
-ganadores = [
-    {"anio": 2010, "nombre": "Andre Geim y Konstantín Novosiólov"},
-    {"anio": 2011, "nombre": "Perlmutter, Schmidt y Adasm Riess"},
-    {"anio": 2012, "nombre": "Serge Haroche y David Wineland"},
-    {"anio": 2013, "nombre": "Peter Higgs y François Englert"},
-    {"anio": 2014, "nombre": "Akasaki, Hiroshi Amano y Nakamura"},
-    {"anio": 2015, "nombre": "Takaaki Kajita y Arthur B. McDonald"},
-    {"anio": 2016, "nombre": "Thoulesss, Haldane y Kosterlitz"},
-    {"anio": 2017, "nombre": "Rainer Weiss, Barry Barish y Thorne"},
-    {"anio": 2018, "nombre": "Donna Strickland, Mourou y Ashkin"},
-    {"anio": 2019, "nombre": "James Peebles, Mayor y Queloz"},
+peliculas = [
+    {"titulo": "Shrek", "anio": 2001},
+    {"titulo": "El viaje de Chihiro", "anio": 2002},
+    {"titulo": "WALL-E", "anio": 2008},
+    {"titulo": "Up", "anio": 2009},
+    {"titulo": "Buscando a Nemo", "anio": 2003},
+    {"titulo": "Los Increíbles", "anio": 2004},
+    {"titulo": "Wallace y Gromit", "anio": 2005},
+    {"titulo": "Valiente", "anio": 2012},
+    {"titulo": "Frozen", "anio": 2013},
+    {"titulo": "Grandes Héroes", "anio": 2014},
+    {"titulo": "Happy Feet", "anio": 2006},
+    {"titulo": "Ratatouille", "anio": 2007},
+    {"titulo": "Toy Story 3", "anio": 2010},
+    {"titulo": "Rango", "anio": 2011},
 ]
 
 
@@ -67,20 +86,23 @@ def binary_search(arr, x):
 
 
 def main_():
+    data = sorted(peliculas, key=lambda x: x["anio"])
     anio = input("Ingresar año: ")
-    pos = binary_search(ganadores, int(anio))
+    pos = binary_search(data, int(anio))
     if pos != -1:
-        print(ganadores[pos]["nombre"])
+        print(data[pos]["titulo"])
     else:
         print("No se encontró el año")
 
 
 class Test(TestCase):
+
+    data = sorted(peliculas, key=lambda x: x["anio"])
     
     def test_binary_search(self):
-        self.assertEqual(binary_search(ganadores, 2010), 0)
-        self.assertEqual(binary_search(ganadores, 2021), -1)
-        self.assertEqual(binary_search(ganadores, 2019), 9)
+        self.assertEqual(binary_search(self.data, 2002), 1)
+        self.assertEqual(binary_search(self.data, 2021), -1)
+        self.assertEqual(binary_search(self.data, 2013), 12)
 
 
 if __name__ == "__main__":
