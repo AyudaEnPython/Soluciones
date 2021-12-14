@@ -2,7 +2,7 @@
 
 Implemente una función, utilizando el algoritmo de búsqueda binaria,
 para buscar datos que están en una lista de diccionarios sobre
-ganadores de premios nobel, con la siguiente estructura año y
+ganadores de premios nobel, con la siguiente estructura: año y
 ganadores. La función debe tomar un parámetro: el año a buscar y debe
 devolver los ganadores.
 
