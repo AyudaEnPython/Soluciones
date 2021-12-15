@@ -70,6 +70,7 @@ class Test(TestCase):
         ((12, 8), 4),
         ((12, 18), 6),
         ((450, 360), 90),
+        ((12345, 54321), 3)
     )
 
     def test_functions(self):
@@ -80,5 +81,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run tests
+    #main() # uncomment this line and comment the next one to run tests
     main_()
