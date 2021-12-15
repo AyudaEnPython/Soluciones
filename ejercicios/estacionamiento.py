@@ -33,9 +33,7 @@ from typing import Dict, Tuple
 from unittest import main, TestCase
 
 # pip install prototools
-from prototools.entradas import entrada_choices, entrada_tiempo
-from prototools.experimental import main_loop
-from prototools.utils import bannerln, boxln, continuar
+from prototools import choice_input, time_input, main_loop, textbox, text_align
 
 TIPOS = ("Automovil", "Camioneta", "Moto")
 PRECIOS = (100, 120, 70)
@@ -88,18 +86,18 @@ class Estacionamiento:
 
 
 def mostrar_detalles(estacionamiento: Estacionamiento) -> None:
-    boxln("Detalles del Registro", ancho=40, alineacion="centro")
+    textbox("Detalles del Registro", ancho=40, alineacion="centro")
     print(estacionamiento.info())
-    bannerln("Fin del proceso", ancho=40)
+    text_align("Fin del proceso", ancho=40)
 
 
 def datos() -> Tuple[Tuple[str, str], Tuple[str, str]]:
-    boxln("Registro", ancho=40, alineacion="centro")
+    textbox("Registro", ancho=40, alineacion="centro")
     placa = input("Ingresar placa: ").upper()
     print(f"Tipo de vehículo: {' - '.join(tipo for tipo in TIPOS)}")
-    tipo = entrada_choices(TIPOS, "Ingresar tipo: ").capitalize()
-    entrada = entrada_tiempo("Hora de entrada: ").strftime("%H:%M:%S")
-    salida = entrada_tiempo("Hora de salida: ").strftime("%H:%M:%S")
+    tipo = choice_input(TIPOS, "Ingresar tipo: ").capitalize()
+    entrada = time_input("Hora de entrada: ").strftime("%H:%M:%S")
+    salida = time_input("Hora de salida: ").strftime("%H:%M:%S")
     return (placa, tipo), (entrada, salida)
 
 
@@ -134,5 +132,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main_loop(autoseguro_main, continuar)
+    main_loop(autoseguro_main)
     #main() # comment main_lopp and uncomment this line to execute the test
