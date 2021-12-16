@@ -1,3 +1,5 @@
+# Fábrica de Mermeladas
+
 Una fábrica de mermeladas, entrega sus productos en dos tipos de envases:
 bolsa y frasco. El detalle de sus posibles ventas es:
 
@@ -30,3 +32,7 @@ total de kilos por producto, la cantidad de productos.
 
 Para el detalle por tipo de envase, debe mostrar la cantidad de kilos por envase,
 el monto vendido por envase, la cantidad de productos por envase.
+
+> _**NOTA**_: Para mejorar el diseño, la implementación del menú debe estar
+> totalmente separada; de esta forma, cambiar a GUI o WebApp a futuro será más
+> fácil.
