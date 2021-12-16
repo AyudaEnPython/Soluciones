@@ -17,7 +17,7 @@ class Fabrica:
         self.data = read_data()
         bar(sum(self.data.values()))
 
-    def resumenes_totales(self):
+    def totales(self):
         data = [
             ["Monto total de ventas",
                 sum(self._info(codigo, "precio") for codigo in self.data)],
@@ -28,7 +28,7 @@ class Fabrica:
         ]
         print(tabulate(data, headless=True, inner=True))
 
-    def mostrar_detalles_por_producto(self):
+    def detalles_por_producto(self):
         for codigo, cantidad in self.data.items():
             data = [
                 ["Código", codigo, "Cantidad vendida", cantidad],
@@ -36,7 +36,7 @@ class Fabrica:
             ]
             print(tabulate(data, headless=True, inner=True))
 
-    def mostrar_detalles_por_tipo_de_envase(self):
+    def detalles_por_tipo(self):
         data = [
             ["Tipo de envase", "Cantidad vendida", "Capacidad", "Precio"],
             *[self._info_envase(tipo) for tipo in ("Bolsa", "Frasco")],

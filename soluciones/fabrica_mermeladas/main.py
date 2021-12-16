@@ -13,11 +13,11 @@ def main():
         ("Ingresar ventas",
             fabrica.ingresar_ventas),
         ("Mostrar resúmenes totales",
-            fabrica.resumenes_totales),
+            fabrica.totales),
         ("Mostrar detalles por producto",
-            fabrica.mostrar_detalles_por_producto),
+            fabrica.detalles_por_producto),
         ("Mostrar detalles por tipo de envase",
-            fabrica.mostrar_detalles_por_tipo_de_envase),
+            fabrica.detalles_por_tipo),
     )
     menu.run()
 
