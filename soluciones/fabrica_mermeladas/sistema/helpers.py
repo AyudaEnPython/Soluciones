@@ -1,7 +1,10 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 from collections import Counter
+from time import sleep
 from typing import Dict
+# pip install prototools
+from prototools import progressbar
 
 CODIGO: Dict[str, Dict[str, float]] = {
     "00": {"kg": 0.25, "precio": 300},
@@ -11,7 +14,14 @@ CODIGO: Dict[str, Dict[str, float]] = {
 }
 
 
+def bar(n):
+    print("Cargando datos de ventas...")
+    for _ in progressbar(range(n)):
+        sleep(0.05)
+
+
 def read_data():
     with open("database/ventas.txt", "r") as f:
         data = f.read().splitlines()
         return dict(Counter(data))
+
