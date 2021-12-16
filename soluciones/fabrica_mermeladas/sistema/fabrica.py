@@ -4,8 +4,8 @@ from dataclasses import dataclass
 from time import sleep
 from typing import ClassVar
 # pip install prototools
-from prototools import tabulate, progressbar
-from .helpers import read_data, CODIGO
+from prototools import tabulate
+from .helpers import bar, read_data, CODIGO
 
 
 @dataclass
@@ -15,9 +15,7 @@ class Fabrica:
 
     def ingresar_ventas(self):
         self.data = read_data()
-        print("Ingresando ventas...")
-        for _ in progressbar(range(sum(self.data.values()))):
-            sleep(0.05)
+        bar(sum(self.data.values()))
 
     def resumenes_totales(self):
         data = [
