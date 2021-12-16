@@ -1,11 +1,11 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 from dataclasses import dataclass
-from time import sleep
 from typing import ClassVar
 # pip install prototools
 from prototools import tabulate
-from .helpers import bar, read_data, CODIGO
+
+from .helpers import CODIGO, bar, read_data, totales
 
 
 @dataclass
@@ -20,9 +20,9 @@ class Fabrica:
     def totales(self):
         data = [
             ["Monto total de ventas",
-                sum(self._info(codigo, "precio") for codigo in self.data)],
+                totales(self.data, self._info, "precio")],
             ["Monto total de kilos",
-                sum(self._info(codigo, "kg") for codigo in self.data)],
+                totales(self.data, self._info, "kg")],
             ["Cantidad de productos vendidos",
                 sum(self.data.values())],
         ]
