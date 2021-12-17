@@ -2,7 +2,8 @@
 
 Calcula si el año es bisiesto.
 """
-from unittest import main, TestCase
+import sys
+import unittest
 
 
 def es_bisiesto(year: int) -> bool:
@@ -16,7 +17,28 @@ def es_bisiesto(year: int) -> bool:
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 
-class Test(TestCase):
+def main():
+    """
+    Muestra por la terminal si el año es bisiesto o no.
+    
+    Ejemplo:
+        Windows::
+
+            $ python es_bisiesto.py 1986
+    
+        macOs/Unix/Linux::
+
+            $ python3 es_bisiesto.py 1986
+    """
+    if len(sys.argv) == 2:
+        year = int(sys.argv[1])
+        if es_bisiesto(year):
+            print(f"{year} es un año bisiesto.")
+        else:
+            print(f"{year} no es un año bisiesto.")
+
+
+class Test(unittest.TestCase):
 
     def test_es_bisiesto(self):
         self.assertTrue(es_bisiesto(2000))
@@ -31,4 +53,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
+    # unittest.main() # uncomment this line and comment the next one to run tests
     main()
