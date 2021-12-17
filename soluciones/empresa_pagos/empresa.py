@@ -31,32 +31,32 @@ class Empleado:
     sueldo: int
     tipo: str
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         self.pago = self.calcular_pago()
 
-    def calcular_pago(self):
+    def calcular_pago(self) -> float:
         pago = self.horas * self.sueldo
         impuesto = IMPUESTOS[self.tipo]
         pago_neto = pago - pago * impuesto
-        return pago_neto if pago < 1000 else pago
+        return pago if pago < 1000 else pago_neto
 
 
 @dataclass
 class Empresa:
     empleados: List[Empleado] = field(default_factory=list)
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         self._load()
 
-    def _load(self):
+    def _load(self) -> None:
         for data in planilla:
             self.empleados.append(Empleado(**data))
 
-    def agregar(self):
+    def agregar(self) -> None:
         empleado = Empleado(*ingresar_datos())
         self.empleados.append(empleado)
 
-    def reporte(self):
+    def reporte(self) -> None:
         obreros, empleados = self._tipo_empleado()
         print(tabulate(
             [
@@ -83,7 +83,7 @@ class Empresa:
             color=magenta,
         ))
 
-    def eliminar(self):
+    def eliminar(self) -> None:
         nombre = input(cyan("Nombre: "))
         empleado = self._buscar(nombre)
         if empleado:
@@ -92,15 +92,15 @@ class Empresa:
         else:
             textbox(red("No existe empleado!"))
 
-    def _buscar(self, nombre):
+    def _buscar(self, nombre) -> Empleado:
         for empleado in self.empleados:
             if empleado.nombres == nombre:
                 return empleado
 
-    def _total_pago(self):
+    def _total_pago(self) -> float:
         return sum([e.pago for e in self.empleados])
     
-    def _tipo_empleado(self):
+    def _tipo_empleado(self) -> Tuple[int, int]:
         obreros = len([e for e in self.empleados if e.tipo == "obrero"])
         empleados = len([e for e in self.empleados if e.tipo == "empleado"])
         return obreros, empleados
