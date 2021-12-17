@@ -38,7 +38,7 @@ def mostrar(texto: List[str]) -> None:
 
 
 def main():
-    mostrar(obtener_texto("ejercicios/leer_archivos/frase.txt"))
+    mostrar(obtener_texto("frase.txt"))
 
 
 if __name__ == "__main__":
