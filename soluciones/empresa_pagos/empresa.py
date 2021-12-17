@@ -6,7 +6,7 @@ from planilla import planilla
 # pip install prototools
 from prototools import int_input, float_input, menu_input
 from prototools import tabulate, textbox
-from prototools.colorize import red, green
+from prototools.colorize import red, green, cyan, magenta
 
 
 IMPUESTOS: Dict[str, float] = {
@@ -15,11 +15,11 @@ IMPUESTOS: Dict[str, float] = {
 }
 
 def ingresar_datos() -> Tuple[str, str, int, float, str]:
-    nombre = input("Nombre: ")
-    apellido = input("Apellido: ")
-    horas = int_input("Horas: ", min=0)
-    sueldo = float_input("Sueldo: ", min=0)
-    tipo = menu_input(tuple(IMPUESTOS.keys()), lang="es")
+    nombre = input(cyan("Nombre: "))
+    apellido = input(cyan("Apellido: "))
+    horas = int_input(cyan("Horas: "), min=0)
+    sueldo = float_input(cyan("Sueldo: "), min=0)
+    tipo = menu_input(tuple(IMPUESTOS.keys()), numbers=True, lang="es")
     return nombre, apellido, horas, sueldo, tipo
 
 
@@ -64,20 +64,27 @@ class Empresa:
                 for e in self.empleados
             ],
             headers=[
-                "Nombre", "Apellido", "Horas", "Sueldo", "Tipo", "Pago",
+                cyan("Nombre"),
+                cyan("Apellido"),
+                cyan("Horas"),
+                cyan("Sueldo"),
+                cyan("Tipo"),
+                cyan("Pago"),
             ],
+            color=magenta,
         ))
         print(tabulate(
             [
-                ["Total a pagar", f"${self._total_pago():.2f}"],
-                ["Tipo Obrero", f"{obreros}"],
-                ["Tipo Empleados", f"{empleados}"],
+                [cyan("Total a pagar"), f"${self._total_pago():.2f}"],
+                [cyan("Tipo Obrero"), f"{obreros}"],
+                [cyan("Tipo Empleados"), f"{empleados}"],
             ],
             headless=True,
+            color=magenta,
         ))
 
     def eliminar(self):
-        nombre = input("Nombre: ")
+        nombre = input(cyan("Nombre: "))
         empleado = self._buscar(nombre)
         if empleado:
             self.empleados.remove(empleado)
