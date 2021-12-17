@@ -20,8 +20,8 @@ planilla: List[Dict[str, Union[str, int]]] = [
     {
         "nombres": "Yngwie",
         "apellidos": "Malmsteen",
-        "horas": 130,
-        "sueldo": 12,
+        "horas": 100,
+        "sueldo": 9,
         "tipo": "obrero",
     },
     {
