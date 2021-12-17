@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 
-def prewitt_filter(img, k_size=3):
+def filtro_prewitt(img, k_size=3):
     H, W = img.shape
     pad = k_size // 2
     out = np.zeros((H + pad * 2, W + pad * 2), dtype=float)
@@ -26,7 +26,7 @@ def prewitt_filter(img, k_size=3):
 
 
 img = cv2.imread("assets/logo.png",0).astype(float)
-out_v, out_h = prewitt_filter(img, k_size=3)
+out_v, out_h = filtro_prewitt(img, k_size=3)
 cv2.imwrite("out_v.jpg", out_v)
 cv2.imshow("result_v", out_v)
 cv2.imwrite("out_h.jpg", out_h)
