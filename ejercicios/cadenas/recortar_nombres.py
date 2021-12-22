@@ -34,11 +34,12 @@ class Test(TestCase):
 
     def test_recortar_nombres(self):
         self.assertEqual(
-            recortar_nombres(["Steve", "Yngwie", "Joe"]),
-            ["Ste", "Yng", "Joe"],
+            recortar_nombres(["Alejandra", "Pedro"]),
+            ["Aleja", "Pedro"],
         )
+        self.assertEqual(recortar_nombres(["Margarita"]), ["Margarita"])
 
 
 if __name__ == "__main__":
-    #main()
-    main_()
+    main()
+    #main_()
