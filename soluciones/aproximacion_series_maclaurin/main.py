@@ -20,7 +20,7 @@ def expx(x, n=N):
     return sum((x**k) / f(k) for k in range(n + 1))
 
 
-def arcsen(x, n=N):
+def arcsenx(x, n=N):
     return sum(
         (f(2*k) * x**(2*k + 1)) / (4**k * (f(k)**2) * (2*k + 1))
         for k in range(n + 1)
@@ -28,7 +28,7 @@ def arcsen(x, n=N):
 
 
 def _f(f, a, b, n):
-    if f == arcsen:
+    if f == arcsenx:
         if a < -1 or b > 1:
             textbox("Fuera de dominio")
             return
@@ -77,7 +77,7 @@ def main():
         ("Evaluación de la función cos(x) en la partición",
             lambda: sol.evaluar(cosx)),
         ("Evaluación de la función arcsen(x) en la partición",
-            lambda: sol.evaluar(arcsen)),
+            lambda: sol.evaluar(arcsenx)),
     )
     menu.settings(header_bottom=True)
     menu.run()
