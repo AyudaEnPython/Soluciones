@@ -29,5 +29,36 @@ def main():
     menu.run()
 
 
+def menu():
+    print("Menu")
+    print("1) Secuencia Fibonacci")
+    print("2) Sumatoria primos")
+    print("3) Primos gemelos")
+    print("4) Máximo común divisor (MCD)")
+    print("5) Centro meteorológico")
+    print("6) Salir")
+
+
+def main_alt():
+    while True:
+        menu()
+        opcion = input("Ingrese una opción: ")
+        if opcion == "1":
+            serie_fibonacci.main_()
+        elif opcion == "2":
+            sumatoria_primos.main_()
+        elif opcion == "3":
+            primos_gemelos.main_()
+        elif opcion == "4":
+            mcd.main_()
+        elif opcion == "5":
+            promedio_temperaturas.main_()
+        elif opcion == "6":
+            break
+        else:
+            print("Opción inválida")
+
+
 if __name__ == "__main__":
-    main()
+    # main()
+    main_alt()
