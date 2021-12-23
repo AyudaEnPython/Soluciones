@@ -20,7 +20,8 @@ Por ejemplo, para los valores: ini=3, fin=8 y num_base=4 deberá mostrar:
 Hacer la prueba con otros valores además de los dados en el ejemplo.
 # ---------------------------------------------------------------------
 NOTE: Se opta por cambiar los identificadores de los parámetros y
-    utilizar el estilo sphinx para la documentación.
+    utilizar el estilo sphinx (formato reStructuredText) para la
+    documentación.
 """
 from unittest import main, TestCase
 
