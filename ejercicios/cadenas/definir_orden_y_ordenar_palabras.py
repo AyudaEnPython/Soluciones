@@ -20,6 +20,42 @@ TODO: add tests later...
 """
 
 
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        if swapped == False:
+            break
+    return arr
+
+
+def definir_orden_bubble_naive(a, b, c):
+    p, q, r = bubble_sort([a.lower(), b.lower(), c.lower()])
+    if a.lower() == p:
+        p = a
+    elif b.lower() == p:
+        p = b
+    else:
+        p = c
+    if a.lower() == q:
+        q = a
+    elif b.lower() == q:
+        q = b
+    else:
+        q = c
+    if a.lower() == r:
+        r = a
+    elif b.lower() == r:
+        r = b
+    else:
+        r = c
+    return f"{p}, {q}, {r}"
+
+
 def definir_orden_naive(a, b, c):
     if a.lower() < b.lower():
         if b.lower() < c.lower():
