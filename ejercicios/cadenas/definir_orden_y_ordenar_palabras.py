@@ -74,7 +74,7 @@ def definir_orden_naive(a, b, c):
 
 
 def ordenar_palabras_naive():
-    p = q = r = s =""
+    p = q = r = s = ""
     i = 0
     while True:
         if i == 3:
