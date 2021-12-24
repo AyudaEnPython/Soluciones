@@ -20,18 +20,7 @@ TODO: add tests later...
 """
 
 
-def definir_orden_naive(a: str, b: str, c: str) -> str:
-    """Devuelve tres palabras en orden alfabético de izquierda a derecha.
-
-    :param a: Primera palabra.
-    :a type: str
-    :param b: Segunda palabra.
-    :b type: str
-    :param c: Tercera palabra.
-    :c type: str
-    :return: Las tres palabras en orden alfabético de izquierda a derecha.
-    :rtype: str
-    """
+def definir_orden_naive(a, b, c):
     if a.lower() < b.lower():
         if b.lower() < c.lower():
             return f"{a}, {b}, {c}"
@@ -46,21 +35,6 @@ def definir_orden_naive(a: str, b: str, c: str) -> str:
             return f"{b}, {c}, {a}"
     else:
         return f"{c}, {b}, {a}"
-
-
-def definir_orden_builtin(a: str, b: str, c: str) -> str:
-    """Devuelve tres palabras en orden alfabético de izquierda a derecha.
-
-    :param a: Primera palabra.
-    :a type: str
-    :param b: Segunda palabra.
-    :b type: str
-    :param c: Tercera palabra.
-    :c type: str
-    :return: Las tres palabras en orden alfabético de izquierda a derecha.
-    :rtype: str
-    """
-    return ", ".join(sorted([a, b, c], key=str.lower))
 
 
 def ordenar_palabras_naive():
@@ -84,7 +58,24 @@ def ordenar_palabras_naive():
     print(definir_orden_naive(p, q, r))
 
 
-def ordenar_palabras_alt():
+def definir_orden_builtin(a: str, b: str, c: str) -> str:
+    """Devuelve tres palabras en orden alfabético de izquierda a derecha.
+
+    :param a: Primera palabra.
+    :a type: str
+    :param b: Segunda palabra.
+    :b type: str
+    :param c: Tercera palabra.
+    :c type: str
+    :return: Las tres palabras en orden alfabético de izquierda a derecha.
+    :rtype: str
+    """
+    return ", ".join(sorted([a, b, c], key=str.lower))
+
+
+def ordenar_palabras_alt() -> None:
+    """Pide tres palabras distintas y las devuelve en orden alfabético.
+    """
     palabras = []
     while True:
         if len(palabras) == 3:
@@ -99,6 +90,7 @@ def ordenar_palabras_alt():
 
 def main():
     ordenar_palabras_naive()
+    # ordenar_palabras_alt()
 
 
 if __name__ == '__main__':
