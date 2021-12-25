@@ -9,7 +9,13 @@ import re
 
 
 def es_diptongo(s: str, n: int = 2) -> bool:
-    """Determina si una cadena es un diptongo.
+    """Determina si una cadena es un diptongo (n=2).
+
+    :param s: cadena de caracteres
+    :s type: str
+    :param n: longitud, por defecto 2 (diptongo)
+    :n type: int
+    :return: True si es diptongo (n=2), False si no lo es
     """
     regex = n * "[aeiou]"
     return re.search(regex, s) is not None
