@@ -39,8 +39,7 @@ from typing import Iterable, List
 from matplotlib import pyplot as plt
 import pandas as pd
 # pip install prototools
-from prototools import int_input, Menu, MESES
-from prototools.utils import ask_to_finish
+from prototools import int_input, Menu, MESES, ask_to_finish
 
 
 def _histograma(
