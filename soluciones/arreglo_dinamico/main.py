@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-TODO: add testcases, possibly add more features later when I have time
+TODO: add more features later when I have time
 """
 from ctypes import py_object, POINTER
 from typing import List
