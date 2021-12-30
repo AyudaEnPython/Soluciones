@@ -59,6 +59,11 @@ class Test(TestCase):
         self.assertEqual(arreglo.pop(), 3)
         self.assertEqual(len(arreglo), 2)
 
+    def test_crear(self):
+        arreglo = ArregloDinamico()
+        arr = arreglo._crear(5)
+        self.assertEqual(len(arr), 5)
+
 
 if __name__ == "__main__":
     main()
