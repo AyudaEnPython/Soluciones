@@ -18,7 +18,7 @@ def registrar() -> Tuple(str, str, str, str, str):
     return placa, marca, modelo, year, precio
 
 
-def main():
+def main_():
     vehiculos: List = []
     while True:
         placa, marca, modelo, year, precio = registrar()
@@ -32,4 +32,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main_()
