@@ -39,7 +39,6 @@ from random import randint
 from prototools import Menu, int_input
 
 
-
 class Reloj:
     def __init__(self) -> None:
         self._horas = randint(0, 24)
