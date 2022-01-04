@@ -61,6 +61,7 @@ class Reloj:
 alarma = Reloj()
 alarmas = []
 
+
 def _entradas():
     horas = int_input("Ingrese la hora: ", min=0, max=24)
     minutos = int_input("Ingrese los minutos: ", min=0, max=59)
