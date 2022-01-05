@@ -11,5 +11,9 @@ def len_(ss, i=0):
     return i
 
 
+def len_alt(ss, i=0):
+    return sum(1 for s in ss)
+
+
 print(len_("Esta es una cadena")) # output 18
 print(len_("trabajando.pe")) # output 13
