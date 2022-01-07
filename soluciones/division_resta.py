@@ -7,14 +7,14 @@ Pedir 2 numeros: en el cual el 2do numero deber ser diferente de 0
 numero1 = 12
 numero2 = 3
 
-A traves de una estructura repetitiva resuelva el problema de la
-divison con restas sucesivas:
+A través de una estructura repetitiva resuelva el problema de la
+división con restas sucesivas:
 
     +---------+---------+---------+---------+
     | numero1 | numero2 | numero1 | numero2 |
     +---------+---------+---------+---------+
     |    12   |    3    |    7    |    3    |
-    |     9   |    3    |    4    |         |
+    |     9   |    3    |    4    |    3    |
     |     6   |    3    |    1    |         |
     |     3   |    3    |         |         |
     |     0   |         |         |         |
@@ -23,7 +23,6 @@ divison con restas sucesivas:
 el resultado de esto:    4     2
 el residuo es :          0     1
 # ---------------------------------------------------------------------
-NOTE: Notas sobrel el enunciado del problema.
 """
 from typing import Tuple
 from unittest import main, TestCase
