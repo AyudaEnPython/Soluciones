@@ -87,3 +87,32 @@
 39. Ingresar 10 temperaturas por teclado y mostrar la mayor.
 40. Se ingresan 10 pares de temperaturas (T1 y T2). Hallar el promedio de las
   temperaturas T1 y el promedio de las temperaturas T2.
+
+## 2.8.7. Problemas: Diagramación lógica -Estructura de control de repetición "while"
+
+41. Diseñar un algoritmo que genere números al azar múltiplos de 5, mientras el
+  usuario no ingresa la opción ‘S’ (Salir).
+42. Diseñar un algoritmo que lea un número desde teclado y determine si el mismo
+  es primo o no. 
+43. Diseñar un algoritmo que lea desde teclado la información sobre altura, edad,
+  y sexo (F/M) de los participantes de un curso. La lectura finaliza cuando se
+  lee un valor de altura negativo. Luego calcule:
+    * a. Promedio de altura de las mujeres.
+    * b. Promedio de altura de los varones.
+    * c. Promedio de edad de los participantes.
+44. Se ingresan 10 números cuyos valores corresponden a los de la ruleta
+  (0,1,2,…,36), se pide hallar y mostrar por pantalla lo siguiente:
+    * a. Cantidad de números impares.
+    * b. Promedio de los números pares (no contar los ceros).
+    * c. Cantidad de números que se encuentran en la 2º docena (13 al 24).
+    * d. El número más grande.
+    * e. ¿En qué cambia la solución si en lugar de leer 10 números, ahora se 
+    leen números hasta que llega el valor 36?
+45. Se leen desde teclado pares de temperaturas (T1 y T2) hasta que T1 sea cero.
+  Hallar el promedio de las temperaturas ingresadas que están comprendidas entre
+  5° y 15° (incluidos).
+46. Se leen desde teclado números hasta que la suma de los mismos llegue a 1000.
+  Mientras tanto debe hallar: 
+    * a. La cantidad de números múltiplos de 6.
+    * b. La suma de los números que se encuentran entre el 1 y el 10 
+    (incluidos).
