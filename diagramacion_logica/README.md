@@ -2,28 +2,32 @@
 
 ## 2.7. Problemas: Diagramación lógica - Estructura de control de decisión
 
-1. Diseñar un algoritmo que, dados dos números, muestre por pantalla su suma.
+1. Diseñar un algoritmo que, dados dos números, muestre por pantalla su suma
+  ([ejercicio 1](ejercicios/ejercicio_01.py)).
 2. Realice un algoritmo que solicite dos datos: país y capital. Y luego muestre
   la capital del país. El cartel debe ser como lo indica el siguiente ejemplo:
-  “Katmandú es la capital de Nepal”.
+  “Katmandú es la capital de Nepal” ([ejercicio 2](ejercicios/ejercicio_02.py)).
 3. Crear un algoritmo que muestre por pantalla el doble y el triple de un número
-  ingresado por teclado.
+  ingresado por teclado ([ejercicio 3](ejercicios/ejercicio_03.py)).
 4. Diseñar un algoritmo que imprima el cuadrado y el cubo de un número ingresado
-  por teclado.
+  por teclado ([ejercicio 4](ejercicios/ejercicio_04.py)).
 5. Diseñar un algoritmo que pida un número por teclado y luego imprima el número
-  siguiente al ingresado.
+  siguiente al ingresado ([ejercicio 5](ejercicios/ejercicio_05.py)).
 6. Diseñar un algoritmo que genere un número aleatorio del 0 al 200, lo muestre
-  y luego calcule y muestre el mismo número aumentado en un 30%.
+  y luego calcule y muestre el mismo número aumentado en un 30%
+  ([ejercicio 6](ejercicios/ejercicio_06.py)).
 7. Diseñar un algoritmo que genere un número aleatorio del 10 al 50, lo muestre
-  y luego calcule y muestre el mismo número disminuido en un 15%.
+  y luego calcule y muestre el mismo número disminuido en un 15%
+  ([ejercicio 7](ejercicios/ejercicio_07.py)).
 8. Diseñar un algoritmo que, dados tres números enteros, calcule e imprima el
-  promedio entre ellos.
+  promedio entre ellos ([ejercicio 8](ejercicios/ejercicio_08.py)).
 9. Diseñe un algoritmo para ingresar dos palabras (A, B) y luego realice el
-  intercambio de sus valores. Finalmente mostrar el contenido de A y de B.
+  intercambio de sus valores. Finalmente mostrar el contenido de A y de B
+  ([ejercicio 9](ejercicios/ejercicio_09.py)).
 10. Diseñar un algoritmo que imprima el área y el perímetro de un rectángulo
-  ingresando su base y altura.
+  ingresando su base y altura ([ejercicio 10](ejercicios/ejercicio_10.py)).
 11. Realice un algoritmo que calcule el volumen de un cilindro a partir de los
-  valores de su radio y altura.
+  valores de su radio y altura ([ejercicio 11](ejercicios/ejercicio_11.py)).
 12. Crear un algoritmo que convierta y muestre un valor ingresado en centímetros
   a yardas, metros, pies y pulgadas.
 13. Diseñar un algoritmo que convierta y muestre la temperatura en Fahrenheit
