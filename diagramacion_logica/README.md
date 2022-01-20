@@ -120,26 +120,24 @@
   es primo o no ([ejercicio 42](ejercicios/ejercicio_42.py)). 
 43. Diseñar un algoritmo que lea desde teclado la información sobre altura, edad,
   y sexo (F/M) de los participantes de un curso. La lectura finaliza cuando se
-  lee un valor de altura negativo. Luego calcule:
+  lee un valor de altura negativo. Luego calcule ([ejercicio 43](ejercicios/ejercicio_43.py)):
     * a. Promedio de altura de las mujeres.
     * b. Promedio de altura de los varones.
     * c. Promedio de edad de los participantes.
-  ([ejercicio 43](ejercicios/ejercicio_43.py))
 44. Se ingresan 10 números cuyos valores corresponden a los de la ruleta
-  (0,1,2,…,36), se pide hallar y mostrar por pantalla lo siguiente:
+  (0,1,2,…,36), se pide hallar y mostrar por pantalla lo siguiente 
+  ([ejercicio 44](ejercicios/ejercicio_44.py)):
     * a. Cantidad de números impares.
     * b. Promedio de los números pares (no contar los ceros).
     * c. Cantidad de números que se encuentran en la 2º docena (13 al 24).
     * d. El número más grande.
     * e. ¿En qué cambia la solución si en lugar de leer 10 números, ahora se 
     leen números hasta que llega el valor 36?
-  ([ejercicio 44](ejercicios/ejercicio_44.py))
 45. Se leen desde teclado pares de temperaturas (T1 y T2) hasta que T1 sea cero.
   Hallar el promedio de las temperaturas ingresadas que están comprendidas entre
   5° y 15° (incluidos) ([ejercicio 45](ejercicios/ejercicio_45.py)).
 46. Se leen desde teclado números hasta que la suma de los mismos llegue a 1000.
-  Mientras tanto debe hallar: 
+  Mientras tanto debe hallar ([ejercicio 46](ejercicios/ejercicio_46.py)): 
     * a. La cantidad de números múltiplos de 6.
     * b. La suma de los números que se encuentran entre el 1 y el 10 
     (incluidos).
-  ([ejercicio 46](ejercicios/ejercicio_46.py))
