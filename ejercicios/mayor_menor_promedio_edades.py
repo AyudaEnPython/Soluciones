@@ -3,11 +3,11 @@
 
 def sol_a():
     # pip install prototools
-    from prototools.entradas import entrada_int
+    from prototools import int_input
     
-    n = entrada_int("Ingrese el número de personas: ",  min=1)
+    n = int_input("Ingrese el número de personas: ",  min=1)
     edades = [
-        entrada_int("Ingrese la edad: ", min=1, max=100) for _ in range(n)
+        int_input("Ingrese la edad: ", min=1, max=100) for _ in range(n)
     ]
     
     print(f"Mayor edad: {max(edades)}")
