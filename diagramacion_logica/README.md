@@ -29,31 +29,37 @@
 11. Realice un algoritmo que calcule el volumen de un cilindro a partir de los
   valores de su radio y altura ([ejercicio 11](ejercicios/ejercicio_11.py)).
 12. Crear un algoritmo que convierta y muestre un valor ingresado en centímetros
-  a yardas, metros, pies y pulgadas.
+  a yardas, metros, pies y pulgadas ([ejercicio 12](ejercicios/ejercicio_12.py)).
 13. Diseñar un algoritmo que convierta y muestre la temperatura en Fahrenheit
-  ingresando la temperatura en Celsius.
+  ingresando la temperatura en Celsius ([ejercicio 13](ejercicios/ejercicio_13.py)).
 14. Diseñar un algoritmo que calcule el volumen de un cilindro dados su radio y
-  altura (primero el programa deberá verificar si son positivas).
+  altura (primero el programa deberá verificar si son positivas)
+  ([ejercicio 14](ejercicios/ejercicio_14.py)).
 15. Crear un algoritmo que calcule si dos números son divisibles. Para ello, se
   piden un primer número y un segundo número, entonces mostrar un cartel que diga
-  “es divisible” si el segundo número es divisible al primero.
+  “es divisible” si el segundo número es divisible al primero
+  ([ejercicio 15](ejercicios/ejercicio_15.py)).
 16. Diseñar un algoritmo para calcular el porcentaje de hombres y de mujeres que
-  hay en un grupo, dados los totales de hombres y de mujeres.
+  hay en un grupo, dados los totales de hombres y de mujeres
+  ([ejercicio 16](ejercicios/ejercicio_16.py)).
 17. Diseñar un algoritmo que indique con carteles si el número ingresado es
-  negativo, positivo o nulo.
+  negativo, positivo o nulo ([ejercicio 17](ejercicios/ejercicio_17.py)).
 18. Ingresar tres números y mostrar el mayor (asuma que todos son distintos entre
-  sí).
+  sí) ([ejercicio 18](ejercicios/ejercicio_18.py)).
 19. Realice un algoritmo para mostrar un cartel que indique si un triángulo es
-  «escaleno», «equilátero» o «isósceles» ingresando sus lados.
+  «escaleno», «equilátero» o «isósceles» ingresando sus lados
+  ([ejercicio 19](ejercicios/ejercicio_19.py)).
 20. Diseñar un algoritmo que imprima con un cartel el número de docena («primera»,
   «segunda» o «tercera») dado el resultado de una jugada de ruleta (del 0 al 36).
-  Utilizar el operador lógico and.
+  Utilizar el operador lógico and ([ejercicio 20](ejercicios/ejercicio_20.py)).
 21. Crear un algoritmo que permita obtener y mostrar la cantidad de dígitos de un
-  número ingresado, sabiendo que el máximo permitido es 4.
-2. Crear un algoritmo que muestre cada uno de los dígitos de un número ingresado
+  número ingresado, sabiendo que el máximo permitido es 4
+  ([ejercicio 21](ejercicios/ejercicio_21.py)).
+22. Crear un algoritmo que muestre cada uno de los dígitos de un número ingresado
   por el usuario. El máximo permitido es de 4 dígitos. Por ejemplo: si se ingresa
   el número 187, entonces debe mostrar en un único cartel lo siguiente:
   “d1 = 0, d2 = 1, d3 = 8 y d4 =7”.
+   ([ejercicio 22](ejercicios/ejercicio_22.py))
 23. Ídem al anterior pero se pide que muestre la suma de los dígitos del número
   ingresado (máximo 4 dígitos).
 24. Diseñar un algoritmo que imprima con un cartel «Correcto» según el siguiente
