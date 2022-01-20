@@ -72,34 +72,45 @@
 26. Crear un algoritmo que muestre las soluciones de una ecuación cuadrática
   (usando Bhaskara), a partir del ingreso de los valores de los coeficientes del
   polinomio. El polinomio tiene la forma: P(x) = ax^2 + bx + c
-  ([ejercicio 26](ejercicios/ejercicio_26.py))
+  ([ejercicio 26](ejercicios/ejercicio_26.py)).
 27. Probar con: a) P(x) = x^2 + 3x + 2 b) P(x) = 2x^2 + 4x + 2 c) P(x) = 3x^2 + 2
- ([ejercicio 27](ejercicios/ejercicio_27.py))
+ ([ejercicio 27](ejercicios/ejercicio_27.py)).
 
 ## 2.8.5. Problemas: Diagramación lógica - Estructura de control de repetición "for"
 
-28. Mostrar por pantalla los números del 10 al 1.
-29. Mostrar por pantalla las tres primeras potencias de los números del 1 al 5.
-30. Dado un número, mostrar por pantalla su tabla de multiplicar (del 1 a 10).
+28. Mostrar por pantalla los números del 10 al 1
+  ([ejercicio 28](ejercicios/ejercicio_28.py)).
+29. Mostrar por pantalla las tres primeras potencias de los números del 1 al 5
+  ([ejercicio 29](ejercicios/ejercicio_29.py)).
+30. Dado un número, mostrar por pantalla su tabla de multiplicar (del 1 a 10)
+  ([ejercicio 30](ejercicios/ejercicio_30.py)).
 31. Mostrar por pantalla la cantidad de personas mayores de edad (≥18) de un
-  total de N edades leídas desde teclado. 
+  total de N edades leídas desde teclado ([ejercicio 31](ejercicios/ejercicio_31.py)). 
 32. Mostrar por pantalla la cantidad de mujeres y hombres (M/H) de un total de N
-  valores leídos desde teclado. Mostrar también su porcentaje.
+  valores leídos desde teclado. Mostrar también su porcentaje
+  ([ejercicio 32](ejercicios/ejercicio_32.py)).
 33. Mostrar por pantalla la cantidad de mujeres mayores de edad y la cantidad de
-  hombres menores de edad de un total de N edades y sexo leídos desde teclado.
+  hombres menores de edad de un total de N edades y sexo leídos desde teclado
+  ([ejercicio 33](ejercicios/ejercicio_33.py)).
 34. A un grupo de 10 personas se les consulta la edad y se desea calcular el
   promedio de edad del grupo. Mostrar el promedio y cuántas de las 10 personas son
-  mayores de 18 años, leyendo la información desde teclado.
+  mayores de 18 años, leyendo la información desde teclado
+  ([ejercicio 34](ejercicios/ejercicio_34.py)).
 35. Se desea conocer el peso acumulado de 10 personas. ¿En qué cambiaría la
-  solución si ahora son 100 personas?
-36. Se desea conocer el peso promedio de 5 personas.
+  solución si ahora son 100 personas ([ejercicio 35](ejercicios/ejercicio_35.py))?
+36. Se desea conocer el peso promedio de 5 personas
+  ([ejercicio 36](ejercicios/ejercicio_36.py)).
 37. Realice un algoritmo que permita ingresar 10 edades de personas para luego
-  hallar y mostrar el % de gente mayor de edad (≥ 18) y el % de menores de edad.
+  hallar y mostrar el % de gente mayor de edad (≥ 18) y el % de menores de edad
+  ([ejercicio 37](ejercicios/ejercicio_37.py))
 38. Crear un algoritmo que genere al azar 5 números de la ruleta (del 0 al 36) y
-  muestre el % de números pares, % de impares y % de ceros generados.
-39. Ingresar 10 temperaturas por teclado y mostrar la mayor.
+  muestre el % de números pares, % de impares y % de ceros generados
+  ([ejercicio 38](ejercicios/ejercicio_38.py)).
+39. Ingresar 10 temperaturas por teclado y mostrar la mayor
+  ([ejercicio 39](ejercicios/ejercicio_39.py)).
 40. Se ingresan 10 pares de temperaturas (T1 y T2). Hallar el promedio de las
-  temperaturas T1 y el promedio de las temperaturas T2.
+  temperaturas T1 y el promedio de las temperaturas T2
+  ([ejercicio 40](ejercicios/ejercicio_40.py)).
 
 ## 2.8.7. Problemas: Diagramación lógica -Estructura de control de repetición "while"
 
