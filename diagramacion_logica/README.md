@@ -58,20 +58,23 @@
 22. Crear un algoritmo que muestre cada uno de los dígitos de un número ingresado
   por el usuario. El máximo permitido es de 4 dígitos. Por ejemplo: si se ingresa
   el número 187, entonces debe mostrar en un único cartel lo siguiente:
-  “d1 = 0, d2 = 1, d3 = 8 y d4 =7”.
-   ([ejercicio 22](ejercicios/ejercicio_22.py))
+  “d1 = 0, d2 = 1, d3 = 8 y d4 =7”
+   ([ejercicio 22](ejercicios/ejercicio_22.py)).
 23. Ídem al anterior pero se pide que muestre la suma de los dígitos del número
-  ingresado (máximo 4 dígitos).
+  ingresado (máximo 4 dígitos) ([ejercicio 23](ejercicios/ejercicio_23.py)).
 24. Diseñar un algoritmo que imprima con un cartel «Correcto» según el siguiente
   caso: si el numero N es múltiplo de 5 y se encuentra entre los 25 primeros
   números. N debe ser obtenido aleatoriamente entre números del 1 al 1000.
-  Primero debe mostrar N.
+  Primero debe mostrar N ([ejercicio 24](ejercicios/ejercicio_24.py)).
 25. Diseñar un algoritmo que ingresando un numero de 5 dígitos detecte si es
-  capicúa y muestre un cartel «Es capicúa» o «No es capicúa» según el resultado.
+  capicúa y muestre un cartel «Es capicúa» o «No es capicúa» según el resultado
+  ([ejercicio 25](ejercicios/ejercicio_25.py)).
 26. Crear un algoritmo que muestre las soluciones de una ecuación cuadrática
   (usando Bhaskara), a partir del ingreso de los valores de los coeficientes del
   polinomio. El polinomio tiene la forma: P(x) = ax^2 + bx + c
+  ([ejercicio 26](ejercicios/ejercicio_26.py))
 27. Probar con: a) P(x) = x^2 + 3x + 2 b) P(x) = 2x^2 + 4x + 2 c) P(x) = 3x^2 + 2
+ ([ejercicio 27](ejercicios/ejercicio_27.py))
 
 ## 2.8.5. Problemas: Diagramación lógica - Estructura de control de repetición "for"
 
