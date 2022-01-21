@@ -2,11 +2,11 @@ Resolver el siguiente problema sin utilizar clases, sólo usando
 funciones. Considere las ecuaciones de oferta y demanda:
 
 <p align="center" width="100%">
-<img src="https://render.githubusercontent.com/render/math?math=S(q) = q^2 %2B \beta *10">
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}S(q) = q^2 %2B \beta *10">
 </p>
 
 <p align="center" width="100%">
-<img src="https://render.githubusercontent.com/render/math?math=D(q) = (q - 20)^2">
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}D(q) = (q - 20)^2">
 </p>
 
 El objetivo es crear un gráfico que muestre la demanda y la oferta
