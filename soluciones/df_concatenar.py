@@ -1,4 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+TODO: add docstring and tests.
 """
 import pandas as pd
 from prototools import retrieve_argname, tabulate, red
