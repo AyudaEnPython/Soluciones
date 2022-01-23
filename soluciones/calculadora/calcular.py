@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-TODO: add docstring and tests.
+TODO: add tests.
 """
 import sys
 from functools import reduce
@@ -10,6 +10,13 @@ from typing import Callable, List, Dict
 
 
 def _accion(s: str) -> Callable:
+    """Ejecuta la accion correspondiente a la opcion ingresada
+
+    :param s: Opcion ingresada por el usuario
+    :type s: str
+    :return: Funcion que ejecuta la accion correspondiente
+    :rtype: Callable
+    """
     accion: Dict[str, Callable] = {
         s == "-s" or s == "--suma": add,
         s == "-r" or s == "--resta": sub,
@@ -20,6 +27,13 @@ def _accion(s: str) -> Callable:
 
 
 def _validar(args: List[str]) -> None:
+    """Valida que el usuario haya ingresado alguna de las opciones
+    -h, --help, -s, --suma, -r, --resta, -m, --mult, -d, --div
+
+    :param args: Argumentos ingresados por el usuario
+    :type args: List[str]
+    :raises Exception: Si el usuario no ingreso ninguna de las opciones
+    """
     if len(args) <= 1:
         raise Exception("Faltan argumentos!")
     if args[1] == "-h" or args[1] == "--help":
@@ -34,6 +48,7 @@ def _validar(args: List[str]) -> None:
 
 
 def help() -> None:
+    """Muestra la ayuda del programa"""
     print("AyudaEnPython: https://www.facebook.com/groups/ayudapython\n")
     print(dedent("""\
         -h or --help: Ayuda
@@ -47,6 +62,13 @@ def help() -> None:
 
 
 def calcular(args: List[str]) -> float:
+    """Calcula la operacion ingresada por el usuario
+
+    :param args: Argumentos ingresados por el usuario
+    :type args: List[str]
+    :return: Resultado de la operacion
+    :rtype: float
+    """
     try:
         resultado = reduce(_accion(args[0]), map(float, args[1:]))
     except ZeroDivisionError:
@@ -56,6 +78,7 @@ def calcular(args: List[str]) -> float:
 
 
 def main():
+    """Ejecuta el programa principal"""
     try:
         _validar(sys.argv)
     except Exception as e:
