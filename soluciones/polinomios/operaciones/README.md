@@ -1,33 +1,33 @@
-Un polinomio de grado <img src="https://render.githubusercontent.com/render/math?math=n">
+Un polinomio de grado <img src="https://render.githubusercontent.com/render/math?math=\color{white}n">
 es una función matemática de la forma:
 
 <p align="center" width="100%">
-<img src="https://render.githubusercontent.com/render/math?math=p(x) = a_{0} %2B a_{1}x %2B a_{2}x^{2} %2B a_{3}x^{3} %2B \ldots %2B a_{n}x^{n}">
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}p(x) = a_{0} %2B a_{1}x %2B a_{2}x^{2} %2B a_{3}x^{3} %2B \ldots %2B a_{n}x^{n}">
 </p>
 
-Donde <img src="https://render.githubusercontent.com/render/math?math=x"> es
-el parámetro y <img src="https://render.githubusercontent.com/render/math?math=a_{0}, a_{1}, \ldots, a_{n}">
+Donde <img src="https://render.githubusercontent.com/render/math?math=\color{white}x"> es
+el parámetro y <img src="https://render.githubusercontent.com/render/math?math=\color{white}a_{0}, a_{1}, \ldots, a_{n}">
 son números reales dados.
 
 Algunos ejemplos de polinomios son:
-* <img src="https://render.githubusercontent.com/render/math?math=p(x) = 1 %2B 2x %2B x^2">
-* <img src="https://render.githubusercontent.com/render/math?math=q(x) = 4 - 17x">
-* <img src="https://render.githubusercontent.com/render/math?math=r(x) = -1 -5x^3 %2B 3x^5">
-* <img src="https://render.githubusercontent.com/render/math?math=s(x) = 5x^40 %2B 2x^80">
+* <img src="https://render.githubusercontent.com/render/math?math=\color{white}p(x) = 1 %2B 2x %2B x^2">
+* <img src="https://render.githubusercontent.com/render/math?math=\color{white}q(x) = 4 - 17x">
+* <img src="https://render.githubusercontent.com/render/math?math=\color{white}r(x) = -1 -5x^3 %2B 3x^5">
+* <img src="https://render.githubusercontent.com/render/math?math=\color{white}s(x) = 5x^40 %2B 2x^80">
 
 Los grados de estos polinomios son, respectivamente 2, 1, 5 y 80.
 
-Evaluar un polinomio significa reemplazar <img src="https://render.githubusercontent.com/render/math?math=x"> por
-un valor y obtener el resultado. Por ejemplo, si evaluamos el polinomio <img src="https://render.githubusercontent.com/render/math?math=p">
-en el valor <img src="https://render.githubusercontent.com/render/math?math=x=3">,
+Evaluar un polinomio significa reemplazar <img src="https://render.githubusercontent.com/render/math?math=\color{white}x"> por
+un valor y obtener el resultado. Por ejemplo, si evaluamos el polinomio <img src="https://render.githubusercontent.com/render/math?math=\color{white}p">
+en el valor <img src="https://render.githubusercontent.com/render/math?math=\color{white}x=3">,
 obtenemos el resultado:
 
 <p align="center" width="100%">
-<img src="https://render.githubusercontent.com/render/math?math=p(3) = 1 %2B (2\cdot3) %2B 3^2 = 16">
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}p(3) = 1 %2B (2\cdot3) %2B 3^2 = 16">
 </p>
 
 Un polinomio puede ser representado como una lista con los valores
-<img src="https://render.githubusercontent.com/render/math?math=a_{0}, a_{1}, \ldots, a_{n}">.
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}a_{0}, a_{1}, \ldots, a_{n}">.
 Por ejemplo, los polinomios anteriores pueden ser representados así en un programa:
 
 ```python
