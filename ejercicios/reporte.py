@@ -28,9 +28,9 @@ for i in range(n):
         [proveedor, cliente, servicio, costo, descuento, ingreso]
     )
 
-print("="*72)
+print("=" * 72)
 print(" Reporte de Ingresos ".center(72, " "))
-print("="*72)
+print("=" * 72)
 print(
     "{:<12} {:<12} {:<12} {:<12} {:<12} {:<12}".format(
         "Proveedor", "Cliente", "Servicio", "Costo", "Descuento", "Ingreso"
