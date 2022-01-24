@@ -1,24 +1,24 @@
 Las sumas de Riemann sirven para el cáculo aproximado de áreas y se define como
 
 <p align="center" width="100%">
-<img src="https://render.githubusercontent.com/render/math?math=\sum_{i=1}^{n} {\Delta}x.{f(x_{i})}">
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}\sum_{i=1}^{n} {\Delta}x.{f(x_{i})}">
 </p>
 
-en donde la función <img src="https://render.githubusercontent.com/render/math?math=\ f">
+en donde la función <img src="https://render.githubusercontent.com/render/math?math=\color{white}\ f">
 representa la función continua en el intervalo
-<img src="https://render.githubusercontent.com/render/math?math=\ [a, b]"> que
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}\ [a, b]"> que
 genera una curva,
-<img src="https://render.githubusercontent.com/render/math?math=\ n"> representa
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}\ n"> representa
 el número de particiones, 
-<img src="https://render.githubusercontent.com/render/math?math=\Delta x = \frac{b-a}{n}">representa
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}\Delta x = \frac{b-a}{n}">representa
 el tamaño de las particiones y 
-<img src="https://render.githubusercontent.com/render/math?math=\ x_{i} = a + {\Delta}x.i"> representa
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}\ x_{i} = a + {\Delta}x.i"> representa
 un punto en cada partición.
 
 Considere ahora al función
-<img src="https://render.githubusercontent.com/render/math?math=\f(x) = x^2 %2B 6x %2B 3"> y
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}\f(x) = x^2 %2B 6x %2B 3"> y
 que se desea calcular el área bajo la curva en
-<img src="https://render.githubusercontent.com/render/math?math=\ a {\leq} x {\leq} b">. Escribir
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}\ a {\leq} x {\leq} b">. Escribir
 un programa con dos funciones:
 
 * `f()` que reciba un número real `x` y devuelva el resultado de evaluar dicho
