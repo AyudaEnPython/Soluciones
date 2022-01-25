@@ -33,7 +33,7 @@ been committed.
 """
 import sqlite3
 
-conn = sqlite3.connect('emaildb.sqlite')
+conn = sqlite3.connect('data/emaildb.sqlite')
 cur = conn.cursor()
 
 cur.execute('DROP TABLE IF EXISTS Counts')

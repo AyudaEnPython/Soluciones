@@ -66,7 +66,7 @@ The expected result of the modified query on your database is:
 import xml.etree.ElementTree as ET
 import sqlite3
 
-conn = sqlite3.connect('tracks.sqlite')
+conn = sqlite3.connect('data/tracks.sqlite')
 cur = conn.cursor()
 
 cur.executescript('''

@@ -14,7 +14,7 @@ bucle máximo para encontrar la dirección que más envíos tuvo.
     +------------------+
 """
 
-archivo = input("Nombre de archivo: ") # py4e/data/mbox-short.txt
+archivo = input("Nombre de archivo: ") # data/mbox-short.txt
 f = open(archivo)
 correos = []
 for linea in f:

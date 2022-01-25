@@ -50,7 +50,7 @@ summing up the integers.
 import re
 
 suma = 0
-archivo = open("py4e/data/regex_sum_18418.txt")
+archivo = open("data/regex_sum_18418.txt")
 for linea in archivo:
     linea = linea.rstrip()
     numeros = re.findall("[0-9]+", linea)

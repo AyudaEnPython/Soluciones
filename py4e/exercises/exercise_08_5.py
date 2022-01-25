@@ -47,7 +47,7 @@ En http://es.py4e.com/code3/romeo.txt puedes descargar los datos de
 muestra.
 """
 
-archivo = input("Nombre de archivo: ") # py4e/data/mbox-short.txt
+archivo = input("Nombre de archivo: ") # data/mbox-short.txt
 f = open(archivo)
 i = 0
 for linea in f:

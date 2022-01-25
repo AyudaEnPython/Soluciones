@@ -31,7 +31,7 @@ string that looks like 53656C696E613333.
 import json
 import sqlite3
 
-conn = sqlite3.connect('rosterdb.sqlite')
+conn = sqlite3.connect('data/rosterdb.sqlite')
 cur = conn.cursor()
 
 cur.executescript('''

@@ -40,7 +40,7 @@ use MySQL or Oracle for this assignment.
 """
 import sqlite3
 
-conn = sqlite3.connect('my_friends.db')
+conn = sqlite3.connect('data/my_friends.db')
 cur = conn.cursor()
 
 cur.execute("DROP TABLE IF EXISTS Ages")
