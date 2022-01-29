@@ -1,0 +1,70 @@
+// Desarrollar un algoritmo que permita obtener el mayor
+// y menor de 4 números ingresados por teclado. También
+// indicar en qué posición fueron ingresados.
+Algoritmo NumerosMayorMenor
+    Definir N1 Como Entero
+    Definir N2 Como Entero
+    Definir N3 Como Entero
+    Definir N4 Como Entero
+
+    Definir NumeroMayor Como Entero
+    Definir NumeroMenor Como Entero
+
+    Definir PosicionMayor Como Entero
+    Definir PosicionMenor Como Entero
+
+    Escribir "Número 1: "
+    Leer N1
+
+    NumeroMayor = N1
+    NumeroMenor = N1
+    PosicionMayor = 1
+    PosicionMenor = 1
+
+    Escribir "Número 2: "
+    Leer N2
+
+    Si N2 > NumeroMayor Entonces
+        NumeroMayor = N2
+        PosicionMayor = 2
+    FinSi
+
+    Si N2 < NumeroMenor Entonces
+        NumeroMenor = N2
+        PosicionMenor = 2
+    FinSi
+
+    Escribir "Número 3: "
+    Leer N3
+
+    Si N3 > NumeroMayor Entonces
+        NumeroMayor = N3
+        PosicionMayor = 3
+    FinSi
+
+    Si N3 < NumeroMenor Entonces
+        NumeroMenor = N3
+        PosicionMenor = 3
+    FinSi
+
+    Escribir "Número 4: "
+    Leer N4
+
+    Si N4 > NumeroMayor Entonces
+        NumeroMayor = N4
+        PosicionMayor = 4
+    FinSi
+
+    Si N4 < NumeroMenor Entonces
+        NumeroMenor = N4
+        PosicionMenor = 4
+    FinSi
+
+    Si N1 = N2 Y N2 = N3 Y N3 = N4 Entonces
+        Escribir "TODOS LOS NÚMEROS SON IGUALES."
+    Sino
+        Escribir "El número mayor es ", NumeroMayor, " y fue el ", PosicionMayor, "° número ingresado."
+        Escribir "El número menor es ", NumeroMenor, " y fue el ", PosicionMenor, "° número ingresado."
+    FinSi
+
+FinAlgoritmo

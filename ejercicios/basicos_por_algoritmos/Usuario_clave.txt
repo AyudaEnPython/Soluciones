@@ -1,0 +1,22 @@
+// DESAROLLAR UN PROGRAMA QUE AUNTENTIQUE A UN USUARIO.
+// EL PROGRAMA DEBE PEDIR EL NOMBRE DEL USUARIO Y
+// LA CONTRASEÑA SECRETA.
+// El usuario es "administrador" y la clave secreta es "123"
+Algoritmo Autenticacion
+    Definir Usuario Como Caracter
+    Definir Clave Como Caracter
+
+    Escribir "INICIO DE SESION"
+
+    Escribir "INGRESE USUARIO:"
+    Leer Usuario
+
+    Escribir "CONTRASEÑA:"
+    Leer Clave
+
+    Si Usuario = "administrador" Y Clave = "123" Entonces
+        Escribir "BIENVENIDO AL SISTEMA"
+    SiNo
+        Escribir "USUARIO O CONTRASEÑA INCORRECTA."
+    FinSi
+FinAlgoritmo
