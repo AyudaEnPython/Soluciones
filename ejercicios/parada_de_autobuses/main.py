@@ -70,7 +70,7 @@ ejercicio para aumentar la legibilidad del código.
 
 still needs some work
 """
-from prototools.menu import EzMenu
+from prototools import Menu
 
 MAXIMA_CAPACIDAD = 20
 CANTIDAD_DE_AUTOBUSES = 5
@@ -135,24 +135,14 @@ def cargar_informacion():
 
 
 if __name__ == '__main__':
-    menu = EzMenu()
-    menu.agregar_opciones(
-        'Ingresar a la cola',
-        'Llegada de Autobus',
-        'Buscar pasajero',
-        'Mostrar colas',
-        'Mostrar autobuses',
-        'Guardar informacion',
-        'Cargar informacion',
-        'Salir del programa',
-    )
-    menu.agregar_funciones(
-        hacer_cola,
-        llegada_de_autobus,
-        buscar_pasajero,
-        mostrar_colas,
-        mostrar_autobuses,
-        guardar_informacion,
-        cargar_informacion,
+    menu = Menu()
+    menu.add_options(
+        ("Ingresar a la cola", hacer_cola),
+        ("Llegar a un autobús", llegada_de_autobus),
+        ("Buscar pasajero", buscar_pasajero),
+        ("Mostrar colas", mostrar_colas),
+        ("Mostrar autobuses", mostrar_autobuses),
+        ("Guardar información", guardar_informacion),
+        ("Cargar información", cargar_informacion),
     )
     menu.run()
