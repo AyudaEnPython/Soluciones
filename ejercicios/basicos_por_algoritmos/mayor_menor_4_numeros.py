@@ -1,6 +1,8 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 NOTE: Se opta por cambiar algunas cosas para seguir (PEP8).
+    Las líneas 39 a 46 están escritas de esa forma para no
+    superar el límite de 79 caracteres por línea.
 """
 
 p = int(input("1° Número: "))
