@@ -4,7 +4,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/AyudaEnPython/soluciones)
 ![GitHub languages](https://img.shields.io/github/languages/top/AyudaEnPython/soluciones)
 ![Github last-commit](https://img.shields.io/github/last-commit/AyudaEnPython/soluciones)
-![maintenance](https://img.shields.io/maintenance/yes/2021)
+![maintenance](https://img.shields.io/maintenance/yes/2022)
 
      _____           _        _____        _____     _   _           
     |  _  |_ _ _ _ _| |___   |   __|___   |  _  |_ _| |_| |_ ___ ___ 
