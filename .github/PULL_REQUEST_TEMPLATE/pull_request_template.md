@@ -3,7 +3,7 @@
 Incluir un resumen de los cambios.
 
 # Related Issue
-- issue goes her
+- issue goes here
 
 # Tipo de cambio
 
