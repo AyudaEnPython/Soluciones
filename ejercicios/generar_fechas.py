@@ -29,6 +29,8 @@ end:  2009 05 02
 Como pueden ver la la fecha inicial, inicia  a la 0:00  hora y la fecha
 final termina a la 23:00 hora y el incremento es de una hora.
 
+NOTE: el enunciado no es claro, además contiene ciertos errores.
+
 TODO: add tests later.
 """
 import time
