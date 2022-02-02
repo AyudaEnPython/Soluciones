@@ -34,9 +34,10 @@ NOTE: el enunciado no es claro, además contiene ciertos errores.
 TODO: add tests later.
 """
 import time
+from typing import List
 
 
-def generar_fechas(start: str, end: str, delta: int = 1):
+def generar_fechas(start: str, end: str, delta: int = 1) -> List[str]:
     """Genera una lista con todas las fechas entre start y end con un
     intervalo de delta horas.
 
@@ -47,7 +48,7 @@ def generar_fechas(start: str, end: str, delta: int = 1):
     :param delta: intervalo, por defecto 1 (hora)
     :delta type: int
     :return: lista con todas las fechas
-    :rtype: list
+    :rtype: List[str]
     """
     fechas = []
     fecha_inicio = time.strptime(start, "%Y %m %d")
@@ -60,7 +61,7 @@ def generar_fechas(start: str, end: str, delta: int = 1):
     return fechas
 
 
-def generar_fechas_alt(start: str, end: str, delta: int = 1):
+def generar_fechas_alt(start: str, end: str, delta: int = 1) -> List[str]:
     """Genera una lista con todas las fechas entre start y end con un
     intervalo de delta horas.
 
@@ -71,7 +72,7 @@ def generar_fechas_alt(start: str, end: str, delta: int = 1):
     :param delta: intervalo, por defecto 1 (hora)
     :delta type: int
     :return: lista con todas las fechas
-    :rtype: list
+    :rtype: List[str]
     """
     fechas = []
     if "/" in start and "/" in end:
@@ -88,8 +89,9 @@ def generar_fechas_alt(start: str, end: str, delta: int = 1):
 
 
 def main():
-    print(generar_fechas_alt("2009 05 01", "2009 05 02", 1))
-    print(generar_fechas("2009/05/01", "2009/05/02", 1))
+    print(generar_fechas("2009 05 01", "2009 05 02"))
+    # print(generar_fechas_alt("2009 05 01", "2009 05 02"))
+    # print(generar_fechas_alt("2009/05/01", "2009/05/02"))
 
 
 if __name__ == "__main__":
