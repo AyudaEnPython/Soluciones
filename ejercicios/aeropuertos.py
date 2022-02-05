@@ -27,6 +27,7 @@ indica que el vuelo salió a las 8:07 pm).
 """
 from typing import Dict, List, Union
 
+Data = Dict[str, Dict[str, Union[str, float]]]
 vuelos = {
     "DL123": {
         "aerolinea": "Latam", "origen": "Peru", "destino": "Colombia",
@@ -51,9 +52,9 @@ vuelos = {
 }
 
 
-def sin_salida_naive(vuelos: Dict[str, Dict[str, Union[str, float]]]) -> List[str]:
-    """Retorna una lista de aeropuertos a los cuales hayan llegado vuelos
-    pero no hayan salido vuelos de este.
+def sin_salida_naive(vuelos: Data) -> List[str]:
+    """Retorna una lista de aeropuertos a los cuales hayan llegado
+    vuelos pero no hayan salido vuelos de este.
 
     :param vuelos: Información de los vuelos.
     :vuelos type: Dict[str, Dict[str, Union[str, float]]]
@@ -70,9 +71,9 @@ def sin_salida_naive(vuelos: Dict[str, Dict[str, Union[str, float]]]) -> List[st
     return aeropuertos
 
 
-def sin_salida_naive_alt(vuelos: Dict[str, Dict[str, Union[str, float]]]) -> List[str]:
-    """Retorna una lista de aeropuertos a los cuales hayan llegado vuelos
-    pero no hayan salido vuelos de este.
+def sin_salida_naive_alt(vuelos: Data) -> List[str]:
+    """Retorna una lista de aeropuertos a los cuales hayan llegado
+    vuelos pero no hayan salido vuelos de este.
 
     :param vuelos: Información de los vuelos.
     :vuelos type: Dict[str, Dict[str, Union[str, float]]]
@@ -86,9 +87,9 @@ def sin_salida_naive_alt(vuelos: Dict[str, Dict[str, Union[str, float]]]) -> Lis
     return [a for a in llegadas if a not in salidas]
 
 
-def sin_salida_alt_list(vuelos: Dict[str, Dict[str, Union[str, float]]]) -> List[str]:
-    """Retorna una lista de aeropuertos a los cuales hayan llegado vuelos
-    pero no hayan salido vuelos de este.
+def sin_salida_alt_list(vuelos: Data) -> List[str]:
+    """Retorna una lista de aeropuertos a los cuales hayan llegado
+    vuelos pero no hayan salido vuelos de este.
 
     :param vuelos: Información de los vuelos.
     :vuelos type: Dict[str, Dict[str, Union[str, float]]]
@@ -99,9 +100,9 @@ def sin_salida_alt_list(vuelos: Dict[str, Dict[str, Union[str, float]]]) -> List
             if a not in [v["origen"] for v in vuelos.values()]]
 
 
-def sin_salida_alt_dict(vuelos: Dict[str, Dict[str, Union[str, float]]]) -> List[str]:
-    """Retorna una lista de aeropuertos a los cuales hayan llegado vuelos
-    pero no hayan salido vuelos de este.
+def sin_salida_alt_dict(vuelos: Data) -> List[str]:
+    """Retorna una lista de aeropuertos a los cuales hayan llegado
+    vuelos pero no hayan salido vuelos de este.
 
     :param vuelos: Información de los vuelos.
     :vuelos type: Dict[str, Dict[str, Union[str, float]]]
