@@ -1,5 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
+# pip install prototools
 from prototools import str_input, int_input, textbox
 
 
