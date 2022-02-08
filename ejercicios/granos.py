@@ -8,5 +8,4 @@ casilla y el triple en la siguiente.
 CASILLAS = 12
 
 total = sum(3 ** n for n in range(CASILLAS))
-
 print(f"En la última casilla tendríamos {total} granos de arroz.")
