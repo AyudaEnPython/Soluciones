@@ -39,9 +39,9 @@ def comprobar(indices: List[int]) -> None:
         posiciones.append(*indices)
 
 
-def mostrar(frase: str) -> str:
+def mostrar(frase: str, ch: str = "_") -> str:
     return "".join(
-        letra if i in posiciones else (" " if letra == " " else "-")
+        letra if i in posiciones else (" " if letra == " " else ch)
         for i, letra in enumerate(frase)
     )
 
