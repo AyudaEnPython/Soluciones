@@ -14,7 +14,7 @@ FRASES = [
 posiciones = []
 
 
-def adivinar():
+def adivinar() -> str:
     while True:
         letra = input("Letra: ")
         if len(letra) != 1:
@@ -29,7 +29,7 @@ def obtener_indices(adivinada: str, frase: str) -> List[int]:
     return [i for i, letra in enumerate(frase) if letra == adivinada]
 
 
-def comprobar(indices: List[int]):
+def comprobar(indices: List[int]) -> None:
     if indices == []:
         return
     if len(indices) > 1 and indices not in posiciones:
