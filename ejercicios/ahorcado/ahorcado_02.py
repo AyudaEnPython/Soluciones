@@ -6,6 +6,7 @@ FRASES = [
     "Nunca olvides lo mucho que tu familia te ama",
     "Porque la muerte es vida; enciende luces en otro lugar"
 ]
+INTENTOS = 9
 
 
 def presentar(patron):
@@ -38,7 +39,7 @@ def run():
     numero = ingresar_numero()
     frase = FRASES[numero - 1]
     patron = construir_patron(frase)
-    intentos = 9
+    intentos = INTENTOS
     puntos = 0
     while True:
         if intentos == 0:
@@ -55,7 +56,7 @@ def run():
                 puntos += 10
             i += 1
         if "_" not in patron:
-            print(f"Felicidades, ganaste en {9 - intentos} intentos")
+            print(f"Felicidades, ganaste en {INTENTOS - intentos} intentos")
             print(f"Puntos: {puntos}")
             break
 
