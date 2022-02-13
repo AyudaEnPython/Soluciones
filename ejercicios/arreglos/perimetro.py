@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-enere una matriz de 25 x 40 con números decimales al azar entre 0 y 1.
+Genere una matriz de 25 x 40 con números decimales al azar entre 0 y 1.
 Mostrar los numeros del perimetro y calcularlo.
 """
 from random import random
