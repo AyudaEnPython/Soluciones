@@ -23,13 +23,15 @@ n = ((Z*Z)*(p*q)*N)/((N*(E*E)+((Z*Z)*(p*q)))
 
 Donde:
 
-Z es el coeficiente de confianza. Lo más común es 90%=1.645, 95%=1.96, 99%=2.576
-p es la probabilidad de que ocurra un evento; si no se conoce, típicamente es del 50% (0.5).
+Z es el coeficiente de confianza. Lo más común es 90%=1.645, 95%=1.96,
+    99%=2.576
+p es la probabilidad de que ocurra un evento; si no se conoce,
+    típicamente es del 50% (0.5).
 q es la probabilidad de que no ocurra el evento; es (1-p)
 E es el error máximo aceptado; típicamente, es el 5% (0.05)
 N es el tamaño de la población.
-
 """
+# pip install prototools
 from prototools import float_input, menu_input
 
 IC = {
@@ -55,7 +57,7 @@ def main():
     p = 0.5 if p == "" else p
     q = 1 - p
     e = 0.05 if e == "" else e
-    n = ((z**2) * (p*q) * n) / ((n * (e**2) + ((z**2) * (p*q))))
+    n = ((z**2) * (p*q) * n_) / ((n_ * (e**2) + ((z**2) * (p*q))))
     
     print(f"Para una poblacion de {n_} la muestra es {n}")
 
