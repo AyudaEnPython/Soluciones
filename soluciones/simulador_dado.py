@@ -2,11 +2,11 @@
 
 Simulador de dado simple
 
-┌────────-┬-─────┬────────-┬──────┬─────────┬──────┐
-│ Unicode │ Char │ Unicode │ Char │ Unicode │ Char │
-└─────────┴──────┴─────────┴──────┴─────────┴──────┘
-  u+2680     ⚀     u+2681     ⚁     u+2682     ⚂
-  u+2683     ⚃     u+2684     ⚄     u+2685     ⚅
+#    ┌────────-┬-─────┬────────-┬──────┬─────────┬──────┐
+#    │ Unicode │ Char │ Unicode │ Char │ Unicode │ Char │
+#    └─────────┴──────┴─────────┴──────┴─────────┴──────┘
+#      u+2680     ⚀     u+2681     ⚁     u+2682     ⚂
+#      u+2683     ⚃     u+2684     ⚄     u+2685     ⚅
 """
 from random import randint
 from typing import Tuple
@@ -26,8 +26,13 @@ def lanzar(n: int = 2) -> Tuple[str, int]:
     return " ".join(caras[dado-1] for dado in dados), sum(dados)
 
 
-while True:
-    dados, resultado = lanzar()
-    print(f"{dados} -> {resultado}")
-    if input("Volver a lanzar los dados? ").lower() not in "si":
-        break
+def main():
+    while True:
+        dados, resultado = lanzar()
+        print(f"{dados} -> {resultado}")
+        if input("Volver a lanzar los dados? ").lower() not in "si":
+            break
+
+
+if __name__ == "__main__":
+    main()
