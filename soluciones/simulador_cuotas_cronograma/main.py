@@ -60,12 +60,11 @@ capital = capital de cuota anterior - amortizacion de cuota anterior
 
 NOTE: If there's a bug, please report it asap.
 """
-
 from models import Cliente, Cuota, Cronograma
-
 from utils import convertir_fecha, show
 # pip install prototools
 from prototools import float_input, choice_input, date_input, main_loop
+
 
 def _registrar_cliente():
     cliente = Cliente(
