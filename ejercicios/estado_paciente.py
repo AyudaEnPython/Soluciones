@@ -22,7 +22,7 @@ NOTE: El enunciado original tiene errores.
 """
 
 
-def estado(anormalias):
+def estado(anormalias: int) -> str:
     if anormalias <= 1:
         return 'sana'
     elif anormalias == 2:
@@ -31,17 +31,17 @@ def estado(anormalias):
         return 'enferma'
 
 
-def resultados(sexo, globulos, colesterol, glucosa):
-    anoramalias = 0
+def resultados(sex: str, globulos: int, colesterol: int, glucosa: int) -> int:
+    anormalias = 0
     if glucosa > 131:
-        anoramalias += 1
+        anormalias += 1
     if colesterol > 231:
+        anormalias += 1
+    if sex == "m" and globulos < 5000000:
+        anormalias += 1
+    if sex == "f" and globulos < 4000000:
         anoramalias += 1
-    if sexo == "m" and globulos < 5000000:
-        anoramalias += 1
-    if sexo == "f" and globulos < 4000000:
-        anoramalias += 1
-    return anoramalias
+    return anormalias
 
 
 def main():
