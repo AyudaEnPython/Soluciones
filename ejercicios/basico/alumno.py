@@ -7,6 +7,10 @@ registro. Haga los métodos para:
     número de registro).
 2. setAge - Debe asignar la edad del estudiante
 3. setNota - Debe asignar las notas del estudiante.
+
+NOTE: Se opta por seguir las instrucciones (lo ideal seria usar
+    dataclasses y properties). Se modifica los nombres de los métodos
+    para seguir PEP8.
 """
 
 
