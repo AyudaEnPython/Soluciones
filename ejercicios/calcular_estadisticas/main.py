@@ -2,7 +2,7 @@
 
 NOTE:
 - Algunas partes del enunciado no estan bien descritas.
-- Las lineas 22, 23 y 24 se comentan para pasar los tests de la
+- Las lineas 26, 27 y 28 se comentan para pasar los tests de la
     plataforma en la cual esta el ejercicio.
 - Solo utilizar el codigo desde la línea 10 hasta la línea 29 (no usar
     las demás lineas)
