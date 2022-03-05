@@ -1,11 +1,11 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 from typing import List, Dict
 
+Directorio = Dict[str, List[str]]
 
-def _añadir(
-    directorio: Dict[str, List[str]],
-    nombre: str,
-    telefono: str
-) -> None:
+
+def _añadir(directorio: Directorio, nombre: str, telefono: str) -> None:
     if nombre in directorio:
         if not telefono in directorio[nombre]:
             directorio[nombre].append(telefono)
@@ -13,13 +13,13 @@ def _añadir(
         directorio[nombre] = [telefono]
 
 
-def _consultar(directorio: Dict[str, List[str]], nombre: str) -> str:
+def _consultar(directorio: Directorio, nombre: str) -> str:
     if nombre in directorio:
         return directorio[nombre]
     return f"El nombre {nombre} no se encuentra en el directorio"
 
 
-def _eliminar(directorio: Dict[str, List[str]], nombre: str) -> None:
+def _eliminar(directorio: Directorio, nombre: str) -> None:
     if nombre in directorio:
         del directorio[nombre]
         print("Datos eliminados!")
@@ -27,9 +27,7 @@ def _eliminar(directorio: Dict[str, List[str]], nombre: str) -> None:
         print("No se encontró el nombre")
 
 
-def añadir_telefornos(
-    directorio: Dict[str, List[str]],
-) -> None:
+def añadir_telefornos(directorio: Directorio) -> None:
     nombre = input("Ingrese un nombre: ")
     while True:
         telefono = input("Ingrese un telefono: ")
@@ -39,7 +37,7 @@ def añadir_telefornos(
             break
 
 
-def consultar_persona(directorio: Dict[str, List[str]]) -> None:
+def consultar_persona(directorio: Directorio) -> None:
     nombre = input("Ingrese un nombre: ")
     telefonos = _consultar(directorio, nombre)
     if isinstance(telefonos, list):
@@ -50,12 +48,12 @@ def consultar_persona(directorio: Dict[str, List[str]]) -> None:
         print(telefonos)
 
 
-def eliminar_persona(directorio: Dict[str, List[str]]) -> None:
+def eliminar_persona(directorio: Directorio) -> None:
     nombre = input("Ingrese un nombre: ")
     _eliminar(directorio, nombre)
 
 
-def menu():
+def menu() -> None:
     print("MENU PRINCIPAL\n")
     print("1) Añadir teléfonos al directorio")
     print("2) Consultar persona en el directorio")
@@ -69,7 +67,7 @@ def menu():
 
 
 def main():
-    directorio = {}
+    directorio: Directorio = {}
     while True:
         opcion = menu()
         print()

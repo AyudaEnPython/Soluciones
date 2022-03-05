@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 def añadir(listin, nombre, telefonos):
 	if nombre in listin:
 		if not telefono in listin[nombre]:
