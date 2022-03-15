@@ -37,13 +37,17 @@ def añadir_telefornos(directorio: Directorio) -> None:
             break
 
 
+def guardar_info(directorio: Directorio) -> None:
+    with open("directorio.txt", "w") as f:
+        for nombre, telefonos in directorio.items():
+            f.write(f"{nombre} -> {', '.join(telefonos)}\n")
+
+
 def consultar_persona(directorio: Directorio) -> None:
     nombre = input("Ingrese un nombre: ")
     telefonos = _consultar(directorio, nombre)
     if isinstance(telefonos, list):
-        print(f"{nombre} tiene los siguientes telefonos:")
-        for telefono in telefonos:
-            print(f"- {telefono}")
+        print(f"{nombre} -> {', '.join(telefonos)}")
     else:
         print(telefonos)
 
@@ -80,6 +84,7 @@ def main():
             consultar_persona(directorio)
         elif opcion == "3":
             eliminar_persona(directorio)
+    guardar_info(directorio)
 
 
 if __name__ == "__main__":
