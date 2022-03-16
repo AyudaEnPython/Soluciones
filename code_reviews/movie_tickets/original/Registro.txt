@@ -1,0 +1,22 @@
+Dia: Viernes Identificación: 2022 Cantidad: 1 Pelicula: Interestelar Precio: 30000 COP
+Dia: Viernes Identificación: 2022 Cantidad: 1 Pelicula: Interestelar Precio: 30000 COP/ 7.894736842105263 USD
+Dia: Miercoles Identificación: 123123 Cantidad: 1 Pelicula: Ouija Precio: 15000 COP/ 3.9473684210526314 USD
+Dia: Miercoles Identificación: 123123 Cantidad: 1 Pelicula: Ouija Precio: 15000 COP/ 3.9473684210526314 USD
+Dia: Jueves Identificación: 10025 Cantidad: 1 Pelicula: Interestelar Precio: 15000 COP/ 3.9473684210526314 USD
+Dia: Jueves Identificación: 1212 Cantidad:  Pelicula: Ouija Precio:  COP
+Dia: Jueves Identificación: 1212 Cantidad:  Pelicula: Ouija Precio:  COP
+Dia: Jueves Identificación: 1212 Cantidad:  Pelicula: Ouija Precio:  COP
+Dia: Domingo Identificación: 1234 Cantidad: 1 Pelicula: La huerfana Precio: 35000 COP/ 9.210526315789474 USD
+Dia: Domingo Identificación: 1234 Cantidad: 1 Pelicula: La huerfana Precio: 35000 COP
+Dia: Domingo Identificación: 1234 Cantidad: 1 Pelicula: La huerfana Precio: 35000 COP/ 9.210526315789474 USD
+Dia: Martes Identificación:  Cantidad: 2 Pelicula: Interestelar Precio: 40000 COP
+Dia: Martes Identificación:  Cantidad: 2 Pelicula: Interestelar Precio: 40000 COP
+Dia: Martes Identificación:  Cantidad: 2 Pelicula:  Precio: 40000 COP
+Dia: Martes Identificación:  Cantidad: 2 Pelicula:  Precio: 40000 COP
+Dia: Miercoles Identificación: 1717 Cantidad: 2 Pelicula: Cuando las luces se apagan Precio: 30000 COP/ 7.894736842105263 USD
+Dia: Miercoles Identificación: 1717 Cantidad: 1 Pelicula: Hereditary Precio: 15000 COP/ 3.9473684210526314 USD
+Dia: Martes Identificación: 2025 Cantidad: 1 Pelicula: Ouija Precio: 20000 COP/ 5.2631578947368425 USD
+Dia: Martes Identificación: 2025 Cantidad: 1 Pelicula: Ouija Precio: 20000 COP
+Dia: Viernes Identificación: 121212 Cantidad: 1 Pelicula: Cuando las luces se apagan Precio: 30000 COP
+Dia: Viernes Identificación: 121212 Cantidad: 1 Pelicula: Cuando las luces se apagan Precio: 30000 COP/ 7.894736842105263 USD
+Dia: Lunes Identificación: 1 Cantidad: 2 Pelicula: La noche del demonio Precio: 40000 COP
