@@ -10,37 +10,18 @@ from tkinter import (
     ttk,
     Text,
 )
-from typing import Any, List, Tuple
 
-MOVIES = "data/movies.txt"
-CFG = {"padx": 5,"pady": 5}
-DIAS = (
-    'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'
-)
-LABELS: Tuple[str, str, str, str] = (
-    "Identificación",
-    "Cantidad de Tickets",
-    "Dias disponibles",
-    "Películas disponibles",
-)
-MAP = {
-    "id": "Identificación",
-    "cantidad": "Cantidad de Tickets",
-    "dia": "Dias disponibles",
-    "pelicula": "Películas disponibles",
-    "total": "Total",
-}
+from constants import Data, DataList, MOVIES, CFG, DIAS, LABELS, MAP
 
 
-def read_file(filename: str) -> List[str]:
+def read_file(filename: str) -> DataList:
     with open(filename, "r", encoding="utf-8") as f:
         return f.read().splitlines()
 
 
-
 class Login(Frame):
 
-    def __init__(self, master=None, controller=None) -> None:
+    def __init__(self, master=None) -> None:
         super().__init__(master)
         self.master = master
         self.create_widgets()
@@ -65,7 +46,7 @@ class Login(Frame):
 
 class Sales(Frame):
 
-    def __init__(self, master=None, controller=None) -> None:
+    def __init__(self, master=None) -> None:
         super().__init__(master)
         self.master = master
         self._currency = StringVar()
@@ -123,7 +104,7 @@ class Sales(Frame):
 
 class Query(Frame):
 
-    def __init__(self, master=None, controller=None) -> None:
+    def __init__(self, master=None) -> None:
         super().__init__(master)
         self.master = master
         self._q = StringVar()
@@ -150,7 +131,7 @@ class Query(Frame):
 
 class Result(Frame):
 
-    def __init__(self, master=None, controller=None) -> None:
+    def __init__(self, master=None) -> None:
         super().__init__(master)
         self.master = master
         self.create_widgets()
@@ -162,7 +143,7 @@ class Result(Frame):
             self.view.heading(label, text=label)
         self.view.grid(row=0, column=0, sticky="w", **CFG)
 
-    def update(self, data: List[List[Any]]) -> None:
+    def update(self, data: Data) -> None:
         self.view.delete(*self.view.get_children())
         for row in data:
             self.view.insert("", "end", values=row)

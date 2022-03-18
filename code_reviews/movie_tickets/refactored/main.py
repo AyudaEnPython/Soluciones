@@ -1,6 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 import tkinter as tk
+from tkinter import messagebox
 
 from invoice import Invoice, Search
 from widgets import Login, Sales, Query, Result
@@ -23,6 +24,7 @@ class App(tk.Tk):
             self.login.destroy()
             self.show_sales()
         else:
+            messagebox.showerror("Error", "Usuario o contraseña incorrectos")
             self.login.clear()
 
     def show_sales(self) -> None:
@@ -52,19 +54,22 @@ class App(tk.Tk):
             self.sales.update_display(text)
             invoice.to_csv()
         except ValueError:
-            tk.messagebox.showerror("Error", "Datos erróneos")
+            messagebox.showerror("Error", "Datos erróneos")
             self.sales.clear()
 
     def get_data(self) -> None:
         search = Search()
-        ok, data = search.get_by(
-            self.query._q.get(), self.query.ent_query.get(),
-        )
-        if ok:
-            self.show_query()
-            self.result.update(data)
+        tag = self.query._q.get()
+        query = self.query.ent_query.get()
+        if query == "":
+            messagebox.showerror("Error", "Ingrese una consulta")
         else:
-            tk.messagebox.showerror("Error", "Datos no disponiibles")
+            ok, data = search.get_by(tag, query)
+            if ok:
+                self.show_query()
+                self.result.update(data)
+            else:
+                messagebox.showerror("Error", "Datos no disponiibles")
 
 
 if __name__ == "__main__":
