@@ -1,9 +1,11 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
+import json
 import tkinter as tk
 from tkinter import messagebox
 
 from invoice import Invoice, Search
+from constants import CREDENTIALS, Token
 from widgets import Login, Sales, Query, Result
 
 
@@ -18,13 +20,14 @@ class App(tk.Tk):
         self.login.login.config(command=self.is_authorized)
     
     def is_authorized(self) -> None:
+        token = self._read_json(CREDENTIALS)
         user = self.login.user.get()
         password = self.login.password.get()
-        if user == "admin" and password == "admin":
+        if token["user"] == user and token["password"] == password:
             self.login.destroy()
             self.show_sales()
         else:
-            messagebox.showerror("Error", "Usuario o contraseña incorrectos")
+            messagebox.showerror("Error", "Credenciales incorrectas")
             self.login.clear()
 
     def show_sales(self) -> None:
@@ -62,7 +65,7 @@ class App(tk.Tk):
         tag = self.query._q.get()
         query = self.query.ent_query.get()
         if query == "":
-            messagebox.showerror("Error", "Ingrese una consulta")
+            messagebox.showerror("Error", "Consulta errónea")
         else:
             ok, data = search.get_by(tag, query)
             if ok:
@@ -70,6 +73,10 @@ class App(tk.Tk):
                 self.result.update(data)
             else:
                 messagebox.showerror("Error", "Datos no disponiibles")
+
+    def _read_json(self, filename: str) -> Token:
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
 
 
 if __name__ == "__main__":

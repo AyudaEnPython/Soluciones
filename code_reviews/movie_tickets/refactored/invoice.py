@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 from dataclasses import dataclass
 
-from constants import DataList, QueryResult, CONVERSION, DATA
+from constants import DataList, QueryResult, CONVERSION, DATA, PRICE
 
 
 @dataclass
@@ -21,10 +21,10 @@ class Invoice:
 
     def _get_price(day: str) -> int:
         prices = {
-            (day == "lunes" or day == "martes") : 20_000,
-            (day == "miércoles" or day == "jueves") : 15_000,
-            (day == "viernes" or day == "sábado") : 30_000,
-            (day == "domingo") : 35_000,
+            (day == "lunes" or day == "martes") : PRICE["lun-mar"],
+            (day == "miércoles" or day == "jueves") : PRICE["mie-jue"],
+            (day == "viernes" or day == "sábado") : PRICE["vie-sab"],
+            (day == "domingo") : PRICE["dom"],
         }
         return prices[True]
 
