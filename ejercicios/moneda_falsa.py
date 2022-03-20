@@ -23,33 +23,28 @@ sentencias if y elif como herramienta.
 El programa deberá de llamar cada una de estas funciones en el flujo
 correcto o a través de la implementación de un menú.
 """
-# Biblioteca necesaria:
-# pip install prototools
-
 from random import uniform, shuffle
-from prototools.entradas import entrada_float
-from prototools.menu import EzMenu
-from prototools.utils import boxln, caja
-
+# pip install prototools
+from prototools import Menu, float_input, textbox
 
 TAMAÑO, PESO, MARGEN = 8, 8.1, 0.8
 monedas = []
 
 
 def _balanza(moneda):
-    if PESO-MARGEN <= moneda <= PESO+MARGEN:
+    if PESO - MARGEN <= moneda <= PESO + MARGEN:
         return True
     return False
 
 
 def cargar_monedas():
     monedas.clear()
-    falsa = entrada_float("Peso: ", menor=PESO-MARGEN)
+    falsa = float_input("Peso: ", min=PESO-MARGEN)
     monedas.append(falsa)
-    for _ in range(TAMAÑO-1):
+    for _ in range(TAMAÑO - 1):
         monedas.append(round(uniform(PESO-MARGEN, PESO+MARGEN), 1))
     shuffle(monedas)
-    boxln("Monedas cargadas")
+    textbox("Monedas cargadas")
 
 
 def imprimir_monedas():
@@ -57,27 +52,19 @@ def imprimir_monedas():
         print(f"Posicion {n}: {moneda} gr.")
 
 
-@caja
 def encontrar_moneda_falsa():
     for n, moneda in enumerate(monedas):
         if _balanza(moneda):
             continue
         else:
-            return f"Posicion {n}"
+            textbox(f"Posicion {n}")
 
 
 if __name__ == "__main__":
-    menu = EzMenu()
-    menu.titulo("Monedas")
-    menu.agregar_opciones(
-        "cargar monedas",
-        "ver monedas",
-        "encontrar moneda falsa",
-        "salir",
-    )
-    menu.agregar_funciones(
-        cargar_monedas,
-        imprimir_monedas,
-        encontrar_moneda_falsa,
+    menu = Menu()
+    menu.add_options(
+        ("Cargar monedas", cargar_monedas),
+        ("Ver monedas", imprimir_monedas),
+        ("Encontrar moneda falsa", encontrar_moneda_falsa)
     )
     menu.run()
