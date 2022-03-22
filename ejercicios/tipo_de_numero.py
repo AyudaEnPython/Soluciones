@@ -10,52 +10,57 @@ NOTE: Se opta por renombrar la función a sumar_numeros (PEP8). Además,
     si se esta trabajando con funciones, se deberia implementar
     funciones para casos concretos (entrada de datos, es_primo, etc.).
     El enunciado presenta errores ortonográficos.
-TODO: add typing, docstring and tests.
+TODO: add docstring and tests.
 """
 
 
-def es_par(numero):
-    if numero % 2 == 0:
+def es_par(n: int) -> bool:
+    if n % 2 == 0:
         return True
     else:
         return False
 
 
-def es_primo(numero):
-    for i in range(2, numero):
-        if numero % i == 0:
+def es_primo(n: int) -> bool:
+    for i in range(2, n):
+        if n % i == 0:
             return False
     return True
 
 
-def es_perfecto(numero):
+def es_perfecto(n: int) -> bool:
     suma = 0
-    for i in range(1, numero):
-        if numero % i == 0:
+    for i in range(1, n):
+        if n % i == 0:
             suma += i
-    if suma == numero:
+    if suma == n:
         return True
     else:
         return False
 
 
-def tipo_de_numero(numero):
-    if es_par(numero):
+def tipo_de_numero(n: int) -> None:
+    if es_par(n):
         print("El número es par.")
     else:
         print("El número es impar.")
-    if es_primo(numero):
+    if es_primo(n):
         print("El número es primo.")
     else:
         print("El número no es primo.")
-    if es_perfecto(numero):
+    if es_perfecto(n):
         print("El número es perfecto.")
     else:
         print("El número no es perfecto.")
 
 
-while True:
-    numero = int(input("Ingrese el número: "))
-    if numero == 0:
-        break
-    tipo_de_numero(numero)
+def main():
+    while True:
+        numero = int(input("Ingrese el número: "))
+        if numero == 0:
+            break
+        tipo_de_numero(numero)
+
+
+if __name__ == "__main__":
+    main()
