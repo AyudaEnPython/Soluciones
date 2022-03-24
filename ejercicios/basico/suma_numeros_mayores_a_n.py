@@ -20,6 +20,21 @@ while True:
         print("El valor ingresado no es un número")
 print("La suma es:", suma)
 
+# ------------------------------------------------------- usando listas
+N = 10
+numeros = []
+while True:
+    numero = input("Ingrese un número: ")
+    if numero == "":
+        break
+    try:
+        numero = int(numero)
+        if numero >= N:
+            numeros.append(numero)
+    except ValueError:
+        print("El valor ingresado no es un número")
+print("La suma es:", sum(numeros))
+
 # ----------------------- usando for e indicando la cantidad de números
 N = 10
 cantidad = int(input("Ingrese la cantidad de números a sumar: "))
