@@ -6,7 +6,7 @@ w, botones = [], []
 
 
 def leer_datos(archivo="datos.txt"):
-    with open(archivo) as f:
+    with open(archivo, "r", encoding="utf-8") as f:
         return f.read()
 
 
