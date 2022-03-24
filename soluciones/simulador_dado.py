@@ -21,7 +21,7 @@ def lanzar(n: int = 2) -> Tuple[str, int]:
     :returns: Tupla (representación, suma)
     :rtype: Tuple(str, int)
     """
-    caras = ['\u2680', '\u2681', '\u2682', '\u2683', '\u2684', '\u2685']
+    caras = ["\u2680", "\u2681", "\u2682", "\u2683", "\u2684", "\u2685"]
     dados = [randint(1, 6) for _ in range(n)]
     return " ".join(caras[dado-1] for dado in dados), sum(dados)
 
