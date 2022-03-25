@@ -25,7 +25,7 @@ def draw(n: int = 5, c: str = "* ") -> None:
     """
     for i in range(1, n+1):
         if i == 1 or i == n:
-            print(" "*(n - i) + c*i)
+            print(f"{' '*(n-i)}{c*i}")
         else:
             print(f"{' '*(n-i)}{c}{' '*(2*i-4)}{c}")
 
