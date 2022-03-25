@@ -48,7 +48,7 @@ class Terminals(Tk):
     def widgets(self):
         for i in range(1, TERMINALES + 1):
             button = Button(self, text=f"Term {i:02}")
-            button.config(command=lambda button=button: self.scan_(button))
+            button.config(command=lambda button=button: self.scan(button))
             entry = Entry(self, width=24)
             button.grid(row=i, column=0, padx=5, pady=5)
             entry.grid(row=i, column=1, padx=5, pady=5)
@@ -61,10 +61,9 @@ class Terminals(Tk):
         for entry in self.entries:
             entry.config(state="disabled")
 
-    def scan_(self, button):
+    def scan(self, button):
         index = self.buttons.index(button)
-        entry = self.entries[index]
-        state, output = ping(entry.get())
+        state, _ = ping(self.entries[index].get())
         self.entries[index].config(state="normal")
         self.entries[index].delete(0, "end")
         self.entries[index].insert("end", state)
