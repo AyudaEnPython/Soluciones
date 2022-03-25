@@ -18,21 +18,15 @@ DB = {
 TERMINALES = len(DB)
 
 
-def _ping(hostname):
-    try:
-        stdout = subprocess.Popen(["ping", "-n", "1", hostname]).wait()
-        return stdout
-    except subprocess.CalledProcessError:
-        return None
-
-
 def ping(hostname):
-    if _ping(hostname) == 0:
-        return (
-            "conectado",
-            subprocess.check_output(["ping", "-n", "1", hostname]),
-        )
-    return "No hay conexion", "---"
+    try: 
+        stdout = subprocess.Popen(["ping", "-n", "1", hostname]).wait()
+        if stdout == 0:
+            return "Conectado"
+        else:
+            return "---------"
+    except subprocess.CalledProcessError:
+        return "---------"
 
 
 class Terminals(Tk):
@@ -63,7 +57,7 @@ class Terminals(Tk):
 
     def scan(self, button):
         index = self.buttons.index(button)
-        state, _ = ping(self.entries[index].get())
+        state = ping(self.entries[index].get())
         self.entries[index].config(state="normal")
         self.entries[index].delete(0, "end")
         self.entries[index].insert("end", state)
