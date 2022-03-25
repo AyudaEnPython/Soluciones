@@ -3,8 +3,6 @@
 import subprocess
 from tkinter import Button, Entry, Tk
 
-TERMINALES = 10
-
 DB = {
     "Term 01": "ayudaenpython.com",
     "Term 02": "google.com",
@@ -17,6 +15,7 @@ DB = {
     "Term 09": "stackoverflow.error",
     "Term 10": "reddit.com",
 }
+TERMINALES = len(DB)
 
 
 def _ping(hostname):
@@ -36,7 +35,7 @@ def ping(hostname):
     return "No hay conexion", "---"
 
 
-class RightColumn(Tk):
+class Terminals(Tk):
 
     def __init__(self):
         super().__init__()
@@ -73,5 +72,5 @@ class RightColumn(Tk):
 
 
 if __name__ == "__main__":
-    app = RightColumn()
+    app = Terminals()
     app.mainloop()
