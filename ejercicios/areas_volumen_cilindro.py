@@ -12,30 +12,30 @@ operación de las siguientes desea realizar:
 Cree su programa utilizando estructuras de control de flujo, e imprima
 el valor de la respuesta al usuario.
 
-NOTE: add docstring and tests later...
+NOTE: add docstring, typing and tests later...
 """
 from math import pi
 
 from prototools import Menu
 
 
-def _area_circulo(radio: float) -> float:
+def _area_circulo(radio):
     return pi * radio ** 2
 
 
-def area_bases(radio: float) -> float:
+def area_bases(radio):
     return 2 * _area_circulo(radio)
 
 
-def area_lateral(radio: float, altura: float) -> float:
+def area_lateral(radio, altura):
     return 2 * pi * radio * altura
 
 
-def area_total(radio: float, altura: float) -> float:
+def area_total(radio, altura):
     return area_lateral(radio, altura) + area_bases(radio)
 
 
-def volumen(radio: float, altura: float) -> float:
+def volumen(radio, altura):
     return _area_circulo(radio) * altura
 
 
