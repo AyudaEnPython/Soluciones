@@ -3,9 +3,6 @@
 from typing import List
 
 
-def tag_sol(): pass # test
-
-
 def numeros_enteros(inicio: int, cantidad: int) -> List[int]:
     """
     >>> numeros_enteros(10, 5)
