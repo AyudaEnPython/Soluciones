@@ -2,6 +2,8 @@
 """
 from typing import List
 
+TAG_SOL = ""
+
 
 def numeros_enteros(inicio: int, cantidad: int) -> List[int]:
     """
@@ -16,4 +18,3 @@ def numeros_enteros(inicio: int, cantidad: int) -> List[int]:
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    TAG = "sol"
