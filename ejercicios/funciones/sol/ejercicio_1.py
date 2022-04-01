@@ -2,7 +2,8 @@
 """
 from typing import List
 
-TAG_SOL = ""
+
+def tag_sol(): pass # test
 
 
 def numeros_enteros(inicio: int, cantidad: int) -> List[int]:
