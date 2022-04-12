@@ -4,7 +4,18 @@ NOTE: Partially functional (more information needed)
 """
 import datetime
 from dataclasses import dataclass, field
-from tkinter import Button, Entry, Frame, Label, Text, Toplevel, Tk, ttk
+from tkinter import (
+    Button,
+    Canvas,
+    Entry,
+    Frame,
+    Label,
+    Scrollbar,
+    Text,
+    Toplevel,
+    Tk,
+    ttk
+)
 
 
 def _today_date():
@@ -195,21 +206,44 @@ class Container(Frame):
         self.lbl_total_desperdicio.config(text=str(desperdicio))
 
 
+class FrameScrollbar(Frame):
+
+    def __init__(self, master):
+        super().__init__(master)
+        self.scroll = Scrollbar(self, orient="vertical")
+        self.scroll.pack(side="right", fill="y")
+        self.canvas = Canvas(self, borderwidth=0)
+        self.canvas.pack(side="left", fill="both", expand=True)
+        self.scroll.config(command=self.canvas.yview)
+        self.canvas.config(yscrollcommand=self.scroll.set)
+        self.frame = Frame(self.canvas)
+        self.canvas.create_window((4, 4), window=self.frame, anchor="nw")
+        self.frame.bind("<Configure>", self.on_configure)
+
+    def on_configure(self, event):
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+
+
 class App(Tk):
 
     def __init__(self, N):
         super().__init__()
         self.widgets = []
         self.N = N
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+        self.frame = FrameScrollbar(self)
+        self.frame.grid(row=0, column=0, sticky="nsew")
+        self.geometry("920x630")
         self.setup()
 
     def setup(self):
         Label(
-            self,
+            self.frame.frame,
             text="Arranque de Producción Máquina y control de eficiencia",
         ).grid(row=0, columnspan=self.N)
         for n in range(self.N):
-            w = Container(self, n + 1)
+            w = Container(self.frame.frame, n + 1)
             w.grid(row=n, column=0, padx=15, pady=15)
             self.widgets.append(w)
 
