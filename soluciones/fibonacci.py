@@ -5,6 +5,7 @@ fibo_rc : Fibonacci recursivo (cache)
 fibo_itr: Fiboanacci iterativo (range)
 fibo_itw: Fiboanacci iterativo (while)
 """
+from operator import imod
 from unittest import main, TestCase
 
 
@@ -37,6 +38,13 @@ def fibo_itw(n: int) -> int:
     return a
 
 
+def fibo_gen(n: int) -> int:
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+
 class Test(TestCase):
     
     funciones = (fibo_rn, fibo_rc, fibo_itr, fibo_itw)
@@ -63,6 +71,11 @@ class Test(TestCase):
         for f in self.funciones:
             for posicion, resultado in self.datos:
                 self.assertEqual(f(posicion), resultado)
+
+    def test_fibo_gen(self):
+        gen = fibo_gen(13)
+        for i in range(13):
+            self.assertEqual(next(gen), self.datos[i][1])
 
 
 if __name__ == "__main__":
