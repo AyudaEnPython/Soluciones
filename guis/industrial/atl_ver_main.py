@@ -147,7 +147,7 @@ class Widget(Frame):
         self.f = formulario
         self.lbl_total_desperdicio.config(text=formulario.total_desperdicio)
         self.lbl_produccion_conforme.config(text=formulario.produccion_conforme)
-        return float(formulario.total_desperdicio)
+        return formulario
 
     def informe(self):
         display = Toplevel()
@@ -197,13 +197,29 @@ class Container(Frame):
         )
         self.lbl_total_desperdicio = Label(self.lbf_informe, text="")
         self.lbl_total_desperdicio.grid(row=0, column=2)
+        Label(self.lbf_informe, text="Porcentaje de desperdicio").grid(
+            row=0, column=3,
+        )
+        self.lbl_porcentaje_desperdicio = Label(self.lbf_informe, text="")
+        self.lbl_porcentaje_desperdicio.grid(row=0, column=4)
+        Label(self.lbf_informe, text="Total de producción").grid(
+            row=0, column=5,
+        )
+        self.lbl_produccion = Label(self.lbf_informe, text="")
+        self.lbl_produccion.grid(row=0, column=6)
 
     def update(self):
-        data = []
-        for w in self.widgets:
-            data.append(w.calcular())
-        desperdicio = sum(data)
+        desperdicio = sum([
+            float(w.calcular().total_desperdicio) for w in self.widgets
+        ])
+        produccion = sum([
+            float(w.calcular().produccion_conforme) for w in self.widgets
+        ])
         self.lbl_total_desperdicio.config(text=str(desperdicio))
+        self.lbl_porcentaje_desperdicio.config(
+            text=f"{(desperdicio / 100):.2f}%"
+        )
+        self.lbl_produccion.config(text=str(produccion))
 
 
 class FrameScrollbar(Frame):
