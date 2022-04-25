@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-TODO: still needs more implementation
+TODO: Needs more implementation
 """
 from tkinter import Frame, Label, Tk, Button, Entry, PhotoImage
 from settings import *
