@@ -5,7 +5,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 entered_number = input('Your Number?: ')
 
-pattern = '|'.join([str(number) for number in numbers])
+pattern = '|'.join([str(f"{number}$") for number in numbers])
 
 match = re.match(f'{pattern}', entered_number, flags=0)
 
