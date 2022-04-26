@@ -40,7 +40,7 @@ def generar_aleatorios(
     :return: Lista de números enteros
     :rtype: List[int]
     """
-    return [randint(min, max) for _ in range(size)]
+    return [randint(min, max) for _ in range(randint(min, size))]
 
 
 def suma(numeros: List[int]) -> int:
