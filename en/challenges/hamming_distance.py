@@ -3,7 +3,7 @@
 Even though the group is only for spanish speakers, english speakers
 are welcome.
 -----------------------------------------------------------------------
- ** PYTHON CODE CHALLENGE - HAMMING DISTANCE ** '
+    ** PYTHON CODE CHALLENGE - HAMMING DISTANCE **
 
 Your company wants to start analyzing text-strings. As first step 
 your boss has heard of Hamming distances and wants you to create 

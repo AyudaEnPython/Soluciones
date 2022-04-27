@@ -3,7 +3,7 @@
 Even though the group is only for spanish speakers, english speakers
 are welcome.
 -----------------------------------------------------------------------
- ** PYTHON CODE CHALLENGE - RESCUE BIEBER IN PARIS ** '
+    ** PYTHON CODE CHALLENGE - RESCUE BIEBER IN PARIS **
 
 Justin is resting and enjoying 'not being kidnapped' in Paris, 
 but unfortunately local kidnappers grab him in the Louvre.
