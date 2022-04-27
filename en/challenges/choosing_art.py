@@ -38,7 +38,7 @@ def sol_2():
     return {i[0] for i in art if len(set(i[1:]) & {"b", "y", "r"}) < 2}
 
 
-def sol_3(): # by Udo Sero 
+def sol_3(): # submitted code by Udo Sero 
     favorites = {'b','y','r'}
     artsplits = {item[0]: set(item[1:]) for item in art}
     selections = [
@@ -48,7 +48,7 @@ def sol_3(): # by Udo Sero
     return selections
 
 
-def sol_4(): # by Himel Sharma
+def sol_4(): # submitted code by Himel Sharma
     colors = ["b","y","r"]
     chosen_ones = []
     for arts in art:
