@@ -5,7 +5,6 @@ fibo_rc : Fibonacci recursivo (cache)
 fibo_itr: Fiboanacci iterativo (range)
 fibo_itw: Fiboanacci iterativo (while)
 """
-from operator import imod
 from unittest import main, TestCase
 
 
@@ -14,6 +13,10 @@ def fibo_rn(n: int):
         return n
     else:
         return fibo_rn(n-1) + fibo_rn(n-2)
+
+
+def fibo_rn_ol(n: int):
+    return n if n <= 1 else fibo_rn_ol(n-1) + fibo_rn_ol(n-2)
 
 
 def fibo_rc(n: int, cache: dict = {0:0, 1:1}):
@@ -47,7 +50,7 @@ def fibo_gen(n: int) -> int:
 
 class Test(TestCase):
     
-    funciones = (fibo_rn, fibo_rc, fibo_itr, fibo_itw)
+    funciones = (fibo_rn, fibo_rn_ol, fibo_rc, fibo_itr, fibo_itw)
     datos = (
         (0, 0),
         (1, 1),
