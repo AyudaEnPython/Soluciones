@@ -13,17 +13,22 @@
     El segundo parámetro de replicar indica las veces que se debe
     repetir.
 
-NOTA: el apartado 2 no es muy claro.
+NOTA: La persona que pide ayuda no brindo la función ord_seleccion,
+    el apartado 2 no es muy claro.
 """
 from typing import List
 
 
-def mayor(arr: List[int]) -> int:
+def mayor(arr: List[int]) -> int: # online -> return max(arr)
     """
-    >>> mayor([1, 3, 3, 7])
-    7
+    >>> _mayor([1, 11, 7])
+    11
     """
-    return max(arr)
+    max_ = 0
+    for n in arr:
+        if n > max_:
+            max_ = n
+    return max_
 
 
 def es_positivo_o_negativo(arr: List[int]):
@@ -42,11 +47,11 @@ def es_positivo_o_negativo(arr: List[int]):
 def duplicar(arr: List[int], n: int) -> List[int]:
     """
     >>> duplicar([1, 3, 3, 7], 2)
-    [1, 3, 3, 7, 1, 3, 3, 7]
+    [1, 1, 3, 3, 3, 3, 7, 7]
     """
     if n == 0:
         return []
-    return arr + duplicar(arr, n - 1)
+    return sorted(arr + duplicar(arr, n - 1))
 
 
 if __name__ == "__main__":
