@@ -10,6 +10,7 @@ información de las ciudades en donde hubo más de 25 grados de
 temperatura máxima.
 """
 
+
 def oneliner():
     ciudades = (
         "Viña del Mar:9:26,Valparaiso:10:24,Quilpe:7:30,Olmue:5:29,"
