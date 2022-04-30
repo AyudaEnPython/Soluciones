@@ -11,9 +11,6 @@ class Cliente:
     direccion: str
     telefono: str
 
-    def __post_init__(self):
-        self.fullname = f"{self.nombres}"
-
 
 @dataclass
 class Producto:
@@ -58,8 +55,10 @@ class App(Tk):
         self.producto = Entry(self.left, width=40)
         self.precio = Entry(self.left)
         self.cantidad = Entry(self.left)
-        self.registrar = Button(self.right, text="Registrar", command=self.calcular)
-        self.reporte = Button(self.right, text="Reporte", command=self.reportar)
+        self.registrar = Button(
+            self.right, text="Registrar", command=self.calcular)
+        self.reporte = Button(
+            self.right, text="Reporte", command=self.reportar)
 
     def layout(self):
         self.dni.grid(row=0, column=1, padx=5, pady=5)
@@ -84,7 +83,7 @@ class App(Tk):
         producto = Producto(producto, precio, cantidad)
         total = producto.calculate()
         self.reporte = (
-            f"Cliente: {cliente.fullname}\n"
+            f"Cliente: {cliente.nombres}\n"
             f"DNI: {cliente.dni}\n"
             f"Direccion: {cliente.direccion}\n"
             f"Telefono: {cliente.telefono}\n"
@@ -107,13 +106,9 @@ class App(Tk):
     def reportar(self):
         top = Toplevel(self)
         top.title("Reporte")
-        display = Text(
-            top, width=30, height=8, font=("Arial", 12)
-        )
+        display = Text(top, width=30, height=8, font=("Arial", 12))
         display.delete(1.0, "end")
-        display.insert(
-            "1.0", self.reporte
-        )
+        display.insert("1.0", self.reporte)
         display.pack()
 
 
