@@ -17,11 +17,11 @@ class Guerrero:
     def esta_con_vida(self) -> bool:
         return self.vida > 0
 
-    def acierto(self, other: object) -> bool:
+    def _acierto(self, other: object) -> bool:
         return random() <= (self.precision - other.velocidad) / 100
 
     def golpear(self, other):
-        if self.acierto(other):
+        if self._acierto(other):
             ataque = max((self.fuerza - other.defensa) + randint(-10, 11), 1)
             other.vida -= ataque
             return f"Golpe certero de {self.nombre}, {ataque} de daño!"
