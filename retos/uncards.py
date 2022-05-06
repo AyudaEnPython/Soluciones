@@ -53,8 +53,8 @@ VALID = "kV+*@aAZ1P[]Coler"
 DEFAULTS = "U", "A", "D"
 
 
-def _load_players(default_: Tuple[str, str]) -> Dict[str, int]:
-    return {name: 0 for name in default_}
+def _load_players(default_: Tuple[str, str], n: int = 0) -> Dict[str, int]:
+    return {name: n for name in default_}
 
 
 def validate(input_: str, valid: str = VALID) -> str:
