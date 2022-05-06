@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ayuda en Python</title>
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <py-env>
+- paths:
+  - models.py
+  </py-env>
+</head>
+<body>
+  <py-title>Simulacion</py-title>
+  <py-script>
+from models import Arena, Guerrero
+
+arena = Arena([
+    Guerrero("Superman", 100, 70, 80, 30, 20),
+    Guerrero("Goku", 100, 60, 80, 40, 20),
+    Guerrero("Chuck Norris", 200, 99, 99, 99, 99),
+])
+arena.simulacion()
+  </py-script>
+</body>
+</html>
