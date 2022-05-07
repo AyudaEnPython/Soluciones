@@ -75,6 +75,9 @@ class Formulario(Frame):
         self.calificacion = Calificaciones(self._mod.get(), w)
         self.calificacion.pack()
 
+    def get_estudiantes(self):
+        return self.estudiantes
+
     def limpiar(self):
         self.codigo.delete(0, "end")
         self.nombre_completo.delete(0, "end")
@@ -132,12 +135,17 @@ class App(Tk):
     def __init__(self):
         super().__init__()
         self.title("AyudaEnPython")
-        Formulario(Estudiante, self).pack()
+        self.formulario = Formulario(Estudiante, self)
+        self.formulario.pack()
         self.guardar = Button(self, text="To Excel", command=self.guardar)
         self.guardar.pack()
 
     def guardar(self):
-        pass
+        estudiantes = self.formulario.get_estudiantes()
+        calificaciones = self.formulario.calificacion.get_calificaciones()
+        registro = Registrar(estudiantes, calificaciones)
+        registro.to_excel()
+        messagebox.showinfo("Exito", "Archivo guardado")
 
 
 if __name__ == "__main__":
