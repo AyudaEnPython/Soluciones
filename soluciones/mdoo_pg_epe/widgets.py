@@ -40,13 +40,13 @@ class Calificaciones(Frame):
         self.n2 = Entry(self)
         self.n3 = Entry(self)
         self.n4 = Entry(self)
+        self.guardar = Button(self, text="Guardar")
+        self.limpiar = Button(self, text="Limpiar", command=self.clear)
         self.n1.grid(row=0, column=1, padx=5, pady=5)
         self.n2.grid(row=1, column=1, padx=5, pady=5)
         self.n3.grid(row=2, column=1, padx=5, pady=5)
         self.n4.grid(row=3, column=1, padx=5, pady=5)
-        self.guardar = Button(self, text="Guardar")
         self.guardar.grid(row=4, column=0, padx=5, pady=5)
-        self.limpiar = Button(self, text="Limpiar", command=self.clear)
         self.limpiar.grid(row=4, column=1, padx=5, pady=5)
 
     def clear(self) -> None:
@@ -75,13 +75,13 @@ class Formulario(Frame):
         self.rbn_epe = Radiobutton(
             self, text="EPE", variable=self._mod, value="EPE"
         )
-        self.rbn_pg.grid(row=2, column=0, sticky="e")
-        self.rbn_epe.grid(row=2, column=1, sticky="e")
+        self.registrar = Button(self, text="Registrar")
+        self.limpiar = Button(self, text="Limpiar", command=self.clear)
         self.codigo.grid(row=0, column=1, padx=5, pady=5)
         self.nombre_completo.grid(row=1, column=1, padx=5, pady=5)
-        self.registrar = Button(self, text="Registrar")
+        self.rbn_pg.grid(row=2, column=0, sticky="e")
+        self.rbn_epe.grid(row=2, column=1, sticky="e")
         self.registrar.grid(row=3, column=0, padx=5, pady=5)
-        self.limpiar = Button(self, text="Limpiar", command=self.clear)
         self.limpiar.grid(row=3, column=1, padx=5, pady=5)
 
     def clear(self) -> None:
