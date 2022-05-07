@@ -52,4 +52,4 @@ Subir lo siguiente:
 - Archivo Excel que maneja el programa python. (Datos.xlsx)
 
 > __**NOTA**__: No es adecuado el uso de notebooks, se opta por
-> cambiar el requerimiento.
+> cambiar el requerimiento (también el nombre del fichero).

@@ -62,4 +62,4 @@ class Registrar:
                 },
                 ignore_index=True
             )
-        df.to_excel("calificaciones.xlsx", index=False)
+        df.to_excel("datos.xlsx", index=False)
