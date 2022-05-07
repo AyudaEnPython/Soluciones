@@ -26,13 +26,13 @@ class Calificacion:
     n3: float
     n4: float
 
-    def __post_init__(self) -> float:
+    def __post_init__(self) -> None:
         self.nf = self.n1*T[self.m]["n1"] + \
                 self.n2*T[self.m]["n2"] + \
                 self.n3*T[self.m]["n3"] + \
                 self.n4*T[self.m]["n4"]
 
-    def final(self):
+    def final(self) -> float:
         return self.nf
 
 
@@ -41,7 +41,7 @@ class Registrar:
     estudiantes: List[Estudiante] = field(default_factory=list)
     calificacion: List[Calificacion] = field(default_factory=list)
 
-    def guardar_calificacion(self):
+    def guardar_calificacion(self) -> None:
         df = pd.DataFrame(
             columns=[
                 "Código",
@@ -50,7 +50,9 @@ class Registrar:
                 "Nota Final",
             ]
         )
-        for estudiante, calificacion in zip(self.estudiantes, self.calificacion):
+        for estudiante, calificacion in zip(
+            self.estudiantes, self.calificacion
+        ):
             df = df.append(
                 {
                     "Código": estudiante.codigo,
