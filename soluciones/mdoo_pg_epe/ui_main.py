@@ -1,5 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
+from operator import ne
 from tkinter import (
     Button,
     Entry,
@@ -60,7 +61,7 @@ class Formulario(Frame):
         self.registrar = Button(
             self, text="Registrar", command=self.registrar)
         self.registrar.grid(row=3, column=0, padx=5, pady=5)
-        self.limpiar = Button(self, text="Limpiar", command=self.limpiar)
+        self.limpiar = Button(self, text="Limpiar", command=self.clear)
         self.limpiar.grid(row=3, column=1, padx=5, pady=5)
 
     def registrar(self):
@@ -78,7 +79,7 @@ class Formulario(Frame):
     def get_estudiantes(self):
         return self.estudiantes
 
-    def limpiar(self):
+    def clear(self):
         self.codigo.delete(0, "end")
         self.nombre_completo.delete(0, "end")
 
@@ -104,26 +105,30 @@ class Calificaciones(Frame):
         self.n4.grid(row=3, column=1, padx=5, pady=5)
         self.guardar = Button(self, text="Guardar", command=self.guardar)
         self.guardar.grid(row=4, column=0, padx=5, pady=5)
-        self.limpiar = Button(self, text="Limpiar", command=self.limpiar)
+        self.limpiar = Button(self, text="Limpiar", command=self.clear)
         self.limpiar.grid(row=4, column=1, padx=5, pady=5)
 
     def guardar(self):
         try:
             n1 = validar_notas(self.n1.get())
+            print(n1, type(n1))
             n2 = validar_notas(self.n2.get())
             n3 = validar_notas(self.n3.get())
             n4 = validar_notas(self.n4.get())
         except ValueError:
             messagebox.showerror("Error", "Notas inválidas")
+            return
         calificacion = Calificacion(
-            n1, n2, n3, n4, self.modalidad
+            self.modalidad, n1, n2, n3, n4
         )
         self.calificaciones.append(calificacion)
+        self.clear()
+        return
 
     def get_calificaciones(self):
         return self.calificaciones
 
-    def limpiar(self):
+    def clear(self):
         self.n1.delete(0, "end")
         self.n2.delete(0, "end")
         self.n3.delete(0, "end")
@@ -137,14 +142,14 @@ class App(Tk):
         self.title("AyudaEnPython")
         self.formulario = Formulario(Estudiante, self)
         self.formulario.pack()
-        self.guardar = Button(self, text="To Excel", command=self.guardar)
+        self.guardar = Button(self, text="To Excel", command=self.save)
         self.guardar.pack()
 
-    def guardar(self):
+    def save(self):
         estudiantes = self.formulario.get_estudiantes()
         calificaciones = self.formulario.calificacion.get_calificaciones()
         registro = Registrar(estudiantes, calificaciones)
-        registro.to_excel()
+        registro.guardar_calificacion()
         messagebox.showinfo("Exito", "Archivo guardado")
 
 
