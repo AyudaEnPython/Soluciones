@@ -12,7 +12,7 @@ def _load_players(default_: Tuple[str, str], n: int = 0) -> Dict[str, int]:
 
 def validate(input_: str, valid: str = VALID) -> str:
     if not all(c in valid for c in input_):
-        raise ValueError("Invalid characters") # return "!"*len(input_)
+        return "!"*len(input_) # raise ValueError("Invalid characters")
     return input_
 
 
@@ -33,8 +33,10 @@ def sol(xs: str, ys: str, d: Tuple[Tuple[str, str], str] = DEFAULTS) -> str:
 
 
 def main():
-    U = validate(input())
-    A = validate(input())
+    #U = validate(input())
+    U = "P1[@]"
+    # A = validate(input())
+    A = "CZ*[ol"
     print(sol(U, A))
 
 
