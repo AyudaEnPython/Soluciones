@@ -33,12 +33,55 @@ CALIFICACIONES: Dict[str, Tuple[str, ...]] = {
 }
 
 
+class Calificaciones(Frame):
+
+    def __init__(self, modalidad, master=None):
+        super().__init__(master)
+        self.modalidad = modalidad
+        self.setup_ui()
+
+    def setup_ui(self):
+        for i, label in enumerate(CALIFICACIONES[self.modalidad]):
+            Label(self, text=label).grid(row=i, column=0, sticky="e")
+        self.n1 = Entry(self)
+        self.n2 = Entry(self)
+        self.n3 = Entry(self)
+        self.n4 = Entry(self)
+        self.n1.grid(row=0, column=1, padx=5, pady=5)
+        self.n2.grid(row=1, column=1, padx=5, pady=5)
+        self.n3.grid(row=2, column=1, padx=5, pady=5)
+        self.n4.grid(row=3, column=1, padx=5, pady=5)
+        self.guardar = Button(self, text="Guardar")
+        self.guardar.grid(row=4, column=0, padx=5, pady=5)
+        self.limpiar = Button(self, text="Limpiar", command=self.clear)
+        self.limpiar.grid(row=4, column=1, padx=5, pady=5)
+
+    def guardar(self):
+        try:
+            n1 = validar_notas(self.n1.get())
+            n2 = validar_notas(self.n2.get())
+            n3 = validar_notas(self.n3.get())
+            n4 = validar_notas(self.n4.get())
+        except ValueError:
+            messagebox.showerror("Error", "Notas inválidas")
+            return
+        calificacion = Calificacion(
+            self.modalidad, n1, n2, n3, n4
+        )
+        self.clear()
+        return calificacion
+
+    def clear(self):
+        self.n1.delete(0, "end")
+        self.n2.delete(0, "end")
+        self.n3.delete(0, "end")
+        self.n4.delete(0, "end")
+
+
 class Formulario(Frame):
 
-    def __init__(self, estudiante: Estudiante, master=None):
+    def __init__(self, master=None):
         super().__init__(master)
-        self.estudiante = estudiante
-        self.estudiantes = []
         self._mod = StringVar()
         self._mod.set("PG")
         self.setup_ui()
@@ -58,81 +101,14 @@ class Formulario(Frame):
         self.rbn_epe.grid(row=2, column=1, sticky="e")
         self.codigo.grid(row=0, column=1, padx=5, pady=5)
         self.nombre_completo.grid(row=1, column=1, padx=5, pady=5)
-        self.registrar = Button(
-            self, text="Registrar", command=self.registrar)
+        self.registrar = Button(self, text="Registrar")
         self.registrar.grid(row=3, column=0, padx=5, pady=5)
         self.limpiar = Button(self, text="Limpiar", command=self.clear)
         self.limpiar.grid(row=3, column=1, padx=5, pady=5)
 
-    def registrar(self):
-        estudiante = self.estudiante(
-            codigo=self.codigo.get(),
-            nombre_completo=self.nombre_completo.get(),
-            modalidad=self._mod.get(),
-        )
-        self.estudiantes.append(estudiante)
-        w = Toplevel()
-        w.title("Registro")
-        self.calificacion = Calificaciones(self._mod.get(), w)
-        self.calificacion.pack()
-
-    def get_estudiantes(self):
-        return self.estudiantes
-
     def clear(self):
         self.codigo.delete(0, "end")
         self.nombre_completo.delete(0, "end")
-
-
-class Calificaciones(Frame):
-
-    def __init__(self, modalidad, master=None):
-        super().__init__(master)
-        self.modalidad = modalidad
-        self.calificaciones = []
-        self.setup_ui()
-
-    def setup_ui(self):
-        for i, label in enumerate(CALIFICACIONES[self.modalidad]):
-            Label(self, text=label).grid(row=i, column=0, sticky="e")
-        self.n1 = Entry(self)
-        self.n2 = Entry(self)
-        self.n3 = Entry(self)
-        self.n4 = Entry(self)
-        self.n1.grid(row=0, column=1, padx=5, pady=5)
-        self.n2.grid(row=1, column=1, padx=5, pady=5)
-        self.n3.grid(row=2, column=1, padx=5, pady=5)
-        self.n4.grid(row=3, column=1, padx=5, pady=5)
-        self.guardar = Button(self, text="Guardar", command=self.guardar)
-        self.guardar.grid(row=4, column=0, padx=5, pady=5)
-        self.limpiar = Button(self, text="Limpiar", command=self.clear)
-        self.limpiar.grid(row=4, column=1, padx=5, pady=5)
-
-    def guardar(self):
-        try:
-            n1 = validar_notas(self.n1.get())
-            print(n1, type(n1))
-            n2 = validar_notas(self.n2.get())
-            n3 = validar_notas(self.n3.get())
-            n4 = validar_notas(self.n4.get())
-        except ValueError:
-            messagebox.showerror("Error", "Notas inválidas")
-            return
-        calificacion = Calificacion(
-            self.modalidad, n1, n2, n3, n4
-        )
-        self.calificaciones.append(calificacion)
-        self.clear()
-        return
-
-    def get_calificaciones(self):
-        return self.calificaciones
-
-    def clear(self):
-        self.n1.delete(0, "end")
-        self.n2.delete(0, "end")
-        self.n3.delete(0, "end")
-        self.n4.delete(0, "end")
 
 
 class App(Tk):
@@ -140,17 +116,54 @@ class App(Tk):
     def __init__(self):
         super().__init__()
         self.title("AyudaEnPython")
-        self.formulario = Formulario(Estudiante, self)
+        self.setup_ui()
+        self.estudiantes = []
+        self.registro_calificaciones = []
+
+    def setup_ui(self):
+        self.formulario = Formulario(self)
         self.formulario.pack()
+        self.formulario.registrar.config(command=self.registrar_notas)
         self.guardar = Button(self, text="To Excel", command=self.save)
         self.guardar.pack()
 
+    def registrar(self):
+        estudiante = Estudiante(
+            codigo=self.formulario.codigo.get(),
+            nombre_completo=self.formulario.nombre_completo.get(),
+            modalidad=self.formulario._mod.get(),
+        )
+        self.estudiantes.append(estudiante)
+        print(self.estudiantes)
+
     def save(self):
-        estudiantes = self.formulario.get_estudiantes()
-        calificaciones = self.formulario.calificacion.get_calificaciones()
-        registro = Registrar(estudiantes, calificaciones)
+        registro = Registrar(self.estudiantes, self.registro_calificaciones)
         registro.guardar_calificacion()
         messagebox.showinfo("Exito", "Archivo guardado")
+
+    def registrar_notas(self):
+        self.registrar()
+        w = Toplevel()
+        w.title("Registro")
+        self.calificaciones = Calificaciones(self.formulario._mod.get(), w)
+        self.calificaciones.guardar.config(command=self.registrar_calificaciones)
+        self.calificaciones.pack()
+
+    def registrar_calificaciones(self):
+        try:
+            n1 = validar_notas(self.calificaciones.n1.get())
+            n2 = validar_notas(self.calificaciones.n2.get())
+            n3 = validar_notas(self.calificaciones.n3.get())
+            n4 = validar_notas(self.calificaciones.n4.get())
+        except ValueError:
+            messagebox.showerror("Error", "Notas inválidas")
+            return
+        calificacion = Calificacion(
+            self.calificaciones.modalidad, n1, n2, n3, n4
+        )
+        self.registro_calificaciones.append(calificacion)
+        self.calificaciones.clear()
+
 
 
 if __name__ == "__main__":
