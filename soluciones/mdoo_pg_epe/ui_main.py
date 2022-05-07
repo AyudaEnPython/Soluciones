@@ -94,14 +94,14 @@ class Calificaciones(Frame):
     def setup_ui(self):
         for i, label in enumerate(CALIFICACIONES[self.modalidad]):
             Label(self, text=label).grid(row=i, column=0, sticky="e")
-        self.pc1 = Entry(self)
-        self.pc2 = Entry(self)
-        self.x = Entry(self)
-        self.y = Entry(self)
-        self.pc1.grid(row=0, column=1, padx=5, pady=5)
-        self.pc2.grid(row=1, column=1, padx=5, pady=5)
-        self.x.grid(row=2, column=1, padx=5, pady=5)
-        self.y.grid(row=3, column=1, padx=5, pady=5)
+        self.n1 = Entry(self)
+        self.n2 = Entry(self)
+        self.n3 = Entry(self)
+        self.n4 = Entry(self)
+        self.n1.grid(row=0, column=1, padx=5, pady=5)
+        self.n2.grid(row=1, column=1, padx=5, pady=5)
+        self.n3.grid(row=2, column=1, padx=5, pady=5)
+        self.n4.grid(row=3, column=1, padx=5, pady=5)
         self.guardar = Button(self, text="Guardar", command=self.guardar)
         self.guardar.grid(row=4, column=0, padx=5, pady=5)
         self.limpiar = Button(self, text="Limpiar", command=self.limpiar)
@@ -109,10 +109,10 @@ class Calificaciones(Frame):
 
     def guardar(self):
         try:
-            n1 = validar_notas(self.pc1.get())
-            n2 = validar_notas(self.pc2.get())
-            n3 = validar_notas(self.x.get())
-            n4 = validar_notas(self.y.get())
+            n1 = validar_notas(self.n1.get())
+            n2 = validar_notas(self.n2.get())
+            n3 = validar_notas(self.n3.get())
+            n4 = validar_notas(self.n4.get())
         except ValueError:
             messagebox.showerror("Error", "Notas inválidas")
         calificacion = Calificacion(
@@ -124,10 +124,10 @@ class Calificaciones(Frame):
         return self.calificaciones
 
     def limpiar(self):
-        self.pc1.delete(0, "end")
-        self.pc2.delete(0, "end")
-        self.x.delete(0, "end")
-        self.y.delete(0, "end")
+        self.n1.delete(0, "end")
+        self.n2.delete(0, "end")
+        self.n3.delete(0, "end")
+        self.n4.delete(0, "end")
 
 
 class App(Tk):
