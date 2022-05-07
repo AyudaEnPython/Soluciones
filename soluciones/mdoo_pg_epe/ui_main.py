@@ -1,14 +1,13 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-import tkinter as tk
+from tkinter import Tk, Button, Toplevel, messagebox
 
 from models import Estudiante, Calificacion, Registrar
 from widgets import Formulario, Calificaciones
-from utils import validar_notas
+from utils import validar_notas, validar_codigos
 
 
-
-class App(tk.Tk):
+class App(Tk):
 
     def __init__(self) -> None:
         super().__init__()
@@ -19,30 +18,42 @@ class App(tk.Tk):
 
     def setup_ui(self) -> None:
         self.formulario = Formulario(self)
-        self.formulario.pack()
+        self.guardar = Button(self, text="To Excel", command=self.save)
+        self.quit = Button(self, text="Salir", command=self.destroy)
         self.formulario.registrar.config(command=self.registrar_notas)
-        self.guardar = tk.Button(self, text="To Excel", command=self.save)
-        self.guardar.pack()
+        self.formulario.pack()
+        self.guardar.pack(fill="x")
+        self.quit.pack(fill="x")
 
     def registrar(self) -> None:
-        estudiante = Estudiante(
-            codigo=self.formulario.codigo.get(),
-            nombre_completo=self.formulario.nombre_completo.get(),
-            modalidad=self.formulario._mod.get(),
-        )
-        self.estudiantes.append(estudiante)
+        try:
+            estudiante = Estudiante(
+                codigo=validar_codigos(
+                    self.estudiantes, self.formulario.codigo.get()
+                ),
+                nombre_completo=self.formulario.nombre_completo.get(),
+                modalidad=self.formulario._mod.get(),
+            )
+            self.estudiantes.append(estudiante)
+        except ValueError:
+            messagebox.showerror("Error", "Código ya registrado")
+            return False
+        return True
 
     def save(self) -> None:
         registro = Registrar(self.estudiantes, self.registro_calificaciones)
         registro.guardar_calificacion()
-        tk.messagebox.showinfo("Exito", "Archivo guardado")
+        messagebox.showinfo("Exito", "Archivo guardado")
 
     def registrar_notas(self) -> None:
-        self.registrar()
-        w = tk.Toplevel()
-        w.title("Registro")
-        self.calificaciones = Calificaciones(self.formulario._mod.get(), w)
-        self.calificaciones.guardar.config(command=self.registrar_calificaciones)
+        if not self.registrar():
+            return
+        self.w = Toplevel()
+        self.w.title("Registro")
+        self.calificaciones = Calificaciones(
+            self.formulario._mod.get(), self.w)
+        self.calificaciones.guardar.config(
+            command=self.registrar_calificaciones)
         self.calificaciones.pack()
 
     def registrar_calificaciones(self) -> None:
@@ -52,12 +63,12 @@ class App(tk.Tk):
             n3 = validar_notas(self.calificaciones.n3.get())
             n4 = validar_notas(self.calificaciones.n4.get())
         except ValueError:
-            tk.messagebox.showerror("Error", "Notas inválidas")
+            messagebox.showerror("Error", "Notas inválidas")
         calificacion = Calificacion(
             self.calificaciones.modalidad, n1, n2, n3, n4
         )
         self.registro_calificaciones.append(calificacion)
-        self.calificaciones.clear()
+        self.w.destroy()
 
 
 if __name__ == "__main__":
