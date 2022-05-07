@@ -5,6 +5,7 @@ from tkinter import (
     Entry,
     Label,
     Frame,
+    messagebox,
     Radiobutton,
     StringVar,
     Tk,
@@ -12,6 +13,8 @@ from tkinter import (
 )
 from typing import Dict, List, Tuple
 
+from models import Estudiante, Calificacion, Registrar
+from utils import validar_notas
 
 CALIFICACIONES: Dict[str, Tuple[str, ...]] = {
     "PG": (
@@ -31,8 +34,10 @@ CALIFICACIONES: Dict[str, Tuple[str, ...]] = {
 
 class Formulario(Frame):
 
-    def __init__(self, master=None):
+    def __init__(self, estudiante: Estudiante, master=None):
         super().__init__(master)
+        self.estudiante = estudiante
+        self.estudiantes = []
         self._mod = StringVar()
         self._mod.set("PG")
         self.setup_ui()
@@ -59,10 +64,16 @@ class Formulario(Frame):
         self.limpiar.grid(row=3, column=1, padx=5, pady=5)
 
     def registrar(self):
-        modalidad = self._mod.get()
+        estudiante = self.estudiante(
+            codigo=self.codigo.get(),
+            nombre_completo=self.nombre_completo.get(),
+            modalidad=self._mod.get(),
+        )
+        self.estudiantes.append(estudiante)
         w = Toplevel()
         w.title("Registro")
-        Calificaciones(modalidad, w).pack()
+        self.calificacion = Calificaciones(self._mod.get(), w)
+        self.calificacion.pack()
 
     def limpiar(self):
         self.codigo.delete(0, "end")
@@ -74,6 +85,7 @@ class Calificaciones(Frame):
     def __init__(self, modalidad, master=None):
         super().__init__(master)
         self.modalidad = modalidad
+        self.calificaciones = []
         self.setup_ui()
 
     def setup_ui(self):
@@ -93,7 +105,20 @@ class Calificaciones(Frame):
         self.limpiar.grid(row=4, column=1, padx=5, pady=5)
 
     def guardar(self):
-        pass
+        try:
+            n1 = validar_notas(self.pc1.get())
+            n2 = validar_notas(self.pc2.get())
+            n3 = validar_notas(self.x.get())
+            n4 = validar_notas(self.y.get())
+        except ValueError:
+            messagebox.showerror("Error", "Notas inválidas")
+        calificacion = Calificacion(
+            n1, n2, n3, n4, self.modalidad
+        )
+        self.calificaciones.append(calificacion)
+
+    def get_calificaciones(self):
+        return self.calificaciones
 
     def limpiar(self):
         self.pc1.delete(0, "end")
@@ -107,7 +132,7 @@ class App(Tk):
     def __init__(self):
         super().__init__()
         self.title("AyudaEnPython")
-        Formulario(self).pack()
+        Formulario(Estudiante, self).pack()
         self.guardar = Button(self, text="To Excel", command=self.guardar)
         self.guardar.pack()
 
