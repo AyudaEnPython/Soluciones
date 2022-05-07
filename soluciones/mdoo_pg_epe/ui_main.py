@@ -10,8 +10,23 @@ from tkinter import (
     Tk,
     Toplevel,
 )
+from typing import Dict, List, Tuple
 
-from utils import CALIFICACIONES
+
+CALIFICACIONES: Dict[str, Tuple[str, ...]] = {
+    "PG": (
+        "Práctica Calificada 1",
+        "Práctica Calificada 2",
+        "Proyecto Final",
+        "Examen Final",
+    ),
+    "EPE": (
+        "Práctica Calificada 1",
+        "Práctica Calificada 2",
+        "Trabajo Parcial",
+        "Trabajo Final",
+    ),
+}
 
 
 class Formulario(Frame):
