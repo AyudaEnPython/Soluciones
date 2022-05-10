@@ -1,4 +1,5 @@
-"""
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
 En una empresa de seguridad, se han asignado 2 contraseñas para el
 ingreso: x5y4 y a1b2. Toda persona que ingrese debe registrar una
 de las contraseñas.
