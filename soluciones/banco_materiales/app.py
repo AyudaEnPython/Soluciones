@@ -4,7 +4,7 @@ import pickle
 from typing import Dict, List, Optional
 
 from models import Carrera, Estudiante, Materia, Material, BancoMateriales
-from prototools.entradas import entrada_choices, entrada_int, entrada_str, entrada_choice, entrada_fecha
+from prototools import bool_input, int_input, menu_input, str_input, date_input
 
 CARRERAS: Dict[str, Carrera] = {
     "C01": Carrera("C01", "Informática", "Ciencias"),
@@ -21,33 +21,32 @@ MATERIAS: Dict[str, Materia] = {
 
 
 def registrar_datos_estudiante(datos: Dict[str, Estudiante]) -> Estudiante:
-    f = lambda x: True if x == "si" else False
-    codigo = entrada_str("Ingresar código: ")
+    codigo = str_input("Ingresar código: ")
     if codigo in datos:
         print("El código ya existe")
         return
     return Estudiante(
         codigo=codigo,
-        nombre=entrada_str("Ingresar nombre: "),
-        apellido=entrada_str("Ingresar apellido: "),
-        ingreso=entrada_fecha("Ingresar fecha de ingreso: "),
-        recibido=f(entrada_choice(("si", "no"), "¿Recibido?")),
+        nombre=str_input("Ingresar nombre: "),
+        apellido=str_input("Ingresar apellido: "),
+        ingreso=date_input("Ingresar fecha de ingreso: "),
+        recibido=bool_input("¿Recibido?", lang="es"),
     )
 
 
 def registrar_material(datos: List[Material]) -> Material:
-    codigo = entrada_str("Ingresar código: ")
+    codigo = str_input("Ingresar código: ")
     for data in datos:
         if data.codigo == codigo:
             print("El código ya existe")
             return
     return Material(
         codigo=codigo,
-        titulo=entrada_str("Ingresar título: "),
-        contenido=entrada_str("Ingresar contenido: "),
-        materia=entrada_choices(MATERIAS, "Ingresar materia: "),
-        gestor=entrada_str("Ingresar gestor: "),
-        calificacion=entrada_int("Ingresar calificación: "),
+        titulo=str_input("Ingresar título: "),
+        contenido=str_input("Ingresar contenido: "),
+        materia=menu_input(tuple(MATERIAS.keys()), numbers=True, lang="es"),
+        gestor=str_input("Ingresar gestor: "),
+        calificacion=int_input("Ingresar calificación: "),
     )
 
 
