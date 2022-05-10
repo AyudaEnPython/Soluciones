@@ -28,19 +28,15 @@ class TestApp(TestCase):
         self.assertEqual(estudiantes["001"].apellido, "Wick")
 
     def test_materiales(self):
-        self.assertEqual(materiales.materiales[0].nombre, "AAA")
-        self.assertEqual(materiales.materiales[0].descripcion, "aaa")
+        self.assertEqual(materiales.materiales[0].codigo, "01")
+        self.assertEqual(materiales.materiales[0].titulo, "AAA")
+        self.assertEqual(materiales.materiales[0].contenido, "aaa")
         self.assertEqual(materiales.materiales[0].materia, MATERIAS["M01"])
         self.assertEqual(
-            materiales.materiales[0].estudiante, estudiantes["001"]
+            materiales.materiales[0].gestor, estudiantes["001"]
         )
         self.assertEqual(materiales.materiales[0].calificacion, 10)
 
 
 if __name__ == "__main__":
-    # main()
-    materiales.ver_por_materia("M003")
-    materiales.ver_documento("01")
-    materiales.cantidad_materiales_por_carrera("Informática")
-    materiales.ver_por_calificacion(5)
-    materiales.ver_gestores()
+    main()
