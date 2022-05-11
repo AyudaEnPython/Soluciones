@@ -17,10 +17,10 @@ def validar_fecha(fecha):
 
 def main():
     fecha = input("Introduce una fecha (dd/mm/aaaa): ")
-    if validar_fecha(fecha):
-        print("La fecha es válida")
-    else:
-        print("La fecha es inválida")
+    print(
+        "La fecha es válida" if validar_fecha(fecha) else
+        "La fecha no es válida"
+    )
 
 
 class Test(unittest.TestCase):
