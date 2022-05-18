@@ -1,7 +1,10 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-Dado el polinomio y=x^4-3x^2+2 calcular el valor de y para valores de x
-que varían en el rango -2, +2 con incremento de 0,1.
+Dado el polinomio: 
+    y = x^4 - 3x^2 + 2
+
+Calcular el valor de y para valores de x que varían en el rango
+-2, +2 con incremento de 0,1.
 
 NOTE: added plot
 """
