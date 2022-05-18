@@ -26,7 +26,7 @@ def f(direction: int = -1) -> None:
     line, = ax.plot([],[], lw=2)
     fr = np.linspace(0, 2*np.pi, 120)
     fig.canvas.draw()
-    a = FuncAnimation(fig, update, frames=fr, blit=True, interval=10)
+    FuncAnimation(fig, update, frames=fr, blit=True, interval=10)
     plt.show()
 
 
