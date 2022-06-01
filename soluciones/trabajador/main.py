@@ -24,10 +24,10 @@ class Trabajador(Persona):
     def obtener_sueldo(self) -> float:
         return self.sueldo + self.pago_horas_extras * self.horas_extras
 
-    def obtener_descuentos(self):
+    def obtener_descuentos(self) -> float:
         return self.obtener_sueldo() * (RENTA + DESEMPLEO)
 
-    def obtener_sueldo_neto(self):
+    def obtener_sueldo_neto(self) -> float:
         return self.obtener_sueldo() - self.obtener_descuentos()
 
     def detalles(self) -> str:
@@ -40,14 +40,7 @@ class Trabajador(Persona):
 
 
 def main():
-    trabajador = Trabajador(
-        dni="45478432",
-        nombre="Jason",
-        apellido="Becker",
-        sueldo=6500,
-        pago_horas_extras=80,
-        horas_extras=10,
-    )
+    trabajador = Trabajador("45478432", "Jason", "Becker", 6500, 80, 10)
     print(trabajador.detalles())
 
 
