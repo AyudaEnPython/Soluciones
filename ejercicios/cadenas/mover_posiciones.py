@@ -4,7 +4,7 @@ Mover las letras de una cadena "n" veces.
 """
 
 
-def mover_posiciones(palabra: str, pos:int) -> str:
+def mover_posiciones(palabra: str, pos: int) -> str:
     return palabra[len(palabra) - pos:] + palabra[:len(palabra) - pos]
 
 
