@@ -5,12 +5,11 @@ from typing import Dict, List, Tuple
 # pip install prototools
 from prototools import int_input, textbox
 
-MIN, MAX = 10, 35
-GRUPOS = 3
+MIN, MAX, GRUPOS = 10, 35, 3
 Data = Dict[str, int]
 
 
-def inscribir() -> None:
+def inscribir() -> Data:
     grupos: Data = {k:0 for k in ascii_uppercase[:GRUPOS]}
     for grupo in grupos:
         grupos[grupo] += int_input(f"[{grupo}] Cantidad de alumnos: ", min=0)
