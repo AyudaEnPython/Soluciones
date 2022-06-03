@@ -6,8 +6,6 @@ siguientes operaciones:
 - Cantidad de vocales.
 - Convierta el texto en mayúsculas.
 """
-# pip install prototools
-from prototools import str_input
 
 
 def to_upper(text: str) -> str:
@@ -23,7 +21,7 @@ def contar_vocales(text: str) -> int:
 
 
 def main():
-    text = str_input("> ")
+    text = input("> ")
     print(f"Espacios: {contar_espacios(text)}")
     print(f"Vocales: {contar_vocales(text)}")
     print(f"Mayúsculas: {to_upper(text)}")
