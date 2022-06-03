@@ -10,5 +10,11 @@ for n in range(10, 100):
     if 2 * int(x) * int(y) == n:
         print(n)
 
+#for n in range(10, 100):
+#    x, y = n//10, n%10
+#    if 2 * x * y == n:
+#        print(n)
+
 # oneliner:
 # print(*[n for n in range(10, 100) if 2 * int(str(n)[0]) * int(str(n)[1]) == n])
+# print(*[n for n in range(10, 100) if 2 * n//10 * n%10 == n])
