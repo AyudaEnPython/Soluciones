@@ -4,19 +4,18 @@ from typing import Dict
 
 MENSAJES: Dict[int, str] = {
     0: "OK",
-    1: "CURSO SENSIBILIZACION",
-    2: "MULTA",
+    1: "MULTA",
+    2: "CURSO SENSIBILIZACION",
 }
 
 
-def sol(e: float, vmp: float, t: float) -> str:
-    if e <= 0 or vmp <= 0 or t <= 0:
+def sol(e: float, lim: float, t: float) -> str:
+    if e <= 0 or lim <= 0 or t <= 0:
         return "ERROR"
-    v = e / t
-    vmp *= 5 / 18
-    if v < vmp:
+    v = (e/t) * (18/5)
+    if v < lim:
         return MENSAJES[0]
-    elif vmp < v <= vmp * 1.2:
+    elif lim < v < lim * 1.2:
         return MENSAJES[1]
     else:
         return MENSAJES[2]
