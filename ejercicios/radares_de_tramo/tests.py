@@ -2,7 +2,7 @@
 """
 import unittest
 
-from main import sol
+from main import sol, MENSAJES
 
 
 class Test(unittest.TestCase):
@@ -16,12 +16,12 @@ class Test(unittest.TestCase):
         (-1000, -50, -100),
     )
     expected = (
-        "OK",
-        "CURSO SENSIBILIZACION",
-        "OK",
-        "CURSO SENSIBILIZACION",
-        "MULTA",
-        "ERROR",
+        MENSAJES[0],
+        MENSAJES[1],
+        MENSAJES[0],
+        MENSAJES[1],
+        MENSAJES[2],
+        MENSAJES[3],
     )
 
     def test_sol(self):

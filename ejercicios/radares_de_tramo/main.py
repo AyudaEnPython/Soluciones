@@ -6,12 +6,13 @@ MENSAJES: Dict[int, str] = {
     0: "OK",
     1: "MULTA",
     2: "CURSO SENSIBILIZACION",
+    3: "ERROR",
 }
 
 
 def sol(e: float, lim: float, t: float) -> str:
     if e <= 0 or lim <= 0 or t <= 0:
-        return "ERROR"
+        return MENSAJES[3]
     v = (e/t) * (18/5)
     if v < lim:
         return MENSAJES[0]
