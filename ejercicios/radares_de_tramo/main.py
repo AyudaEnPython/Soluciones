@@ -10,7 +10,7 @@ MENSAJES: Dict[int, str] = {
 
 
 def sol(e: float, vmp: float, t: float) -> str:
-    if e < 0 or vmp < 0 or t < 0:
+    if e <= 0 or vmp <= 0 or t <= 0:
         return "ERROR"
     v = e / t
     vmp *= 5 / 18
