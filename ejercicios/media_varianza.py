@@ -12,10 +12,7 @@ usuario debe ingresar el límite inferior (a) y superior (b).
 
 # Ejercicio 3
 n = int(input("Cantidad de números a ingresar: "))
-ns = []
-for _ in range(n):
-    ns.append(int(input("> ")))
-print(f"Media: {sum(ns)/n}")
+print(f"Media: {sum(int(input('> ')) for _ in range(n))/n}")
 
 
 # Ejercicio 4
