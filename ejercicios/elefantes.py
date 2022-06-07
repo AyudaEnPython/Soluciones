@@ -39,9 +39,12 @@ lo que esa cantidad siempre será inferior a N.
 from unittest import main, TestCase
 
 
+def get_data():
+    return int(input()), int(input())
+
+
 def solucion_a():
-    m = int(input())
-    n = int(input())
+    m, n = get_data()
     e = 0
     for i in range(n):
         e += int(input())
@@ -51,8 +54,7 @@ def solucion_a():
 
 
 def solucion_b():
-    m = int(input())
-    n = int(input())
+    m, n = get_data()
     i = e = 0
     while i < n:
         e += int(input())
