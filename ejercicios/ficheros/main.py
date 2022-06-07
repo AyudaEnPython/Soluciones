@@ -7,9 +7,9 @@ cuente las palabras cuya longitud sea menor o igual a 4 letras.
 from typing import List
 
 
-def open_file(filename: str) -> List[str]:
-    with open(filename, 'r') as f:
-        return f.read().splitlines()
+def open_file(filename: str, encoding="utf-8") -> List[str]:
+    with open(filename, encoding=encoding) as f:
+        return f.readlines()
 
 
 def count_words(data: List[str]) -> List[str]:
