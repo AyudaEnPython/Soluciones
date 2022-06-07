@@ -27,8 +27,8 @@ Observaciones: Los datos de la tómbola que se van ingresando serán
 |El ganador es el jugador 1      |   |Ambos jugadores ganan           | 
 +--------------------------------+   +--------------------------------+
 """
-from random import shuffle
-from typing import List, Tuple
+from random import shuffle, sample
+from typing import List, Optional, Tuple
 
 N = 99
 BOLILLERO = list(range(1, N+1))
@@ -44,11 +44,16 @@ def obtener_carton(carton: str) -> List[int]:
     return list(map(int, carton.split("-")))
 
 
-def tombola() -> int:
+def carton_random(n: int) -> List[int]:
+    return sample(list(range(1, N+1)), n)
+
+
+def tombola(show: Optional[bool] = True) -> int:
     shuffle(BOLILLERO)
     n = BOLILLERO.pop(0)
     DISPLAY.append(n)
-    print(" - ".join(map("{:02}".format, DISPLAY[-6:])))
+    if show:
+        print(" - ".join(map("{:02}".format, DISPLAY[-6:])))
     return n
 
 
@@ -79,8 +84,8 @@ def run(a: List[int], b: List[int]) -> None:
 
 
 def main():
-    a = obtener_carton(input("Carton del jugador 1: "))
-    b = obtener_carton(input("Carton del jugador 2: "))
+    a = obtener_carton(input("Carton del jugador 1: ")) # carton_random(4)
+    b = obtener_carton(input("Carton del jugador 2: ")) # carton_random(4)
     run(a, b)
 
 
