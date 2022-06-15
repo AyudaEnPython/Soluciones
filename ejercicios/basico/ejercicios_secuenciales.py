@@ -1,5 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
+----------------------- Ejercicios Secuenciales -----------------------
+
 1. Jardines La Paz vende parcelas a crédito, donde el cliente da una
     inicial y el resto lo paga en 24 cuotas, pero con un incremento del
     20% sobre lo que quedó debiendo. Teniendo como dato de entrada el
