@@ -49,4 +49,6 @@ Salida:
 
 
 > __**NOTA**__: El enunciado fue modificado para mejorar la legibilidad del mismo.
-> Las entradas deberían ser 6 y no 5.
+> Las entradas deberían ser 6 y no 5. Además, la salida debería ser 1, solo "pepe234"
+> sería un correo válido; "usuariovalido1" tiene un dominio de más de 5 caracteres
+> ("abcdef").
