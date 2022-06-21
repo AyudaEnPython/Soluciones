@@ -11,6 +11,10 @@ Cada payaso pesa 112 g y cada muñeca pesa 75 g.
 
 Escribir un programa que lea el número de payasos y muñecas vendidos en
 el último pedido y calcule el peso total del paquete que será enviado.
+
+--- Variante:
+... les cobra por peso un valor de 0.05 soles x gramo de cada paquete...
+... y el valor a pagar que será enviado.
 """
 
 PAYASO_PESO = 112
@@ -22,3 +26,4 @@ muñecas = int(input("Muñecas vendidas: "))
 peso = (payasos * PAYASO_PESO) + (muñecas * MUÑECA_PESO)
 
 print(f"El peso total del paquete es {peso} g.")
+# print(f"El valor a pagar es {peso * 0.05} soles.")
