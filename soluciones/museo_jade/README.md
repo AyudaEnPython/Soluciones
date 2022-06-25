@@ -36,3 +36,6 @@ Este prodría ser un ejemplor del contenido de ese archivo:
     21/06/2022 445467890
     21/06/2022 112340512
     22/06/2022 145784476
+
+> __**NOTE**__: El enunciado sugiere funciones con demasiadas responsabilidades y
+> y uso de una diccionario global, se opta por realizar cambios.
