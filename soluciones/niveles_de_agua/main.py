@@ -31,6 +31,4 @@ def main():
 
 
 if __name__ == "__main__":
-    #main()
-
-    print(fuera_de_rango([3, 4, 5], 4))
+    main()
