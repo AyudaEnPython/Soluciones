@@ -9,6 +9,10 @@ DIAS = 365
 LIMITE = 5
 
 
+def get_data(n = DIAS):
+    return [int(input("> ")) for _ in range(n)]
+
+
 def niveles(dias: int):
     return [randint(MIN, MAX) for _ in range(dias)]
 
@@ -22,6 +26,7 @@ def fuera_de_rango(xs: List[int], limite: int) -> List[int]:
 
 
 def main():
+    # dias = get_data()
     dias = niveles(DIAS)
     promedio = promedio_int(dias)
     dias_fuera_de_rango = fuera_de_rango(dias, promedio + LIMITE)
@@ -31,6 +36,4 @@ def main():
 
 
 if __name__ == "__main__":
-    #main()
-
-    print(fuera_de_rango([3, 4, 5], 4))
+    main()
