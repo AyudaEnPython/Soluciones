@@ -1,6 +1,5 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-# ------------------------- Enunciado Original ------------------------ 
 Una empresa de conciertos desea desarrollar un simulador para calcular
 el precio por la venta de boletos para un evento. La empresa ofrece dos
 tipos de boletos: gradas y general. Desarrolla un programa en Python
@@ -19,15 +18,13 @@ c. El programa debe permitir que el usuario repita el cálculo del
     hasta que indique que desea terminar.
 
 Ejemplo:
-
 - Tipo boleto: general
 - Número de boletos: 3
 - Precio de la compra: 3 x 810 = 2430
 - IVA: 388
 - Total a pagar: 2818.8 pesos
-# ---------------------------------------------------------------------
 """
-from typing import Dict
+from typing import Dict, Tuple
 # pip install prototools
 from prototools import choice_input, int_input, main_loop, tabulate, text_align
 
@@ -35,7 +32,7 @@ IVA: float = 0.16
 TIPO: Dict[str, int] = {"grada": 925, "general": 810}
 
 
-def ingresar_datos():
+def ingresar_datos() -> Tuple[str, int]:
     """Pide al usuario los datos para calcular el precio de la compra
     de boletos.
 
@@ -48,7 +45,7 @@ def ingresar_datos():
     return tipo, cantidad
 
 
-def calcular_precio(tipo: str, cantidad: int):
+def calcular_precio(tipo: str, cantidad: int) -> Tuple[float, float, float]:
     """Calcula el precio de la compra de boletos.
     
     :param tipo: tipo de boleto
