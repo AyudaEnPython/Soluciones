@@ -11,7 +11,7 @@ Taking as base the Mario Kart v1.0 program implement the next improves:
     player is in the 5 first places and the "Surprised effect" happens;
     the player will be delay 1 place.
 
-NOTE: There's no code for v1.0.
+NOTE: The code for v1.0 wasn't very clean.
 """
 from random import getrandbits
 from typing import Dict
