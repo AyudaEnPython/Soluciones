@@ -14,7 +14,7 @@ Taking as base the Mario Kart v1.0 program implement the next improves:
 NOTE: There's no code for v1.0.
 """
 from random import getrandbits
-from typing import Any, Dict, List, Optional, Union
+from typing import Dict
 # pip install prototools
 from prototools import int_input, menu_input, bool_input
 
