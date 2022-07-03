@@ -6,7 +6,7 @@ class DniException(Exception):
     """Excepción para DNI"""
 
 
-def validar(dni: str) -> bool:
+def validar(dni: str) -> str:
     """Valida un DNI
     
     :param dni: DNI a validar
