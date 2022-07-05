@@ -10,6 +10,6 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swapped = True
-        if swapped == False:
+        if not swapped:
             break
     return arr
