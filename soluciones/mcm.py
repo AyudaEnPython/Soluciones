@@ -2,8 +2,9 @@
 
 Mínimo común múltiplo (MCM) de dos números naturales.
 """
-from unittest import main, TestCase
+import unittest
 from typing import Callable
+
 from mcd import mcd_recursivo, mcd_while, mcd_for
 
 
@@ -73,7 +74,7 @@ def mcm_while(a: int, b: int) -> int:
     return c
 
 
-def main_(): # comment/uncomment to swtiches between mcm versions
+def main(): # comment/uncomment to swtiches between mcm versions
     a = int(input('a: '))
     b = int(input('a: '))
     # mcm = mcm_usando_mcd(a, b)
@@ -83,7 +84,7 @@ def main_(): # comment/uncomment to swtiches between mcm versions
     print(f'MCM de {a} y {b} es {mcm}')
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data = (
         (2, 3, 6),
@@ -110,5 +111,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment this line and comment the next one to run tests
+    main()
