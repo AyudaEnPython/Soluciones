@@ -3,17 +3,17 @@
 from collections import namedtuple
 from typing import List
 # pip install prototools
-from prototools import Menu
+from prototools import Menu, str_input
 
 Pasajero = namedtuple("Pasajero", "nombre cedula destino")
 Destino = namedtuple("Destino", "ciudad pais")
 
 
 def ingresar_datos(pasajeros: List[Pasajero]) -> None:
-    nombre = input("Nombre: ")
-    cedula = input("Cedula: ")
-    ciudad = input("Ciudad: ")
-    pais = input("Pais: ")
+    nombre = str_input("Nombre: ")
+    cedula = str_input("Cedula: ")
+    ciudad = str_input("Ciudad: ")
+    pais = str_input("Pais: ")
     destino = Destino(ciudad, pais)
     pasajero = Pasajero(nombre, cedula, destino)
     pasajeros.append(pasajero)
