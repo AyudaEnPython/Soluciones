@@ -9,17 +9,18 @@ from prototools.keyboard import typewrite, press
 TXT = "* Ayuda en Python *"
 BAR = "* "*(len(TXT)//2 + 1)
 
+
 def start_app(app_name: str) -> None:
     subprocess.Popen(app_name)
 
 
 def write_to_app(txt: str) -> None:
     time.sleep(1)
-    typewrite(BAR)
+    typewrite(BAR, 0.09)
+    press("enter") 
+    typewrite(txt, 0.2)
     press("enter")
-    typewrite(txt)
-    press("enter")
-    typewrite(BAR)
+    typewrite(BAR, 0.09)
     press("enter")
     press("\t")
     press("\t")
