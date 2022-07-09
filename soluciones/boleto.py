@@ -26,7 +26,13 @@ Ejemplo:
 """
 from typing import Dict, Tuple
 # pip install prototools
-from prototools import choice_input, int_input, main_loop, tabulate, text_align
+from prototools import (
+    choice_input,
+    int_input,
+    main_loop,
+    tabulate,
+    text_align
+)
 
 IVA: float = 0.16
 TIPO: Dict[str, int] = {"grada": 925, "general": 810}
