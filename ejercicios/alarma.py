@@ -22,20 +22,21 @@ guiarse de las siguientes restricciones y utilizar el diagrama de clase:
 * Considere el valor actual y el valor máximo que puede contener cada uno
 de los atributos al momento de añadir tiempo.
 
-            +----------------------------------------+
-            |                  Reloj                 |
-            +----------------------------------------+
-            | - horas: int                           |
-            | - minutos: int                         |
-            | - segundos: int                        |
-            +----------------------------------------+
-            | + agregar_horas(int horas): void       |
-            | + agregar_minutos(int minutos): void   |
-            | + agregar_segundos(int segundos): void |
-            | + visualizar(): string                 |
-            +----------------------------------------+
+    +----------------------------------------+
+    |                  Reloj                 |
+    +----------------------------------------+
+    | - horas: int                           |
+    | - minutos: int                         |
+    | - segundos: int                        |
+    +----------------------------------------+
+    | + agregar_horas(int horas): void       |
+    | + agregar_minutos(int minutos): void   |
+    | + agregar_segundos(int segundos): void |
+    | + visualizar(): string                 |
+    +----------------------------------------+
 """
 from random import randint
+# pip install prototools
 from prototools import Menu, int_input
 
 
