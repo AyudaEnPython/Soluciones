@@ -27,16 +27,16 @@ NOTA: El problema sugiere un diseño demasiado acoplado, por ejemplo la
     diseño mas desacoplado aumentando la legibilidad del código, su
     reusabilidad y la facilidad para realizar los casos de prueba.
 """
+import unittest
 from datetime import datetime
 from dataclasses import dataclass
 from typing import Dict, Tuple
-from unittest import main, TestCase
 
 # pip install prototools
 from prototools import choice_input, time_input, main_loop, textbox, text_align
 
-TIPOS = ("Automovil", "Camioneta", "Moto")
-PRECIOS = (100, 120, 70)
+TIPOS: Tuple[str] = ("Automovil", "Camioneta", "Moto")
+PRECIOS: Tuple[int] = (100, 120, 70)
 
 
 @dataclass
@@ -107,7 +107,7 @@ def autoseguro_main():
     mostrar_detalles(estacionamiento)
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     v, t = ("AEP-101", "Moto"), ("7:00:00", "7:30:00")
 
@@ -133,4 +133,4 @@ class Test(TestCase):
 
 if __name__ == "__main__":
     main_loop(autoseguro_main)
-    #main() # comment main_lopp and uncomment this line to execute the test
+    # unittest.main() # comment main_lopp and uncomment this line to execute the test
