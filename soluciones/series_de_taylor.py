@@ -3,11 +3,12 @@
 sinx = x - (x**3)/3! + (x**5)/5! - (x**7)/7! + ...
 cosx = 1 - (x**2)/2! + (x**4)/4! - (x**6)/6! + ...
 tanx = x - (x**3)/3! + (2*(x**5))/15 - (17*(x**7))/315 + ...
+arcsinx = x + 1/6*(x**3) + 3/40*(x**5) + 15/336*(x**7) + ...
 """
 import math
 from fractions import Fraction as Fr
 from math import factorial as f
-from unittest import main, TestCase
+import unittest
 
 N = 10
 
@@ -36,7 +37,14 @@ def tanx(x, n=N):
     )
 
 
-class Test(TestCase):
+def arcsinx(x, n=N):
+    return sum(
+        f(2*k) * x**(2*k + 1) / ((4**k) * (f(k)**2) * (2*k + 1))
+        for k in range(n + 1)
+    )
+
+
+class Test(unittest.TestCase):
 
     def test_sinx(self):
         self.assertAlmostEqual(math.sin(1), sinx(1), places=N)
@@ -49,6 +57,10 @@ class Test(TestCase):
         self.assertAlmostEqual(math.tan(1), sinx(1)/cosx(1), delta=0.001)
         self.assertAlmostEqual(tanx(1), sinx(1)/cosx(1), delta=0.001)
 
+    def test_arcsinx(self):
+        self.assertAlmostEqual(math.asin(0.5), arcsinx(0.5), delta=0.001)
+        self.assertAlmostEqual(math.asin(1), arcsinx(1), delta=0.18)
+
 
 if __name__ == "__main__":
-    main()
+    unittest.main()
