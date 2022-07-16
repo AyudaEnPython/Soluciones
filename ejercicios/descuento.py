@@ -18,6 +18,7 @@ Ingrese precio unitario: 3.5
 (66.5, 21.0, 45.5)
 """
 
+
 def calcular(cantidad: int, precio: float) -> tuple:
     """Calcula el descuento y el monto final.
 
@@ -38,8 +39,7 @@ def calcular(cantidad: int, precio: float) -> tuple:
 def main():
     cantidad = int(input('Ingrese cantidad comprada: '))
     precio_unitario = float(input('Ingrese precio unitario: '))
-    resultado = calcular(cantidad, precio_unitario)
-    print(resultado)
+    print(calcular(cantidad, precio_unitario))
 
 
 if __name__ == '__main__':
