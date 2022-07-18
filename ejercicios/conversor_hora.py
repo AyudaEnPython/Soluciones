@@ -6,7 +6,7 @@ salida será 1:45 PM. El programa debe solicitar al usuario que
 introduzca exactamente cinco caracteres para especificar una hora; por
 ejemplo, las 9 en punto se debe introducir así: 09:00.
 """
-from unittest import main, TestCase
+import unittest
 
 
 def convertir(hora: str) -> str:
@@ -22,12 +22,12 @@ def convertir(hora: str) -> str:
     return f"{hora_12}:{hora[3:]} {'AM' if hora_24 < 12 else 'PM'}"
 
 
-def main_():
+def main():
     hora = input("Ingrese una hora en formato de 24 horas: ")
     print(convertir(hora))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_convertir(self):
         self.assertEqual(convertir("13:45"), "1:45 PM")
@@ -40,5 +40,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment this line and comment the next one to run tests
+    main()
