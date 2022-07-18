@@ -87,18 +87,16 @@ Como el tanque tiene un capacidad de 2163 lts y consume 2000 lts si es
 posible hacer el buceo con estas condiciones.
 
 http://tagangadives.blogspot.com/2011/03/sabes-cual-es-tu-tasa-de-consumo-de.html
-
-TODO: needs to be change to last version of prototools.
 """
 from prototools import Menu, float_input, textbox
 
 
-def atmosferas():
+def atmosferas() -> None:
     profundidad = float_input("Ingresar profundidad: ", min=0)
     textbox((profundidad/10) + 1, 40)
 
 
-def sca():
+def sca() -> None:
     capacidad = float_input("Ingresar capacidad: ", min=0)
     profundidad = float_input("Ingresar profundidad: ", min=0)
     tiempo = float_input("Ingresar tiempo: ", min=0)
@@ -106,14 +104,13 @@ def sca():
     textbox(round((bar * capacidad )/tiempo / ((profundidad/10) + 1), 1), 40)
 
 
-def consumo():
+def consumo() -> None:
     capacidad = float_input("Ingresar capacidad: ", min=0)
     bar = float_input("Ingresar bar: ", min=0)
     reserva = float_input("Ingresar reserva: ", min=0)
     profundidad = float_input("Ingresar profundidad: ", min=0)
     tiempo = float_input("Ingresar tiempo: ", min=0, max=180)
     sca = float_input("Ingresar sca: ", min=0)
-    
     disponible = capacidad * (bar - reserva)
     requerido = (((profundidad/10) + 1) * sca) * tiempo
     textbox(f"Disponible: {disponible}\nRequerido: {requerido}", 40)
