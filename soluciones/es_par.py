@@ -2,7 +2,7 @@
 
 Ingresar dos números y mostrar cual de ellos es par o si ambos lo son.
 """
-from unittest import main, TestCase
+import unittest
 
 
 def es_par(numero: int) -> bool:
@@ -16,7 +16,7 @@ def es_par(numero: int) -> bool:
     return numero % 2 == 0
 
 
-def main_():
+def main():
     x = int(input("Ingrese un número: "))
     y = int(input("Ingrese otro número: "))
 
@@ -30,7 +30,7 @@ def main_():
         print("Ninguno es par")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_es_par(self):
         self.assertTrue(es_par(2))
@@ -40,5 +40,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment this line and comment the next one to run tests
+    main()
