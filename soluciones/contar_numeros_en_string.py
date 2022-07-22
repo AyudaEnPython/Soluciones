@@ -7,7 +7,7 @@ Ejemplo:
     'hola23mundo356' -> 5
 """
 import re
-from unittest import main, TestCase
+import unittest
 
 
 def count_ss(s: str) -> int:
@@ -30,7 +30,7 @@ def count_b(s: str) -> int:
     return i
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_mixletternumbers(self):
         self.assertEqual(count_ss("hola2mu444n43do3"), 7)
@@ -52,4 +52,4 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main()
+    unittest.main()
