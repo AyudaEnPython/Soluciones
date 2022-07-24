@@ -2,7 +2,7 @@
 """
 from math import sqrt
 from typing import Iterable
-from unittest import main, TestCase
+import unittest
 
 
 def es_primo_naive(numero: int) -> bool:
@@ -62,22 +62,19 @@ def es_primo_(n: int) -> bool:
     return not any(not n % i for i in impares)
 
 
-class Test(TestCase):
-    true_cases = [2, 3, 5, 7, 11, 13]
-    false_cases = [1, 10, 33, -19, 0, 3*5]
-    funciones = [
-        es_primo,
-        es_primo_,
-        es_primo_naive,
-    ]
+class Test(unittest.TestCase):
+
+    true_cases = 2, 3, 5, 7, 11, 13
+    false_cases = 1, 10, 33, -19, 0, 3*5
+    functions = es_primo, es_primo_, es_primo_naive
 
     def test_primos(self):
-        for f in self.funciones:
+        for f in self.functions:
             for n in self.true_cases:
                 self.assertTrue(f(n))
     
     def test_no_primos(self):
-        for f in self.funciones:
+        for f in self.functions:
             for n in self.false_cases:
                 self.assertFalse(f(n))
 
@@ -86,4 +83,4 @@ if __name__ == "__main__":
     import doctest
 
     doctest.testmod()
-    main()
+    unittest.main()
