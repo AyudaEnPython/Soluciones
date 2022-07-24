@@ -7,7 +7,7 @@ NOTE: add docstrings and tests.
 
 
 def es_vocal(s: str) -> bool:
-    return s in "aeiouAEIOU"
+    return s in "aeiouáéíóúAEIOUÁÉÍÓÚ"
 
 
 def main():
