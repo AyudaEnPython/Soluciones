@@ -65,7 +65,7 @@ def main():
     menu = Menu("Ingreso de Información")
     menu.add_options(
         ("Datos Personales", lambda: datos_personales(data)),
-        ("Consultar", lambda: buscar(data)),
+        ("Consultar por cédula", lambda: buscar(data)),
         ("Consultar todos", lambda: mostrar(data)),
     )
     menu.run()
