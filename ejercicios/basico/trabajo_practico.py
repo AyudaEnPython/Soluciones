@@ -27,7 +27,7 @@ impares y cuántos números se ingresaron en total.
 son pares. Se debe imprimir el resultado de la suma de los pares y el
 resultado de la suma de los impares.
 
-8. Escribir un programa que imprimal los 10 primeros números pares
+8. Escribir un programa que imprima los 10 primeros números pares
 comenzando por el 2 e imprima también sus respectivos valores elevados
 al cuadrado y al cubo. Por ejemplo: valor: 2, cuadrado: 4, cubo. 8;
 valor: 5, cuadrado: 16, cubo: 64...
