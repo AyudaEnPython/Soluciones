@@ -1,8 +1,8 @@
 Ejercicio: Muchas veces es importante evaluar una función  sobre 
-los *n+1* puntos de una partición regular de un intervalo cerrado [a, b]. 
+los $n + 1$ puntos de una partición regular de un intervalo cerrado $[a, b]$. 
 
 Escribir un programa que evalúe las funciones mediante aproximación de
-series de Maclaurin en una partición regular del intervalo [a, b] de
+series de Maclaurin en una partición regular del intervalo $[a, b]$ de
 tal forma que se programe el siguiente menú de opciones:
 
     1. Ingrese el valor de a.
@@ -16,17 +16,17 @@ tal forma que se programe el siguiente menú de opciones:
 
 Elemento a tener en cuenta para escribir (y la evaluación) el programa:
 
-* Se debe inicializar las  variables _**a**_, _**b**_ y _**n**_ con los valores
+* Se debe inicializar las  variables $a$, $b$ y $n$ con los valores
   -1, 1 y 10 respectivamente. (Todo debe funcionar sin ningún error con
   estos tres valores.)
 * Cuando seleccione las opciones 1 o 2  para actualizar el valor
   de _**a**_ o _**b**_ se debe garantizar que dichos valores determinen un
-  intervalo cerrado [a, b] bien definido.
+  intervalo cerrado $[a, b]$ bien definido.
 * Cuando seleccione la opción 3 para actualizar el valor de la variable
   n se debe garantizar que dicho valor sea positivo.
 * Al seleccionar las opciones 4, 5 o 6 el programa debe evaluar la función
-  correspondiente en cada uno de los _**n+1**_ puntos de la partición regular del
-  intervalo [a, b]. Esta información debe aparecer en dos columnas, en la
+  correspondiente en cada uno de los $n + 1$ puntos de la partición regular del
+  intervalo $[a, b]$. Esta información debe aparecer en dos columnas, en la
   primera columna el valor de x y en la segunda columna f(x), donde f(x)
   puede ser  _**sen(x)**_, _**cos(x)**_ o _**arcsen(x)**_ dependiendo la
   opción seleccionada.
