@@ -1,33 +1,23 @@
-Un polinomio de grado <img src="https://render.githubusercontent.com/render/math?math=\color{white}n">
+Un polinomio de grado $n$
 es una función matemática de la forma:
+$$p(x) = a_{0} + a_{1}x + a_{2}x^{2} + a_{3}x^{3} + \ldots + a_{n}x^{n}$$
 
-<p align="center" width="100%">
-<img src="https://render.githubusercontent.com/render/math?math=\color{white}p(x) = a_{0} %2B a_{1}x %2B a_{2}x^{2} %2B a_{3}x^{3} %2B \ldots %2B a_{n}x^{n}">
-</p>
-
-Donde <img src="https://render.githubusercontent.com/render/math?math=\color{white}x"> es
-el parámetro y <img src="https://render.githubusercontent.com/render/math?math=\color{white}a_{0}, a_{1}, \ldots, a_{n}">
-son números reales dados.
+Donde $x$ es el parámetro y $a_{0}, a_{1}, \ldots, a_{n}$ son números reales dados.
 
 Algunos ejemplos de polinomios son:
-* <img src="https://render.githubusercontent.com/render/math?math=\color{white}p(x) = 1 %2B 2x %2B x^2">
-* <img src="https://render.githubusercontent.com/render/math?math=\color{white}q(x) = 4 - 17x">
-* <img src="https://render.githubusercontent.com/render/math?math=\color{white}r(x) = -1 -5x^3 %2B 3x^5">
-* <img src="https://render.githubusercontent.com/render/math?math=\color{white}s(x) = 5x^40 %2B 2x^80">
+* $p(x) = 1 + 2x + x^2$
+* $q(x) = 4 - 17x$
+* $r(x) = -1 -5x^3 + 3x^5$
+* $s(x) = 5x^{40} + 2x^{80}$
 
 Los grados de estos polinomios son, respectivamente 2, 1, 5 y 80.
 
-Evaluar un polinomio significa reemplazar <img src="https://render.githubusercontent.com/render/math?math=\color{white}x"> por
-un valor y obtener el resultado. Por ejemplo, si evaluamos el polinomio <img src="https://render.githubusercontent.com/render/math?math=\color{white}p">
-en el valor <img src="https://render.githubusercontent.com/render/math?math=\color{white}x=3">,
-obtenemos el resultado:
+Evaluar un polinomio significa reemplazar $x$ por un valor y obtener el resultado.
+Por ejemplo, si evaluamos el polinomio $p$ en el valor $x=3$, obtenemos el resultado:
+$$p(3) = 1 + (2\cdot3) + 3^2 = 16$$
 
-<p align="center" width="100%">
-<img src="https://render.githubusercontent.com/render/math?math=\color{white}p(3) = 1 %2B (2\cdot3) %2B 3^2 = 16">
-</p>
 
-Un polinomio puede ser representado como una lista con los valores
-<img src="https://render.githubusercontent.com/render/math?math=\color{white}a_{0}, a_{1}, \ldots, a_{n}">.
+Un polinomio puede ser representado como una lista con los valores $a_{0}, a_{1}, \ldots, a_{n}$.
 Por ejemplo, los polinomios anteriores pueden ser representados así en un programa:
 
 ```python
