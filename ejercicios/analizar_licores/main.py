@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from dataclasses import dataclass
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 URL = "https://www.beeradvocate.com/beer/?view=recent"
 CONVERT = {
