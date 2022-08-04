@@ -1,3 +1,5 @@
+# Enunciado Original
+
 Crear el siguiente módulo:
 
 El módulo se denominará operaciones.py y contendrá 4 funciones para realizar una
