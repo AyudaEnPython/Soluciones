@@ -27,8 +27,8 @@ file = open("/usercode/files/books.txt", "r")
 file.close()
 """
 import io
+import unittest
 from textwrap import dedent
-from unittest import main, TestCase
 from unittest.mock import patch
 
 
@@ -53,7 +53,7 @@ def solution_3():
     file.close()
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
     
     books = """\
     H12
@@ -61,13 +61,13 @@ class Test(TestCase):
     P19
     G18
     """
-    
+
     @patch("sys.stdout", new_callable=io.StringIO)
     def assert_stdout(self, expected_output, mock_output, function=None):
         if function:
             function()
         self.assertEqual(mock_output.getvalue(), expected_output)
-        
+
     def test_solution(self):
         self.assert_stdout(dedent(self.books), function=solution_1)
         self.assert_stdout(dedent(self.books), function=solution_2)
@@ -75,4 +75,4 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main()
+    unittest.main()
