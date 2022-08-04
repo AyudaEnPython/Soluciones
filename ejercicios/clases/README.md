@@ -28,3 +28,6 @@ Cree una clase Point4D que añada una coordenada t al sistema de coordenadas (x,
 creado por la clase Point3D. La coordenada t representa el tiempo, de modo que nunca
 puede establecerse en un valor negativo. Use la herencia y escriba un programa para
 probar la clase Point4D.
+
+> __*NOTA*__: Los enunciados de los ejercicios 1, 2 y 3 no son del todo correctos,
+> por lo tanto se opta por cambiar el diseño.
