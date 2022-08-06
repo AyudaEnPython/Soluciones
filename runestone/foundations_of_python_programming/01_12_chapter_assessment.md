@@ -1,4 +1,4 @@
-# 1.12 Chapter Assessment
+# 1.12. Chapter Assessment
 
 Write code to print out the phrase "Hello World"
 ```python
