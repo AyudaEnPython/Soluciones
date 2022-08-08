@@ -46,3 +46,40 @@ Assign the first 30 characters of `school_prompt.txt` as a string to the variabl
 with open("school_prompt.txt") as f:
     beginning_chars = f.read()[:30]
 ```
+
+**Challenge:** Using the file `school_prompt.txt`, assign the third word of every
+line to a list called `three`.
+```python
+three = []
+with open("school_prompt.txt") as f:
+    for line in f.readlines():
+        three.append(line.split(" ")[2])
+```
+
+**Challenge:** Create a list called `emotions` that contains the first word of
+every line in `emotion_words.txt`.
+```python
+emotions = []
+with open("emotion_words.txt") as f:
+    for line in f.readlines():
+        emotions.append(line.split(" ")[0])
+```
+
+Assign the first 33 characters from the textfile, `travel_plans.txt` to the
+variable `first_chars`.
+```python
+with open("travel_plans.txt") as f:
+    first_chars = f.read()[:33]
+```
+
+**Challenge:** Using the file `school_prompt.txt`, if the character ‘p’ is
+in a word, then add the word to a list called `p_words`.
+```python
+p_words = []
+with open("school_prompt.txt") as f:
+    for line in f.readlines():
+        for word in line.rstrip().split(" "):
+            if "p" in word:
+                p_words.append(word)
+```
+
