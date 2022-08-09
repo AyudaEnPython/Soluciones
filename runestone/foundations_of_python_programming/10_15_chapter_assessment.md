@@ -83,3 +83,28 @@ with open("school_prompt.txt") as f:
                 p_words.append(word)
 ```
 
+Read in the contents of the file `SP500.txt` which has monthly data for 2016
+and 2017 about the S&P 500 closing prices as well as some other financial
+indicators, including the “Long Term Interest Rate”, which is interest rate
+paid on 10-year U.S. government bonds.
+
+Write a program that computes the average closing price (the second column,
+labeled SP500) and the highest long-term interest rate. Both should be computed
+only for the period from June 2016 through May 2017. Save the results in the
+variables `mean_SP` and `max_interest`.
+```python
+i = t = max_interest = 0
+with open("SP500.txt") as f:
+    for line in f.read().splitlines()[1:]:
+        col = line.split(",")
+        month, _, year = col[0].split("/")
+        if (
+            (int(month) >= 6 and year == "2016") or
+            (int(month) <= 5 and year == "2017")
+        ):
+            i += 1
+            t += float(col[1])
+            if float(col[5]) > max_interest:
+                max_interest = float(col[5])
+mean_SP = t / i
+```
