@@ -1,4 +1,6 @@
-# [Foundations of Python Programming](https://runestone.academy/ns/books/published/fopp/index.html)
+# Foundations of Python Programming
+
+Link to website ([click here!](https://runestone.academy/ns/books/published/fopp/index.html))
 
 ## Table of Contents
 
