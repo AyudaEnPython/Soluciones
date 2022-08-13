@@ -66,6 +66,8 @@ The attribute is
         
         x
 
+        Good work!
+
 What are the names of the instances in the following code? Please put one instance
 per blank space and enter them in the order that the computer would read them.
 
@@ -82,3 +84,7 @@ pop.forward(76)
 ```
 
         | wn      | jazz       | pop
+
+        - Good work!
+        - Good work!
+        - Good work!
