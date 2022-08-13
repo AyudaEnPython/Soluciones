@@ -40,3 +40,45 @@ Select all of the following things that methods can do:
         A. Methods can change the value that is associated with an attribute.
         B. Methods can return values.
         C. Attributes do not need to be pre-declared; any code can add a new attribute to an instance just by assigning a value to it.
+
+For an instance of a class that is assigned to the variable student, what is
+the proper way to refer to the title attribute/instance variable?
+
+- [ ] A. student.title()
+- [ ] B. title.student()
+- [ ] C. title.student
+- [ ] D. student(title)
+- [X] E. student.title
+
+        Yes, this is the correct syntax to use.
+
+What is the name of jane’s attribute (not method) that is referred to in the following code?
+
+```python
+import turtle
+
+jane = turtle.Turtle()
+jane.forward(20)
+print(jane.x)
+```
+
+The attribute is
+        
+        x
+
+What are the names of the instances in the following code? Please put one instance
+per blank space and enter them in the order that the computer would read them.
+
+```python
+import turtle
+wn = turtle.Screen()
+
+jazz = turtle.Turtle()
+jazz.forward(50)
+jazz.right(90)
+pop = turtle.Turtle()
+pop.left(180)
+pop.forward(76)
+```
+
+        | wn      | jazz       | pop
