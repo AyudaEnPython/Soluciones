@@ -27,9 +27,7 @@ What does each instance of the Turtle class represent?
 - [] B. The same turtle that is used in each drawing your programs make.
 - [X] C. A unique 'turtle' that you can use to draw.
 
-        Yes, an instance of the turtle class represents a unique turtle. The
-        turtle class is like a stencil or mold that can be used to make as
-        many turtles as you would like.
+        Yes, an instance of the turtle class represents a unique turtle. The turtle class is like a stencil or mold that can be used to make as many turtles as you would like.
 
 Select all of the following things that methods can do:
 
@@ -41,5 +39,4 @@ Select all of the following things that methods can do:
 
         A. Methods can change the value that is associated with an attribute.
         B. Methods can return values.
-        C. Attributes do not need to be pre-declared; any code can add a new
-        attribute to an instance just by assigning a value to it.
+        C. Attributes do not need to be pre-declared; any code can add a new attribute to an instance just by assigning a value to it.
