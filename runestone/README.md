@@ -23,6 +23,7 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
   - 8.14. [Chapter Assessment](foundations_of_python_programming/08_14_chapter_assessment.md)
 - Transforming Sequences
   - 9.16. [Chapter Assessment](foundations_of_python_programming/09_16_chapter_assessment.md)
-
+- Files
+  - 10.15. [Chapter Assessment](foundations_of_python_programming/09_16_chapter_assessment.md)
 
 > __**TODO**__: write it later...
