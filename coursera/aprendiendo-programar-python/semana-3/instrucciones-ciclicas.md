@@ -79,7 +79,7 @@ while a > 1:
 print(r)
 ```
 
-- [ ] b ** a
+- [X] b ** a
 - [ ] a * b
 - [ ] a / b
 - [ ] a ** b
