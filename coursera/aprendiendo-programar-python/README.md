@@ -7,7 +7,7 @@ Tabla de Contenidos
   * Semana 1
     * [Cuestionario Calificado: Cuestionario Módulo 1](semana-1/cuestionario-modulo-1.md)
     * [Cuestionario Práctico: Primer Cuestionario Práctico](semana-1/primer-cuestionario-practico.md)
-    * [Cuestionario Práctico: ¿Qué características incluirías en tu red social?]
+    * [Cuestionario Práctico: ¿Qué características incluirías en tu red social?](semana-1/cuestionario-practico.md)
   * Semana 2
     * [Variables, expresiones, y entrada/salida](semana-2/cuestionario-calificado.md)
     * [Cuestionario Práctico](semana-2/cuestionario-practico.md)
