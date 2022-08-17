@@ -47,6 +47,30 @@ _Tip: prueba el código en tu entorno de programación_\
 <br>
 _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
 
+- [X] <details><summary>Ver código (respuesta correcta)</summary>
+  <p>
+
+  ```python
+  lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio > lat
+
+  ```
+  <p>
+  </detailes>
+
+- [X] <details><summary>Ver código (respuesta correcta)</summary>
+  <p>
+
+  ```python
+  lat_domicilio = int(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = int(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio > lat
+
+  ```
+  <p>
+  </detailes>
+
 - [ ] <span>
   ```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
@@ -62,18 +86,6 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
   estoy_al_sur = lat_domicilio - lat
   ```
   </span>
-
-- [X] <details><summary>Ver código (respuesta correcta)</summary>
-  <p>
-
-  ```python
-  lat_domicilio = int(input("Ingresa la latitud de tu domicilio"))
-  lon_domicilio = int(input("Ingresa la longitud de tu domicilio"))
-  estoy_al_sur = lat_domicilio > lat
-
-  ```
-  <p>
-  </detailes>
 
 - [ ] <span>
   ```python
@@ -99,20 +111,12 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
   ```
   </span>
 
-- [ ] <span>
-  ```python
-  lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
-  lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
-  estoy_al_sur = lat_domicilio > lat
-  ```
-  </span>
-
 ## Pregunta 5
 
 De las siguientes alternativas, ¿cuáles son verdaderas respecto del código del
 programa?
 
-- [ ] El programa presentado no utiliza tipos de datos bool
+- [X] El programa presentado no utiliza tipos de datos bool
 - [ ] Luego de cada ejecución el programa, éste recuerda los datos que ingresamos en la ejecución anterior.
 - [ ] La variables, **estatura**, de tipo float, no se almacena.
 - [ ] La edad del usuario está calculada de manera exacta
