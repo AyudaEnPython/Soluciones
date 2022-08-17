@@ -47,20 +47,21 @@ _Tip: prueba el código en tu entorno de programación_\
 <br>
 _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
 
-- [ ] <pre>
+- [ ] <span>
 ```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
   estoy_al_sur = lat_domicilio - lat > 0
   ```
-  </pre>
+  </span>
 
-- [ ] <pre><code class="language-python">
+- [ ] <span
+  ```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
   estoy_al_sur = lat_domicilio - lat
-  </code>
-  </pre>
+  ```
+  </span>
 
 - [X] <details><summary>Ver código</summary>
   <p>
@@ -74,19 +75,21 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
   <p>
   </detailes>
 
-- [ ] <pre><code class="language-python">
+- [ ] <span>
+  ```python
   lat_domicilio = input("Ingresa la latitud de tu domicilio")
   lon_domicilio = input("Ingresa la longitud de tu domicilio")
   estoy_al_sur = lat_domicilio - lat > 0
-  </code><pre>
+  ```
+  </span>
 
-- [ ] <p>
+- [ ] <span>
   ```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
   estoy_al_sur = lat_domicilio > lon
   ```
-  </p>
+  </span>
 
 - [ ] <span>
   ```python
@@ -96,12 +99,13 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
   ```
   </span>
 
-- [ ] 
+- [ ] <span>
   ```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
   estoy_al_sur = lat_domicilio > lat
   ```
+  </span>
 
 ## Pregunta 5
 
