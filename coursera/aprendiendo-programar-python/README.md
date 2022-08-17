@@ -14,6 +14,7 @@ Tabla de Contenidos
     * [Cuestionario: Proyecto Mi Red: Entrada y Salida](semana-2/proyecto-mi-red-entrada-y-salida.md)
   * Semana 3
     * [Cuestionario: Instrucciones condicionales](semana-3/instrucciones-condicionales.md)
+    * [Cuestionario: Instrucciones cíclicas](semana-3/instrucciones-ciclicas.md)
   * Semana 4
   * Semana 5
   * Semana 6
