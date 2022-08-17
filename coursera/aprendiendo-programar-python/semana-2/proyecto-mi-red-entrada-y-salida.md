@@ -48,13 +48,13 @@ _Tip: prueba el código en tu entorno de programación_\
 _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
 
 - [ ] <pre>
-  ```python
+```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
   estoy_al_sur = lat_domicilio - lat > 0
   ```
   </pre>
-  
+
 - [ ] <pre><code class="language-python">
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
@@ -74,13 +74,11 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
   <p>
   </detailes>
 
-- [ ] 
-  ```python
+- [ ] <code class="language-python">
   lat_domicilio = input("Ingresa la latitud de tu domicilio")
   lon_domicilio = input("Ingresa la longitud de tu domicilio")
   estoy_al_sur = lat_domicilio - lat > 0
-  ```
-
+  </code>
 
 - [ ] 
   ```python
