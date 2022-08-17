@@ -63,7 +63,7 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
   ```
   </span>
 
-- [X] <details><summary>Ver código</summary>
+- [X] <details><summary>Ver código (respuesta correcta)</summary>
   <p>
 
   ```python
