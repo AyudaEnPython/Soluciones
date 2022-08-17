@@ -15,6 +15,7 @@ Tabla de Contenidos
   * Semana 3
     * [Cuestionario: Instrucciones condicionales](semana-3/instrucciones-condicionales.md)
     * [Cuestionario: Instrucciones cíclicas](semana-3/instrucciones-ciclicas.md)
+    * [Cuestionario: Cuestionario Práctico](semana-3/cuestionario-practico.md)
   * Semana 4
   * Semana 5
   * Semana 6
