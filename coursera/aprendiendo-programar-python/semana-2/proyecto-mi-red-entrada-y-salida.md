@@ -48,54 +48,54 @@ _Tip: prueba el código en tu entorno de programación_\
 _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
 
 - [ ] 
-```python
-lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
-lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
-estoy_al_sur = lat_domicilio - lat > 0
-```
+  ```python
+  lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio - lat > 0
+  ```
 
 - [ ] 
-```python
-lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
-lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
-estoy_al_sur = lat_domicilio - lat
-```
+  ```python
+  lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio - lat
+  ```
 
 - [X] 
-```python
-lat_domicilio = int(input("Ingresa la latitud de tu domicilio"))
-lon_domicilio = int(input("Ingresa la longitud de tu domicilio"))
-estoy_al_sur = lat_domicilio > lat
-```
+  ```python
+  lat_domicilio = int(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = int(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio > lat
+  ```
 
 - [ ] 
-```python
-lat_domicilio = input("Ingresa la latitud de tu domicilio")
-lon_domicilio = input("Ingresa la longitud de tu domicilio")
-estoy_al_sur = lat_domicilio - lat > 0
-```
+  ```python
+  lat_domicilio = input("Ingresa la latitud de tu domicilio")
+  lon_domicilio = input("Ingresa la longitud de tu domicilio")
+  estoy_al_sur = lat_domicilio - lat > 0
+  ```
 
 
 - [ ] 
-```python
-lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
-lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
-estoy_al_sur = lat_domicilio > lon
-```
+  ```python
+  lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio > lon
+  ```
 
 - [ ] 
-```python
-lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
-lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
-estoy_al_sur = lat_domicilio - lat < 0
-```
+  ```python
+  lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio - lat < 0
+  ```
 
 - [ ] 
-```python
-lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
-lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
-estoy_al_sur = lat_domicilio > lat
-```
+  ```python
+  lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
+  lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
+  estoy_al_sur = lat_domicilio > lat
+  ```
 
 ## Pregunta 5
 
