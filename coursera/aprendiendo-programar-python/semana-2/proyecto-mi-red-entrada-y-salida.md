@@ -49,6 +49,7 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
 
 - [X] <details><summary>Ver código (respuesta correcta)</summary>
   <p>
+  
   ```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))
@@ -60,6 +61,7 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
 
 - [X] <details><summary>Ver código (respuesta correcta)</summary>
   <p>
+
   ```python
   lat_domicilio = int(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = int(input("Ingresa la longitud de tu domicilio"))
@@ -70,6 +72,7 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
 
 - [X] <details><summary>Ver código (respuesta correcta)</summary>
   <p>
+
   ```python
   lat_domicilio = float(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = float(input("Ingresa la longitud de tu domicilio"))

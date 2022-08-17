@@ -50,6 +50,7 @@ o no?
 
 - [X] <details><summary>Ver código (respuesta correcta)</summary>
   <p>
+
   ```python
   edad = int(input("Ingresa tu edad: "))
   if edad > 18:
@@ -247,6 +248,7 @@ otro caso. ¿Cuál es el código correcto para esto?
 
 - [X] <details><summary>Ver código (respuesta correcta)</summary>
   <p>
+
   ```python
   numero = int(input("Ingrese numero"))
   if numero % 2 == 0:
@@ -296,6 +298,7 @@ Por ejemplo, 1996 es año bisiesto porque cumple la condición uno. Por otro lad
 
 - [X] <details><summary>Ver código (respuesta correcta)</summary>
   <p>
+  
   ```python
   if (A % 4 == 0 and A % 100 != 0) or (A % 100 == 0 and A % 400 == 0):
       print("Es bisiesto")
