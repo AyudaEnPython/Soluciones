@@ -61,12 +61,17 @@ _Tip2: el Polo Sur es -90 en latitud, y el Polo Norte es +90_
   estoy_al_sur = lat_domicilio - lat
   ```
 
-- [X] 
+- [X] <details><summary>Ver</summary>
+  <p>
+
   ```python
   lat_domicilio = int(input("Ingresa la latitud de tu domicilio"))
   lon_domicilio = int(input("Ingresa la longitud de tu domicilio"))
   estoy_al_sur = lat_domicilio > lat
+  
   ```
+  <p>
+  </detailes>
 
 - [ ] 
   ```python
