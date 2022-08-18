@@ -34,11 +34,11 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
 - More About Iteration
   - 14.8. [Chapter Assessment](foundations_of_python_programming/14_08_chapter_assessment.md)
 - Advanced Functions
-  - 15.7. [Chapter Assessment]()
+  - 15.7. [Chapter Assessment](foundations_of_python_programming/15_07_chapter_assessment.md)
 - Sorting
-  - 16.9. [Chapter Assessment]()
+  - 16.9. [Chapter Assessment](foundations_of_python_programming/16_09_chapter_assessment.md)
 - Nested Data and Nested Iteration
-  - 17.9. [Chapter Assessment]()
+  - 17.9. [Chapter Assessment](foundations_of_python_programming/17_09_chapter_assessment.md)
 - Test Cases
   - 18.10.[Chapter Assessment]()
 - Exceptions
