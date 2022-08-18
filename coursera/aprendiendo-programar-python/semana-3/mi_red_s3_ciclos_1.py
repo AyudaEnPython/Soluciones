@@ -67,5 +67,4 @@ while continuar:
         print("-"*SIZE)
         print()
 
-
-print("Gracias por usar Mi Red. ¡Hasta pronto!")
+print("\nGracias por usar Mi Red. ¡Hasta pronto!\n")

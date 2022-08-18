@@ -18,6 +18,12 @@ Tabla de Contenidos
     * [Cuestionario: Cuestionario Práctico](semana-3/cuestionario-practico.md)
     * [Cuestionario: Proyecto mi Red: Ciclos y condicionales](semana-3/proyecto-mi-red-ciclos-y-condicionales.md)
   * Semana 4
+    * [Cuestionario: Concepto, elementos y uso de funciones](semana-4/concepto-elementos-y-uso-de-funciones.md)
+    * [Cuestionario: Creación de funciones](semana-4/creacion-de-funciones.md)
+    * [Cuestionario: Cuestionario Práctico](semana-4/cuestionario-practico.md)
+    * [Cuestionario: Proyecto Mi Red 1: Identificando funciones](semana-4/proyecto-mi-red-1-identificando-funciones.md)
+    * [Cuestionario: Proyecto Mi Red 2: Utilizando funciones](semana-4/proyecto-mi-red-2-utilizando-funciones.md)
+    * [Cuestionario: Proyecto Mi Red 3: Usando módulos](semana-4/proyecto-mi-red-3-usando-modulos.md)
   * Semana 5
   * Semana 6
 <!--te-->
