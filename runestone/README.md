@@ -32,7 +32,7 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
 - Tuple Packing and Unpacking
   - 13.8. [Chapter Assessment](foundations_of_python_programming/13_08_chapter_assessment.md)
 - More About Iteration
-  - 14.8. [Chapter Assessment]()
+  - 14.8. [Chapter Assessment](foundations_of_python_programming/14_08_chapter_assessment.md)
 - Advanced Functions
   - 15.7. [Chapter Assessment]()
 - Sorting
