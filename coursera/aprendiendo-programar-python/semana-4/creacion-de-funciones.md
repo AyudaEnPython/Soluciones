@@ -339,7 +339,7 @@ d = funcion(2)
 
 Determina el valor que queda almacenado en _d_ tras la ejecución del programa.
 
-- [] 820
+- [ ] 820
 - [X] None
 - [ ] 0
 - [ ] 2
