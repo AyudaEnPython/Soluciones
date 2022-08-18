@@ -25,5 +25,13 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
   - 9.16. [Chapter Assessment](foundations_of_python_programming/09_16_chapter_assessment.md)
 - Files
   - 10.15. [Chapter Assessment](foundations_of_python_programming/09_16_chapter_assessment.md)
+- Dictionaries
+  - 11.12. [Chapter Assessment](foundations_of_python_programming/11_12_chapter_assessment.md)
+- Functions
+  - 12.18. [Chapter Assessment](foundations_of_python_programming/12_18_chapter_assessment.md)
+- Tuple Packing and Unpacking
+  - 13.8. [Chapter Assessment](foundations_of_python_programming/13_08_chapter_assessment.md)
+
+---
 
 > __**TODO**__: write it later...
