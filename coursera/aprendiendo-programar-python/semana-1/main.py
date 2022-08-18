@@ -1,6 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 
+
 # Pregunta 1
 def sumador(a, b):
     return a + b

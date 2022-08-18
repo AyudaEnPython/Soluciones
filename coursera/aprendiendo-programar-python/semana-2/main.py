@@ -1,6 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 
+
 # Pregunta 1
 def imc(masa, estatura):
     return masa / (estatura ** 2)
