@@ -31,6 +31,26 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
   - 12.18. [Chapter Assessment](foundations_of_python_programming/12_18_chapter_assessment.md)
 - Tuple Packing and Unpacking
   - 13.8. [Chapter Assessment](foundations_of_python_programming/13_08_chapter_assessment.md)
+- More About Iteration
+  - 14.8. [Chapter Assessment]()
+- Advanced Functions
+  - 15.7. [Chapter Assessment]()
+- Sorting
+  - 16.9. [Chapter Assessment]()
+- Nested Data and Nested Iteration
+  - 17.9. [Chapter Assessment]()
+- Test Cases
+  - 18.10.[Chapter Assessment]()
+- Exceptions
+  - 19.6. [Chapter Assessment]()
+- Defining your own Classes
+  - 20.16. [Chapter Assessment]()
+- Building Programs
+  - 21.5. [Exercises]
+- Inheritance
+  - 22.7. [Chapter Assessment]()
+- More on Accumulation: Map, Filter, List Comprehension, and Zip
+  - 23.7. [Chapter Assessment]()
 
 ---
 
