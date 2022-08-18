@@ -16,6 +16,7 @@ Tabla de Contenidos
     * [Cuestionario: Instrucciones condicionales](semana-3/instrucciones-condicionales.md)
     * [Cuestionario: Instrucciones cíclicas](semana-3/instrucciones-ciclicas.md)
     * [Cuestionario: Cuestionario Práctico](semana-3/cuestionario-practico.md)
+    * [Cuestionario: Proyecto mi Red: Ciclos y condicionales](semana-3/proyecto-mi-red-ciclos-y-condicionales.md)
   * Semana 4
   * Semana 5
   * Semana 6

@@ -2,11 +2,16 @@
 
 ## Ejercicio 1
 
-Escribe 3 solicitudes de datos al usuario, por ejemplo, género, número
-de teléfono, ciudad donde vive, país de nacimiento y dirección. Guarda
-estos datos en variables del tipo correspondiente y finalmente
-escríbelos por pantalla utilizando la función "print". Puedes agregar
-tantas líneas de código como creas necesario.
+Este programa termina cada vez que el valor de "escribir_mensaje" es
+distinto a "S" o a "s". Modifica el programa para que termine
+ÚNICAMENTE cuando se ingresa "N" o "n". En caso de que ingrese algo
+distinto, debe solicitar al usuario una nueva opción.
+
+## Ejercicio 2
+
+Modifica este menú para que le permita al usuario realizar más de una
+acción. Por ejemplo, puedes agregar una acción que permita al usuario
+modificar su nombre en el perfil.
 
 NOTE: refactored.
 """
@@ -48,23 +53,19 @@ print("-"*SIZE)
 print("Gracias por la información. Esperamos que disfrutes con Mi Red")
 print()
 
-print("Ahora vamos a publicar tu primer mensaje.\n")
-mensaje = input("¿Qué piensas hoy?\n> ")
-print()
-print("-"*SIZE)
-print(f"{nombre} dice: {mensaje}")
-print("-"*SIZE)
+continuar = True
+while continuar:
+    escribir = input("¿Deseas escribir un escribir? (S/N)\n> ")
+    if escribir == "N" or escribir == "n":
+        continuar = False
+    elif escribir == "S" or escribir == "s":
+        print("Vamos a publicar un mensaje.")
+        mensaje = input("¿Qué piensas hoy?\n> ")
+        print()
+        print("-"*SIZE)
+        print(f"{nombre} dice: {mensaje}")
+        print("-"*SIZE)
+        print()
 
-print("\nCuéntame más de ti, para seguir agregándolo a tu perfil.\n")
 
-pais = input("¿En qué país naciste?\n> ")
-ciudad = input("¿En qué ciudad vives?\n> ")
-telefono = input("¿Cual es tu número de teléfono?\n> ")
-
-print()
-print("Nuevos datos agregados en tu perfil.")
-print("-"*SIZE)
-print(f"País: {pais}")
-print(f"Ciudad: {ciudad}")
-print(f"Teléfono: {telefono}")
-print("-"*SIZE)
+print("Gracias por usar Mi Red. ¡Hasta pronto!")
