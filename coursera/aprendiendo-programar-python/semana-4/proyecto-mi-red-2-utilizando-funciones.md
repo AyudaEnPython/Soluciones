@@ -1,4 +1,4 @@
-# Proyecto Mi Red: Utilizando funciones
+# Proyecto Mi Red 2: Utilizando funciones
 
 # Pregunta 1
 
