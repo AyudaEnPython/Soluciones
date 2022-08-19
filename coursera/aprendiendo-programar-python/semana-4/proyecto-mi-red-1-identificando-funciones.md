@@ -1,4 +1,4 @@
-# Proyecto Mi Red
+# Proyecto Mi Red: Identificando funciones
 
 # Pregunta 1
 
