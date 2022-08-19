@@ -70,7 +70,7 @@ def obtener_edad():
 
 def obtener_estatura():
     estatura = float(input("¿Cuánto mides? Dímelo en metros.\n> "))
-    return int(estatura), int((estatura %1 ) * 100)
+    return int(estatura), int((estatura % 1) * 100)
 
 
 def obtener_amigos():
