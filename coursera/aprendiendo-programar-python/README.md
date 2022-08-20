@@ -25,5 +25,8 @@ Tabla de Contenidos
     * [Cuestionario: Proyecto Mi Red 2: Utilizando funciones](semana-4/proyecto-mi-red-2-utilizando-funciones.md)
     * [Cuestionario: Proyecto Mi Red 3: Usando módulos](semana-4/proyecto-mi-red-3-usando-modulos.md)
   * Semana 5
+    * [Cuestionario: Strings](semana-5/strings.md)
+    * [Cuestionario: Archivos](semana-5/archivos.md)
+
   * Semana 6
 <!--te-->
