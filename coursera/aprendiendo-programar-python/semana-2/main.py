@@ -18,3 +18,12 @@ def velocidad(distancia, tiempo):
 # Pregunta 3
 def xor(a, b):
     return a and not b or not a and b
+
+
+if __name__ == "__main__":
+    assert imc(80, 1.80) == 24.691358024691358
+    assert velocidad(0.01, 1) == "La velocidad es 36.0 km/h o 10.0 m/s"
+    assert xor(True, True) == False
+    assert xor(False, True) == True
+    assert xor(True, False) == True
+    assert xor(False, False) == False
