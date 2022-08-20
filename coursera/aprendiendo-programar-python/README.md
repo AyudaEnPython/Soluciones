@@ -27,6 +27,9 @@ Tabla de Contenidos
   * Semana 5
     * [Cuestionario: Strings](semana-5/strings.md)
     * [Cuestionario: Archivos](semana-5/archivos.md)
+    * [Cuestionario: Cuestionario Práctico](semana-5/cuestionario-practico.md)
+    * [Cuestionario: Proyecto Mi Red: Usando archivos](semana-5/proyecto-mi-red-usando-archivos.md)
+    * [Cuestionario: Proyecto Mi Red: Archivos y módulos](semana-5/proyecto-mi-red-archivos-y-modulos.md)
 
   * Semana 6
 <!--te-->
