@@ -108,8 +108,8 @@ La tabla de verdad para todos los valores posibles de a y b, es la siguiente:
 Así, utilizando los conocimientos de _booleanos_ adquiridos en el curso, y los
 conocimientos de operadores lógicos, modifica el código de más abajo, para
 que en la variable _xor_ quede almacenado el valor de hacer XOR entre las
-variables a y b.\
-<br>
+variables a y b.
+<br><br>
 Para poder resolver este problema , debes escribir el código que falta en el
 espacio que lo señala. Asume que ya existen variables con los nombres **a** y
 **b**, que ya contienen los valores requeridos (no debes pedírselos al usuario),
