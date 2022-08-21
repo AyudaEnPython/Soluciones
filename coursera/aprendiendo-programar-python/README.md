@@ -33,4 +33,5 @@ Tabla de Contenidos
   * Semana 6
     * [Cuestionario: Listas](semana-6/listas.md)
     * [Cuestionario: Cuestionario Práctico](semana-6/cuestionario-practico.md)
+    * [Cuestionario: Proyecto Mi Red: Lista de amigos](semana-6/proyecto-mi-red-lista-de-amigos.md)
 <!--te-->
