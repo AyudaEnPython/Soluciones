@@ -89,6 +89,7 @@ Python, donde se utilizan strings con un espacio: " " y "X" para representar
 espacios libres y bombas respectivamente, viene dado por:
 
 ```python
+tablero = [[' ', 'X', ' ', 'X'],['X', ' ', ' ', ' '],[' ', 'X', 'X', ' '],['X', ' ', ' ', 'X']]
 ```
 
 El objetivo de este ejercicio, es que programes una función _buscaminas_ que reciba como
