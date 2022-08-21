@@ -1,47 +1,18 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-# Parte I
-
 ## Ejercicio 1
 
-Al leer las líneas del archivo, siempre se leen como últimos caracteres
-algunos caracteres en blancos, como espacios o el caracter cambio de
-línea ("\n"). Esto hace que los nombres de archivos creados incluyan
-estos caracteres adicionales. 
-
-Utiliza métodos de 'str' para eliminar este tipo de caracteres que
-denominamos "no imprimibles". Es decir, "limpia" toda línea que leas,
-de manera que no tengan caracteres adicionales a lo esperado (ya sean
-saltos de línea y/o espacios en blanco).
+Agrega una opción que permita agregar un nuevo amigo a tu lista. Esta
+funcionalidad solamente agregará al usuario, sin pedir autorización y
+aceptación por parte del destinatario como hace Facebook. Es decir, que
+la relación de amistad solamente existe en un sentido.
 
 ## Ejercicio 2
 
-Utiliza tu conocimiento de funciones para crear funciones que lean
-desde un archivo, y retornen el conjunto de datos leídos, de manera de
-encapsular el proceso de lectura y escritura, y reducir el tamaño de tu
-código.
-
-# Parte II
-
-## Ejercicio 1
-
-Ingresa al progmra de red social con distintos usuarios. Déspues de
-esto, tendrás varios archivos generados con extensión '.user'. Abre
-cualquiera de estos archivos con un editor de texto y edita alguno de
-los valores del fichero. Por ejemplo, cambia el nombre de usuario de
-alguno de los usuarios de la red. A continuación, ejecuta de nuevo tu
-programa y entra con el nombre de uno de los usuarios que constaba en
-alguno de los archivos con extensión '.user'.
-¿Se han actualizado los datos que cambiaste en el fichero? Prueba esto
-varias veces a ver qué ocurre.
-
-## Ejercicio 2
-
-Agrega al menú una nueva opción que se llame "Cambiar de usuario". Esta
-opción debe permitir al usuario que está en el programa, sin salirse
-de la red, solicitar un nuevo nombre de usuario y, en caso de que
-exista un archivo con este nombre, cargar sus datos. Si el archivo no
-existe, basta con indicar que no se puede cambiar este usuario.
+Agrega una opción que permita mostrar los últimos estados de todos los
+amigos de un usuario. Ten en cuenta que esto no es equivalente a
+publicar los mensajes de su muro, sino que necesitarás leer una línea
+particular de los archivos de cada usuario en su lista de amigos.
 
 NOTE: refactored.
 """
