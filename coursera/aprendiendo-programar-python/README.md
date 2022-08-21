@@ -31,5 +31,6 @@ Tabla de Contenidos
     * [Cuestionario: Proyecto Mi Red: Usando archivos](semana-5/proyecto-mi-red-usando-archivos.md)
     * [Cuestionario: Proyecto Mi Red: Archivos y módulos](semana-5/proyecto-mi-red-archivos-y-modulos.md)
   * Semana 6
+    * [Cuestionario: Listas](semana-6/listas.md)
     * [Cuestionario: Cuestionario Práctico](semana-6/cuestionario-practico.md)
 <!--te-->
