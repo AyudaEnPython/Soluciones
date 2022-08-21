@@ -54,39 +54,6 @@ lista_compras.insert(2,"leche");
 - [ ] `["pan", "huevo", "leche", "queso", "jamon"]`
 - [ ] `["pan", "huevo", "queso", "jamon", "maní"]`
 
-- [X] <details><summary>Ver código (respuesta correcta)</summary>
-  <p>
-
-  ```python
-  ["pan", "huevo", "leche", "queso", "jamon", "maní"]
-  ```
-  <p>
-  </detailes>
-
-- [ ] <span>
-  ```python
-  ["pan", "huevo", "queso", "arroz", "jamon"]
-  ```
-  </span>
-
-- [ ] <span>
-  ```python
-  ["pan", "leche", "huevo", "queso", "jamon", "maní"]
-  ```
-  </span>
-
-- [ ] <span>
-  ```python
-  ["pan", "huevo", "leche", "queso", "jamon"]
-  ```
-  </span>
-
-- [ ] <span>
-  ```python
-  ["pan", "huevo", "queso", "jamon", "maní"]
-  ```
-  </span>
-
 # Pregunta 4
 
 ¿Cuál es el valor de la variable **trozo** después de ejecutar el siguiente código?
