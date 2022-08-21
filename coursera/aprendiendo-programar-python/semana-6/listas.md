@@ -198,7 +198,7 @@ orden de columnas. Esto significa que la salida debe escribir los valores:
   ```python
   for i in range(3):
       for j in range(3):
-          print(tablero[i][j],end=" ")
+          print(tablero[j][i],end=" ")
   ```
   <p>
   </detailes>
@@ -234,9 +234,9 @@ orden de columnas. Esto significa que la salida debe escribir los valores:
 
 - [ ] <span>
   ```python
-  for i in range(3):
-      for j in range(3):
-          print(tablero[i][j],end=" ")
+  for j in range(3):
+      for i in range(3):
+          print(tablero[j][i],end=" ")
   ```
   </span>
 
