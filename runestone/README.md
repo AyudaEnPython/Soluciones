@@ -40,7 +40,7 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
 - Nested Data and Nested Iteration
   - 17.9. [Chapter Assessment](foundations_of_python_programming/17_09_chapter_assessment.md)
 - Test Cases
-  - 18.10.[Chapter Assessment]()
+  - 18.10.[Chapter Assessment](foundations_of_python_programming/18_10_chapter_assessment.md)
 - Exceptions
   - 19.6. [Chapter Assessment]()
 - Defining your own Classes
