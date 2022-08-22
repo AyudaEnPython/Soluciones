@@ -28,10 +28,20 @@ def mostrar_opciones():
     print("\t2. Escribir un mensaje solo a algunos amigos")
     print("\t3. Mostrar los datos del perfil")
     print("\t4. Actualizar el perfil de usuario")
+    print("\t5. Cambiar de usuario")
     print("\t0. Salir")
 
 
-def mostrar_perfil(nombre, edad, estatura_m, estatura_cm, genero, pais, amigos):
+def mostrar_perfil(
+    nombre, 
+    edad,
+    estatura_m,
+    estatura_cm,
+    genero,
+    pais,
+    amigos,
+    estado,
+):
     print("\n" + BARRA)
     print(f"Nombre  : {nombre}")
     print(f"Edad    : {edad} años")
@@ -39,6 +49,7 @@ def mostrar_perfil(nombre, edad, estatura_m, estatura_cm, genero, pais, amigos):
     print(f"Género  : {genero}")
     print(f"País    : {pais}")
     print(f"Amigos  : {amigos}")
+    print(f"Estado  : {estado}")
     print(BARRA +"\n")
 
 
@@ -92,20 +103,20 @@ def obtener_amigos():
     ))
 
 
-def obtener_datos():
+def obtener_datos(nombre):
     edad = obtener_edad()
     estatura_m, estatura_cm = obtener_estatura()
     genero = obtener_genero()
     pais = obtener_pais()
     amigos = obtener_amigos()
-    return edad, estatura_m, estatura_cm, genero, pais, amigos
+    return nombre, edad, estatura_m, estatura_cm, genero, pais, amigos
 
 
 def obtener_opcion():
     mostrar_opciones()
     while True:
         opcion = input("Ingresa una opción:\n> ")
-        if opcion in "01234":
+        if opcion in "012345":
             return opcion
         print("No conozco la opción que has ingresado. Inténtalo otra vez.")
 
@@ -124,5 +135,4 @@ def leer_usuario(nombre):
 
 def escribir_usuario(nombre, datos):
     with open(f"{nombre}.user", "w") as f:
-        for dato in datos:
-            f.write(dato + "\n")
+        f.writelines(f"{line}\n" for line in datos)

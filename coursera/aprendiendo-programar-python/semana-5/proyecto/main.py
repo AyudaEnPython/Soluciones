@@ -70,12 +70,11 @@ def main():
         datos = leer_usuario(nombre)
     else:
         print()
-        datos = obtener_datos(nombre) 
-        datos.append("")
-    
+        data = obtener_datos(nombre) 
+        datos = [*list(data), ""]
     print("Muy bien. Estos son los datos de tu perfil.")
-    mostrar_perfil(*datos[:-1])
-
+    mostrar_perfil(*datos)
+    nombre, edad, estatura_m, estatura_cm, genero, pais, amigos, estado = datos
     opcion = ""
     while opcion != SALIR:
         opcion = obtener_opcion()
@@ -87,10 +86,18 @@ def main():
                 amigo = input("Ingresa el nombre de tu amig@: ")
                 mostrar_mensaje(nombre, amigo, mensaje)
         elif opcion == "3":
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos)
+            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos, estado)
         elif opcion == "4":
-            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos)
+            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos, estado = obtener_datos(nombre)
+            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos, estado)
+        elif opcion == "5":
+            usuario = input("Nombre de usuario: ")
+            if existe_archivo(f"{usuario}.user"):
+                print(f"Leyendo datos de usuario {usuario} desde archivo.")
+                datos = leer_usuario(usuario)
+            else:
+                print()
+                print(f"No se puede cambiar al usuario {usuario}.")
         elif opcion == SALIR:
             print(f"\nHas decidido salir. Guardando perfil en {nombre}.user")
             escribir_usuario(nombre, datos)
