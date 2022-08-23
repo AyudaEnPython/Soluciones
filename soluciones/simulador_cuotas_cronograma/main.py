@@ -78,8 +78,8 @@ def _registrar_cliente():
 def _registrar_cuota():
     cuota = Cuota(
         monto_prestamo=float_input("Préstamo: ", min=5_000, max=30_000),
-        dias_pago=choice_input(("15", "25"), "Días de pago: "),
-        fecha=convertir_fecha(date_input("de desembolso", "-")),
+        dias_pago=choice_input(("15", "25"), prompt="Días de pago: "),
+        fecha=convertir_fecha(date_input("de desembolso")),
     )
     return cuota
 
