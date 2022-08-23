@@ -38,13 +38,9 @@ Which of the following cases fail for the mySum function?
 - [ ] B. a list with one item
 - [X] C. a list with more than one item
 
-> ✔️
-> Correct, 0 is not returned if the function is given an empty list.
+> ✔️\
+> Correct, 0 is not returned if the function is given an empty list.\
 > Correct, a list with more than one item does not provide the correct response.
-
-        ✔️
-        Correct, 0 is not returned if the function is given an empty list.
-        Correct, a list with more than one item does not provide the correct response.
 
 Are there any other cases, that we can determine based on the current
 structure of the function, that also fail for the mySum function?
@@ -52,9 +48,9 @@ structure of the function, that also fail for the mySum function?
 - [ ] A. Yes
 - [X] B. No
 
-        ✔️ Correct. At the moment we can't tell if other cases would fail
-        (such as combining integers and floats), but it is possible that 
-        he function could have more issues once the current issues are fixed.
+> ✔️ Correct. At the moment we can't tell if other cases would fail
+> (such as combining integers and floats), but it is possible that 
+> he function could have more issues once the current issues are fixed.
 
 ---
 
