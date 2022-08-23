@@ -38,6 +38,10 @@ Which of the following cases fail for the mySum function?
 - [ ] B. a list with one item
 - [X] C. a list with more than one item
 
+> ✔️
+> Correct, 0 is not returned if the function is given an empty list.
+> Correct, a list with more than one item does not provide the correct response.
+
         ✔️
         Correct, 0 is not returned if the function is given an empty list.
         Correct, a list with more than one item does not provide the correct response.
