@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from datetime import datetime
+from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 
 
@@ -32,6 +32,8 @@ def sumar_mes(a: str) -> str:
 def convertir_fecha(
     fecha: str, dia: int = None, mes: int = None, caracter: str = "-"
 ) -> str:
+    if isinstance(fecha, date):
+        return fecha.strftime("%Y-%m-%d")
     dd, mm, aaaa = fecha.split(caracter)
     if len(dd) > 2:
         dd, aaaa = aaaa, dd
