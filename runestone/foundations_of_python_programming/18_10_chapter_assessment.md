@@ -116,10 +116,10 @@ Which of the following cases fail for the Student class?
 - [X] D. the method study does not increase self.knowledge
 - [ ] E. the method year_at_umich does not return the value of self.years_UM
 
-        ✔️
-        Correct! The constructor does not actually use the optional integer
-        that is provided. Instead it sticks with using the default value.
-        Correct! Study does not increase the self.knowledge.
+> ✔️\
+> Correct! The constructor does not actually use the optional integer
+> that is provided. Instead it sticks with using the default value.
+> Correct! Study does not increase the self.knowledge.
 
 Are there any other cases, that we can determine based on the current
 structure of the class, that also fail for the Student class?
@@ -127,6 +127,6 @@ structure of the class, that also fail for the Student class?
 - [X] A. Yes 
 - [ ] B. No
 
-        ✔️ Correct! There is an issue with the getKnowledge method because
-        it returns None when self.knowledge is 0, even though it returns
-        the correct value when self.knowledge is non-zero.
+> ✔️ Correct! There is an issue with the getKnowledge method because
+> it returns None when self.knowledge is 0, even though it returns
+> the correct value when self.knowledge is non-zero.
