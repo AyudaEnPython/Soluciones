@@ -41,7 +41,7 @@ def clean(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         tmp = {}
         for k, v in dict_.items():
             if isinstance(v, dict):
-                for k_, v_ in v.items():
+                for _, v_ in v.items():
                     tmp.update({k: v_})
             else:
                 tmp.update({k: v})
@@ -49,5 +49,10 @@ def clean(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return result
 
 
-df = pd.DataFrame(clean(data))
-print(df)
+def main():
+    df = pd.DataFrame(clean(data))
+    print(df)
+
+
+if __name__ == "__main__":
+    main()
