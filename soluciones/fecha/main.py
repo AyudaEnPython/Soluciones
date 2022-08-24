@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from utils import escribir, comparar, es_fecha
+from fecha import escribir, comparar, es_fecha
 
 
 def _f(fecha: int) -> int:

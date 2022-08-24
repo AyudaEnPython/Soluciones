@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 import unittest
-from utils import dia_mes, es_fecha, comparar, _escribir
+from fecha import dia_mes, es_fecha, comparar, _escribir
 
 
 class Test(unittest.TestCase):
