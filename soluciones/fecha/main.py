@@ -3,7 +3,7 @@
 from fecha import escribir, comparar, es_fecha
 
 
-def _f(fecha: int) -> int:
+def _validate(fecha: int) -> int:
     if not es_fecha(fecha):
         print("Fecha incorrecta")
         exit(1)
@@ -11,9 +11,9 @@ def _f(fecha: int) -> int:
 
 
 def main():
-    a = _f(int(input("Ingresar primera fecha: ")))
+    a = _validate(int(input("Ingresar primera fecha: ")))
     escribir(a)
-    b = _f(int(input("Ingresar segunda fecha: ")))
+    b = _validate(int(input("Ingresar segunda fecha: ")))
     escribir(b)
     fechas = [None, a, b]
     print("Menor fecha")

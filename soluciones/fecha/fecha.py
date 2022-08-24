@@ -1,8 +1,8 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from typing import Dict, List, Tuple
 from calendar import isleap
 from datetime import datetime
+from typing import Dict, List, Tuple
 
 MESES: Tuple[str, ...] = (
     'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
@@ -24,6 +24,11 @@ def _fecha(fecha: int) -> List[int]:
     return list(map(int, [fecha[s] for s in _S[len(fecha)]]))
 
 
+def _escribir(fecha: int) -> str:
+    dd, mm, yy = _fecha(fecha)
+    return f"{dd} {_T[mm]} {yy}"
+
+
 def dia_mes(m: int, yy: int) -> int:
     days = MES[_T[m]]
     return days + 1 if isleap(yy) else days
@@ -43,11 +48,6 @@ def comparar(a: int, b: int) -> int:
     a = datetime(*_fecha(a)[::-1])
     b = datetime(*_fecha(b)[::-1])
     return 0 if a == b else (1 if a > b else -1)
-
-
-def _escribir(fecha: int) -> str:
-    dd, mm, yy = _fecha(fecha)
-    return f"{dd} {_T[mm]} {yy}"
 
 
 def escribir(fecha: int) -> None:
