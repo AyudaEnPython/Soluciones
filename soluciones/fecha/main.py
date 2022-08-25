@@ -15,13 +15,14 @@ def main():
     escribir(a)
     b = _validate(int(input("Ingresar segunda fecha: ")))
     escribir(b)
-    fechas = [None, a, b]
     print("Menor fecha")
     menor = comparar(a, b)
     if menor == 0:
         print("Las fechas son iguales")
+    elif menor == -1:
+        escribir(a)
     else:
-        escribir(fechas[menor])
+        escribir(b)
 
 
 if __name__ == "__main__":
