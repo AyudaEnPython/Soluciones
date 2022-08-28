@@ -24,7 +24,7 @@ Observaciones: Los datos de la tómbola que se van ingresando serán
 |Ingrese numero de la tombola: 8 |   |Ingrese numero de la tombola: 2 |
 |Ingrese numero de la tombola: 5 |   |Ingrese numero de la tombola: 5 |
 |Ingrese numero de la tombola: 12|   |Ingrese numero de la tombola: 12|
-|El ganador es el jugador 1      |   |Ambos jugadores ganan           | 
+|El ganador es el jugador 1      |   |Ambos jugadores ganan           |
 +--------------------------------+   +--------------------------------+
 """
 from random import shuffle, sample
@@ -84,8 +84,8 @@ def run(a: List[int], b: List[int]) -> None:
 
 
 def main():
-    a = obtener_carton(input("Carton del jugador 1: ")) # carton_random(4)
-    b = obtener_carton(input("Carton del jugador 2: ")) # carton_random(4)
+    a = obtener_carton(input("Carton del jugador 1: "))  # carton_random(4)
+    b = obtener_carton(input("Carton del jugador 2: "))  # carton_random(4)
     run(a, b)
 
 
