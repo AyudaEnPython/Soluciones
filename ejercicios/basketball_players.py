@@ -1,8 +1,8 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-Dada una lista con la altura de varios jugadores de baloncesto, calcular 
+Dada una lista con la altura de varios jugadores de baloncesto, calcular
 cuantos jugadores estan en el rango de 1 desviación estándar desde el promedio.
-.                                              
+.
 .                                             +------------------------------+
 -4 |*                                         | Fórmulas:                    |
 -3 |***                                       | σ = √ (1/N)(∑|x-u|²)      #1 |
@@ -15,7 +15,7 @@ cuantos jugadores estan en el rango de 1 desviación estándar desde el promedio
 +4 |*                                         | #1: stdev de una población   |
 .                                             | #2: stdev de una muestra     |
 .                                             +------------------------------+
-Nota: 
+Nota:
     - solucion_a: desviación estándar de una población (usando statistics)
     - solucion_b: desviación estándar de una población (usando un helper)
     - solucion_c: desviación estándar de una muestra (usando statistics)
@@ -68,15 +68,15 @@ class Test(TestCase):
     def test_solucion_a(self):
         self.assertEqual(solucion_a(players), 6)
         self.assertEqual(solucion_a(dataset), 5)
-    
+
     def test_solucion_b(self):
         self.assertEqual(solucion_b(players), 6)
         self.assertEqual(solucion_b(dataset), 5)
-        
+
     def test_solucion_c(self):
         self.assertEqual(solucion_c(players), 7)
         self.assertEqual(solucion_c(dataset), 5)
-    
+
     def test_solucion_d(self):
         self.assertEqual(solucion_d(players), 7)
         self.assertEqual(solucion_d(dataset), 5)
