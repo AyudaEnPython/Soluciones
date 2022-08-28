@@ -49,16 +49,17 @@ def main():
         "Ingresar la probabilidad de ocurrencia: ",
         blank=True, min=0, max=1, lang="es",
     )
-    e = float_input("Ingresar el margen de error: ",
-        blank=True, gt=0, lt=1, lang="es"
+    e = float_input(
+        "Ingresar el margen de error: ",
+        blank=True, gt=0, lt=1, lang="es",
     )
-    
+
     z = IC[z]
     p = 0.5 if p == "" else p
     q = 1 - p
     e = 0.05 if e == "" else e
     n = ((z**2) * (p*q) * n_) / ((n_ * (e**2) + ((z**2) * (p*q))))
-    
+
     print(f"Para una poblacion de {n_} la muestra es {n}")
 
 
