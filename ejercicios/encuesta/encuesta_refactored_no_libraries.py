@@ -84,13 +84,13 @@ def main():
     z = ingresar_intervalo()
     p = ingresar_("Ingresar la probabilidad de ocurrencia: ", min=0, max=1)
     e = ingresar_("Ingresar el margen de error: ", gt=0, lt=1)
-    
+
     z = IC[z]
     p = 0.5 if p == "" else p
     q = 1 - p
     e = 0.05 if e == "" else e
     n = ((z**2) * (p*q) * n_) / ((n_ * (e**2) + ((z**2) * (p*q))))
-    
+
     print(f"Para una poblacion de {n_} la muestra es {n}")
 
 
