@@ -63,14 +63,14 @@ def impar(n: int) -> bool:
 def cuadrado(lado: int, caracter: str, espacio: bool = True) -> None:
     """
     >>> cuadrado(3, "*")
-    * * * 
-    * * * 
-    * * * 
+    * * *
+    * * *
+    * * *
     >>> cuadrado(4, "#")
-    # # # # 
-    # # # # 
-    # # # # 
-    # # # # 
+    # # # #
+    # # # #
+    # # # #
+    # # # #
     >>> cuadrado(2, "*", False)
     **
     **
