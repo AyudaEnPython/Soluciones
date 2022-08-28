@@ -51,7 +51,7 @@ def main():
     print(f'Promedio: {promedio}')
 
 
-def main_alt(): # hardcoded
+def main_alt():  # hardcoded
     aprobados = desaprobados = notables = 0
     promedio = i = 0
     while i < 10:
