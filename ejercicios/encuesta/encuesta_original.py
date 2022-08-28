@@ -1,3 +1,4 @@
+# flak8: noqa
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 En estadística, una muestra es un conjunto de observaciones capaz de
@@ -30,7 +31,6 @@ E es el error máximo aceptado; típicamente, es el 5% (0.05)
 N es el tamaño de la población.
 
 """
-
 # Módulo para trabajar con Expresiones Regulares
 import re
 
