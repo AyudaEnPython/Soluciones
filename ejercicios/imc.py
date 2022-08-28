@@ -62,10 +62,10 @@ def solucion_b(imc: float) -> str:
     :rtype: str
     """
     categories = {
-        imc < 18.5       : "Underweight",
-        18.5 <= imc < 25 : "Normal",
-        25 <= imc < 30   : "Overweight",
-        30 < imc         : "Obesity",
+        imc < 18.5: "Underweight",
+        18.5 <= imc < 25: "Normal",
+        25 <= imc < 30: "Overweight",
+        30 < imc: "Obesity",
     }
     return categories[True]
 
@@ -79,14 +79,14 @@ def solucion_c(imc: float) -> str:
     :rtype: str
     """
     categorias = {
-        imc < 16       : "criterio de ingreso hospitalario",
-        16 <= imc < 17 : "infrapeso",
-        17 <= imc < 18 : "bajo peso",
-        18 <= imc < 25 : "saludable",
-        25 <= imc < 30 : "sobrepeso",
-        30 <= imc < 35 : "sobrepeso crónico",
-        35 <= imc < 40 : "sobrepeso premórbida",
-        40 <= imc      : "obesidad mórbida",
+        imc < 16: "criterio de ingreso hospitalario",
+        16 <= imc < 17: "infrapeso",
+        17 <= imc < 18: "bajo peso",
+        18 <= imc < 25: "saludable",
+        25 <= imc < 30: "sobrepeso",
+        30 <= imc < 35: "sobrepeso crónico",
+        35 <= imc < 40: "sobrepeso premórbida",
+        40 <= imc: "obesidad mórbida",
     }
     return categorias[True]
 
@@ -145,9 +145,9 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    #import doctest
+    # import doctest
 
-    #doctest.testmod()
-    #main()             # Uncomment the above lines to run tests
-    #print(solver())    # for single solution without name
+    # doctest.testmod()
+    # main()             # Uncomment the above lines to run tests
+    # print(solver())    # for single solution without name
     main_dict()         # or use main_list()
