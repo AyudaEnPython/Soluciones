@@ -1,4 +1,4 @@
-# flak8: noqa
+# flake8: noqa
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 En estadística, una muestra es un conjunto de observaciones capaz de
