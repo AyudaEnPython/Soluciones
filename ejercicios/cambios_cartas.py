@@ -18,12 +18,12 @@ gestionaCambios(
     2
 )
 
-Escribe la 1 carta a cambiar: ["10", "trabajos"] 
+Escribe la 1 carta a cambiar: ["10", "trabajos"]
 Lo siento, no tienes esa carta.
 
-Escribe la 1 carta a cambiar: ["3", "picas"] 
+Escribe la 1 carta a cambiar: ["3", "picas"]
 
-Escribe la 2 carta a cambiar: ["K", "diamantes"] 
+Escribe la 2 carta a cambiar: ["K", "diamantes"]
 [
     ["5", "corazones"],
     ["5", "trabajos"],
@@ -46,7 +46,7 @@ VALID_N: List[str] = list(map(str, range(1, 11))) + list("JQKA")
 
 
 def _random_card() -> List[str]:
-    return list((sample(VALID_N, 1)[0], sample(TIPO, 1)[0])) 
+    return list((sample(VALID_N, 1)[0], sample(TIPO, 1)[0]))
 
 
 def cambiar_carta(mazo: Mazo, cambios: Mazo) -> Mazo:
