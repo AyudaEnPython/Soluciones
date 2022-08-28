@@ -44,7 +44,7 @@ class Sistema:
             self.usuarios[nombre] = Usuario(nombre, correo)
         else:
             print('Correo inválido')
-    
+
     def _delete_user(self) -> None:
         nombre = input('Nombre de usuario: ')
         if nombre in self.usuarios:
@@ -60,7 +60,7 @@ class Sistema:
     def delete_users(self) -> None:
         main_loop(self._delete_user)
         text_align("Lista de usuarios actualizada")
-        self._show_users()    
+        self._show_users()
 
     def _show_users(self) -> None:
         for nombre, usuario in self.usuarios.items():
