@@ -19,10 +19,22 @@ from datetime import datetime
 from typing import Dict, List
 
 users = [
-    {'user': 'Ignazio Marino', 'date':'25/02/2022','inicial': '07:29:05 am'},
-    {'user': 'Ignazio Marino', 'date':'25/02/2022','final': '04:20:05 pm'},
-    {'user': 'Ignazio Marino1', 'date':'25/02/2022','inicial': '01:27:05 pm'},
-    {'user': 'Ignazio Marino1', 'date':'25/02/2022','final': '04:27:05 pm'}
+    {
+        'user': 'Ignazio Marino',
+        'date': '25/02/2022', 'inicial': '07:29:05 am',
+    },
+    {
+        'user': 'Ignazio Marino',
+        'date': '25/02/2022', 'final': '04:20:05 pm',
+    },
+    {
+        'user': 'Ignazio Marino1',
+        'date': '25/02/2022', 'inicial': '01:27:05 pm',
+    },
+    {
+        'user': 'Ignazio Marino1',
+        'date': '25/02/2022', 'final': '04:27:05 pm',
+    }
 ]
 
 
