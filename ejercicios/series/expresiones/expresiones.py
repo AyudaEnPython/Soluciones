@@ -3,10 +3,10 @@
 Evalue las siguientes expresiones donde N es proporcionada por el
 usuario, proponga un sub-menú.
 
-a. \sum_{i=1}^{N} \sqrt{i^{3} - 1}
-b. \sum_{i=1}^{N} \frac{2^{i} - 2^{i + 1}}{i + 1}
-c. \sum_{i=1}^{N} (-1)^{i + 1\frac{2^{i}}{i}}
-d. \prod_{i=1}^{N} N(N - 1)
+a. \sum_{i=1}^{N} \sqrt{i^{3} - 1}  # noqa W605
+b. \sum_{i=1}^{N} \frac{2^{i} - 2^{i + 1}}{i + 1}  # noqa W605
+c. \sum_{i=1}^{N} (-1)^{i + 1\frac{2^{i}}{i}}  # noqa W605
+d. \prod_{i=1}^{N} N(N - 1)  # noqa W605
 
 NOTE:
 - se modifica la formula en c por (ver README para más detalles):
@@ -27,11 +27,15 @@ def a(n: int) -> None:
 
 
 def b(n: int) -> None:
-    print(f"{sum(map(lambda i: (2**i - 2**(i + 1)) / (i + 1), range(1, n + 1)))}")
+    print(
+        f"{sum(map(lambda i: (2**i - 2**(i + 1)) / (i + 1), range(1, n + 1)))}"
+    )
 
 
 def c(n: int) -> None:
-    print(f"{sum(map(lambda i: (-1)**(i + 1) * (2**i) / i, range(1, n + 1)))}")
+    print(
+        f"{sum(map(lambda i: (-1)**(i + 1) * (2**i) / i, range(1, n + 1)))}"
+    )
 
 
 def d(n: int) -> None:
