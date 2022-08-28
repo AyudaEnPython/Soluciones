@@ -3,13 +3,13 @@
 Crear una aplicación de consola que permita al usuario programar alarmas
 de tiempo. Para realizar esta aplicación deberá presentarle al usuario
 las siguientes opciones: ver alarmas activas, agregar nueva alarma,
-agregar nueva alarma con tiempo aleatorio, editar alarma existente y 
+agregar nueva alarma con tiempo aleatorio, editar alarma existente y
 quitar alarma.
 
 Para este ejercicio debe crear una clase llamada Reloj que contenga los
 atributos necesarios para almacenar el tiempo (horas, minutos y segundos),
 guiarse de las siguientes restricciones y utilizar el diagrama de clase:
-- Programe un método constructor vacío que cree objetos con un tiempo 
+- Programe un método constructor vacío que cree objetos con un tiempo
     (horas, minutos y segundos) aleatorio.
 - Programe un método que reciba las horas, minutos y segundos para la nueva
     alarma.
@@ -48,7 +48,7 @@ class Reloj:
 
     def agregar_horas(self, horas):
         self._horas = horas
-    
+
     def agregar_minutos(self, minutos):
         self._minutos = minutos
 
