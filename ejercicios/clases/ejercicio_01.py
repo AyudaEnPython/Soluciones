@@ -2,7 +2,9 @@
 """
 
 MIN, MAX = 0, 20
-ERROR_MSG = f"El valor debe ser un número mayor a {MIN:.1f} y menor a {MAX:.1f}"
+ERROR_MSG = (
+    f"El valor debe ser un número mayor a {MIN:.1f} y menor a {MAX:.1f}"
+)
 
 
 def _validate(n: float, msg: str = ERROR_MSG) -> float:
