@@ -8,7 +8,7 @@ control de sus estudiantes en el Taller de Informática, para lo cual se
 debe tener en cuenta los siguientes datos: nombre del estudiante, edad
 (18 - 25 años), sexo (M o F), sus 5 calificaciones (0 - 20), luego de
 ello mostrar su promedio. Existen 4 aulas denominadas: "ALFA", "BETA",
-"DELTA", "GAMA" y por cada aula se deben ingresar los datos de un 
+"DELTA", "GAMA" y por cada aula se deben ingresar los datos de un
 estudiante, si el usuario desea, ingresará un siguiente estudiante a la
 misma aula y continuará hasta que decida ya no ingresar uno más. Este
 proceso se repetirá para las 4 aulas creadas.
@@ -73,16 +73,20 @@ class Aula:
     def promedio(self):
         if len(self.estudiantes) == 0:
             return 0
-        return sum(e.promedio() for e in self.estudiantes) / len(self.estudiantes)
-    
+        return sum(
+            e.promedio() for e in self.estudiantes
+            ) / len(self.estudiantes)
+
     def cantidad_estudiantes(self):
         return len(self.estudiantes)
 
     def porcentaje(self, sexo):
         return (
-            len([e for e in self.estudiantes if e.sexo == sexo]) / len(self.estudiantes)
+            len(
+                [e for e in self.estudiantes if e.sexo == sexo]
+            ) / len(self.estudiantes)
         )
-    
+
     def mayor_edad(self):
         return max(e.edad for e in self.estudiantes)
 

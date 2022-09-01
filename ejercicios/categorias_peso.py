@@ -41,7 +41,7 @@ def main_sin_ingresar_pesos():
 
 
 def main_ingresando_pesos():
-    data: Dict[int, float] = {k:v for k, v in zip(range(4), [0, 0, 0, 0])}
+    data: Dict[int, float] = {k: v for k, v in zip(range(4), [0, 0, 0, 0])}
     n: int = int_input("Ingrese la cantidad de alumnos: ", min=0)
     for _ in range(n):
         peso: float = float_input("Ingrese el peso del alumno: ")
@@ -60,5 +60,5 @@ def main_ingresando_pesos():
 
 
 if __name__ == "__main__":
-    main_sin_ingresar_pesos() # comment/uncomment to switch between 'mains'
-    #main_ingresando_pesos()
+    main_sin_ingresar_pesos()  # comment/uncomment to switch between 'mains'
+    # main_ingresando_pesos()
