@@ -9,6 +9,7 @@ datos:
 - El alumno(a) de mayor edad.
 """
 
+
 def solucion_a():
     datos = []
 
@@ -20,13 +21,13 @@ def solucion_a():
         datos.append((nombre, edad))
 
     mayores = [nombre for nombre, edad in datos if edad >= 18]
-    print("Mayores de edad" , *mayores, sep=", ")
+    print("Mayores de edad", *mayores, sep=", ")
     print("Alumno(a) de mayor edad:", max(datos, key=lambda x: x[1]))
 
 
 def solucion_b():
     datos = []
-    
+
     while True:
         nombre = input("Nombre: ")
         if nombre == "*":
@@ -38,7 +39,7 @@ def solucion_b():
     for nombre, edad in datos:
         if edad >= 18:
             print(nombre)
-    
+
     mayor = 0
     alumno = ""
     for nombre, edad in datos:
