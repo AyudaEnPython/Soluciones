@@ -16,5 +16,7 @@ for n in range(10, 100):
 #         print(n)
 
 # oneliner:
-# print(*[n for n in range(10, 100) if 2 * int(str(n)[0]) * int(str(n)[1]) == n])
+# print(
+#     *[n for n in range(10, 100) if 2 * int(str(n)[0]) * int(str(n)[1]) == n]
+# )
 # print(*[n for n in range(10, 100) if 2 * n//10 * n%10 == n])

@@ -36,7 +36,7 @@ lo que esa cantidad siempre será inferior a N.
     | 250     |        |
     +---------+--------+
 """
-from unittest import main, TestCase
+import unittest
 
 
 def get_data():
@@ -64,7 +64,7 @@ def solucion_b():
     print(i)
 
 
-def solver(m, n, data): # edge cases
+def solver(m, n, data):  # edge cases
     if m == 1 and n == 1:
         return 1
     e = 0
@@ -75,7 +75,7 @@ def solver(m, n, data): # edge cases
     return i
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_solver(self):
         self.assertEqual(solver(1000, 5, [100, 200, 300, 400, 500]), 4)
@@ -85,5 +85,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    # main() # uncomment and comment the next line to run tests
+    # unittest.main()  # uncomment and comment the next line to run tests
     solucion_a()
