@@ -17,7 +17,7 @@ def dias_libres(id_: int, tiempo: int) -> str:
         _d = 0
     if _d != 0:
         return f"tiene derecho a {_d} dias de vacaciones"
-    return f"no tiene derecho a vacaciones"
+    return "no tiene derecho a vacaciones"
 
 
 def main():

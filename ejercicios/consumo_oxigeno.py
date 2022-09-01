@@ -101,7 +101,7 @@ def sca() -> None:
     profundidad = float_input("Ingresar profundidad: ", min=0)
     tiempo = float_input("Ingresar tiempo: ", min=0)
     bar = float_input("Ingresar bar: ", min=0)
-    textbox(round((bar * capacidad )/tiempo / ((profundidad/10) + 1), 1), 40)
+    textbox(round((bar * capacidad) / tiempo / ((profundidad/10) + 1), 1), 40)
 
 
 def consumo() -> None:

@@ -41,7 +41,7 @@ CAMBIO: 18.80
 10 centavos: 1
 """
 from typing import Dict, Union
-#pip install prototools
+# pip install prototools
 from prototools import float_input
 
 

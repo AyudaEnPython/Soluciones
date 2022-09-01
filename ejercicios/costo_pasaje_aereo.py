@@ -16,10 +16,10 @@ Los costos de (1) un pasaje (en pesos) de acuerdo a la clase en la que
 se viaja y a su destino son:
 
     +------------------+-----------+-----------+
-    | Clase \ Destinos |   Miami   |  Madrid   |
+    | Clase | Destinos |   Miami   |  Madrid   |
     +------------------+-----------+-----------+
     |     Primera      | 1 300 000 | 2 700 000 |
-    |     Segunda      | 1 120 000 | 2 500 000 | 
+    |     Segunda      | 1 120 000 | 2 500 000 |
     |     Tercera      | 1 100 000 | 2 320 000 |
     +------------------+-----------+-----------+ # recuperado de la web
 

@@ -2,7 +2,7 @@
 
 Escribir un programa que lea la hora en notación de 24 horas y que
 imprima en notación de 12; por ejemplo, si la entrada es 13:45, la
-salida será 1:45 PM. El programa debe solicitar al usuario que 
+salida será 1:45 PM. El programa debe solicitar al usuario que
 introduzca exactamente cinco caracteres para especificar una hora; por
 ejemplo, las 9 en punto se debe introducir así: 09:00.
 """
@@ -40,5 +40,5 @@ class Test(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    # unittest.main() # uncomment this line and comment the next one to run tests
+    # unittest.main()  # uncomment this and comment the next one to run tests
     main()

@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 Desarrollar una función que utilice dos parámetros: cantidad comprada y
-precio unitario y retorne una tupla con: (monto antes del descuento, 
+precio unitario y retorne una tupla con: (monto antes del descuento,
 descuento, monto después del descuento). Para el descuento se considera
 una promoción de 5 x 2, es decir por cada 5 unidades de compra, dos
 unidades no se pagan (descuento):

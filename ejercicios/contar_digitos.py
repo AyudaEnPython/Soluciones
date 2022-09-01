@@ -18,7 +18,7 @@ def contar_digitos(n: int) -> int:
     while n > 0:
         n //= 10
         i += 1
-    return i # oneliner: from math import log10; int(log10(n)) + 1
+    return i  # oneliner: from math import log10; int(log10(n)) + 1
 
 
 def sol(n: int) -> None:
