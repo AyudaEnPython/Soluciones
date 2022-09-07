@@ -27,7 +27,7 @@ from typing import Dict, List
 from prototools import Menu
 
 
-def _factorial(n: int, d: Dict[int, int] = {0:1}) -> int:
+def _factorial(n: int, d: Dict[int, int] = {0: 1}) -> int:
     if n not in d:
         d[n] = n * _factorial(n - 1, d)
     return d[n]
@@ -53,7 +53,7 @@ def potencia(v: List[int]) -> List[int]:
     return [x ** 2 for x in v]
 
 
-def aleatorio(min: int = 1, max: int = 15, size: int =10) -> List[int]:
+def aleatorio(min: int = 1, max: int = 15, size: int = 10) -> List[int]:
     return [randint(min, max) for _ in range(size)]
 
 
