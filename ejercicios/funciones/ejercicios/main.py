@@ -1,5 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
+
+
 # --------------------------------------------------------- Ejercicio 1
 def hipotenusa(a: float, b: float) -> float:
     """

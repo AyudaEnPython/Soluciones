@@ -7,7 +7,6 @@ def factorial(n: int) -> int:
     >>> factorial(4)
     24
     >>> factorial(-2)
-    
     """
     if n < 0:
         return None

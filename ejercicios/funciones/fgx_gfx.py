@@ -5,7 +5,7 @@ f(x) =sqrt( 2 + 5x)
 g(x) =(4 + x )^3
 
 Se debe evaluar, para un conjunto de entradas, f(g(x)) si x es par, o
-g(f(x)) si x es impar. 
+g(f(x)) si x es impar.
 
 Entrada
 La entrada contiene un conjunto de líneas con cada uno de los valores
@@ -14,17 +14,17 @@ procesarse
 
 Salida
 La salida debe contener para cada entrada una línea con el resultado
-correspondiente. 
+correspondiente.
 
 Ejemplo de entrada :
 4
 15
 382
-0 
+0
 
 Ejemplo de salida:
-50.61620293937506 
-2084.8705484240154 
+50.61620293937506
+2084.8705484240154
 16957.661454339745
 """
 from typing import List, Union

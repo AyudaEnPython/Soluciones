@@ -20,9 +20,7 @@ def proximo_primo(n: int) -> int:
     >>> proximo_primo(7)
     11
     >>> proximo_primo(8)
-    
     >>> proximo_primo(-1)
-
     """
     if n < 0:
         return None

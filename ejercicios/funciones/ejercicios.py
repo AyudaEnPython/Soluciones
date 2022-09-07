@@ -13,16 +13,16 @@
 """
 
 # 1
-f = lambda n: n > 1 and not any(n % i == 0 for i in range(2, int(n**0.5) + 1))
+f = lambda n: n > 1 and not any(n % i == 0 for i in range(2, int(n**0.5) + 1))  # noqa: E731, E501
 
 # 2
-f = lambda n: sum(i ** 3 for i in range(1, n + 1))
+f = lambda n: sum(i ** 3 for i in range(1, n + 1))  # noqa: E731, E501
 
 # 3
-f = lambda n: 1 if n == 1 else n ** 3 + f(n - 1)
+f = lambda n: 1 if n == 1 else n ** 3 + f(n - 1)  # noqa: E731, E501
 
 # 4
-f = lambda n: 1 if n == 1 else 1 + f(n - 1)
+f = lambda n: 1 if n == 1 else 1 + f(n - 1)  # noqa: E731, E501
 
 # 5
-f = lambda n: n if n <= 1 else f(n-1) + f(n-2)
+f = lambda n: n if n <= 1 else f(n-1) + f(n-2)  # noqa: E731, E501

@@ -25,7 +25,7 @@ Nota: Recuerda que la división entre 0 está indeterminada, y esa
     problema.
 """
 
-f = lambda x, y: (
+f = lambda x, y: (  # noqa: E731
     ("suma", x + y),
     ("resta", x - y),
     ("multiplicación", x * y),

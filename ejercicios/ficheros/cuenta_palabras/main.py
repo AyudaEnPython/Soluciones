@@ -2,7 +2,7 @@
 
 Escriba un programa que cuente las palabras del archivo
 python_robots.txt y despligue las 6 palabras más comunes del texto. No
-cuente las palabras cuya longitud sea menor o igual a 4 letras. 
+cuente las palabras cuya longitud sea menor o igual a 4 letras.
 """
 from typing import List
 
