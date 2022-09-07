@@ -4,6 +4,7 @@ Contributor: Carolina Morán
 Source:
 https://github.com/CarolinaMoran03/Juego-de-ahorcado-con-frase/blob/main/Juego%20de%20ahorcado%20con%20frase
 """
+# flake8: noqa
 participante=input("Ingrese nombre del participante: ")
 print(participante.upper())
 
