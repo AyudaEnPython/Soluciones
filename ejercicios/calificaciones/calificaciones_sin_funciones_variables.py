@@ -11,7 +11,8 @@ while True:
             practica = int(input("Ingrese nota de practicas: "))
             problemas = int(input("Ingrese nota de problemas: "))
             teoria = int(input("Ingrese nota de teoria: "))
-            if ((0 <= practica <= 10) and
+            if (
+                (0 <= practica <= 10) and
                 (0 <= problemas <= 10) and
                 (0 <= teoria <= 10)
             ):

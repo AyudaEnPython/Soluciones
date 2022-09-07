@@ -15,8 +15,9 @@ También se requieren las siguientes operaciones:
 - Agregar un elemento mas cada producto llamado existencia.
 
 NOTE: el enunciado no es muy claro y el diccionario esta mal diseñado.
+TODO: review it later...
 """
-from typing import Dict, List
+from typing import Dict
 # pip install prototools
 from prototools import Menu, int_input
 
@@ -26,6 +27,7 @@ productos: Dict[str, int] = {
     "nevera": 1200,
     "licuadora": 180,
 }
+
 
 def agregar():
     nombre = input("Nombre del producto: ")
@@ -49,7 +51,7 @@ def main():
         ("Buscar producto", print),
         ("Actualizar producto", print),
         ("Eliminar producto", print),
-        ("Calcular precio de venta", print),        
+        ("Calcular precio de venta", print),
     )
 
 

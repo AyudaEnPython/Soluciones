@@ -52,7 +52,7 @@ trabajadores: Dict[str, Dict[str, Union[str, int]]] = {
     "Yngwie": {
         "área": "gerencia",
         "desempeño": 70,
-    } 
+    }
 }
 
 
