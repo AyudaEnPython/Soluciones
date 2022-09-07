@@ -25,7 +25,7 @@ lo siguiente:
         +---+---+---+---+
         | 3 | 4 | 5 | 3 |
         +---+---+---+---+
-    
+
     Pida al usuario ingresar par o impar, si ingresó par, entonces cree
     una lista con los números pares de la matriz, si ingresó impar,
     cree una lista con los números impares.
@@ -106,7 +106,6 @@ class Test(TestCase):
         [3, 5, 4, 9],
         [3, 4, 5, 3],
     ]
-        
 
     def test_multiplos(self):
         self.assertEqual(multiplos(20), [20, 40, 60, 80, 100])
@@ -121,7 +120,7 @@ class Test(TestCase):
             vocales_en(ciudades, 'a'),
             ['Lima', 'Arequipa', 'Tacna'],
         )
-    
+
     def test_pares_impares(self):
         self.assertEqual(
             pares_impares(self.matriz, 'par'),
@@ -146,6 +145,5 @@ class Test(TestCase):
 
 if __name__ == "__main__":
     import doctest
-    
     doctest.testmod()
     main()

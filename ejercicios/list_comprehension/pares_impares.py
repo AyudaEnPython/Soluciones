@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 Creá un programa que pida introducir un número y un modo. Los modos
-serán “par” o “impar”. Luego se imprimirán todos los números pares o 
+serán “par” o “impar”. Luego se imprimirán todos los números pares o
 impares (según corresponda) desde 0 hasta el número introducido.
 """
 from typing import List

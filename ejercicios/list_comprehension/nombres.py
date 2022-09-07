@@ -13,8 +13,8 @@ con las iniciales de cada nombre.
     | respuesta: ["A", "L", "P", "M", "N", "P"] |
     +-------------------------------------------+
 """
+import unittest
 from typing import List
-from unittest import main, TestCase
 
 alumnos = ["Ana", "Luis", "Pedro", "Maria", "Nerea", "Pablo"]
 
@@ -30,11 +30,11 @@ def solver(alumnos: List[str]) -> List[str]:
     return [s[0] for s in alumnos]
 
 
-def main_():
+def main():
     print("respuesta: ", solver(alumnos))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_solver(self):
         self.assertEqual(solver(alumnos), ["A", "L", "P", "M", "N", "P"])
@@ -46,5 +46,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()
+    main()
