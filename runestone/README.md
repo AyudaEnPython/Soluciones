@@ -48,9 +48,9 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
 - Building Programs
   - 21.5. [Exercises](foundations_of_python_programming/21_05_exercises.md)
 - Inheritance
-  - 22.7. [Chapter Assessment]()
+  - 22.7. [Chapter Assessment](foundations_of_python_programming/22_07_chapter_assessments.md)
 - More on Accumulation: Map, Filter, List Comprehension, and Zip
-  - 23.7. [Chapter Assessment]()
+  - 23.7. [Chapter Assessment](foundations_of_python_programming/23_07_chapter_assessment.md)
 
 ---
 
