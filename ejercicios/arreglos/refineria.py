@@ -46,8 +46,8 @@ componentes: Iterable[Sequence[int]] = [
 A = [3, 7, 2]
 B = [4, 5, 6]
 
-_mul = lambda a, b: map(lambda x, y: x * y, a, b)
-_sum = lambda a, b: map(lambda x, y: x + y, a, b)
+_mul = lambda a, b: map(lambda x, y: x * y, a, b)  # noqa: E731
+_sum = lambda a, b: map(lambda x, y: x + y, a, b)  # noqa: E731
 
 
 def totales_anuales(a: List[int], b: List[int]) -> List[int]:
@@ -56,6 +56,7 @@ def totales_anuales(a: List[int], b: List[int]) -> List[int]:
 
 def maximo_alquitran(a, b):
     return max(max(list(map(lambda x: list(_mul(componentes[1], x)), (a, b)))))
+
 
 def consumo(a, b):
     return [[sum([componentes[j][i] * x[j] for j in range(len(a))])

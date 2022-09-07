@@ -19,7 +19,7 @@ NOTA: La persona que pide ayuda no brindo la función ord_seleccion,
 from typing import List
 
 
-def mayor(arr: List[int]) -> int: # online -> return max(arr)
+def mayor(arr: List[int]) -> int:  # online -> return max(arr)
     """
     >>> _mayor([1, 11, 7])
     11

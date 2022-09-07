@@ -3,7 +3,7 @@
 Genere una matriz de 25 x 40 con números decimales al azar entre 0 y 1.
 Mostrar los numeros del perimetro y calcularlo.
 """
-from random import random
+from random import random  # noqa: F401
 
 from prototools import show_matrix
 
@@ -14,7 +14,7 @@ def solver_a():
     [1, 2, 3, 4, 5, 16, 17, 18, 19, 20, 6, 11, 10, 15]
     147
     """
-    #arr = [[random() for _ in range(40)] for _ in range(25)]
+    # arr = [[random() for _ in range(40)] for _ in range(25)]
     arr = [
         [1, 2, 3, 4, 5],
         [6, 7, 8, 9, 10],

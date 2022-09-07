@@ -9,7 +9,7 @@ los siguientes:
     | Costos     | Sedán | Camioneta | Económico |
     +------------+-------+-----------+-----------+
     | Material   |     7 |         8 |         5 |
-    | Personal   |    10 |         9 |         7 | 
+    | Personal   |    10 |         9 |         7 |
     | Impuestos  |     5 |         3 |         2 |
     | Transporte |     2 |         3 |         1 |
     +------------+-------+-----------+-----------+

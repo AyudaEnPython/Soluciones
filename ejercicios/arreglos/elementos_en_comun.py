@@ -11,8 +11,8 @@ NOTE: El enunciado no contempla números repetidos.
 from random import randrange
 
 N = 10
-f = lambda min, max: [randrange(min, max+1) for _ in range(N)]
-g = lambda a, b: len(list(filter(lambda x: x in b, a)))
+f = lambda min, max: [randrange(min, max+1) for _ in range(N)]  # noqa: E731
+g = lambda a, b: len(list(filter(lambda x: x in b, a)))  # noqa: E731
 
 
 def main():

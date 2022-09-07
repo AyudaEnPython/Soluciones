@@ -60,7 +60,7 @@ def main_alt():
     print("Vector 2")
     b = [int_input(f"Vector[{i}] ->") for i in range(SIZE)]
     show(a, b, "Inicial")
-    a[:], b[:] = b[:], a[:] # a, b = b, a
+    a[:], b[:] = b[:], a[:]  # a, b = b, a
     show(a, b, "Final")
 
 

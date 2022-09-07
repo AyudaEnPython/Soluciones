@@ -20,6 +20,6 @@ anónima... todo en una sola línea.
 NOTE: el enunciado esta incompleto.
 """
 # js
-# const f = n => n ? n * f(n-1) : 1; console.log(Array.from({length: 20}, (v, k) => k+1).filter((n) => n%2==1).map(f));
+# const f = n => n ? n * f(n-1) : 1; console.log(Array.from({length: 20}, (v, k) => k+1).filter((n) => n%2==1).map(f));  # noqa: E501
 
-f = lambda n: 1 if n <= 1 else n*f(n - 1); print(*map(f, filter(lambda x: x % 2, range(1, 21))))  # noqa: E501 
+f = lambda n: 1 if n <= 1 else n*f(n - 1); print(*map(f, filter(lambda x: x % 2, range(1, 21))))  # noqa: E731, E501, E702

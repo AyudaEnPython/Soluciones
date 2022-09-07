@@ -55,10 +55,10 @@ def ingresar_ventas() -> List[int]:
 
 
 def vendidos_por_tipo(ventas: List[int]) -> Dict[int, int]:
-    tipos = {k:0 for k in CLASIFICACION}
+    tipos = {k: 0 for k in CLASIFICACION}
     for v in ventas:
         tipos[v] += 1
-    return tipos # {x:ventas.count(x) for x in ventas} -> alt. ver
+    return tipos  # {x:ventas.count(x) for x in ventas} -> alt. ver
 
 
 def mas_vendido(tipos: Dict[int, int]) -> str:

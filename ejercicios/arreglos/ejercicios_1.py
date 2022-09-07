@@ -67,7 +67,7 @@ def main_5():
 
 
 if __name__ == "__main__":
-    main_1() # comment/uncomment to run each exercise
+    main_1()  # comment/uncomment to run each exercise
     # main_2()
     # main_3()
     # main_4()

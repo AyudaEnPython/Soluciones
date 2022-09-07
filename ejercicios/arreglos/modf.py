@@ -12,7 +12,7 @@ from random import uniform
 
 def main():
     numbers = [uniform(10, 100) for _ in range(10)]
-    f = lambda n, xs: sum(map(lambda x: float(modf(x)[n]), xs))
+    f = lambda n, xs: sum(map(lambda x: float(modf(x)[n]), xs))  # noqa: E731
     print(f"Sumatoria parte entera: {f(1, numbers)}")
     print(f"Sumatoria parte decimal: {f(0, numbers)}")
 

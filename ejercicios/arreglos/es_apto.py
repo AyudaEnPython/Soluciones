@@ -25,6 +25,7 @@ from prototools import show_matrix, int_input
 Vector = List[float]
 SIZE = 10
 
+
 def promedio(data: Vector) -> float:
     return sum(data) / len(data)
 

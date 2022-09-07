@@ -72,8 +72,8 @@ def main():
 
 class Test(unittest.TestCase):
 
-    x = [ 2, -2,  1, -1]
-    y = [ 4,  2,  1, -1]
+    x = [2, -2, 1, -1]
+    y = [4, 2, 1, -1]
 
     def test_punto(self):
         punto = Punto(1, 1)
@@ -89,7 +89,7 @@ class Test(unittest.TestCase):
         b = Punto(2, 2)
         self.assertEqual(_distancia(a, b), 2**0.5)
 
-    def test_recta(self):     
+    def test_recta(self):
         m, b = _recta(Punto(-3, 1), Punto(-2, -3))
         self.assertEqual(m, -4.0)
         self.assertEqual(b, -11.0)

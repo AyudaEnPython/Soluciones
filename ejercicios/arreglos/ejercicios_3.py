@@ -50,7 +50,7 @@ def ex_1():
 
 
 def ex_2():
-    f = lambda n: sum([int(i) for i in str(n)])
+    f = lambda n: sum([int(i) for i in str(n)])  # noqa: E731
     arr = input_data(False)
     n_arr = list(map(lambda x: list(map(f, x)), arr))
     show_result(arr, n_arr, "resultado")
