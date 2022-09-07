@@ -22,7 +22,7 @@ called `first_names` that contains only the first names of everyone in
 the original list.
 ```python
 people = [('Snow', 'Jon'), ('Lannister', 'Cersei'), ('Stark', 'Arya'), ('Stark', 'Robb'), ('Lannister', 'Jamie'), ('Targaryen', 'Daenerys'), ('Stark', 'Sansa'), ('Tyrell', 'Margaery'), ('Stark', 'Eddard'), ('Lannister', 'Tyrion'), ('Baratheon', 'Joffrey'), ('Bolton', 'Ramsey'), ('Baelish', 'Peter')]
-first_names = [b for a, b in people]
+first_names = [firstname for lastname, firstname in people]
 ```
 
 Use list comprehension to create a list called `lst2` that doubles each
