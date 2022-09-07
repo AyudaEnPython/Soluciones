@@ -14,9 +14,9 @@
     C =
     V = A + np.arange(B) * C
 """
-import numpy as np # respuesta 2
+import numpy as np  # respuesta 2
 
-arr = np.arange(1, 2, 0.1) # respuesta 1
+arr = np.arange(1, 2, 0.1)  # respuesta 1
 
 # respuesta 3: Todas las anteriores, se usara un tipo específico dependiendo
 #              del problema a solucionar.
@@ -25,7 +25,7 @@ arr = np.arange(1, 2, 0.1) # respuesta 1
 A = 1      # suma 1 a cada elemento del arreglo
 B = 10     # construye el arreglo [0, 1, 2... 9]
 C = 0.1    # multiplica por 0.1 a cada elemento arreglo
-V = A + np.arange(B) * C 
+V = A + np.arange(B) * C
 
 print(arr, V)
 print(np.allclose(arr, V))

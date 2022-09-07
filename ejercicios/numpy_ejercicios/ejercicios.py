@@ -47,7 +47,7 @@ def ex_1():
 
 
 def ex_2():
-    f = lambda n: sum([int(i) for i in str(n)])
+    f = lambda n: sum([int(i) for i in str(n)])  # noqa: E731
     fv = np.vectorize(f)
     arr = input_data(False)
     n_arr = fv(arr.astype(int))

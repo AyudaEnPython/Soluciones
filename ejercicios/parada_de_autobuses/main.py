@@ -12,7 +12,7 @@ siguientes opciones de menú:
     que espera ese autobús está llena, se informará del suceso, en caso
     contrario se colocará a la persona en la cola correspondiente.
 
-- Llegar Bus Parada: Se pedirá por teclado el número del autobús y el 
+- Llegar Bus Parada: Se pedirá por teclado el número del autobús y el
     número de plazas libres que tiene el autobús. Se quitarán de la
     cola (mostrando su nombre por pantalla) tantas personas como plazas
     libres haya o hasta que la cola esté vacía.
@@ -27,7 +27,7 @@ siguientes opciones de menú:
 - Salvar Parada Fichero: Se pedirá el nombre de un fichero y se
     almacenará toda la información en un fichero de texto con el
     siguiente formato:
-    
+
     <numero de bus><persona1><ESPACIO><persona2>...<personaN><PUNTO>
 
 - Cargar Parada Fichero: Se pedirá el nombre de un fichero y se cargará
