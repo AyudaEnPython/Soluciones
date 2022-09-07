@@ -11,7 +11,7 @@ TODO: add tests
 """
 
 
-def solucion_a(): # solucion propuesta autocompletada por github copilot
+def solucion_a():  # solucion propuesta autocompletada por github copilot
     nombre = input("Ingrese su nombre completo: ")
     numero = int(input("Ingrese un número entero: "))
     print(nombre[0:nombre.find(" ")] * numero)

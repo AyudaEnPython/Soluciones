@@ -18,7 +18,7 @@ N:10   Promedio: 0.0
 N:500  Promedio: 247.5
 """
 from typing import Optional
-from unittest import main, TestCase, result
+from unittest import main, TestCase
 from unittest.mock import patch
 
 
@@ -65,7 +65,7 @@ def main_():
 
 
 class Test(TestCase):
-    
+
     inputs = ("100", "3500", "10", "500")
     results = (45.0, 1747.5, 0.0, 247.5)
 

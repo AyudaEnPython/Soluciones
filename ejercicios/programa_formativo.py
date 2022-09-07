@@ -162,7 +162,7 @@ def programa_formativo(
 
 
 class Test(TestCase):
-    
+
     data = (
         (
             3,
@@ -179,8 +179,8 @@ class Test(TestCase):
     )
     results = (
         "Felicitaciones. Te graduaste",
-        "Has reprobado. Pero no te rindas, toma el Programa nuevamente." \
-            " Aprobaste 1 de los 2 cursos."
+        "Has reprobado. Pero no te rindas, toma el Programa nuevamente."
+        " Aprobaste 1 de los 2 cursos."
     )
 
     def test_validar_numero(self):

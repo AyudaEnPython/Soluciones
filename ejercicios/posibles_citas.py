@@ -16,56 +16,58 @@ usuarios = [
         "nombre": "Julia",
         "sexo": "femenino",
         "edad": 29,
-        "hobbies": ["correr", "musica", "leer"], 
+        "hobbies": ["correr", "musica", "leer"],
         "ciudad":"Cordoba"
     },
     {
         "nombre": "Camila",
         "sexo": "femenino",
         "edad": 18,
-        "hobbies": ["escribir", "arte"], 
+        "hobbies": ["escribir", "arte"],
         "ciudad":"Mendoza"
     },
     {
         "nombre": "Lucia",
         "sexo": "femenino",
         "edad": 35,
-        "hobbies": ["arte"], 
+        "hobbies": ["arte"],
         "ciudad":"Mendoza"
     },
     {
         "nombre": "Daniel",
         "sexo": "masculino",
         "edad": 50,
-        "hobbies": ["boxeo", "leer", "arte"], 
+        "hobbies": ["boxeo", "leer", "arte"],
         "ciudad":"Mendoza"
     },
     {
         "nombre": "Pepe",
         "sexo": "masculino",
         "edad": 32,
-        "hobbies": ["correr", "leer"], 
+        "hobbies": ["correr", "leer"],
         "ciudad":"Cordoba"
     },
     {
         "nombre": "Juan",
         "sexo": "masculino",
         "edad": 41,
-        "hobbies": ["leer", "alpinismo", "juegos de mesa"], 
+        "hobbies": ["leer", "alpinismo", "juegos de mesa"],
         "ciudad":"Cordoba"
     }
 ]
 
 
 def main():
-    preferencias = lambda persona: (
+    preferencias = lambda persona: (  # noqa: E731
         persona["sexo"] == "femenino" and
         persona["edad"] > 30 and
         persona["ciudad"] == "Mendoza" and
         "arte" in persona["hobbies"]
     )
 
-    citas = [usuario["nombre"] for usuario in usuarios if preferencias(usuario)]
+    citas = [
+        usuario["nombre"] for usuario in usuarios if preferencias(usuario)
+    ]
     print(", ".join(citas))
 
 

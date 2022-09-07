@@ -52,7 +52,7 @@ def es_primo(n: int) -> bool:
 
 
 def f(n: int) -> int:
-    i = j = k = r =0
+    i = j = k = r = 0
     while j != n:
         i += 1
         k = fibo_itw(i)
@@ -78,8 +78,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    # fs = {"f": f, "g": g}
-    # time_functions(fs, args=(5), globals=globals())
-    # # 'f' took 10.6349 secs
-    # # 'g' took 7.1475 secs
+    # main()
+    fs = {"f": f, "g": g}
+    time_functions(fs, args=(5), globals=globals())
+    # 'f' took 10.6349 secs
+    # 'g' took 7.1475 secs

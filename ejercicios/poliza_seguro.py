@@ -19,9 +19,9 @@ póliza. Utilice los siguientes datos para determinar los cargos:
 #+--------------------------+ +--------------------------------------+
 """
 
-cm = lambda m: {m <= 90: 0.001, 91 <= m <= 97: 0.003, 98 <= m: 0.005}[1]
-cep = lambda e: {18 <= e <= 23: 350, 24 <= e <= 55: 200, 56 <= e <= 65: 400}[1]
-cap = lambda a: {a <= 3: 15, a > 3: 15 + (a-3)*20}[1]
+cm = lambda m: {m <= 90: 0.001, 91 <= m <= 97: 0.003, 98 <= m: 0.005}[1]  # noqa: E731, E501
+cep = lambda e: {18 <= e <= 23: 350, 24 <= e <= 55: 200, 56 <= e <= 65: 400}[1]  # noqa: E731, E501
+cap = lambda a: {a <= 3: 15, a > 3: 15 + (a-3)*20}[1]  # noqa: E731, E501
 
 nombre = input("Nombre del propietario: ")
 edad = int(input("Edad del propietario: "))

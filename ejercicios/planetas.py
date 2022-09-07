@@ -66,7 +66,7 @@ def retorna_llave(valor: str) -> str:
     for llave, val in datos.items():
         if valor == val:
             return llave
-    #return list(datos.keys())[list(datos.values()).index(valor)] # oneliner
+    # return list(datos.keys())[list(datos.values()).index(valor)]
 
 
 def ingresar_llave() -> int:
