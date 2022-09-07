@@ -5,7 +5,7 @@ las líneas que comiencen con un número y terminen con un punto. El
 resultado de la impresión debe comenzar de la siguiente forma:
 
     +-------------------------------+
-    |4 hours ago.                   | 
+    |4 hours ago.                   |
     |1 day.                         |
     |.                              |
     |.                              |
