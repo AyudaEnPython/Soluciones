@@ -72,7 +72,7 @@ def sueldo_(cargo):
 class Sueldo:
     jefe: int = field(default=100, metadata={'unit': 'dollars'})
     ejecutivo: int = field(default=90, metadata={'unit': 'dollars'})
-    externo: int= field(default=50, metadata={'unit': 'dollars'})
+    externo: int = field(default=50, metadata={'unit': 'dollars'})
 
 
 def _sueldo(cargo):
@@ -117,6 +117,6 @@ class Test(TestCase):
 
 if __name__ == "__main__":
     import doctest
-    
+
     doctest.testmod()
     main()

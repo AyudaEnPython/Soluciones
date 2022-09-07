@@ -40,8 +40,12 @@ def solucion_b(texto: str) -> str:
 class Test(TestCase):
 
     def test_solucion(self):
-        self.assertEqual(solucion_a(mensaje), "uestro planeta debe cuidarse. agámoslo .")
-        self.assertEqual(solucion_b(mensaje), "uestro planeta debe cuidarse. agámoslo .")
+        self.assertEqual(
+            solucion_a(mensaje), "uestro planeta debe cuidarse. agámoslo ."
+        )
+        self.assertEqual(
+            solucion_b(mensaje), "uestro planeta debe cuidarse. agámoslo ."
+        )
 
 
 if __name__ == "__main__":

@@ -3,9 +3,9 @@
 Calcular: sin(x), cos(x) y e^x.
 Las fórmulas matemáticas son:
 
-sin x = \sum_{n=0}^{\infty} (-1)^n / \fact{2n+1} x^(2n+1)
-cos x = \sum_{n=0}^{\infty} (-1)^n / \fact{2n} x^(2n)
-e^x = \sum_{n=0}^{\infty} (-1)^n / \fact{n}
+sin x = \sum_{n=0}^{\infty} (-1)^n / \fact{2n+1} x^(2n+1)  # noqa: W605
+cos x = \sum_{n=0}^{\infty} (-1)^n / \fact{2n} x^(2n)      # noqa: W605
+e^x = \sum_{n=0}^{\infty} (-1)^n / \fact{n}                # noqa: W605
 
 El único dato de entrada es el valor de x. La salida consiste de los
 valores aproximados a 11 decimales desde el 0 hasta el 10 inclusive.

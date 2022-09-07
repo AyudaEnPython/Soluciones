@@ -5,7 +5,6 @@ a, a + b, 2a + b, 2a + 2b, 3a + 2b, 3a + 3b...
 
 TODO: review it later.
 """
-from typing import List
 
 
 def sucesion(a, b, n):
@@ -15,7 +14,10 @@ def sucesion(a, b, n):
 
 
 def sucesion_alt(n):
-    t = [str(int(0.25*(2*k+3+(-1)**k))) + "a + " + str(int(0.25*(2*k+1+(-1)**(k+1)))) + "b" for k in range(n)]
+    t = [
+        f"{int(0.25*(2*k+3+(-1)**k))}a + {int(0.25*(2*k+1+(-1)**(k+1)))}b "
+        for k in range(n)
+    ]
     print(t)
 
 

@@ -60,5 +60,5 @@ def main():
         print(f"Monto a pagar: {pago(horas, tarifa):.2f}")
 
 
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     main()

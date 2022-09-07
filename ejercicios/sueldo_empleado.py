@@ -92,7 +92,9 @@ def sueldo(empleado: Dict[str, Union[str, int]]) -> int:
         return 2000
 
 
-def estadisticas(emleados: List[Dict[str, Union[str, int]]]) -> Tuple[int, int]:
+def estadisticas(
+    emleados: List[Dict[str, Union[str, int]]]
+) -> Tuple[int, int]:
     a = b = 0
     for empleado in emleados:
         if empleado["sueldo"] == 2500:
