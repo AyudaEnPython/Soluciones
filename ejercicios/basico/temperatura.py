@@ -9,12 +9,12 @@ valor capturado según la siguiente tabla (Pista: Se solicita al usuario
 día y temperatura).
 
     +-----------------------------+--------------+
-    | Temperatura                 | Mensaje      | 
+    | Temperatura                 | Mensaje      |
     +-----------------------------+--------------+
     | Menor o igual a 0           | Congelante   |
-    | 1 a 10 grados C             | Muy frío     | 
+    | 1 a 10 grados C             | Muy frío     |
     | 11 a 20 grados C            | Frio         |
-    | 21 a 24 grados C            | Templado     | 
+    | 21 a 24 grados C            | Templado     |
     | 25 a 29 grados C            | Agradable    |
     | 30 a 35 grados C            | Caliente     |
     | Mayor o igual a 36 grados C | Muy Caliente |

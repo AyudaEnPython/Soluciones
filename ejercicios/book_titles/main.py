@@ -3,16 +3,17 @@
 Book Titles
 -----------
 
-You have been asked to make a special book categorization program, which assigns
-each book a special code based on its title.
-The code is equal to the first letter of the book, followed by the number of 
+You have been asked to make a special book categorization program, which
+assigns each book a special code based on its title.
+The code is equal to the first letter of the book, followed by the number of
 characters in the title.
-For example, for the book "Harry Potter", the code would be: H12, as it contains 12
-characters (including the space).
+For example, for the book "Harry Potter", the code would be: H12, as it
+contains 12 characters (including the space).
 
-You are provided a books.txt file, which includes the book titles, each one written
-on a separate line.
-Read the title one by one and output the code for each book on a separate line.
+You are provided a books.txt file, which includes the book titles, each one
+written on a separate line.
+Read the title one by one and output the code for each book on a separate
+line.
 
 For example, if the books.txt file contains:
 Some book
@@ -33,20 +34,20 @@ from unittest.mock import patch
 
 
 def solution_1():
-    with open("books.txt", "r") as f: #change to "/usercode/files/books.txt"
+    with open("books.txt", "r") as f:  # change to "/usercode/files/books.txt"
         for book in f.read().splitlines():
             print(f"{book[0]}{len(book)}")
 
 
 def solution_2():
-    with open("books.txt", "r") as f: #change to "/usercode/files/books.txt"
+    with open("books.txt", "r") as f:  # change to "/usercode/files/books.txt"
         for book in f:
             book = book.replace("\n", "")
             print(f"{book[0]}{len(book)}")
 
 
 def solution_3():
-    file = open("books.txt", "r")  #change to "/usercode/files/books.txt"
+    file = open("books.txt", "r")  # change to "/usercode/files/books.txt"
     books = file.read().splitlines()
     for book in books:
         print(f"{book[0]}{len(book)}")
@@ -54,7 +55,7 @@ def solution_3():
 
 
 class Test(unittest.TestCase):
-    
+
     books = """\
     H12
     T16

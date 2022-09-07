@@ -5,7 +5,7 @@ tabla de 1 al 15 en el siguiente formato:
 
 Ejemplo:
     INGRESE TABLA = 10
-    
+
     10 * 1 = 10
     10 * 2 = 20
     10 * 3 = 30

@@ -1,6 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-Escribe un programa Python que acepte una cadena y calcule el número de dígitos y letras.
+Escribe un programa Python que acepte una cadena y calcule el número de
+dígitos y letras.
 """
 
 digitos = letras = 0

@@ -9,6 +9,7 @@ n = 483
 nnum = 43
 inv_nnum = 34
 """
+from math import log10
 # ----------------------------------------------------------- version 1
 c, d, u = input("n: ")
 print(f"Número original: {c + d + u}")
@@ -26,8 +27,6 @@ print(f"Nuevo número: {nn}")
 print(f"Inverso del nuevo número: {nni}")
 
 # ----------------------------------------------------------- version 3
-from math import log10
-
 n = int(input("n: "))
 c = int(n / pow(10, int(log10(n))))
 u = n % pow(10, int(log10(n/10)))

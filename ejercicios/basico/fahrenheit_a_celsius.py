@@ -4,7 +4,7 @@ Dada la temperatura en grados Fahrenheit, convertirla a grados Celsius
 y luego mostrar un mensaje según la tabla:
 
 +------------------------------------+------------------------------+
-|           Grados Celsius           |      Mensaje a mostrar       |   
+|           Grados Celsius           |      Mensaje a mostrar       |
 +------------------------------------+------------------------------+
 |Menos de 12 grados                  |"X grados... Hace mucho frio" |
 |Desde 12 grados y menos de 16 grados|"X grados... Está fresco"     |

@@ -41,7 +41,7 @@ from prototools import float_input
 
 monto = float_input("Ingrese el monto: ", min=0)
 if monto <= 35000:
-    impuesto = round((monto * 0.12) -399.2)
+    impuesto = round((monto * 0.12) - 399.2)
 else:
     impuesto = round(3500.2 + ((monto-35000) * 0.24))
 print(f"El impuesto es: {impuesto if impuesto > 0 else 0:.1f} dólares")
