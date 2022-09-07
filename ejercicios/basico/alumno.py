@@ -29,7 +29,7 @@ class Alumno:
 
     def set_nota(self, nota):
         self._nota = nota
-    
+
     def get_edad(self):
         return self._edad
 

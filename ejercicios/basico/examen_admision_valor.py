@@ -5,7 +5,7 @@ admisión de una universidad, cuyo valor depende del nivel
 socioeconómico y el colegio de procedencia.
 
 #                 +-----------------+
-#                 |   NIVEL SOCIAL  | 
+#                 |   NIVEL SOCIAL  |
 #    +------------+-----+-----+-----+
 #    | Colegio    |  A  |  B  |  C  |
 #    +------------+-----+-----+-----+

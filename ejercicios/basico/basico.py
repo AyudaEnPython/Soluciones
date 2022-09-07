@@ -7,11 +7,11 @@
 # Escriba un programa que calcule el pago a un trabajador. El programa
 # le pide al usuario que ingrese el número de horas y el salario por
 # hora. El programa debe mostrar el salario total.
-# 
+#
 # Ejemplo de entrada:
 # Ingrese el número de horas trabajadas: 41
 # Ingrese el salario por hora en Bs: 30
-# 
+#
 # Ejemplo de salida:
 # El salario del trabajadro es Bs 1245.00
 horas = float(input("Ingrese el número de horas trabajadas: "))
