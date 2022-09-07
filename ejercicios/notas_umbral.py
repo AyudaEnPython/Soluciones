@@ -6,10 +6,10 @@ Evaluar las notas mayores de f y retornar dos listas: nombres
 y notas de las que coincidieron. Además, el promedio de las
 notas que superaron el umbral.
 """
+import unittest
 from typing import List, Tuple
-from unittest import main, TestCase
 
-data =  Tuple[List[str], List[int], float]
+data = Tuple[List[str], List[int], float]
 
 
 def evaluar(nombres: List[str], notas: List[int], umbral: int) -> data:
@@ -33,7 +33,7 @@ def evaluar(nombres: List[str], notas: List[int], umbral: int) -> data:
     return nombres_, notas_, promedio
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     nombres = ["John", "Paul", "George", "Ringo"]
     notas = [6, 9, 10, 7]
@@ -47,4 +47,4 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

@@ -20,10 +20,11 @@ NOTE: se opta a cambiar el nombre de la función (PEP8).
 import requests
 from unittest import main, TestCase
 
+
 # or get_country (PEP8)
 def obtener_pais(codigo: str) -> str:
     """Obtiene el nombre del país a partir del código.
-    
+
     :param codigo: Código del país.
     :codigo type: str
     :return: Nombre del país.

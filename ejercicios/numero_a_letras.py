@@ -70,4 +70,4 @@ def main():
 if __name__ == "__main__":
     # import doctest
     # doctest.testmod()
-    main() # comment this line and uncomment the previous to run tests
+    main()  # comment/uncomment to run tests

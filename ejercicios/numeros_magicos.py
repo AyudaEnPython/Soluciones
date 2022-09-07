@@ -34,7 +34,7 @@ from unittest import main, TestCase
 
 # Mejores implementaciones de la función es_primo en:
 # https://github.com/AyudaEnPython/Soluciones/blob/main/soluciones/es_primo.py
-def es_primo(n: int) -> bool: 
+def es_primo(n: int) -> bool:
     if n <= 1:
         return False
     for i in range(2, n):
@@ -77,7 +77,7 @@ def main_alt() -> None:
     print("El número es mágico" if R % 3 == 0 else "El número no es mágico")
 
 
-def is_magic_number(n: int) -> str: # for testing purposes only
+def is_magic_number(n: int) -> str:  # for testing purposes only
     r = sum([x for x in range(n+1) if es_primo(x)])
     return r, True if r % 3 == 0 else False
 
