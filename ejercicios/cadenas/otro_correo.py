@@ -24,7 +24,7 @@ def main():
     print(separar_correo(input("Ingresar correo: ")))
 
 
-if __name__ == "__main__":  
+if __name__ == "__main__":
     # import doctest
     # doctest.testmod()
     main()

@@ -9,8 +9,8 @@ def mover_posiciones(palabra: str, pos: int) -> str:
 
 
 def main_():
-    print(mover_posiciones("perro", 2)) 
+    print(mover_posiciones("perro", 2))
 
 
 if __name__ == "__main__":
-    main_() # output: "roper"
+    main_()  # output: "roper"

@@ -8,8 +8,8 @@ dicha lista.
 NOTE: El enunciado no es claro, no especifica que parte (izquierda o
     derecha) de la cadena de caracteres se recorta.
 """
+import unittest
 from typing import List
-from unittest import main, TestCase
 
 
 def recortar_nombres(nombres: List[str]) -> List[str]:
@@ -22,15 +22,15 @@ def recortar_nombres(nombres: List[str]) -> List[str]:
     :rtype: List[str]
     """
     n = len(nombres[-1])
-    return [nombre[:n] for nombre in nombres] # [n:] para recortar a la derecha
+    return [nombre[:n] for nombre in nombres]  # [n:] recortar a la derecha
 
 
-def main_():
+def main():
     nombres = ["abcdef", "abc", "ab", "abcd"]
     print(f"Nombres recortados: {recortar_nombres(nombres)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_recortar_nombres(self):
         self.assertEqual(
@@ -41,5 +41,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
+    # unittest.main()
     main()
-    #main_()

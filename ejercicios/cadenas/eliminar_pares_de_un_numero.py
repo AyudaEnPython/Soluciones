@@ -11,7 +11,8 @@ import unittest
 
 
 def sol_a(N: int) -> int:
-    return int(str(N).
+    return int(
+        str(N).
         replace('0', '').
         replace('2', '').
         replace('4', '').

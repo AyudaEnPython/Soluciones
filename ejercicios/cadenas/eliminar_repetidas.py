@@ -20,7 +20,7 @@ def eliminar_repetidas(cadena: str) -> str:
 
 def main():
     cadena = "aaa bb aaa bb cc aaa ddd bbb eee aaa"
-    print(eliminar_repetidas(cadena)) # output: bb bb cc ddd bbb eee
+    print(eliminar_repetidas(cadena))  # output: bb bb cc ddd bbb eee
 
 
 if __name__ == "__main__":
