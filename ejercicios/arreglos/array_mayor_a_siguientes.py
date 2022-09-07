@@ -30,7 +30,7 @@ def solve(arr: List[int]) -> List[int]:
 
 
 def main():
-    array = [16, 17, 4, 3 ,5, 2]
+    array = [16, 17, 4, 3, 5, 2]
     sol = solve(array)
     print(sol)
 

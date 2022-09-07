@@ -16,10 +16,10 @@ def total_filas(matriz, x: int) -> int:
 
 
 def total_matriz(matriz) -> int:
-    return sum(sum(
-        matriz[i][j] for i in range(len(matriz)))
-        for j in range(len(matriz[0])
-    ))
+    return sum(
+        sum(matriz[i][j] for i in range(len(matriz)))
+        for j in range(len(matriz[0]))
+    )
 
 
 def ingresar_numeros(n: int, m: int) -> List[List[int]]:
@@ -27,7 +27,7 @@ def ingresar_numeros(n: int, m: int) -> List[List[int]]:
     for i in range(n):
         matriz.append([])
         for j in range(m):
-            matriz[i].append(int(input(f"matriz[{i}][{j}] -> " )))
+            matriz[i].append(int(input(f"matriz[{i}][{j}] -> ")))
     return matriz
 
 

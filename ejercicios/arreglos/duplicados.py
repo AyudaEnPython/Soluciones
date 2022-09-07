@@ -31,7 +31,7 @@ def sol_c(arr: List[Any]) -> List[Any]:
 
 
 def sol_d(arr: List[Any]) -> List[Any]:
-    return [*{*arr}] # not ordered
+    return [*{*arr}]  # not ordered
 
 
 def main():
