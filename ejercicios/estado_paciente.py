@@ -40,7 +40,7 @@ def resultados(sex: str, globulos: int, colesterol: int, glucosa: int) -> int:
     if sex == "m" and globulos < 5000000:
         anormalias += 1
     if sex == "f" and globulos < 4000000:
-        anoramalias += 1
+        anormalias += 1
     return anormalias
 
 

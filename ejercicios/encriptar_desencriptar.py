@@ -28,7 +28,7 @@ def encriptar(frase: str, clave: str, s: str = "02468") -> str:
 
 def desencriptar(frase: str, clave: str, s: str = "02468") -> str:
     """Función que desencripta una frase.
-    
+
     :param frase: Frase a desencriptar.
     :type frase: str
     :param clave: Clave de encriptación.
@@ -46,13 +46,13 @@ def desencriptar(frase: str, clave: str, s: str = "02468") -> str:
 
 def main():
     CLAVE = "aeiou"
-    
+
     mensaje = "Ayuda En Python"
     print(f"Mensaje original: {mensaje}")
-    
+
     encriptado = encriptar(mensaje, CLAVE)
     print(f"Mensaje encriptado: {encriptado}")
-    
+
     desencriptado = desencriptar(encriptado, CLAVE)
     print(f"Mensaje desencriptado: {desencriptado}")
 

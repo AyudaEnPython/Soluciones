@@ -25,7 +25,7 @@ Ejemplo: Si el estrato es 3 y el nivel de consumo 45 entonces el valor
 
 Realizar:
     a. Una función que tenga como parámetros de entrada el estrato y el
-        nivel de consumo, y debe retornar el valor de la factura a 
+        nivel de consumo, y debe retornar el valor de la factura a
         pagar.
 """
 
