@@ -19,7 +19,9 @@ Ejemplos:
     +-----------------------------------------+
 
 """
-from unittest import main, TestCase
+import unittest
+# pip install prototools
+from prototools import int_input
 
 
 def suma(a: int, b: int) -> int:
@@ -41,13 +43,13 @@ def suma(a: int, b: int) -> int:
         return a + suma(a + 1, b)
 
 
-def main_():
-    a = int(input("Ingrese un número: "))
-    b = int(input("Ingrese un número: "))
+def main():
+    a = int_input("Ingrese un número: ")
+    b = int_input("Ingrese un número: ")
     print(f"Resultado: {suma(a, b)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_suma(self):
         self.assertEqual(suma(30, 35), 195)
@@ -55,5 +57,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()
+    main()
