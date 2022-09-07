@@ -21,6 +21,7 @@ de humanos simples es mayoría, la categoría es Origen.
 El programa debe definir al menos una función.
 """
 
+
 def get_data(file):
     result, countries = {}, []
     with open(file, "r", encoding="utf-8") as f:
@@ -52,7 +53,7 @@ def process(data, countries):
 
 
 def main():
-    data = get_data("futuro.mundo") # ejercicios/futuro_mundo/
+    data = get_data("futuro.mundo")  # ejercicios/futuro_mundo/
     results = process(*data)
     categories = ("Nuevo mundo", "Transicion", "Origen")
     for cat, result in zip(categories, results):

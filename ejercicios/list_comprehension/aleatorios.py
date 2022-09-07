@@ -12,7 +12,7 @@ números decimales aleatorios con dos decimales entre 10 y 20.
 """
 from random import uniform, seed
 from typing import List
-from unittest import main, TestCase
+import unittest
 
 
 def generar_decimales(min: int, max: int, n: int, r: int = 2) -> List[float]:
@@ -33,11 +33,11 @@ def generar_decimales(min: int, max: int, n: int, r: int = 2) -> List[float]:
     return [round(uniform(min, max), r) for _ in range(n)]
 
 
-def main_():
+def main():
     print("respuesta: ", generar_decimales(10, 20, 10))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_generar_decimales(self):
         seed(1)
@@ -59,5 +59,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()
+    main()
