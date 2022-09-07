@@ -24,7 +24,7 @@ analizador = {
 
 
 def solucion_a(fuente: str, analizador: dict) -> str:
-    """Reemplaza pares de caracteres si son encontrados en el 
+    """Reemplaza pares de caracteres si son encontrados en el
     analizador.
 
     :param fuente: Texto fuente
@@ -42,7 +42,7 @@ def solucion_a(fuente: str, analizador: dict) -> str:
 
 
 def solucion_b(fuente: str, analizador: dict) -> str:
-    """Reemplaza pares de caracteres si son encontrados en el 
+    """Reemplaza pares de caracteres si son encontrados en el
     analizador.
 
     :param fuente: Texto fuente
@@ -57,13 +57,15 @@ def solucion_b(fuente: str, analizador: dict) -> str:
         y: caracter en posicion par del texto fuente
     """
     return "".join(
-        [analizador[x + y] for x, y in zip(fuente[::2], fuente[1::2]) 
-        if x+y in analizador]
-        )
+        [
+            analizador[x + y] for x, y in zip(fuente[::2], fuente[1::2])
+            if x + y in analizador
+        ]
+    )
 
 
 def solucion_c(fuente: str, analizador: dict, n: int = 2) -> str:
-    """Reemplaza 'n' caracteres si son encontrados en el 
+    """Reemplaza 'n' caracteres si son encontrados en el
     analizador.
 
     :param fuente: Texto fuente
@@ -76,13 +78,15 @@ def solucion_c(fuente: str, analizador: dict, n: int = 2) -> str:
     :rtype: str
     """
     return "".join(
-        [analizador[fuente[x:x+n]] for x in range(0, len(fuente), n) 
-        if fuente[x:x+n] in analizador]
-        )
+        [
+            analizador[fuente[x:x+n]] for x in range(0, len(fuente), n)
+            if fuente[x:x+n] in analizador
+        ]
+    )
 
 
 def solucion_d(fuente: str, analizador: dict, n: int = 2) -> str:
-    """Reemplaza 'n' caracteres si son encontrados en el 
+    """Reemplaza 'n' caracteres si son encontrados en el
     analizador.
 
     :param fuente: Texto fuente
@@ -95,7 +99,7 @@ def solucion_d(fuente: str, analizador: dict, n: int = 2) -> str:
     :rtype: str
     """
     from itertools import zip_longest
-    
+
     salida = ""
 
     def _grupos(iterable, n):

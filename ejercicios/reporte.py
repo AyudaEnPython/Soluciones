@@ -37,7 +37,7 @@ print(
     )
 )
 for i in range(n):
-    print("-"* 72)
+    print("-" * 72)
     print(
         "{:<12} {:<12} {:<12} {:<12} {:<12} {:<12}".format(
             reporte[i][0],
@@ -48,4 +48,4 @@ for i in range(n):
             reporte[i][5]
         )
     )
-print("-"* 72)
+print("-" * 72)

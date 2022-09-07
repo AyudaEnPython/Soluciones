@@ -8,7 +8,7 @@ from itertools import zip_longest
 from math import floor
 from random import randint, sample
 from typing import List
-from unittest import main, TestCase
+import unittest
 
 
 def random_list():
@@ -34,7 +34,7 @@ def promedio(a: List[int], b: List[int], c: List[int]) -> List[int]:
 
 
 # without typing, list comprehension, floor, map and zip_longest
-def promedio_(a, b, c): 
+def promedio_(a, b, c):
     result = []
     max_ = max(len(a), len(b), len(c))
     while len(a) < max_:
@@ -52,7 +52,7 @@ def promedio_(a, b, c):
     return result
 
 
-def main_():
+def main():
     a = random_list()
     b = random_list()
     c = random_list()
@@ -61,7 +61,7 @@ def main_():
     print(p)
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data = (
         (
@@ -86,5 +86,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run the test
-    main_()
+    # unittest.main() # uncomment/comment to run the test
+    main()

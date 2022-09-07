@@ -10,6 +10,7 @@ Nota: Se aclara que el programa debe poder procesar más de un artículo
 en la venta.
 """
 
+
 def registro():
     cantidad_articulos = int(input("Ingrese la cantidad de artículos: "))
     precio_unitario = float(input("Ingrese el precio unitario: "))

@@ -6,8 +6,8 @@ un alumno. Mostrar el número de respuestas correctas e incorrectas y la
 nota final sabiendo que cada respuesta correcta tiene un valor de 2
 puntos.
 """
+import unittest
 from typing import List, Optional
-from unittest import main, TestCase
 
 
 def calcular_nota(
@@ -31,11 +31,10 @@ def calcular_nota(
             nota += puntos
         else:
             incorrectas += 1
-        
     return correctas, incorrectas, nota
 
 
-def main_():
+def main():
     respuestas = [
         True, False, True, False, True, True, False, True, False, False
     ]
@@ -48,32 +47,50 @@ def main_():
     print(f"Nota: {nota}")
 
 
-class Test(TestCase):
-    
+class Test(unittest.TestCase):
+
     def test_calcular_nota(self):
         self.assertEqual(
             calcular_nota(
-                [True, False, True, False, True, True, False, True, False, False],
-                [True, False, True, True, False, True, False, False, False, False]
+                [
+                    True, False, True, False, True,
+                    True, False, True, False, False,
+                ],
+                [
+                    True, False, True, True, False,
+                    True, False, False, False, False,
+                ]
             ),
             (7, 3, 14),
         )
         self.assertEqual(
             calcular_nota(
-                [True, False, True, False, True, True, False, True, False, False],
-                [True, False, True, False, True, True, False, True, False, False],
+                [
+                    True, False, True, False, True,
+                    True, False, True, False, False,
+                ],
+                [
+                    True, False, True, False, True,
+                    True, False, True, False, False,
+                ],
             ),
             (10, 0, 20),
         )
         self.assertEqual(
             calcular_nota(
-                [True, False, True, False, True, True, False, True, False, False],
-                [False, True, False, True, False, False, True, False, True, True],
+                [
+                    True, False, True, False, True,
+                    True, False, True, False, False,
+                ],
+                [
+                    False, True, False, True, False,
+                    False, True, False, True, True,
+                ],
             ),
             (0, 10, 0),
         )
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run the tests
-    main_()
+    # unittest.main() # uncomment/comment to run the tests
+    main()
