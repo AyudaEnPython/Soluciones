@@ -30,7 +30,7 @@ def _generate_data(teams: int, states="GPE", min_: int = 0) -> str:
     """Generate random game results and validate it. Wins must equal
     losses and their sum plus the number of ties must equal the total
     number of games played.
-    
+
     T = k(k-1) - (W + L)
 
     :param teams: Number of teams
@@ -77,7 +77,7 @@ def main_input() -> str:
         for _ in range(k-1):
             r = input(f"{i+1}> ").upper()
             p += 3 if r[-1] == "G" else (1 if r[-1] == "E" else 0)
-        (min_, t) = (p, i+1) if p < min_ else (min_, t)
+        (min_, t) = (p, i+1) if p < min_ else (min_, t)  # noqa: F821
         res += f"{i+1} -> {p}\n"
     res += f"{t}"
     return res
@@ -85,14 +85,14 @@ def main_input() -> str:
 
 def main_alt(f: Callable, args: Any = None) -> str:
     min_, res, rs = float("inf"), "", f() if args is None else f(args)
-    k = int(abs((-1 -((4*len(rs))**0.5))//2))
+    k = int(abs((-1 - ((4 * len(rs)) ** 0.5)) // 2))
     rs = [rs[i:i+(k-1)] for i in range(0, len(rs), k-1)]
     print(rs)
     for i in range(k):
         p = 0
         for r in rs[i]:
             p += 3 if r[-1] == "G" else (1 if r[-1] == "E" else 0)
-        (min_, t) = (p, r[0]) if p < min_ else (min_, t)
+        (min_, t) = (p, r[0]) if p < min_ else (min_, t)  # noqa: F821
         res += f"{r[0]} -> {p}\n"
     res += f"{t[0]}"
     return res

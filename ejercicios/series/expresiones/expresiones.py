@@ -45,10 +45,14 @@ def d(n: int) -> None:
 def main():
     menu = Menu("Evaluación de expresiones")
     menu.add_options(
-        ("Sumatoria (i^3 - 1)^1/2", lambda: a(int_input("Ingrese N: "))),
-        ("Sumatoria (2^i - 2^(i+1))/(i + 1)",lambda: b(int_input("Ingrese N: "))),
-        ("Sumatoria (-1)^(i+1(2^i/i))", lambda: c(int_input("Ingrese N: "))),
-        ("Factorial", lambda: d(int_input("Ingrese N: "))),
+        ("Sumatoria (i^3 - 1)^1/2",
+            lambda: a(int_input("Ingrese N: "))),
+        ("Sumatoria (2^i - 2^(i+1))/(i + 1)",
+            lambda: b(int_input("Ingrese N: "))),
+        ("Sumatoria (-1)^(i+1(2^i/i))",
+            lambda: c(int_input("Ingrese N: "))),
+        ("Factorial",
+            lambda: d(int_input("Ingrese N: "))),
     )
     menu.run()
 

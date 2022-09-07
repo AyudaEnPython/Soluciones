@@ -32,7 +32,7 @@ def _validar_usuario(usuario: str) -> str:
 
 
 def _validar_dominio(dominio: str) -> str:
-    if not "." in dominio:
+    if "." not in dominio:
         raise ValueError("Dominio inválido")
     ss = dominio.split(".")
     for s in ss:
@@ -46,7 +46,7 @@ def _validar_dominio(dominio: str) -> str:
 def validar_correo(correo: str) -> str:
     if correo.find(" ") != -1:
         raise ValueError("El correo no debe contener espacios")
-    if not "@" in correo:
+    if "@" not in correo:
         raise ValueError("El correo no tiene @")
     usuario, dominio = _helper(correo)
     usuario = _validar_usuario(usuario)

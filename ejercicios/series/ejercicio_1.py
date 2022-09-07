@@ -18,7 +18,7 @@ def r(n: int) -> float:
     :param n: número entero positivo mayor o igual a 1.
     :return: resultado de la serie.
     """
-    return sum(1 / (i**2) for i in range(1, n+1)) 
+    return sum(1 / (i**2) for i in range(1, n+1))
 
 
 @lru_cache(maxsize=None)
