@@ -8,17 +8,18 @@ clase debe incluir métodos para establecer el valor de cada propiedad y
 recuperar el valor de cada propiedad.
 """
 
+
 class Flowers:
 
     def __init__(self, name: str, petals: int, price: float) -> None:
         self._name = name
         self._petals = petals
         self._price = price
-    
+
     @property
     def name(self) -> str:
         return self._name
-    
+
     @name.setter
     def name(self, name) -> None:
         self._name = name

@@ -9,7 +9,7 @@ from prototools.validators import validate_float
 
 class TarjetaCredito:
     """Representación de una tarjeta de credito.
-    
+
     El balance inicial por defecto es cero.
 
     :param cliente: Nombre del cliente.
@@ -43,7 +43,7 @@ class TarjetaCredito:
     @property
     def cliente(self) -> str:
         return self._cliente
-    
+
     @cliente.setter
     def cliente(self, cliente: str) -> None:
         self._cliente = cliente
@@ -67,7 +67,7 @@ class TarjetaCredito:
     @property
     def limite(self) -> float:
         return self._limite
-    
+
     @limite.setter
     def limite(self, limite: float) -> None:
         self._limite = limite
@@ -75,7 +75,7 @@ class TarjetaCredito:
     @property
     def balance(self) -> float:
         return self._balance
-    
+
     @balance.setter
     def balance(self, balance: float) -> None:
         self._balance = balance
@@ -124,7 +124,7 @@ if __name__ == "__main__":
 
     for tarjeta in billetera.tarjetas:
         tarjeta.cargar(1000)
-    
+
     for tarjeta in billetera.tarjetas:
         boxln(f"{tarjeta.cliente} | {tarjeta.banco} | {tarjeta.cuenta}")
         print(f"Limite: {tarjeta.limite} | Balance: {tarjeta.balance}")

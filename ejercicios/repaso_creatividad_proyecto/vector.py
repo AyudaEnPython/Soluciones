@@ -1,11 +1,12 @@
 """Se opta por modificar ligeramente la clase original.
 """
-from typing import Any, List, Optional
 from __future__ import annotations
+from typing import Any, List, Optional
+
 
 class Vector:
     """Representación de un vector como un espacion multidimensional
-    
+
     :param d: dimension del vector o iterable que representa al vector
     :d type: Opional[Any]
     """
@@ -29,7 +30,7 @@ class Vector:
         if len(self) != len(otro):
             raise ValueError('Los vectores no tienen la misma dimension')
         return Vector([self[i] + otro[i] for i in range(len(self))])
-    
+
     def __sub__(self, otro) -> Vector:
         return self + (-otro)
 
