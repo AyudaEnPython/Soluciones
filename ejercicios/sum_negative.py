@@ -38,7 +38,7 @@ def solution():
 
 
 class Test(TestCase):
-    
+
     output = """\
     1
     2

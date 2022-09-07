@@ -3,7 +3,7 @@
 from datetime import timedelta
 from typing import List
 # pip install prototools
-from prototools.validators import validate_time
+from prototools.validators import validate_time  # noqa: F401
 
 
 def sumar_tiempos_1(tiempos: List[str]) -> str:
@@ -40,14 +40,14 @@ def sumar_tiempos_4(tiempos: List[str]) -> str:
     ], timedelta()))
 
 
-def sumar_tiempos_5(tiempos: List[str]) -> str: # using prototools
+def sumar_tiempos_5(tiempos: List[str]) -> str:  # using prototools
     return sum([
         timedelta(hours=t.hour, minutes=t.minute, seconds=t.second)
         for t in tiempos
     ], timedelta())
 
 
-def sumar_tiempos_6(tiempos: List[str]) -> str: # no days
+def sumar_tiempos_6(tiempos: List[str]) -> str:  # no days
     ss = 0
     for tiempo in tiempos:
         h, m, s = [int(s) for s in tiempo.split(":")]

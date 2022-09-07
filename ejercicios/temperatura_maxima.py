@@ -17,8 +17,11 @@ def oneliner():
         "Limache:9:23,Villa Alemana:9:22"
     )
     print(
-        "\n".join(f"{s[0]} min {s[1]}, max {s[2]}" for s in (c.split(":")
-        for c in ciudades.split(",")) if int(s[2]) > 25)
+        "\n".join(
+            f"{s[0]} min {s[1]}, max {s[2]}"
+            for s in (c.split(":") for c in ciudades.split(","))
+            if int(s[2]) > 25
+        )
     )
 
 

@@ -17,10 +17,10 @@ def en_segundos(tiempo: str) -> int:
     :rtype: int
 
     .. Nota::
-    
+
         u: unidad
         t: tiempo(int)
-    
+
     >>> en_segundos('1:0:0:0')
     86400
     >>> en_segundos('1:0:10:4')

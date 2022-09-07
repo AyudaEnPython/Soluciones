@@ -11,7 +11,7 @@ texto = "El 23 de mayo de 1973 se inauguró el edificio CPM, el cual" \
 Resultado: 23 + 1773 + 1300 = 3296
 """
 import re
-from unittest import main, TestCase
+import unittest
 
 REGEX = re.compile(r"[-+]?\d*\.?\d+|[-+]?\d+")
 
@@ -29,11 +29,13 @@ def main_():
     print(solver(s))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data = (
-        ("El 23 de mayo de 1973 se inauguró el edificio CPM, el cual" \
-            " se encontraba en la calle Rawson al 1300", 3296),
+        (
+            "El 23 de mayo de 1973 se inauguró el edificio CPM, el cual"
+            " se encontraba en la calle Rawson al 1300", 3296
+        ),
         ("La última versión estable fue el 4 de octubre del 2021", 2025),
     )
     data_decimals = (
@@ -52,5 +54,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
+    # main()  # uncomment/comment to run tests
     main_()

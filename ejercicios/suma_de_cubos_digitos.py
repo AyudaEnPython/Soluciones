@@ -55,7 +55,7 @@ def suma_de_cubos(n: int) -> int:
     return r
 
 
-def calcular(): # it uses int_input from prototools library
+def calcular():  # it uses int_input from prototools library
     while True:
         n = int_input("Ingresar un número: ")
         if es_divisible(n, 3):

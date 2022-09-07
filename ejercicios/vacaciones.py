@@ -10,12 +10,13 @@ vacaciones.
 import hashlib
 import hmac
 import os
-from typing import Tuple 
-from unittest import main, TestCase
+from typing import Tuple
+import unittest
 from unittest.mock import patch
 
 # opcional
 empleados = []
+
 
 # opcional
 def hash_contraseña(s: str) -> Tuple[bytes, bytes]:
@@ -57,14 +58,14 @@ def main_app():
     nombre, contraseña = registrar()
     años = tiempo_servicio()
     print(f"{nombre} tiene derecho a {dias(años)} dias de vacaciones")
-    
-    #opcional
+
+    # opcional
     s, k = hash_contraseña(contraseña)
     empleados.append([nombre, s+k, años])
 
 
-class Test(TestCase):
-    
+class Test(unittest.TestCase):
+
     inputs = ("john doe", "1234", "123", "1234", "1234")
     seniority = ("30", "40", "4")
 
@@ -82,7 +83,7 @@ class Test(TestCase):
     def test_registrar(self, mock_input):
         response = registrar()
         self.assertEqual(response, ("john doe", "1234"))
-    
+
     @patch("builtins.input", side_effect=seniority)
     def test_tiempo_servicio(self, mock_input):
         response = tiempo_servicio()
@@ -98,5 +99,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run the tests
+    # unittest.main() # uncomment/comment to run the tests
     main_app()
