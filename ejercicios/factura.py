@@ -26,7 +26,7 @@ ITEMS, IVA, Data = 6, 0.19, Dict[str, Dict[str, Union[float, int]]]
 
 def ingresar_datos() -> Data:
     """Función que solicita los datos del producto.
-    
+
     :return: Diccionario con los datos de los productos.
     :rtype: Dict[str, Dict[str, Union[float, int]]]
     """
@@ -53,7 +53,7 @@ def ingresar_datos() -> Data:
 
 def total_factura(productos: Data) -> float:
     """Función que calcula el total de la factura.
-    
+
     :param productos: Diccionario con los datos de los productos.
     :type productos: Dict[str, Dict[str, Union[float, int]]]
     :return: Total de la factura.
@@ -64,7 +64,7 @@ def total_factura(productos: Data) -> float:
 
 def obtener_descuento(total: float, productos: Data) -> float:
     """Función que obtiene el descuento del total de la factura.
-    
+
     :param total: Total de la factura.
     :type total: float
     :param productos: Diccionario con los datos de los productos.

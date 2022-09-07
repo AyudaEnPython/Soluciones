@@ -15,9 +15,9 @@ tengan un valor igual o superior al indicado por el usuario.
 """
 from typing import List
 
-vehiculos = ["DeLorean", "Mustang",   "i8", "5008", "C300", "Model X"]
-fuerza    = [       130,      1200,    228,    120,    255,       259]
-precio    = [     25000,     35630, 148500,  37000,  41400,    105000]
+vehiculos = ["DeLorean", "Mustang", "i8", "5008", "C300", "Model X"]
+fuerza = [130, 1200, 228, 120, 255, 259]
+precio = [25000, 35630, 148500, 37000, 41400, 105000]
 
 
 def filtrar(c: str, v: int, r: List[str] = vehiculos) -> List[str]:

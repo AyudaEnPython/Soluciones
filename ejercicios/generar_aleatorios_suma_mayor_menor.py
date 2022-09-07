@@ -24,7 +24,7 @@ def generar_aleatorios(
 
 
 def suma(numeros: List[int]) -> List[int]:
-    return sum(list(filter(lambda x: x%2 == 0, numeros)))
+    return sum(list(filter(lambda x: x % 2 == 0, numeros)))
 
 
 def f(numeros: List[int]) -> List[int]:
@@ -46,7 +46,7 @@ class Test(unittest.TestCase):
     def test_generar(self):
         seed(60)
         self.assertEqual(generar_aleatorios(1, 10, 4), [5, 5, 10, 3])
-    
+
     def test_suma(self):
         self.assertEqual(suma([1, 2, 3, 4, 5]), 6)
 

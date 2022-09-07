@@ -13,9 +13,9 @@ PARTICIPANTES = 3
 tiempos = []
 
 
-def entrada() -> Tuple[int, int, int]: 
+def entrada() -> Tuple[int, int, int]:
     """Entrada de datos
-    
+
     :return: horas, minutos y segundos
     :rtype: Tupla[int]
     """
@@ -27,7 +27,7 @@ def entrada() -> Tuple[int, int, int]:
 
 def convertir_tiempo(segundos: int) -> str:
     """Convierte un tiempo en segundos a horas, minutos y segundos
-    
+
     :param segundos: tiempo en segundos
     :type segundos: int
     :return: tiempo en formato hh:mm:ss
@@ -40,8 +40,8 @@ def convertir_tiempo(segundos: int) -> str:
 
 
 def tiempo_a_segundos(horas: int, minutos: int, segundos: int) -> int:
-    """Convierte el tiempo en segundos 
-    
+    """Convierte el tiempo en segundos
+
     :param horas: horas
     :horas type: int
     :param minutos: minutos
@@ -56,7 +56,7 @@ def tiempo_a_segundos(horas: int, minutos: int, segundos: int) -> int:
 
 def calcular_ganador(tiempos: List[int]) -> int:
     """Calcula el ganador de la competencia
-    
+
     :param tiempos: lista de tiempos
     :type tiempos: List[int]
     :return: ganador

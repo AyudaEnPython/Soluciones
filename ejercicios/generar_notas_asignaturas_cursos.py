@@ -4,7 +4,7 @@ Generar las notas de 5 estudiantes, en 6 asignaturas, durante 4 cursos.
 Mostrar en pantalla los datos de forma que seleccionando un elemento
 lo muestre según su curso, asignatura o compañeros.
 
-NOTA: cursos se refiere a un periodo académico (por ejemplo bimestre o 
+NOTA: cursos se refiere a un periodo académico (por ejemplo bimestre o
     semestre) y asignaturas a una materia.
     Las calificaciones pueden variar (0 a 10, 0 a 20, 0 a 100, etc.).
     No se precisa con exactitud el como mostrar los datos.
@@ -24,7 +24,7 @@ ESTUDIANTES = "Jason", "Joe", "Paul", "Steve", "Yngwie"
 def generar_notas() -> Data:
     return [
         {estudiante:
-            {asignatura:randint(*RANGO) for asignatura in ASIGNATURAS}
+            {asignatura: randint(*RANGO) for asignatura in ASIGNATURAS}
             for estudiante in ESTUDIANTES}
         for _ in range(PERIODO)
     ]

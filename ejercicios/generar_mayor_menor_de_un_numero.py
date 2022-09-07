@@ -77,7 +77,7 @@ def obtener_menor(numero: int) -> int:
 
 
 def remover_digito(numero: int, posicion: int) -> int:
-    izq = numero  // 10 ** (posicion + 1)
+    izq = numero // 10 ** (posicion + 1)
     der = numero % 10 ** posicion
     if izq == 0:
         return der

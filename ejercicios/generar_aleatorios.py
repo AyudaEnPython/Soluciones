@@ -5,7 +5,7 @@ Original
 Generar una lista (el tamaño de la lista debe de generarse de manera
 automática y aleatoriamente entre 1 y 20) con números generados de
 manera automática aleatoriamente entre 1 y 100.
-Enviar esa lista creada a una funcion para que esta halle el valor 
+Enviar esa lista creada a una funcion para que esta halle el valor
 total de los los números de la lista generada.
 
 
