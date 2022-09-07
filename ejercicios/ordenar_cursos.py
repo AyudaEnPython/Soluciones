@@ -37,7 +37,7 @@ Algunos ejemplos de diálogo de este programa serían:
     | Maria, 14, 18                     |
     | Roberto, 13, 14                   |
     +-----------------------------------+
-    
+
     +-----------------------------------+
     | Ordenar por la columna: curso1    |
     | Kike, 11, 16                      |
@@ -48,13 +48,13 @@ Algunos ejemplos de diálogo de este programa serían:
     | Lucero, 17, 17                    |
     +-----------------------------------+
 """
+import unittest
 from typing import List, Union
-from unittest import main, TestCase
 
 matrix = List[List[Union[str, int]]]
 datos: matrix = [
     ["Maria", 14, 18],
-    ["Kike", 11, 16],  
+    ["Kike", 11, 16],
     ["Roberto", 13, 14],
     ["Carlos", 12, 20],
     ["Jimena", 17, 15],
@@ -76,22 +76,22 @@ def ordenar(arr: matrix, x: str) -> matrix:
     return sorted(arr, key=lambda y: y[col[x]])
 
 
-def main_():
+def main():
     columna: str = input("Ordenar por la columna: ")
     resultado: matrix = ordenar(datos, columna)
     for fila in resultado:
         print(", ".join(str(x) for x in fila))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_ordenar(self):
         self.assertEqual(
-            ordenar(datos, "nombre"), 
+            ordenar(datos, "nombre"),
             [
                 ["Carlos", 12, 20],
                 ["Jimena", 17, 15],
-                ["Kike", 11, 16],  
+                ["Kike", 11, 16],
                 ["Lucero", 17, 17],
                 ["Maria", 14, 18],
                 ["Roberto", 13, 14],
@@ -111,5 +111,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    #main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment/comment to run tests
+    main()

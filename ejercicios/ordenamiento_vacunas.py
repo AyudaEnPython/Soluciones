@@ -16,7 +16,7 @@ Ejemplo:
     |     3: [30, 43, 52, 23, 37, 51, 29, 50, 26, 35], |
     |     4: [36, 44, 49, 22, 44, 49, 55, 48, 52, 51], |
     |     5: [32, 29, 43, 32, 32, 36, 22, 48, 38, 29], |
-    | }                                                |  
+    | }                                                |
     +--------------------------------------------------+
 
 - Ordenar cada una de las listas de edades, asociadas al número de
@@ -44,7 +44,7 @@ Algunos ejemplos de diálogo de este programa serían:
     | 5: [48, 43, 38, 36, 32, 32, 32, 29, 29, 22]      |
     +--------------------------------------------------+
 """
-from unittest import main, TestCase
+import unittest
 
 asistentes = {
     1: [43, 39, 23, 52, 21, 48, 31, 26, 55, 32],
@@ -66,12 +66,12 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swapped = True
-        if swapped == False:
+        if not swapped:
             break
     return arr
 
 
-def main_():
+def main():
     ordenado = dict(
         map(lambda k: (k, bubble_sort(asistentes[k])[::-1]), asistentes)
     )
@@ -83,13 +83,13 @@ def main_():
         print(f"{k}: {ordenado[k]}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_bubble_sort(self):
         self.assertEqual(bubble_sort([4, 2, 1, 3, 5]), [1, 2, 3, 4, 5])
-        self.assertEqual(bubble_sort([3, 2, 4, 1, 5])[::-1], [5, 4, 3, 2, 1 ])
+        self.assertEqual(bubble_sort([3, 2, 4, 1, 5])[::-1], [5, 4, 3, 2, 1])
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and commnent the next one to run test
-    main_()
+    # unittest.main() # uncomment/commnent to run test
+    main()

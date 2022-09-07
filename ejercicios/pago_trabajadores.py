@@ -18,7 +18,7 @@ años laborados. Considera lo siguiente:
 NOTE: Se opta por mejorar el diseño, por ello el tipo pasa a ser un
     diccionario.
 """
-from unittest import main, TestCase
+import unittest
 # pip install prototools
 from prototools import int_input, menu_input
 
@@ -48,7 +48,7 @@ def main_():
     print(f"Pago total: {monto(horas, tipo, años)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_tipo(self):
         self.assertEqual(TIPO["completo"], 20)
@@ -66,5 +66,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
+    # unittest.main() # uncomment/comment to run tests
     main_()

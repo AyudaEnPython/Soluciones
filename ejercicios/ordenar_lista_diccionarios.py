@@ -38,7 +38,7 @@ def ordenar(arr: HashMap, key: str) -> HashMap:
 
 def main():
     ordered_hashmap = ordenar(hashmap, "Value")
-    #ordered_hashmap = sorted(hashmap, key=lambda x: x["Value"])
+    # ordered_hashmap = sorted(hashmap, key=lambda x: x["Value"])
     for key in ordered_hashmap:
         print(f"Key = {key['Key']}, Value = {key['Value']}")
 
