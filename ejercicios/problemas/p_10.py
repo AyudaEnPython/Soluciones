@@ -17,7 +17,7 @@ def _paralelogramo(b: float, h: float) -> AreaPerimetro:
 
 
 def _trapecio(B: float, b: float, h: float, c: float) -> AreaPerimetro:
-    return (B + b)/2 * h , (B + b) + 2 * c
+    return (B + b)/2 * h, (B + b) + 2 * c
 
 
 def _rombo(d1: float, d2: float, a: float) -> AreaPerimetro:
@@ -47,7 +47,7 @@ class App(Menu):
         area, perimetro = _paralelogramo(b, h)
         print(f"El area del paralelogramo es: {area}")
         print(f"El perimetro del paralelogramo es: {perimetro}")
-    
+
     def trapecio(self):
         B = float_input("Ingrese el valor de la base mayor: ")
         b = float_input("Ingrese el valor de la base menor: ")
@@ -56,7 +56,7 @@ class App(Menu):
         area, perimetro = _trapecio(B, b, h, c)
         print(f"El area del trapecio es: {area}")
         print(f"El perimetro del trapecio es: {perimetro}")
-    
+
     def rombo(self):
         d1 = float_input("Ingrese el valor de la diagonal mayor: ")
         d2 = float_input("Ingrese el valor de la diagonal menor: ")

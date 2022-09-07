@@ -7,7 +7,7 @@ def solver(n: int) -> int:
 
 
 def main():
-    print(solver(200)) # 0.2222...
+    print(solver(200))  # 0.2222...
 
 
 if __name__ == "__main__":

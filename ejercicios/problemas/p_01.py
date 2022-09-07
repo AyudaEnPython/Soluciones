@@ -6,9 +6,9 @@ from typing import Tuple, Union
 
 # https://github.com/AyudaEnPython/Soluciones/blob/main/soluciones/ecuacion_2do_grado.py
 def solve(
-    a: Union[int, float], 
-    b: Union[int, float], 
-    c: Union[int, float]
+    a: Union[int, float],
+    b: Union[int, float],
+    c: Union[int, float],
 ) -> Tuple[float, float]:
     d = b**2 - 4*a*c
     if d < 0:

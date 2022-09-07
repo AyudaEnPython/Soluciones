@@ -9,7 +9,7 @@ def solver(r: float, theta: float) -> float:
 
 def main():
     r = 13
-    theta = 0.3944444 # 22.6°
+    theta = 0.3944444  # 22.6°
     print(solver(r, theta))
 
 
