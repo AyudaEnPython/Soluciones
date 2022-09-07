@@ -10,7 +10,7 @@ from typing import Dict
 
 # utilizar cualquier función para contar vocales de:
 # https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/contar_vocales.py
-# y modificar la función para que devuelva el total de vocales 
+# y modificar la función para que devuelva el total de vocales
 
 
 def contar_vocales_dc(s: str) -> Dict[str, int]:

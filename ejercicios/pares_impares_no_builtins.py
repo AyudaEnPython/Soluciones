@@ -13,7 +13,7 @@ listas de números enteros.
     igual a 100, N es la cantidad de números pares a mostrar (validar
     N):
     Ejemplo:
-    
+
     Input: 19
     Output: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30,
             32, 34, 36, 38]
@@ -33,7 +33,7 @@ listas de números enteros.
         11, 2, 9, 5, 9, 4, 8, 18, 8, 10, 5, 14, 19, 10, 9, 16, 17,
         5, 8, 6, 5, 19, 20, 8, 6
     )
-    
+
     Realice un algoritmo en Python que calcule:
     a. La cantidad de números pares y la cantidad de números impares.
     b. El porcentaje de números pares y el porcentaje de números impares.
@@ -84,13 +84,18 @@ aleatorios = (
     8, 2, 16, 17, 7, 2, 6, 7, 17, 1, 14, 3, 13, 8, 17, 11, 11, 2, 9, 5, 9, 4,
     8, 18, 8, 10, 5, 14, 19, 10, 9, 16, 17, 5, 8, 6, 5, 19, 20, 8, 6,
 )
-pares = list(filter(lambda x: x%2 == 0, aleatorios))
-impares = list(filter(lambda x: x%2 != 0, aleatorios))
-print(len(pares), len(impares))                                             # a
-print((len(pares)*100)/len(aleatorios), (len(impares)*100)/len(aleatorios)) # b
-print(sum(pares)/len(pares), sum(impares)/len(impares))                     # c
-print(max(pares), max(impares))                                             # e
-print(min(pares), min(impares))                                             # d
+pares = list(filter(lambda x: x % 2 == 0, aleatorios))
+impares = list(filter(lambda x: x % 2 != 0, aleatorios))
+# a
+print(len(pares), len(impares))
+# b
+print((len(pares)*100)/len(aleatorios), (len(impares)*100)/len(aleatorios))
+# c
+print(sum(pares)/len(pares), sum(impares)/len(impares))
+# e
+print(max(pares), max(impares))
+# d
+print(min(pares), min(impares))
 
 # 3
 par = Counter(pares).most_common(1)

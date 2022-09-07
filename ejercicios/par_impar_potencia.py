@@ -15,7 +15,7 @@ def solucion(n: int) -> int:
     :type n: int
     :return: Número elevada a al cubo o al cuadrado
     :rtype: int
-    
+
     >>> solucion(3)
     9
     >>> solucion(4)

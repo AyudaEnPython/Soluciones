@@ -29,7 +29,7 @@ def f_c(s: str, n: int) -> bool:
 def solver(f: Callable, s: str, n: int) -> None:
     """Evalua las palabras de una cadena de texto 's', si existe alguna
     palabra cuya longuitud es mayor o igual a 'n' imprime 'Hay palabras
-    largas', de lo contrario imprime 'No hay palabras largas' 
+    largas', de lo contrario imprime 'No hay palabras largas'
 
     :param f: Función de evaluación
     :f type: Callable
@@ -62,7 +62,7 @@ class Test(TestCase):
             self.assertFalse(f_a(case, 5))
             self.assertFalse(f_b(case, 5))
             self.assertFalse(f_c(case, 5))
-    
+
     @patch("sys.stdout", new_callable=io.StringIO)
     def assert_stdout(self, expected_output, mock_output, f=None, args=None):
         if f and args is not None:
@@ -79,7 +79,7 @@ class Test(TestCase):
 if __name__ == "__main__":
     main()
     # one-liner:
-    # 
+    #
     # print(
     #   "Hay palabras largas" if any(len(e) >= 6 for e in input("> ").split())
     #   else "No hay palabras largas"

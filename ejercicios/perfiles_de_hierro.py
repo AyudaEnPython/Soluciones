@@ -1,10 +1,10 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-Una fabrica dedicada a la producción de perfiles de hierro posee una linea 
-de producción donde se deben garantizar la calidad de los perfiles, una 
+Una fabrica dedicada a la producción de perfiles de hierro posee una linea
+de producción donde se deben garantizar la calidad de los perfiles, una
 forma de garantizar la calidad es el uso de sensores tipo barrera que
 permiten medir la distancia de cada perfil de hierro, para la empresa cada
-perfil debe tener entre 1.2 y 1.5 metros y el poceso permite seleccionar la 
+perfil debe tener entre 1.2 y 1.5 metros y el poceso permite seleccionar la
 cantidad de perfiles que se desean.
 
 Confeccionar un programa que pida ingresar por teclado la cantidad de piezas
