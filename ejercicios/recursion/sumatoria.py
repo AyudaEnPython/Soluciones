@@ -24,7 +24,9 @@ Algunos ejemplos del diálogo de este programa serían:
     | Output: 63                              |
     +-----------------------------------------+
 """
-from unittest import main, TestCase
+import unittest
+# pip install prototools
+from prototools import int_input
 
 
 def K(n: int, p: int) -> int:
@@ -34,13 +36,13 @@ def K(n: int, p: int) -> int:
         return n*p + K(n-1, p)
 
 
-def main_():
-    n = int(input("Input n: "))
-    p = int(input("Input p: "))
+def main():
+    n = int_input("Input n: ")
+    p = int_input("Input p: ")
     print(f"Output: {K(n, p)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_K(self):
         self.assertEqual(K(5, 2), 30)
@@ -48,5 +50,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run the test
-    main_()
+    # unittest.main()
+    main()

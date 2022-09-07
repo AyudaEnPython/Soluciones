@@ -25,13 +25,15 @@ Algunos ejemplos del diálogo de este programa serían:
     | Output: 30                              |
     +-----------------------------------------+
 """
-from unittest import main, TestCase
+import unittest
+# pip install prototools
+from prototools import int_input
 # Ejercicio idéntico a:
 # https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/recursion/sumatoria.py
 # solo cambia la multiplicación por potencia (retorno del caso base cambia a 1)
 
 
-def E(n: int, p: int) -> int: # Big O -> O(n)
+def E(n: int, p: int) -> int:  # Big O -> O(n)
     if n == 1:
         return 1
     else:
@@ -39,12 +41,12 @@ def E(n: int, p: int) -> int: # Big O -> O(n)
 
 
 def main_():
-    n = int(input("Input n: "))
-    p = int(input("Input p: "))
+    n = int_input("Input n: ")
+    p = int_input("Input p: ")
     print(f"Output: {E(n, p)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_E(self):
         self.assertEqual(E(2, 1), 3)
@@ -52,5 +54,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    #main() # uncomment this line and comment the next one to run the test
+    # unittest.main()
     main_()

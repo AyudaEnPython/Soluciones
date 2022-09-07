@@ -15,7 +15,7 @@ Algunos ejemplos de diálogo de este programa serían:
     | Output: 6                               |
     +-----------------------------------------+
 """
-from unittest import main, TestCase
+import unittest
 from typing import List
 
 
@@ -27,7 +27,7 @@ def suma_impares(arr: List[int]) -> int:
     return suma_impares(arr[1:])
 
 
-def main_():
+def main():
     a = [1, 2, 3, 4, 5]
     print("Input:", a)
     print("Output:", suma_impares(a))
@@ -36,7 +36,7 @@ def main_():
     print("Output:", suma_impares(b))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_suma_impares(self):
         self.assertEqual(suma_impares([1, 2, 3, 4, 5]), 9)
@@ -47,5 +47,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    #main() # uncomment this line and comment the next one to run test
-    main_()
+    # unittest.main()
+    main()

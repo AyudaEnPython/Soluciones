@@ -14,13 +14,15 @@ Algunos ejemplos de diálogo de este programa serían:
     | Input: 111                              |
     | Output: 0                               |
     +-----------------------------------------+
-    
+
     +-----------------------------------------+
     | Input: 2220                             |
     | Output: 4                               |
     +-----------------------------------------+
 """
-from unittest import main, TestCase
+import unittest
+# pip install prototools
+from prototools import int_input
 
 
 def contar_digitos_pares(n: int) -> int:
@@ -39,13 +41,13 @@ def contar_digitos_pares(n: int) -> int:
         return contar_digitos_pares(n // 10)
 
 
-def main_():
-    n = int(input('Ingrese un número entero: '))
+def main():
+    n = int_input('Ingrese un número entero: ')
     print(f"Input: {n}")
     print(f"Output: {contar_digitos_pares(n)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_contar_digitos_pares(self):
         self.assertEqual(contar_digitos_pares(101), 1)
@@ -59,5 +61,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()
+    main()

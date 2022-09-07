@@ -19,12 +19,14 @@ O el caso en que n = 4, el resultado de la función sería:
 NOTE: Se opta por cambiar el nombre de la función sumaSerie por
     suma_serie (PEP8).
 """
-from unittest import main, TestCase
+import unittest
+# pip install prototools
+from prototools import int_input
 
 
 def suma_serie(n: int) -> int:
     """Suma los elementos de la serie E_i = i^3 + 5, desde 1 hasta n.
-    
+
     :param n: número de elementos de la serie
     :n type: int
     :return: suma de los elementos de la serie
@@ -36,12 +38,12 @@ def suma_serie(n: int) -> int:
         return (n ** 3 + 5) + suma_serie(n - 1)
 
 
-def main_():
-    n = int(input("Input: "))
+def main():
+    n = int_input("Input: ")
     print(f"Output: {suma_serie(n)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_suma_serie(self):
         self.assertEqual(suma_serie(3), 51)
@@ -49,5 +51,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    #main() # uncomment this line and comment the next one to run test
-    main_()
+    # unittest.main()
+    main()

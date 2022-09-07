@@ -25,11 +25,11 @@ con mayor cantidad de números impares en una matriz.
     | Output: La fila 0 tiene mayor cantidad de números impares. |
     +------------------------------------------------------------+
 """
+import unittest
 from typing import List
-from unittest import main, TestCase
 
 
-def contar_impares(arr: List[int]) -> int: # helper function
+def contar_impares(arr: List[int]) -> int:  # helper function
     """Determina la cantidad de números impares en una lista.
 
     :param arr: Lista de números enteros.
@@ -59,29 +59,29 @@ def mayor_fila(arr: List[List[int]], pos: int = 0) -> int:
     return pos
 
 
-def main_():
+def main():
     m = []
     n = int(input("Cantidad de filas: "))
     print("Ingresar elementos de cada fila separados por comas (,)")
     print("Ejemplo: 1, 2, 3, 4\n")
     for i in range(n):
         m.append([int(x) for x in input("Fila {}: ".format(i)).split(",")])
-    print(f"\nM = [")
+    print("\nM = [")
     for fila in m:
         print(f"  {fila},")
-    print(f"]")
+    print("]")
     print(
         f"Output: La fila {mayor_fila(m)}"
         f" tiene mayor cantidad de números impares."
     )
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_mayor_fila(self):
         self.assertEqual(
             mayor_fila([
-                [1, 2, 3, 4,],
+                [1, 2, 3, 4],
                 [5, 7, 9, 10, 3, 3, 3, 3],
                 [1, 4, 6],
                 [8, 7, 1, 3, 5],
@@ -118,5 +118,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()
+    main()

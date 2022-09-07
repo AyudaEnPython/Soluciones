@@ -14,7 +14,7 @@ diálogo de este programa serían (funcion sugerida):
     | lista = []                                                 |
     | listaSerie(lista, 1, 5)                                    |
     | print(lista) # [6, 13, 32, 69, 130]                        |
-    +------------------------------------------------------------+                 
+    +------------------------------------------------------------+
 
     +------------------------------------------------------------+
     | lista = []                                                 |
@@ -24,13 +24,13 @@ diálogo de este programa serían (funcion sugerida):
 
 NOTE: Se opta por cambiar el nombre de la función y la variable (PEP8).
 """
-from unittest import main, TestCase
+import unittest
 from typing import List
 
 
 def serie_recursiva(arr: List[int], a: int, b: int) -> List[int]:
     """Devuelve la serie E_i = i^3 + 5, desde 1 hasta n.
-    
+
     :param arr: Lista vacía.
     :arr type: List[int]
     :param a: Inicio de la serie.
@@ -46,7 +46,7 @@ def serie_recursiva(arr: List[int], a: int, b: int) -> List[int]:
     return serie_recursiva(arr, a+1, b)
 
 
-def main_():
+def main():
     serie = []
     a = int(input("Inicio de la serie: "))
     b = int(input("Fin de la serie: "))
@@ -54,7 +54,7 @@ def main_():
     print(f"Output: {serie}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_serie_recursiva(self):
         self.assertEqual(
@@ -68,5 +68,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    #main() # uncomment this line and comment the next one to run test
-    main_()
+    # unittest.main()
+    main()

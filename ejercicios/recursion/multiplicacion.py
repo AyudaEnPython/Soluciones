@@ -37,7 +37,7 @@ def multiplicar_(a: int, b: int) -> int:
 
 
 class Test(TestCase):
-    
+
     def test_multiplicar(self):
         self.assertEqual(multiplicar(2, 3), 6)
         self.assertEqual(multiplicar(3, 4), 12)
