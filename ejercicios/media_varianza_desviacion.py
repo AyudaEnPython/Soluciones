@@ -3,9 +3,9 @@
 Escribir una función que reciba una muestra de números en una lista y
 devuelva un diccionario con su media, varianza y desviación estándar.
 """
-from typing import Dict, List
-from unittest import main, TestCase
+import unittest
 from statistics import mean, pvariance, pstdev, stdev
+from typing import Dict, List
 
 
 def media_varianza_desviacion(numeros: List[float]) -> Dict[str, float]:
@@ -32,10 +32,8 @@ def stdev_(numeros: List[float]) -> float:
     :rtype: float
     """
     return (
-        sum(
-            (x - (sum(numeros) / len(numeros))) ** 2 for x in numeros) /
-            (len(numeros) - 1
-        )
+        sum((x - (sum(numeros) / len(numeros))) ** 2 for x in numeros) /
+        (len(numeros) - 1)
     ) ** 0.5
 
 
@@ -47,7 +45,7 @@ def main_():
     print(f"Desviación estándar: {datos['desviacion']}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_media_varianza_desviacion(self):
         n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -67,5 +65,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main() # uncomment this line and comment the next one to run tests
+    unittest.main()  # uncomment/comment to run tests
     # main_()

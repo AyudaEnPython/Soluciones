@@ -8,6 +8,7 @@ final la siguiente información:
 Dentro de ... días, usted cobrará ... pesos.
 """
 
+
 def monto_plazo_fijo(capital: float, tiempo: int, tasa: float) -> float:
     return capital * (1 + tasa / 100) ** tiempo
 

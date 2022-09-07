@@ -28,9 +28,9 @@ Algunos ejemplos de diálogo de este programa serían:
 
 NOTE: Se opta por añadir un control errores para el rango de notas.
 """
-from typing import Dict, List 
-from unittest import main, TestCase
-# ejercicio similar a 
+import unittest
+from typing import Dict, List
+# ejercicio similar a
 # https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/aprobados_desaprobados.py
 
 
@@ -72,7 +72,7 @@ def resultados(arr: List[int]) -> Dict[str, float]:
     """
     llaves = ("cantidad", "mayores", "menores", "promedio")
     return {
-        k:v for k, v in zip(
+        k: v for k, v in zip(
             llaves, (
                 len(arr),
                 len(list(filter(lambda x: x >= 11, arr))),
@@ -83,7 +83,7 @@ def resultados(arr: List[int]) -> Dict[str, float]:
     }
 
 
-def main_():
+def main():
     notas = ingresar_notas()
     datos = resultados(notas)
     print(f"\nCantidad de notas: {datos['cantidad']}")
@@ -92,7 +92,7 @@ def main_():
     print(f"Promedio: {datos['promedio']}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data = [12, 10, 6, 15, 11]
 
@@ -106,5 +106,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()  # uncomment/comment to run tests
+    main()
