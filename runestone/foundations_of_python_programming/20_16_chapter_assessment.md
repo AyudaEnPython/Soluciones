@@ -28,6 +28,8 @@ apples."` or "A basket of 50 blue apples." (Writing some test code that
 creates instances and assigns values to variables may help you solve this
 problem!)
 ```python
+
+
 class AppleBasket:
 
     def __init__(self, color: str, quantity: int) -> None:
@@ -49,6 +51,8 @@ instance of `BankAccount`, you see `"Your account, [name goes here], has [start_
 dollars."` Create an instance of this class with `"Bob"` as the name and `100` as the
 amount. Save this to the variable `t1`.
 ```python
+
+
 class BankAccount:
 
     def __init__(self, name: str, amount: int) -> None:

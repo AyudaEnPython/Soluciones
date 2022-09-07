@@ -46,7 +46,7 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
 - Defining your own Classes
   - 20.16. [Chapter Assessment](foundations_of_python_programming/20_16_chapter_assessment.md)
 - Building Programs
-  - 21.5. [Exercises]
+  - 21.5. [Exercises](foundations_of_python_programming/21_05_exercises.md)
 - Inheritance
   - 22.7. [Chapter Assessment]()
 - More on Accumulation: Map, Filter, List Comprehension, and Zip
