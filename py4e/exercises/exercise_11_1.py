@@ -58,4 +58,4 @@ for linea in archivo:
         for numero in numeros:
             suma += int(numero)
 archivo.close()
-print(suma) # output: 372851
+print(suma)  # output: 372851

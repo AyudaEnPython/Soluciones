@@ -28,7 +28,7 @@ recuentos, ordenados por hora como se muestra a continuación.
     +------------+
 """
 
-archivo = input("Nombre de archivo: ") # data/mbox-short.txt
+archivo = input("Nombre de archivo: ")  # data/mbox-short.txt
 f = open(archivo)
 horas = []
 for linea in f:

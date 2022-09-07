@@ -52,7 +52,7 @@ Here is a sample execution of a solution:
 
 The answer to the assignment for this execution is "Anayah".
 """
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 from bs4 import BeautifulSoup
 import ssl
 

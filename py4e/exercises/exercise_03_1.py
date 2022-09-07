@@ -14,7 +14,7 @@ paga debe ser 498.75).
 
 Debes utilizar "input" para leer una cadena y "float" para convertir la
 cadena en un número. No se preocupe por la comprobación de errores en
-la entrada del usuario: suponga que el usuario escribe los números 
+la entrada del usuario: suponga que el usuario escribe los números
 correctamente.
 """
 

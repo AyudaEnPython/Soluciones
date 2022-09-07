@@ -25,7 +25,7 @@ del archivo.
 
 resultado = 0
 cantidad = 0
-archivo = input("Nombre de archivo: ") # data/mbox-short.txt
+archivo = input("Nombre de archivo: ")  # data/mbox-short.txt
 f = open(archivo)
 for linea in f:
     if linea.startswith("X-DSPAM-Confidence:"):

@@ -19,7 +19,7 @@ muestra.
 """
 
 resultado = []
-archivo = input("Nombre de archivo: ") # data/romeo.txt
+archivo = input("Nombre de archivo: ")  # data/romeo.txt
 f = open(archivo)
 for linea in f:
     for palabra in linea.split():

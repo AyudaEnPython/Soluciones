@@ -26,8 +26,8 @@ shown in http://www.py4e.com/code3/geojson.py
 
 Test Data / Sample Execution
 
-You can test to see if your program is working with a location of 
-"South Federal University" which will have a place_id of 
+You can test to see if your program is working with a location of
+"South Federal University" which will have a place_id of
 "ChIJLzabHQ7i2IgRzeZb_AgUj0Q".
 
     +------------------------------------------+
@@ -54,7 +54,7 @@ Make sure to retreive the data from the URL specified above and not the
 normal Google API. Your program should work with the Google API - but
 the place_id may not match for this assignment.
 """
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 import json
 import ssl
 
@@ -76,8 +76,8 @@ data = uh.read().decode()
 
 print("Enter location:", LOCATION)
 print("Retrieving", url)
-print("Retrieved", len(data), "characters") # 1646
+print("Retrieved", len(data), "characters")  # 1646
 
 js = json.loads(data)
 
-print(js['results'][0]['place_id']) # ChIJt8-EJZu1RIYR3iFKF0_uMYE
+print(js['results'][0]['place_id'])  # ChIJt8-EJZu1RIYR3iFKF0_uMYE

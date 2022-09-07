@@ -58,7 +58,7 @@ Sample Execution
 
 """
 import json
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 import ssl
 
 URL = "http://py4e-data.dr-chuck.net/comments_18423.json"
@@ -72,12 +72,12 @@ data = uh.read().decode()
 
 print("Enter location:", URL)
 print('Retrieving', URL)
-print('Retrieved', len(data), 'characters') # 2745
+print('Retrieved', len(data), 'characters')  # 2745
 
 js = json.loads(data)
 
 suma = 0
 for item in js['comments']:
     suma += int(item['count'])
-print('Count:', len(js['comments'])) # 50
-print("Sum:", suma) # 2358
+print('Count:', len(js['comments']))  # 50
+print("Sum:", suma)  # 2358

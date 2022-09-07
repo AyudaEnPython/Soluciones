@@ -53,5 +53,7 @@ for line in fh:
     if row is None:
         cur.execute('INSERT INTO Counts (org, count) VALUES (?, 1)', (org,))
     else:
-        cur.execute('UPDATE Counts SET count = count + 1 WHERE org = ?', (org,))
+        cur.execute(
+            'UPDATE Counts SET count = count + 1 WHERE org = ?', (org,)
+        )
 conn.commit()

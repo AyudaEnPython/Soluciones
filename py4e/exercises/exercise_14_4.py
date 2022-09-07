@@ -5,7 +5,7 @@ This application will read roster data in JSON format, parse the file,
 and then produce an SQLite database that contains a User, Course, and
 Member table and populate the tables from the data file.
 
-You can base your solution on this code: 
+You can base your solution on this code:
 http://www.py4e.com/code3/roster/roster.py - this code is incomplete as
 you need to modify the program to store the role column in the Member
 table to complete the assignment.
@@ -20,7 +20,7 @@ command:
 
     +-----------------------------------------------------------------+
     | SELECT hex(User.name || Course.title || Member.role ) AS X FROM |
-    |   User JOIN Member JOIN Course                                  | 
+    |   User JOIN Member JOIN Course                                  |
     |   ON User.id = Member.user_id AND Member.course_id = Course.id  |
     |   ORDER BY X                                                    |
     +-----------------------------------------------------------------+
@@ -68,26 +68,30 @@ for entry in json_data:
     title = entry[1]
     role = entry[2]
 
-    cur.execute('''INSERT OR IGNORE INTO User (name)
-        VALUES ( ? )''', ( name, ) )
-    cur.execute('SELECT id FROM User WHERE name = ? ', (name, ))
+    cur.execute(
+        '''INSERT OR IGNORE INTO User (name) VALUES ( ? )''', (name,)
+    )
+    cur.execute('SELECT id FROM User WHERE name = ? ', (name,))
     user_id = cur.fetchone()[0]
-
-    cur.execute('''INSERT OR IGNORE INTO Course (title)
-        VALUES ( ? )''', ( title, ) )
-    cur.execute('SELECT id FROM Course WHERE title = ? ', (title, ))
+    cur.execute(
+        '''INSERT OR IGNORE INTO Course (title) VALUES ( ? )''', (title,)
+    )
+    cur.execute('SELECT id FROM Course WHERE title = ? ', (title,))
     course_id = cur.fetchone()[0]
-
-    cur.execute('''INSERT OR REPLACE INTO Member
+    cur.execute(
+        '''INSERT OR REPLACE INTO Member
         (user_id, course_id, role) VALUES ( ?, ?, ? )''',
-        ( user_id, course_id, role ) )
+        (user_id, course_id, role)
+    )
 
 conn.commit()
 
-cur.execute('''SELECT hex(User.name || Course.title || Member.role ) AS X
+cur.execute(
+    '''SELECT hex(User.name || Course.title || Member.role ) AS X
     FROM User JOIN Member JOIN Course
     ON User.id = Member.user_id AND Member.course_id = Course.id
-    ORDER BY X''')
+    ORDER BY X'''
+)
 
 row = cur.fetchone()
-print(row[0]) # 416164616D736934333030
+print(row[0])  # 416164616D736934333030

@@ -1,7 +1,7 @@
 """
 Instructions
 
-If you don't already have it, install the SQLite Browser from 
+If you don't already have it, install the SQLite Browser from
 http://sqlitebrowser.org/
 Then, create a SQLite database or use an existing database and create a
 table in the database called "Ages".
@@ -54,4 +54,4 @@ cur.execute("INSERT INTO Ages (name, age) VALUES ('Abia', 16)")
 
 cur.execute("SELECT hex(name || age) AS X FROM Ages ORDER BY X")
 row = cur.fetchone()
-print(row[0]) # 416269613136
+print(row[0])  # 416269613136
