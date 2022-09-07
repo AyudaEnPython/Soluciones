@@ -24,4 +24,4 @@ t = m + d + c + u
 print(t)
 
 # alternativamente usando list comprehension
-#print(sum([int(s) for s in str(n)]))
+# print(sum([int(s) for s in str(n)]))
