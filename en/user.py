@@ -20,7 +20,7 @@ if __name__ == '__main__':
     user_1 = User("Joe", "Satriani")
     user_2 = User("Steve", "Vai")
     user_3 = User("Eric", "Johnson")
-    
+
     print("G3: Live in Concert 1997")
     for user in (user_1, user_2, user_3):
         print(f"- {user}")
