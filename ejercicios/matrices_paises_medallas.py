@@ -47,7 +47,7 @@ m: List[List[int, int, int]] = [
 
 medallas: List[str, str, str] = ["Oro", "Plata", "Bronce"]
 max_: List[int, int, int] = [sum([i[j] for i in m]) for j in range(len(m[0]))]
-result: Dict[str, int] = {k:v for k,v in zip(medallas, max_)}
+result: Dict[str, int] = {k: v for k, v in zip(medallas, max_)}
 
 # Opcional ===================================================================
 paises = ("Estados Unidos", "Rusia", "Inglaterra", "China", "Alemania")

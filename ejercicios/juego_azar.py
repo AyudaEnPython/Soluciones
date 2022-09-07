@@ -49,25 +49,30 @@ def main(funcion):
         if aciertos == 4:
             cuatro.append(posicion)
     print(f"Número ganador: {' - '.join(map(str, ganador))}")
-    print(f"Ganadores: {len(seis)}\n5 aciertos: {len(cinco)}\n"
-        f"4 aciertos: {len(cuatro)}")
+    print(
+        f"Ganadores: {len(seis)}\n5 aciertos: {len(cinco)}\n"
+        f"4 aciertos: {len(cuatro)}"
+    )
 
 
 def main_test(_f):
     s, f, f_ = [], [], []
-    w = [ 1, 24, 52, 29, 94, 13]
+    w = [1, 24, 52, 29, 94, 13]
     ps = [
         [19, 24, 52, 29, 94, 13],
-        [ 1, 24, 53, 29, 94, 13],
+        [1, 24, 53, 29, 94, 13],
         [12, 44, 52, 59, 34, 23],
-        [52, 94,  1, 13, 24, 29],
-        [ 1, 24,  5, 29,  4, 13],
-        [ 1,  2,  3,  4,  5,  6],
+        [52, 94, 1, 13, 24, 29],
+        [1, 24, 5, 29, 4, 13],
+        [1, 2, 3, 4, 5, 6],
     ]
-    for i, p in enumerate(ps): 
+    for i, p in enumerate(ps):
         t = _f(p, w)
-        s.append(i) if t == 6 else (f.append(i)
-        if t == 5 else(f_.append(i) if t==4 else None))
+        s.append(i) if t == 6 else (
+            f.append(i) if t == 5 else (
+                f_.append(i) if t == 4 else None
+            )
+        )
     return tuple(map(len, (s, f, f_)))
 
 

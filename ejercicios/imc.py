@@ -10,11 +10,11 @@ Normal = 18.5 - 24.9
 Overweight = 25 - 29.9
 Obesity = 30 o más
 
-Hagamos que averiguar tu IMC sea más rápido y fácil, creando un script 
-que tome el peso y la altura de una persona como entrada y genere la 
+Hagamos que averiguar tu IMC sea más rápido y fácil, creando un script
+que tome el peso y la altura de una persona como entrada y genere la
 categoría de IMC correspondiente.
 """
-from unittest import main, TestCase
+import unittest
 # pip install prototools
 from prototools import int_input, float_input
 
@@ -132,7 +132,7 @@ def main_dict():
         )
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_imc(self):
         self.assertAlmostEqual(imc(85, 1.9), 23.55)
@@ -148,6 +148,6 @@ if __name__ == "__main__":
     # import doctest
 
     # doctest.testmod()
-    # main()             # Uncomment the above lines to run tests
-    # print(solver())    # for single solution without name
-    main_dict()         # or use main_list()
+    # unittest.main()  # Uncomment the above lines to run tests
+    # print(solver())  # for single solution without name
+    main_dict()        # or use main_list()

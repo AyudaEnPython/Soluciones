@@ -95,7 +95,9 @@ def calcular_impuesto_2(estrato: int, valor: int, pisos: int) -> int:
     return valor * (estrato/100) * pisos
 
 
-def main(f: Callable, ss: List[str], min: int, max: int, u: bool, n: int) -> None:
+def main(
+    f: Callable, ss: List[str], min: int, max: int, u: bool, n: int
+) -> None:
     try:
         a = validar_caracteres(input(f"{ss[0]}: "), u=u, n=n)
         b = validar_rango(_int(input(f"{ss[1]}: ")), minimo=min, maximo=max)
@@ -113,7 +115,7 @@ if __name__ == "__main__":
         ["Matrícula", "Estrato", "Pisos", "Valor"],
     )
     valores = (
-        (2000 , 2022, False, 6),
+        (2000, 2022, False, 6),
         (1, 6, False, 7),
     )
     for funcion, etiqueta, valor in zip(funciones, etiquetas, valores):
