@@ -10,7 +10,7 @@ NOTE: Add tests later.
 
 def encriptar(frase: str, clave: str, s: str = "02468") -> str:
     """Función que encripta una frase.
-    
+
     :param frase: Frase a encriptar.
     :type frase: str
     :param clave: Clave de encriptación.

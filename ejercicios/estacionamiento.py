@@ -61,8 +61,8 @@ class Cronometro:
 
 
 class Estacionamiento:
-    
-    precios: Dict[str, int] = {k:v for k, v in zip(TIPOS, PRECIOS)}
+
+    precios: Dict[str, int] = {k: v for k, v in zip(TIPOS, PRECIOS)}
 
     def __init__(
         self,
@@ -133,4 +133,4 @@ class Test(unittest.TestCase):
 
 if __name__ == "__main__":
     main_loop(autoseguro_main)
-    # unittest.main() # comment main_lopp and uncomment this line to execute the test
+    # unittest.main()  # comment/uncomment this line to execute the test
