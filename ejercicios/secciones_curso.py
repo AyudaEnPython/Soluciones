@@ -30,7 +30,7 @@ Algunos ejemplos de diálogo de este programa serían:
     | Ingrese una opción (a, b, x): x |
     +---------------------------------+
 """
-from unittest import main, TestCase
+import unittest
 from typing import Dict
 # pip install prototools
 from prototools import int_input, choice_input
@@ -75,17 +75,17 @@ def main_():
         print(PLUGINS[opcion](datos))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data: Dict[int, int] = {101: 29, 102: 30, 201: 25, 202: 27}
 
     def test_maximo(self):
         self.assertEqual(a(self.data), 102)
-    
+
     def test_minimo(self):
         self.assertEqual(b(self.data), 201)
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run tests
+    # unittest.main()  # uncomment/comment to run tests
     main_()

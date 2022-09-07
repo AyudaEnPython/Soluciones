@@ -12,10 +12,10 @@ secuencia se repite dos veces en la primera secuencia.
 
 # ------------------------ Enunciado Modificado -----------------------
 Escribe una función que reciba dos secuencias de letras "a1a2a3...am" y
-"b1b2b3..bn" (siendo m > n) y que devuelva el número de veces que la 
+"b1b2b3..bn" (siendo m > n) y que devuelva el número de veces que la
 segunda secuencia aparece en la primera.
 
-Por ejemplo, dadas las secuencias "afertdeafetk" y "afe", la función 
+Por ejemplo, dadas las secuencias "afertdeafetk" y "afe", la función
 debería retornar 2 puesto que la segunda secuencia se repite dos veces
 en la primera secuencia.
 
