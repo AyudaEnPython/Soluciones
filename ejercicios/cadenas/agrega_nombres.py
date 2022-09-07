@@ -15,11 +15,11 @@ from unittest import main, TestCase
 
 
 # NOTE: Mutabilidad de lista.
-def agrega_nombres(nombres: List[str], datos: Tuple[Tuple[str, str]]) ->int:
+def agrega_nombres(nombres: List[str], datos: Tuple[Tuple[str, str]]) -> int:
     agregados = 0
     for nombre, _ in datos:
         if nombre not in nombres:
-            agregados += 1 
+            agregados += 1
             nombres.append(nombre)
     return agregados
 
@@ -37,7 +37,7 @@ class Test(TestCase):
             agrega_nombres(
                 ["Ramiro", "Alexa"],
                 (("Ana", "Suarez"), ("Ramiro", "Lin")),
-                ), 
+                ),
             1
         )
         self.assertEqual(
@@ -51,4 +51,4 @@ class Test(TestCase):
 
 if __name__ == "__main__":
     main()
-    #main_()
+    # main_()

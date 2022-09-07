@@ -24,8 +24,8 @@ Algunos ejemplos de diálogo de este programa serían:
     | digitos: 4                                |
     +-------------------------------------------+
 """
+import unittest
 from typing import Dict
-from unittest import main, TestCase
 
 
 def contar(frase: str) -> Dict[str, int]:
@@ -53,7 +53,7 @@ def contar(frase: str) -> Dict[str, int]:
     }
 
 
-def main_():
+def main():
     frase = input("Input: ")
     resultado = contar(frase)
     print(f"vocales: {resultado['vocales']}")
@@ -61,7 +61,7 @@ def main_():
     print(f"digitos: {resultado['digitos']}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_contar(self):
         self.assertEqual(
@@ -75,5 +75,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()
+    main()

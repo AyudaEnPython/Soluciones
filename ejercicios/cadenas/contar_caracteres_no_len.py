@@ -17,5 +17,5 @@ def len_alt(ss):
     return sum(1 for _ in ss)
 
 
-print(len_("Esta es una cadena")) # output 18
-print(len_("trabajando.pe")) # output 13
+print(len_("Esta es una cadena"))  # output 18
+print(len_("trabajando.pe"))  # output 13

@@ -19,7 +19,6 @@ def es_diptongo(s: str, n: int = 2) -> bool:
     """
     regex = n * "[aeiou]"
     return re.search(regex, s) is not None
-    
 
 
 def main():

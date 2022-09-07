@@ -42,8 +42,8 @@ def contar_palabra_no_builtin(linea: str, palabra: str) -> int:
 def main():
     cadena = "La casa de la esquina tiene la puerta roja y la ventana"
     palabra = "la"
-    print(contar_palabra(cadena, palabra)) # output: 3
-    #print(contar_palabra_no_builtin(cadena, palabra)) # output: 3
+    print(contar_palabra(cadena, palabra))  # output: 3
+    # print(contar_palabra_no_builtin(cadena, palabra))  # output: 3
 
 
 if __name__ == "__main__":

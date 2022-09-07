@@ -75,8 +75,8 @@ class Test(TestCase):
             self.assertEqual(
                 solver(
                     [9.8, 9.8, 9.8, 9.8, 1.1, 9.8, 9.8, 9.8, 9.8, 9.8]
-                    ), 
-                9
+                ),
+                9,
             )
 
 

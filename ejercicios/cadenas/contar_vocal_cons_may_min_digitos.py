@@ -12,9 +12,9 @@ al terminar, deberá mostrar además 2 de las siguientes acciones:
 
 NOTE: Se opta por ejecutar todas las acciones.
 """
+import unittest
 from time import sleep
 from typing import Dict
-from unittest import main, TestCase
 # Similar al ejercicio (con variaciones mínimas):
 # https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/contar_vocales_consonantes_digitos.py
 
@@ -61,7 +61,7 @@ def mostrar(s: str) -> None:
     print()
 
 
-def main_():
+def main():
     frase = input("Input: ")
     mostrar(frase)
     resultado = contar(frase)
@@ -72,7 +72,7 @@ def main_():
     print(f"digitos: {resultado['digitos']}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_contar(self):
         self.assertEqual(
@@ -102,5 +102,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unitttest.main()
+    main()

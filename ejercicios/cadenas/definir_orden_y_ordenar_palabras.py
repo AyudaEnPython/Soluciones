@@ -5,7 +5,7 @@ parámetros tres cadenas de texto distintos cad_a, cad_b y cad_c y las
 devuelva en orden alfabético de izquierda a derecha.
 
 Definir una función denominada "ordenar_palabras" que solicite tres
-palabras a la persona usuaria. Debe controlar que sean palabras 
+palabras a la persona usuaria. Debe controlar que sean palabras
 distintas y en caso contrario solicitar reingresos hasta que lo sean.
 Luego debe invocar a la función "definir_orden" y mostrar las palabras
 ordenadas.
@@ -28,7 +28,7 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swapped = True
-        if swapped == False:
+        if not swapped:
             break
     return arr
 

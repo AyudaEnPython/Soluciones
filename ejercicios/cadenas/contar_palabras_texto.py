@@ -20,4 +20,4 @@ Theseus decide que todas las parejas deben casarse. Puck termina la
 obra sugiriendo a la audiencia que la obra pudo haber sido un sueño.
 """
 
-print(len(set(texto.split()))) # output: 73
+print(len(set(texto.split())))  # output: 73
