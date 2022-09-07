@@ -42,9 +42,8 @@ Algunos ejemplos de diálogo de este programa serían:
     +-----------------------+
 """
 import io
-from textwrap import dedent
+import unittest
 from typing import Any, List
-from unittest import main, TestCase
 from unittest.mock import patch
 # pip install prototools
 from prototools import Menu, show_matrix
@@ -58,6 +57,7 @@ m = [
     ['C', 'L', '5', 'G'],
     ['A', 'J', '3', '0'],
 ]
+
 
 def _user_input(s, f) -> str:
     """Interfaz para capturar datos de usuario."""
@@ -81,21 +81,21 @@ def find_char(m: List[List[Any]], char: str) -> None:
     print(f'Output:{t}')
 
 
-def main_():
+def main():
     menu = Menu(red("Matrix"), arrow_keys=True)
     menu.add_options(
         ("Mostrar matriz", show_matrix, m),
         ("Mostrar matriz con indices",
-        lambda: show_matrix(m, show_index=True)),
+            lambda: show_matrix(m, show_index=True)),
         ("Mostrar fila",
-        lambda: _user_input("Ingrese fila: ", show_row)),
+            lambda: _user_input("Ingrese fila: ", show_row)),
         ("Buscar caracter",
-        lambda: _user_input("Ingrese caracter: ", find_char)),
+            lambda: _user_input("Ingrese caracter: ", find_char)),
     )
     menu.run()
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     @patch("sys.stdout", new_callable=io.StringIO)
     def assert_stdout(self, expected_output, mock_output, function=None):
@@ -114,5 +114,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()  # uncomment/comment to run tests
+    main()

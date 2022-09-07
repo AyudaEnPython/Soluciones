@@ -1,15 +1,16 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 
+
 def sol_a():
     # pip install prototools
     from prototools import int_input
-    
+
     n = int_input("Ingrese el número de personas: ",  min=1)
     edades = [
         int_input("Ingrese la edad: ", min=1, max=100) for _ in range(n)
     ]
-    
+
     print(f"Mayor edad: {max(edades)}")
     print(f"Menor edad: {min(edades)}")
     print(f"Promedio de edades: {sum(edades) / len(edades)}")

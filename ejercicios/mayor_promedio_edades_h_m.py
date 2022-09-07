@@ -18,7 +18,7 @@ def promedio(arr: List[int]) -> float:
 
 
 def cantidad(arr: List[int], n: int) -> int:
-    return len([e for e in arr if e > n]) 
+    return len([e for e in arr if e > n])
 
 
 def get_data() -> Tuple[List[float], List[float]]:
