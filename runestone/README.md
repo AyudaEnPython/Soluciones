@@ -44,7 +44,7 @@ Link to website ([click here!](https://runestone.academy/ns/books/published/fopp
 - Exceptions
   - 19.6. [Chapter Assessment](foundations_of_python_programming/19_06_chapter_assessment.md)
 - Defining your own Classes
-  - 20.16. [Chapter Assessment]()
+  - 20.16. [Chapter Assessment](foundations_of_python_programming/20_16_chapter_assessment.md)
 - Building Programs
   - 21.5. [Exercises]
 - Inheritance
