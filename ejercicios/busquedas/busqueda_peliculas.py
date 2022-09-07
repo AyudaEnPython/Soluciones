@@ -49,7 +49,7 @@ NOTE: En el enunciado original la lista se llama 'peliculas', cuando el
 """
 # Mismo ejercicio que:
 # https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/busqueda_premios.py
-from unittest import main, TestCase
+import unittest
 
 peliculas = [
     {"titulo": "Shrek", "anio": 2001},
@@ -85,7 +85,7 @@ def binary_search(arr, x):
     return -1
 
 
-def main_():
+def main():
     data = sorted(peliculas, key=lambda x: x["anio"])
     anio = input("Ingresar año: ")
     pos = binary_search(data, int(anio))
@@ -95,10 +95,10 @@ def main_():
         print("No se encontró el año")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data = sorted(peliculas, key=lambda x: x["anio"])
-    
+
     def test_binary_search(self):
         self.assertEqual(binary_search(self.data, 2002), 1)
         self.assertEqual(binary_search(self.data, 2021), -1)
@@ -106,5 +106,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment/comment to run tests
+    main()

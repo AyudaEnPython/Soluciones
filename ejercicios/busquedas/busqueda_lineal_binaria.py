@@ -42,7 +42,7 @@ la lista de claves de cada usuario. Utilice funciones.
 
 NOTE: Se opta por cambiar findTheKey por find_key (PEP8).
 """
-from unittest import main, TestCase
+import unittest
 from typing import Dict, List, Tuple
 
 data = {
@@ -100,12 +100,12 @@ def find_key(
     return -1, "No se encontró el usuario"
 
 
-def main_():
+def main():
     clave = int(input("Ingresar clave de búsqueda: "))
     print(find_key(data, clave))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_ordenar(self):
         self.assertEqual(
@@ -138,5 +138,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment/comment to run tests
+    main()

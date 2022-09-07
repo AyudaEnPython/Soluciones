@@ -14,7 +14,7 @@ encuentra en la lista retornar la posición.
     | Output: 8                                         |
     +---------------------------------------------------+
 """
-from unittest import main, TestCase
+import unittest
 
 
 # Tomado del repositorio del grupo AyudaEnPython:
@@ -26,7 +26,7 @@ def binary_search_unsorted(arr, x):
         mid = (low + high) // 2
         if arr[mid] == x:
             return mid
-        else: # modified to handle unsorted array
+        else:  # modified to handle unsorted array
             if x in arr[mid:]:
                 low = mid + 1
             elif x in arr[0:mid-1]:
@@ -35,14 +35,14 @@ def binary_search_unsorted(arr, x):
                 return -1
 
 
-def main_():
+def main():
     m = [int(x) for x in input("Array: ").split(",")]
     x = int(input("Elemento a buscar: "))
     print(f"Input: {m}, {x}")
     print(f"Output: {binary_search_unsorted(m, x)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_binary_search_unsorted(self):
         self.assertEqual(
@@ -54,5 +54,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment/comment to run tests
+    main()

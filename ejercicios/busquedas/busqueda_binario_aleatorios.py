@@ -36,7 +36,9 @@ def generar_aleatorios(n: int, min_: int = MIN, max_: int = MAX) -> List[int]:
     return [randint(min_, max_) for _ in range(n+1)]
 
 
-# def generar_aleatorios(n: int, min_: int = MIN, max_: int = MAX) -> List[int]:
+# def generar_aleatorios(
+#     n: int, min_: int = MIN, max_: int = MAX
+# ) -> List[int]:
 #     aleatorios = []
 #     for _ in range(n+1):
 #         aleatorios.append(randint(min_, max_))
@@ -55,7 +57,7 @@ def ingresar_n(msg: str) -> int:
             print("Debe ingresar un número")
 
 
-def main_():
+def main():
     N = ingresar_n("Cantidad de elementos: ")
     data = generar_aleatorios(N)
     n = int(input("> "))
@@ -67,4 +69,4 @@ def main_():
 
 
 if __name__ == "__main__":
-    main_()
+    main()

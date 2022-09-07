@@ -46,7 +46,7 @@ y realize el siguiente proceso:
 NOTE: En el enunciado original la lista se llama 'peliculas', cuando el
     mejor nombre para esa lista debería de ser 'ganadores'.
 """
-from unittest import main, TestCase
+import unittest
 
 peliculas = [
     {"anio": 2010, "nombre": "Andre Geim y Konstantín Novosiólov"},
@@ -78,7 +78,7 @@ def binary_search(arr, x):
     return -1
 
 
-def main_():
+def main():
     anio = input("Ingresar año: ")
     pos = binary_search(peliculas, int(anio))
     if pos != -1:
@@ -87,8 +87,8 @@ def main_():
         print("No se encontró el año")
 
 
-class Test(TestCase):
-    
+class Test(unittest.TestCase):
+
     def test_binary_search(self):
         self.assertEqual(binary_search(peliculas, 2010), 0)
         self.assertEqual(binary_search(peliculas, 2021), -1)
@@ -96,5 +96,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main() # uncomment/comment to run tests
+    main()
