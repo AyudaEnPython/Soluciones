@@ -3,13 +3,13 @@
 Escribir una función que calcula el área de un círculo y otra que
 calcule el volumen de un cilindro usando la primera función.
 """
+import unittest
 from math import pi
-from unittest import main, TestCase
 
 
 def area_circulo(radio: float) -> float:
     """Calcula el área de un círculo.
-    
+
     :param radio: Radio del círculo.
     :type radio: float
     :return: Área del círculo.
@@ -20,7 +20,7 @@ def area_circulo(radio: float) -> float:
 
 def volumen_cilindro(radio: float, altura: float) -> float:
     """Calcula el volumen de un cilindro.
-    
+
     :param radio: Radio del cilindro.
     :type radio: float
     :param altura: Altura del cilindro.
@@ -31,14 +31,14 @@ def volumen_cilindro(radio: float, altura: float) -> float:
     return area_circulo(radio) * altura
 
 
-def main_():
+def main():
     radio = float(input("Ingrese el radio del círculo: "))
     print(f"Área del círculo: {area_circulo(radio)}")
     altura = float(input("Ingrese la altura del cilindro: "))
     print(f"Volumen del cilindro: {volumen_cilindro(radio, altura)}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_area_circulo(self):
         self.assertEqual(area_circulo(2), 12.566370614359172)
@@ -48,5 +48,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()
+    main()

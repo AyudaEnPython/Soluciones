@@ -39,8 +39,9 @@ class Cerveza:
 
 def clean_up(s: str) -> Dict[str, float]:
     return {
-        CONVERT[k]: float(v) for k, v in {k:v for k, v in (x.split(": ")
-        for x in s.split(" | "))}.items()
+        CONVERT[k]: float(v)
+        for k, v
+        in {k: v for k, v in (x.split(": ") for x in s.split(" | "))}.items()
     }
 
 

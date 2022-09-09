@@ -4,13 +4,13 @@ Hacer un programa que pueda calcular el perímetro y el área de
 cualquier polígono regular, pero que le pregunte al usuario qué
 desea calcular.
 """
+import unittest
 from math import pi, tan
-from unittest import main, TestCase
 # pip install prototools
 from prototools import Menu, int_input, float_input
 
 
-def perimetro(n: int, l:float) -> float:
+def perimetro(n: int, longitud: float) -> float:
     """Calcula el perimetro de un poligono regular.
 
     :param n: Numero de lados del poligono.
@@ -19,12 +19,12 @@ def perimetro(n: int, l:float) -> float:
     :l type: float
     :return: Perimetro del poligono.
     """
-    return n * l
+    return n * longitud
 
 
-def area(n: int, l:float):
+def area(n: int, long: float) -> float:
     """Calcula el área de un polígono regular.
-    
+
     :param l: longitud de un lado
     :l type: float
     :param n: numero de lados
@@ -32,13 +32,13 @@ def area(n: int, l:float):
     :return: area del poligono
     :rtype: float
     """
-    return ((l**2) * n)/(4 * tan(pi/n))
+    return ((long**2) * n)/(4 * tan(pi/n))
 
 
-def main_():
+def main():
     menu = Menu()
     menu.add_options(
-        ("Perimetro", 
+        ("Perimetro",
             lambda: print(perimetro(
                 int_input("Numero de lados: "),
                 float_input("Longitud de un lado: ")))),
@@ -50,7 +50,7 @@ def main_():
     menu.run()
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_perimetro(self):
         self.assertEqual(perimetro(3, 1), 3)
@@ -64,5 +64,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() uncomment this and comment the next line to run tests
-    main_()
+    # unittest.main()
+    main()
