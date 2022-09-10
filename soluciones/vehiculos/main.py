@@ -17,7 +17,9 @@ def ingresar_datos(tipo):
         airbag = yes_no_input("¿Tiene airbag? (s/n): ")
         return marca, modelo, km, precio, airbag
     else:
-        casco = yes_no_input("¿Tiene casco? (s/n): ", yes_value="s", no_value="n")
+        casco = yes_no_input(
+            "¿Tiene casco? (s/n): ", yes_value="s", no_value="n"
+        )
         return marca, modelo, km, precio, casco
 
 

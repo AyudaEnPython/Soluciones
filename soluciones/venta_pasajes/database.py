@@ -5,7 +5,7 @@ from models import DAO
 
 
 class VentaDAO(DAO):
-    
+
     def __init__(self):
         self._conectar()
 
@@ -67,7 +67,7 @@ class VentaDAO(DAO):
             )
             """
         )
-    
+
     def execute(self, data):
         self.cur.execute(data)
 

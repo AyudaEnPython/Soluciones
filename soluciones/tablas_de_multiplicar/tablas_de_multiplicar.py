@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-#pip install prototools
+# pip install prototools
 from prototools import int_input
 
 MIN, MAX = 1, 10
