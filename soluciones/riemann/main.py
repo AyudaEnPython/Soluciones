@@ -1,6 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 
+
 def f(x: int) -> int:
     return x**2 + 6*x + 3
 
