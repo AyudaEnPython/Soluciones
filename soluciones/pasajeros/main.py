@@ -19,7 +19,7 @@ def ingresar_datos(pasajeros: List[Pasajero]) -> None:
     pasajeros.append(pasajero)
 
 
-def mostrar_destino(pasajeros: List[Pasajero],cedula: str) -> None:
+def mostrar_destino(pasajeros: List[Pasajero], cedula: str) -> None:
     for pasajero in pasajeros:
         if pasajero.cedula == cedula:
             print(f"Nombre: {pasajero.nombre}")
@@ -46,11 +46,11 @@ def main():
         ("Ingresar datos", lambda: ingresar_datos(pasajeros)),
         ("Mostrar destino",
             lambda: mostrar_destino(
-                pasajeros, 
+                pasajeros,
                 input("Ingresar cedula: "))),
         ("Mostrar cantidad de pasajeros a un destino",
             lambda: cantidad_pasajeros(
-                pasajeros, 
+                pasajeros,
                 input("Ingresar ciudad: "))),
     )
     menu.run()
