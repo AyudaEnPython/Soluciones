@@ -24,7 +24,7 @@ def main():
     for k, v in [(col[0], int(col[1])) for col in d]:
         d_[k] += v
     print("\n".join(f"{k},{d_[k]}" for k in d_))
-    
+
     # Ejercicio 4:
     m = sorted(col[2][5:-3] for col in d)
     d_ = dict((x, m.count(x)) for x in m)
@@ -49,7 +49,7 @@ def main():
     for k, v in [(col[1], col[0]) for col in d]:
         d_[k].append(v)
     print("\n".join(f"{i}" for i in list(d_.items())))
-    
+
     # Ejercicio 8:
     d_ = {str(k): [] for k in range(10)}
     for k, v in [(col[1], col[0]) for col in d]:
@@ -70,10 +70,10 @@ def main():
         f"{e[0]},{len(e[-2].split(','))},{len(e[-1].split(','))}"
         for e in d
     ]))
-    
+
     # Ejercicio 11:
     d_ = {k: [] for k in "abcdefg"}
-    for v in [{s:int(col[1]) for s in col[3].split(',')} for col in d]:
+    for v in [{s: int(col[1]) for s in col[3].split(',')} for col in d]:
         for k in v:
             d_[k].append(v[k])
     print("\n".join(f"{k},{sum(d_[k])}" for k in d_))
