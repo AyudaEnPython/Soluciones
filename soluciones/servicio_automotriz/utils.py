@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 import csv
-from typing import Any, Dict, List, Tuple
+from typing import Any, List
 
 Arr = List[List[Any]]
 FILENAME = "data/catalogo.csv"

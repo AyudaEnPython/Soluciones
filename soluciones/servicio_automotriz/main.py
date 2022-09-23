@@ -35,10 +35,10 @@ class App(Menu):
 
     def calculate_price(self) -> None:
         orders = self.catalog.calculate(self.orders)
-        for i, order in  enumerate(orders, 1):
+        for i, order in enumerate(orders, 1):
             print(f"Orden # {i:02d}: {order}")
         print(f"Total: {sum(orders)}")
-    
+
     def show_catalog(self) -> None:
         print(tabulate(
             self.catalog.data, headers=["id", "description", "price"]
