@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 def raiz_cubica(x: int, e: float = 0.01) -> float:
     s = 1
     while abs(((2/3)*s + (1/3)*x/(s**2))**3 - x) >= e:
-        s = (2/3)*s + (1/3)*x/(s**2) # == (1/3)*(2*s + x/(s**2))
+        s = (2/3)*s + (1/3)*x/(s**2)  # == (1/3)*(2*s + x/(s**2))
         logging.info(f"s = {s}")
     return s
 
@@ -25,7 +25,7 @@ def raiz_cuadrada(b: int, r: int = 1, e: float = 0.00001) -> float:
 class Test(unittest.TestCase):
 
     def test_raiz_cubica(self):
-        f = lambda x: x**(1./3.) if x > 0 else -(-x)**(1./3.)
+        f = lambda x: x**(1./3.) if x > 0 else -(-x)**(1./3.)  # noqa: E731
         self.assertAlmostEqual(raiz_cubica(235), f(235), delta=0.1)
         self.assertAlmostEqual(raiz_cubica(-91.6), f(-91.6), delta=0.1)
 
