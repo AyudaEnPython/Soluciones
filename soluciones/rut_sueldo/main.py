@@ -29,7 +29,7 @@ class Fecha:
         self.dd = dd
         self.mm = mm
         self.aa = aa
-    
+
     def mostrar_fecha(self) -> str:
         return f"{self.dd}/{self.mm}/{self.aa}"
 

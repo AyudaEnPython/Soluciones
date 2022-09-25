@@ -6,9 +6,9 @@ ADICIONAL = 1.5
 IVA = 0.12
 PRECIOS = {"pequeña": 6.5, "mediana": 12.35, "familiar": 22.5}
 
-iva = lambda precio: precio * IVA
-precio_con_iva = lambda precio, iva: precio + iva
-precio_sin_iva = lambda t, c, i: PRECIOS[t] * c + (ADICIONAL * i)
+iva = lambda precio: precio * IVA  # noqa: E731
+precio_con_iva = lambda precio, iva: precio + iva  # noqa: E731
+precio_sin_iva = lambda t, c, i: PRECIOS[t] * c + (ADICIONAL * i)  # noqa: E731
 
 
 def datos():
