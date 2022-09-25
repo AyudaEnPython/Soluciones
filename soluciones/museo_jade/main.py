@@ -52,7 +52,7 @@ def new_data(data: Data) -> None:
         return None
     _write(date, id_)
     _update(data, date, id_)
-    textbox(f"Registro agregado")
+    textbox("Registro agregado")
 
 
 def info(data: Data) -> None:

@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 Desarrollar una aplicación en Python que permita almacenar en un Curso
-del cual se registran en forma privada, el código de la clase, el 
+del cual se registran en forma privada, el código de la clase, el
 nombre de la clase y el semestre al que pertenece. Para cada curso se
 debe registrar estudiantes y sus atributos privados serían: rut,
 nombre, dirección y teléfono. Considerar que cada estudiante, tiene
@@ -37,7 +37,7 @@ class Estudiante:
     @property
     def dni(self) -> str:
         return self._dni
-    
+
     @dni.setter
     def dni(self, dni: str) -> None:
         self._dni = dni
@@ -45,7 +45,7 @@ class Estudiante:
     @property
     def nombre(self) -> str:
         return self._nombre
-    
+
     @nombre.setter
     def nombre(self, nombre: str) -> None:
         self._nombre = nombre
@@ -53,7 +53,7 @@ class Estudiante:
     @property
     def direccion(self) -> str:
         return self._direccion
-    
+
     @direccion.setter
     def direccion(self, direccion: str) -> None:
         self._direccion = direccion
@@ -82,7 +82,7 @@ class Curso:
     @property
     def codigo(self) -> str:
         return self._codigo
-    
+
     @codigo.setter
     def codigo(self, codigo: str) -> None:
         self._codigo = codigo
@@ -90,7 +90,7 @@ class Curso:
     @property
     def nombre(self) -> str:
         return self._nombre
-    
+
     @nombre.setter
     def nombre(self, nombre: str) -> None:
         self._nombre = nombre
@@ -98,7 +98,7 @@ class Curso:
     @property
     def semestre(self) -> str:
         return self._semestre
-    
+
     @semestre.setter
     def semestre(self, semestre: str) -> None:
         self._semestre = semestre
@@ -138,22 +138,28 @@ if __name__ == "__main__":
     menu = Menu()
     menu.add_options(
         ("Crear curso",
-        lambda: sistema.agregar_curso(
-            Curso(input("Código: "), input("Nombre: "), input("Semestre: ")))),
+            lambda: sistema.agregar_curso(
+                Curso(
+                    input("Código: "),
+                    input("Nombre: "),
+                    input("Semestre: ")
+                ))),
         ("Buscar curso",
-        lambda: print(sistema.buscar_curso(input("Código: ")))),
+            lambda: print(sistema.buscar_curso(input("Código: ")))),
         ("Eliminar curso",
-        lambda: sistema.eliminar_curso(input("Código: "))),
+            lambda: sistema.eliminar_curso(input("Código: "))),
         ("Agregar estudiante",
-        lambda: sistema.agregar_estudiante(
-            input("Código: "),
-            Estudiante(input("DNI: "),
-            input("Nombre: "),
-            input("Dirección: "),
-            input("Teléfono: ")))),
-        ("Información de estudiante", 
-        lambda: print(
-            sistema.buscar_curso(
-                input("Código: ")).buscar_estudiante(input("DNI: ")))),
+            lambda: sistema.agregar_estudiante(
+                input("Código: "),
+                Estudiante(
+                    input("DNI: "),
+                    input("Nombre: "),
+                    input("Dirección: "),
+                    input("Teléfono: "),
+                ))),
+        ("Información de estudiante",
+            lambda: print(
+                sistema.buscar_curso(
+                    input("Código: ")).buscar_estudiante(input("DNI: ")))),
     )
     menu.run()
