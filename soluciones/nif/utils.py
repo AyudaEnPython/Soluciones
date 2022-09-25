@@ -2,7 +2,7 @@
 """
 from random import randint
 from datetime import date, datetime, timedelta
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 # pip install prototools
 from prototools import str_input, menu_input, date_input, yes_no_input
 
@@ -11,7 +11,7 @@ ESTADO = ("soltero(a)", "casado(a)", "viudo(a)")
 Data = Dict[str, List[Any]]
 
 
-def obtener_precio() -> int: 
+def obtener_precio() -> int:
     return randint(MIN, MAX)
 
 
@@ -34,7 +34,6 @@ def _print(nombre, fecha, estado, pertenece):
     print(f"Fecha de nacimiento: {fecha}")
     print(f"Estado civil: {estado}")
     print(f"Pertenece a la UE: {pertenece}")
-    
 
 
 def grabar(data: Data):

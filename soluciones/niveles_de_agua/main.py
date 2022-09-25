@@ -9,7 +9,7 @@ DIAS = 365
 LIMITE = 5
 
 
-def get_data(n = DIAS):
+def get_data(n: int = DIAS):
     return [int(input("> ")) for _ in range(n)]
 
 
