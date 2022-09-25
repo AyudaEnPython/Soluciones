@@ -72,7 +72,7 @@ class Test(unittest.TestCase):
         for f in self.functions:
             for n in self.true_cases:
                 self.assertTrue(f(n))
-    
+
     def test_no_primos(self):
         for f in self.functions:
             for n in self.false_cases:
@@ -81,6 +81,5 @@ class Test(unittest.TestCase):
 
 if __name__ == "__main__":
     import doctest
-
     doctest.testmod()
     unittest.main()

@@ -20,12 +20,12 @@ def es_bisiesto(year: int) -> bool:
 def main():
     """
     Muestra por la terminal si el año es bisiesto o no.
-    
+
     Ejemplo:
         Windows::
 
             $ python es_bisiesto.py 1986
-    
+
         macOs/Unix/Linux::
 
             $ python3 es_bisiesto.py 1986
@@ -53,5 +53,5 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # unittest.main() # uncomment this line and comment the next one to run tests
+    # unittest.main() # uncomment/comment to run tests
     main()

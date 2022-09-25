@@ -7,7 +7,7 @@ import unittest
 
 def es_par(numero: int) -> bool:
     """Determina si un número es par o no.
-    
+
     :param numero: Número a evaluar.
     :type numero: int
     :return: True si el número es par, False si no lo es.
@@ -40,5 +40,5 @@ class Test(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    # unittest.main() # uncomment this line and comment the next one to run tests
+    # unittest.main() # uncomment/comment to run tests
     main()
