@@ -15,7 +15,7 @@ MES: Dict[str, int] = {k: v for k, v in zip(
 _T: Dict[int, str] = {k: v for k, v in zip(range(1, 11), MESES)}
 _S: Dict[int, Tuple[Tuple[int, ...]]] = {
     7: (slice(0, 1, 1), slice(1, 3, 1), slice(3, 7, 1)),
-    8: (slice(0, 2, 1), slice(2, 4, 1), slice(4, 8, 1)), 
+    8: (slice(0, 2, 1), slice(2, 4, 1), slice(4, 8, 1)),
 }
 
 
