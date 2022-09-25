@@ -10,7 +10,7 @@ Data = Dict[str, int]
 
 
 def inscribir() -> Data:
-    grupos: Data = {k:0 for k in ascii_uppercase[:GRUPOS]}
+    grupos: Data = {k: 0 for k in ascii_uppercase[:GRUPOS]}
     for grupo in grupos:
         grupos[grupo] += int_input(f"[{grupo}] Cantidad de alumnos: ", min=0)
     return grupos
