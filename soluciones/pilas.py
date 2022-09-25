@@ -16,12 +16,12 @@ class Pila:
 
     def push(self, item) -> None:
         self.items.append(item)
-    
+
     def pop(self) -> None:
         if self.is_empty():
             raise Exception("La pila está vacía")
         return self.items.pop()
-    
+
     def is_empty(self) -> bool:
         return len(self.items) == 0
 

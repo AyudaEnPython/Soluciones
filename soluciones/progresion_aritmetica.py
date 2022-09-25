@@ -5,7 +5,7 @@ from unittest import main, TestCase
 
 
 def solucion(
-    a:int , d: int, n: int, t: Optional[int] = None
+    a: int, d: int, n: int, t: Optional[int] = None,
 ) -> Tuple[int, float]:
     """Encuentra el n-ésimo termino y calcula suma de los 'n' terminos
     de una progresión aritmética.
@@ -18,7 +18,7 @@ def solucion(
     :type n: int
     :param t: Último termino de la progresión aritmética
     :type t: int, optional
-    :return: Tupla (n-ésimo termino, suma de la progresión) 
+    :return: Tupla (n-ésimo termino, suma de la progresión)
     :rtype: Tuple[int, float]
 
     >>> solucion(1, 1, 100)
@@ -52,6 +52,5 @@ class TestSolucion(TestCase):
 
 if __name__ == "__main__":
     import doctest
-    
     doctest.testmod()
     main()

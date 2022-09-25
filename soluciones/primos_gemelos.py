@@ -6,9 +6,9 @@ entre dichos números. Los números primos gemelos son una pareja de
 números primos con una diferencia entre sí de exactamente dos unidades.
 Por ejemplo, 3 y 5 son números primoes gemelos.
 """
+import unittest
 from math import sqrt
 from typing import Iterable, List, Tuple
-from unittest import main, TestCase
 
 
 # función "es_primo" del repositorio del grupo AyudaEnPython:
@@ -48,13 +48,13 @@ def primos_gemelos(n1: int, n2: int) -> List[Tuple[int, int]]:
     return [(i, i + 2) for i in primos if es_primo(i + 2)]
 
 
-def main_():
+def main():
     a = int(input("a: "))
     b = int(input("b: "))
     print(primos_gemelos(a, b))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data = (
         ((1, 10), [(3, 5), (5, 7)]),
@@ -69,5 +69,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # umcomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()  # uncomment/comment to run tests
+    main()

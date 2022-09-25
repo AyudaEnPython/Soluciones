@@ -24,13 +24,13 @@ REGIONES: Tuple[str] = (
     "norte", "centro", "occidente", "sur", "pacifico", "caribe",
 )
 datos: Dict[str, List[int]] = {
-    k:[randint(10, 34) for _ in range(12)] for k in REGIONES
+    k: [randint(10, 34) for _ in range(12)] for k in REGIONES
 }
 
 
 def promedio_anual(dict_: Dict[str, List[int]]) -> Dict[str, int]:
     """Calcula el promedio anual de cada región.
-    
+
     :param dict_: Diccionario con los datos de las regiones
     :dict_ type: Dict[str, List[int]]
     :return: Diccionario con los promedios anuales de cada región
@@ -41,7 +41,7 @@ def promedio_anual(dict_: Dict[str, List[int]]) -> Dict[str, int]:
 
 def menor_temperatura(dict_: Dict[str, List[int]]) -> Tuple[str, int]:
     """Determina el menor registro de cada región.
-    
+
     :param dict_: Diccionario con los datos de las regiones
     :dict_ type: Dict[str, List[int]]
     :return: Tupla con el nombre de la región y el menor registro
@@ -49,9 +49,10 @@ def menor_temperatura(dict_: Dict[str, List[int]]) -> Tuple[str, int]:
     """
     return {k: min(v) for k, v in dict_.items()}
 
+
 def limites_anual(dict_: Dict[str, List[int]]) -> Tuple[str, int, int]:
     """Determina el menor y el mayor registro de cada región.
-    
+
     :param dict_: Diccionario con los datos de las regiones
     :dict_ type: Dict[str, List[int]]
     :return: Tupla con el nombre de la región, el menor registro y el
@@ -66,7 +67,7 @@ def mayor_promedio_anual(
 ) -> str:
     """Determina la región con mayor promedio anual dentro de un
     conjunto de regiones.
-    
+
     :param dict_: Diccionario con los promedios anuales de las regiones
     :dict_ type: Dict[str, int]
     :param regiones: Tupla con las regiones a evaluar
