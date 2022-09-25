@@ -3,7 +3,7 @@
 from random import randint
 # pip install prototools
 from prototools import int_input, text_align, textbox
-from prototools.colorize import *
+from prototools.colorize import cyan, yellow, magenta, red
 
 LIMITE, MIN, MAX, intentos = 5, 1, 10, 0
 NUMERO_ALEATORIO = randint(MIN, MAX)

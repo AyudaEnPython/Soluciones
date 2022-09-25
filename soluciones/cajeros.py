@@ -47,7 +47,7 @@ def _histograma(
     bins: Iterable,
     title: str,
     xlabel: str,
-    ylabel: str
+    ylabel: str,
 ) -> None:
     plt.hist(data, bins=bins)
     plt.title(title)
@@ -71,13 +71,13 @@ class Tienda:
 
     def total_mensual(self, mes: str) -> float:
         return sum(cajero.horas[mes] for cajero in self.personal)
-    
+
     def total_anual(self) -> float:
         return sum(cajero.horas["total"] for cajero in self.personal)
-    
+
     def cajero_mas_trabajador(self) -> Cajero:
         cajero = max(self.personal, key=lambda cajero: cajero.horas["total"])
-        return f"Cajero: {cajero.nombre} | Horas: {cajero.horas['total']} " 
+        return f"Cajero: {cajero.nombre} | Horas: {cajero.horas['total']} "
 
     def mes_con_mas_horas(self) -> str:
         mes = max(MESES, key=lambda mes: self.total_mensual(mes))
@@ -140,27 +140,29 @@ def cargar_personal() -> Tienda:
 
 def load_random_data() -> Tienda:
     data = []
-    fake_data = lambda: {k: v for k, v in zip(MESES, sample(range(120, 240), 12))}
+    fake_data = lambda: {  # noqa: E731
+        k: v for k, v in zip(MESES, sample(range(120, 240), 12))
+    }
     for nombre in sample(ascii_uppercase, randint(5, 10)):
         data.append(Cajero(nombre, fake_data()))
     return Tienda(data)
 
 
 def main():
-    #tienda = load_random_data()
+    # tienda = load_random_data()
     tienda = cargar_personal()
     menu = Menu()
     menu.add_options(
         ("Mostrar datos",
-        lambda: print(tienda.mostrar())),
+            lambda: print(tienda.mostrar())),
         ("Mejor cajero",
-        lambda: print(tienda.cajero_mas_trabajador())),
+            lambda: print(tienda.cajero_mas_trabajador())),
         ("Mes con mayor horas trabajadas",
-        lambda: print(tienda.mes_con_mas_horas())),
+            lambda: print(tienda.mes_con_mas_horas())),
         ("Histograma frecuencias total mensual",
-        lambda: tienda.histograma_frecuencias_total_mensual()),
+            lambda: tienda.histograma_frecuencias_total_mensual()),
         ("Histograma frecuencias total por cajero",
-        lambda: tienda.histograma_frecuencias_total_por_cajero()),
+            lambda: tienda.histograma_frecuencias_total_por_cajero()),
     )
     menu.run()
 
