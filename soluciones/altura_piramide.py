@@ -6,7 +6,7 @@ inferior contiene un bloque más que la capa superior.
 #           +---+
 #           |   |
 #         +---+---+
-#         |   |   |   
+#         |   |   |
 #       +---+---+---+
 #       |   |   |   |
 #       +---+---+---+
