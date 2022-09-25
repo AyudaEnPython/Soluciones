@@ -38,7 +38,6 @@ class Polinomio_:
         self.coeeficientes = coeficientes
         self.grado = len(coeficientes) - 1
 
-
     def __str__(self) -> str:
         s = ""
         for i, c in enumerate(self.coeeficientes):

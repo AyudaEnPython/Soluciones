@@ -7,7 +7,7 @@ from prototools import int_input, float_input
 
 def f(grado: int, coeficientes: List[int], x: float) -> float:
     """Calcula el valor de un polinomio de grado n
-    
+
     :param grado: grado del polinomio
     :grado type: int
     :param coeficientes: coeficientes del polinomio

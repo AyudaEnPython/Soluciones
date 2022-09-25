@@ -6,7 +6,7 @@ from typing import List
 
 def grado(p: int) -> int:
     """Calcula el grado de un polinomio
-    
+
     :param p: polinomio
     :p type: list
     :return: grado del polinomio
@@ -17,7 +17,7 @@ def grado(p: int) -> int:
 
 def evaluar(p: List[float], x: float) -> float:
     """Evalua un polinomio en x
-    
+
     :param p: polinomio
     :p type: list
     :param x: valor a evaluar
@@ -30,7 +30,7 @@ def evaluar(p: List[float], x: float) -> float:
 
 def sumar_polinomios(p: List[float], q: List[float]) -> List[float]:
     """Suma dos polinomios
-    
+
     :param p: polinomio
     :p type: list
     :param q: polinomio
@@ -46,7 +46,7 @@ def sumar_polinomios(p: List[float], q: List[float]) -> List[float]:
 
 def derivar_polinomio(p: List[float]) -> List[float]:
     """Deriva un polinomio
-    
+
     :param p: polinomio
     :p type: list
     :return: polinomio derivado
@@ -57,7 +57,7 @@ def derivar_polinomio(p: List[float]) -> List[float]:
 
 def multiplicar_polinomios(p: List[float], q: List[float]) -> List[float]:
     """Multiplica dos polinomios
-    
+
     :param p: polinomio
     :p type: list
     :param q: polinomio
