@@ -9,7 +9,7 @@ from unittest import main, TestCase
 
 
 def fibo_rn(n: int):
-    if n <=1:
+    if n <= 1:
         return n
     else:
         return fibo_rn(n-1) + fibo_rn(n-2)
@@ -19,7 +19,7 @@ def fibo_rn_ol(n: int):
     return n if n <= 1 else fibo_rn_ol(n-1) + fibo_rn_ol(n-2)
 
 
-def fibo_rc(n: int, cache: dict = {0:0, 1:1}):
+def fibo_rc(n: int, cache: dict = {0: 0, 1: 1}):
     if n not in cache:
         cache[n] = fibo_rc(n-1, cache) + fibo_rc(n-2, cache)
     return cache[n]
@@ -49,7 +49,7 @@ def fibo_gen(n: int) -> int:
 
 
 class Test(TestCase):
-    
+
     funciones = (fibo_rn, fibo_rn_ol, fibo_rc, fibo_itr, fibo_itw)
     datos = (
         (0, 0),
