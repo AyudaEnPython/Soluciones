@@ -8,7 +8,7 @@ siguiente:
 
 a. Que calcule e imprima el precio de la venta de boletos, considerando
     que las gradas cuestan 925 pesos y la entrada general 810 pesos. La
-    empresa establece un máximo de 12 boletos por transacción, para 
+    empresa establece un máximo de 12 boletos por transacción, para
     evitar revendedores, por lo que el programa debe validar este dato
     y mostrar un mensaje al usuario.
 b. Los precios no incluyen IVA, del 16%. El programa debe calcular este
@@ -53,7 +53,7 @@ def ingresar_datos() -> Tuple[str, int]:
 
 def calcular_precio(tipo: str, cantidad: int) -> Tuple[float, float, float]:
     """Calcula el precio de la compra de boletos.
-    
+
     :param tipo: tipo de boleto
     :tipo type: str
     :param cantidad: número de boletos
