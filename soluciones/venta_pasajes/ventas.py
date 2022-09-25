@@ -4,7 +4,7 @@ from database import VentaDAO
 
 
 class Gestor:
-    
+
     def __init__(self, dao: VentaDAO) -> None:
         dao = dao
 
@@ -15,11 +15,11 @@ class Gestor:
     def modificar(self, obj) -> None:
         # TODO: Implementar
         self.dao.actualizar(obj)
-    
+
     def eliminar(self, obj) -> None:
         # TODO: Implementar
         self.dao.eliminar(obj)
-    
+
     def seleccionar(self, obj) -> None:
         # TODO: Implementar
         self.dao.seleccionar(obj)
