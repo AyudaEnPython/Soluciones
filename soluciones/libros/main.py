@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-# ------------------------ Enunciado Original ------------------------ 
+# ------------------------ Enunciado Original ------------------------
 Considerar que se desea guardar estos datos en una estructura de datos
 
     +--------+----------------------------------+--------+-----------+
@@ -97,7 +97,7 @@ class Libros:
             for libro in self.libros:
                 if libro.categoria == categoria:
                     print(libro)
-    
+
     def _comprobar_codigo(self):
         codigo = input("Ingrese el código del libro: ")
         for libro in self.libros:
@@ -116,11 +116,11 @@ def main():
     menu.add_options(
         ("Agregar nuevo libro", libros.agregar_nuevo_libro),
         ("Actualizar precio",
-        lambda: libros.actualizar_precio(
-            float_input("Ingrese el monto a incrementar: "),
-            input("Ingrese la categoría: "))),
+            lambda: libros.actualizar_precio(
+                float_input("Ingrese el monto a incrementar: "),
+                input("Ingrese la categoría: "))),
         ("Imprimir reporte",
-        lambda: libros.imprimir_reporte(input("Ingrese la categoría: "))),
+            lambda: libros.imprimir_reporte(input("Ingrese la categoría: "))),
     )
     menu.run()
 
