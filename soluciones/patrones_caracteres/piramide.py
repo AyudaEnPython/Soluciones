@@ -12,7 +12,7 @@ output:
 
 NOTE: add testcases
 """
-from unittest import main, TestCase
+import unittest
 
 
 def draw(n: int = 5, c: str = "* ") -> None:
@@ -27,12 +27,12 @@ def draw(n: int = 5, c: str = "* ") -> None:
         print(" "*(n - i) + c*i)
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_draw(self):
         NotImplementedError()
 
 
 if __name__ == "__main__":
-    # main()
+    # unittest.main()
     draw(5)

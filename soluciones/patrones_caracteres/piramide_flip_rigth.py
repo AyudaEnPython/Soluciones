@@ -16,7 +16,7 @@ Imprimir el patrón siguiente usando bucles:
 
 NOTE: add testcases
 """
-from unittest import main, TestCase
+import unittest
 
 
 def naive():
@@ -28,15 +28,6 @@ def naive():
         for j in range(i):
             print("*", end="")
         print("")
-
-
-def alt():
-    n = 5
-    c = "*"
-    for i in range(1, n+1):
-        print("*"*i)
-    for i in range(n-1, 0, -1):
-        print("*"*i)
 
 
 def draw(n: int = 5, c: str = "* ") -> None:
@@ -53,12 +44,12 @@ def draw(n: int = 5, c: str = "* ") -> None:
         print(c*i)
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_draw(self):
         NotImplementedError()
 
 
 if __name__ == "__main__":
-    # main()
+    # unittest.main()
     draw(5)

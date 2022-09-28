@@ -12,7 +12,7 @@ output:
 
 NOTE: add testcases
 """
-from unittest import main, TestCase
+import unittest
 
 
 def draw(n: int = 5, c: str = "* ") -> None:
@@ -30,12 +30,12 @@ def draw(n: int = 5, c: str = "* ") -> None:
             print(f"{' '*(n-i)}{c}{' '*(2*i-4)}{c}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_draw(self):
         NotImplementedError()
 
 
 if __name__ == "__main__":
-    # main()
+    # unittest.main()
     draw(5)

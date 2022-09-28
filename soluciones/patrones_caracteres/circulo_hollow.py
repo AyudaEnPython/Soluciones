@@ -13,7 +13,7 @@ output:
 
 NOTE: add testcases
 """
-from unittest import main, TestCase
+import unittest
 
 
 def draw(r):
@@ -24,16 +24,16 @@ def draw(r):
             if (dist > r - 0.5 and dist < r + 0.5):
                 print(c, end="")
             else:
-                print(" " * 2, end="")     
+                print(" " * 2, end="")
         print()
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_draw(self):
         NotImplementedError()
 
 
 if __name__ == "__main__":
-    # main()
+    # unittest.main()
     draw(3)
