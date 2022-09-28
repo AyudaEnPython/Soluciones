@@ -32,7 +32,12 @@ class Fabrica:
         for codigo, cantidad in self.data.items():
             data = [
                 ["Código", codigo, "Cantidad vendida", cantidad],
-                ["Capacidad", self._info(codigo, "kg"), "Precio", self._info(codigo, "precio")],
+                [
+                    "Capacidad",
+                    self._info(codigo, "kg"),
+                    "Precio",
+                    self._info(codigo, "precio"),
+                ],
             ]
             print(tabulate(data, headless=True, inner=True))
 

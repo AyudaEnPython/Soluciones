@@ -2,7 +2,7 @@
 """
 from funciones import mcd, factores, es_abundante
 # pip install prototools
-from prototools import Menu, int_input, textbox
+from prototools import Menu, int_input
 
 
 def main():

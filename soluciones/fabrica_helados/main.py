@@ -27,7 +27,7 @@ def _descuento(cantidad: int, total: float) -> float:
     """Calcula el descuento a aplicar. Si la cantidad de helados es
     mayor a 7, el descuento es del 10% de lo que se compro; de lo
     contrario no se aplica descuento.
-    
+
     :param cantidad: Cantidad de helados
     :type cantidad: int
     :param total: Total de la compra
