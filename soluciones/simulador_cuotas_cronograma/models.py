@@ -3,13 +3,19 @@
 from dataclasses import dataclass, field
 from typing import Any, List
 
-from utils import _tem, _cuota_mensual, diferencia_dias, convertir_fecha, sumar_mes
+from utils import (
+    _tem,
+    _cuota_mensual,
+    diferencia_dias,
+    convertir_fecha,
+    sumar_mes,
+)
 # pip install prototools
 from prototools import RangeDict
 
 DATA = RangeDict(
     {
-        ( 5_000, 10_000): (12, 0.26),
+        (5_000, 10_000): (12, 0.26),
         (10_001, 15_000): (18, 0.24),
         (15_001, 20_000): (24, 0.22),
         (20_001, 25_000): (30, 0.20),
@@ -83,7 +89,7 @@ class Cronograma:
                 "fecha_vencimiento": fecha,
                 "dias": dias,
                 "capital": capital if capital > 0.5 else 0.0,
-                "amortizacion": 
+                "amortizacion":
                     amortizacion if capital > 0.5 else
                     self.data[i-1]["capital"],
                 "interes": interes,

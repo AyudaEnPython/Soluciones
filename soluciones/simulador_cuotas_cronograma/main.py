@@ -6,7 +6,7 @@ Un banco les ha encargado que generen un simulador de cuotas y
 cronogramas de pago de préstamos personales para los clientes. Para
 ello se han establecido las siguientes condiciones:
 
-- El programa termina cuando el cliente no quiere hacer más 
+- El programa termina cuando el cliente no quiere hacer más
     soluciones.
 - La primera vez el cliente debe ingresar sus apellidos, nombres y DNI
 - Luego iniciará la simulación y el programa solicitará:

@@ -42,7 +42,7 @@ def convertir_fecha(
     return f"{aaaa}-{mes}-{dia}"
 
 
-def _tem(I: float) -> float:
+def _tem(I: float) -> float:  # noqa: E741
     """
     Retorna el valor de la tasa efectiva mensual
 
@@ -52,7 +52,7 @@ def _tem(I: float) -> float:
     return ((1+I)**(30/360))-1
 
 
-def _cuota_mensual(L: float, I: float, n: float) -> float:
+def _cuota_mensual(L: float, I: float, n: float) -> float:  # noqa: E741
     """
     Calcula los pagos mensuales de un cronograma
 
