@@ -40,7 +40,7 @@ def generador() -> List[int]:
     REDONDEAR = {1: ceil, 2: floor, 3: round}
     INDICACIONES = (
         "¿Cuántos números quieres generar? [1-20]: ",
-        ("¿Cómo quieres redondear los números? " \
+        ("¿Cómo quieres redondear los números? "
             "[1]Al alza [2]A la baja [3]Normal: ")
     )
     cantidad = ingresar_numero(1, 20, INDICACIONES[0])

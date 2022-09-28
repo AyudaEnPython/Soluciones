@@ -32,6 +32,6 @@ class Rectangle:
     def __post_init__(self) -> None:
         p = self.tr - self.bl
         self.w, self.h = p.x, p.y
-    
+
     def area(self) -> float:
         return self.w * self.h

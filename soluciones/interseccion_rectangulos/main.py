@@ -57,9 +57,9 @@ def solver_alt_helpers(data: List[tuple]) -> float:
 
 
 def solver_alt(data: List[tuple]) -> float:
-    points = lambda m, n=2: tuple([m[x:x+n] for x in range(0, len(m), n)])
-    area = lambda a, b: (b[0] - a[0]) * (b[1] - a[1])
-    f = lambda a, b, g: (g(a[0], b[0]), g(a[1], b[1]))
+    points = lambda m, n=2: tuple([m[x:x+n] for x in range(0, len(m), n)])  # noqa: E731, E501
+    area = lambda a, b: (b[0] - a[0]) * (b[1] - a[1])  # noqa: E731
+    f = lambda a, b, g: (g(a[0], b[0]), g(a[1], b[1]))  # noqa: E731
     (p1, p2), (p3, p4) = points(data[0]), points(data[1])
     x, y = f(p1, p3, max), f(p2, p4, min)
     (x, y) = ((0, 0), (0, 0)) if max(x) > min(y) else (x, y)
@@ -81,6 +81,7 @@ Returns the total area of two rectangles (fields).
 
 
 class Test(TestCase):
+
     data = (
         ("1 1 3 4", "2 3 6 7", 21),
         ("0 0 2 2", "2 2 4 4", 8),
@@ -103,13 +104,13 @@ class Test(TestCase):
         solver_alt_helpers,
         solver_alt,
     )
-    
+
     def test_process_input(self):
         self.assertEqual([
-            (1, 1, 3, 4), (2, 3, 6, 7)], 
+            (1, 1, 3, 4), (2, 3, 6, 7)],
             process_input("1 1 3 4", "2 3 6 7")
             )
-    
+
     def test_solvers(self):
         for function in self.functions:
             for s1, s2, total_area in self.data:
