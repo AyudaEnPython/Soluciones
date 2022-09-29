@@ -12,12 +12,16 @@ def filtro_prewitt(img, k_size=3):
     t = out.copy()
     out_v = out.copy()
     out_h = out.copy()
-    v_k = [[-1., -1., -1.], [ 0., 0., 0.], [ 1., 1., 1.]]
-    h_k = [[-1.,  0.,  1.], [-1., 0., 1.], [-1., 0., 1.]]
+    v_k = [[-1., -1., -1.], [ 0., 0., 0.], [ 1., 1., 1.]]  # noqa: E201
+    h_k = [[-1.,  0.,  1.], [-1., 0., 1.], [-1., 0., 1.]]  # noqa: E201
     for y in range(H):
         for x in range(W):
-            out_v[pad + y, pad + x] = np.sum(v_k * (t[y: y + k_size, x: x + k_size]))
-            out_h[pad + y, pad + x] = np.sum(h_k * (t[y: y + k_size, x: x + k_size]))
+            out_v[pad + y, pad + x] = np.sum(
+                v_k * (t[y: y + k_size, x: x + k_size])
+            )
+            out_h[pad + y, pad + x] = np.sum(
+                h_k * (t[y: y + k_size, x: x + k_size])
+            )
     out_v = np.clip(out_v, 0, 255)
     out_h = np.clip(out_h, 0, 255)
     out_v = out_v[pad: pad + H, pad: pad + W].astype(np.uint8)
@@ -25,7 +29,7 @@ def filtro_prewitt(img, k_size=3):
     return out_v, out_h
 
 
-img = cv2.imread("assets/logo.png",0).astype(float)
+img = cv2.imread("assets/logo.png", 0).astype(float)
 out_v, out_h = filtro_prewitt(img, k_size=3)
 cv2.imwrite("out_v.jpg", out_v)
 cv2.imshow("result_v", out_v)
