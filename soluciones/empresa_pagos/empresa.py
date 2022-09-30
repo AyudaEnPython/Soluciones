@@ -14,6 +14,7 @@ IMPUESTOS: Dict[str, float] = {
     "empleado": 0.12,
 }
 
+
 def ingresar_datos() -> Tuple[str, str, int, float, str]:
     nombre = input(cyan("Nombre: "))
     apellido = input(cyan("Apellido: "))
@@ -60,7 +61,7 @@ class Empresa:
         obreros, empleados = self._tipo_empleado()
         print(tabulate(
             [
-                [e.nombres, e.apellidos, e.horas, e.sueldo, e.tipo,e.pago]
+                [e.nombres, e.apellidos, e.horas, e.sueldo, e.tipo, e.pago]
                 for e in self.empleados
             ],
             headers=[
@@ -99,7 +100,7 @@ class Empresa:
 
     def _total_pago(self) -> float:
         return sum([e.pago for e in self.empleados])
-    
+
     def _tipo_empleado(self) -> Tuple[int, int]:
         obreros = len([e for e in self.empleados if e.tipo == "obrero"])
         empleados = len([e for e in self.empleados if e.tipo == "empleado"])
