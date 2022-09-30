@@ -60,7 +60,7 @@ class Supervisor(Empleado):
         super().datos()
         data = [
             [cyan("Licenciatura"), self.licenciatura],
-            [cyan("Personal supervisado"), 
+            [cyan("Personal supervisado"),
                 "- ".join(s.fullname for s in self.supervisados)],
         ]
         print(tabulate(
@@ -101,6 +101,6 @@ class Operativo(Administrativo):
 
     def tecnicas(self) -> None:
         ...
-    
+
     def ejecutar(self) -> None:
         ...

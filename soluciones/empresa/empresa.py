@@ -58,7 +58,7 @@ class Empresa:
             if empleado.__class__.__name__ == tipo:
                 empleado.datos()
 
-    def asignar_supervisor(self) -> None: # TODO: split it in more methods
+    def asignar_supervisor(self) -> None:  # TODO: split it in more methods
         id_ = int_input(cyan("Ingresar id del empleado: "))
         empleado = self._buscar(id_)
         if empleado is None:
