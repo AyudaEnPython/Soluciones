@@ -1,10 +1,10 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 from dataclasses import dataclass
-from typing import Tuple, Dict, List
+from typing import Tuple, Dict
 
 # pip install prototools
-from prototools import Menu, menu_input, int_input, tabulate
+from prototools import menu_input, int_input, tabulate
 from prototools.utils import textbox
 
 MARCAS: Tuple[str] = ("Huawei", "Xiaomi", "Apple", "Samsung")
@@ -41,7 +41,7 @@ class Carcasa:
             self.cantidad <= 5: 2,
             5 < self.cantidad <= 10: 3,
             10 < self.cantidad <= 15: self.cantidad,
-            self.cantidad > 15: self.cantidad *2,
+            self.cantidad > 15: self.cantidad * 2,
         }
         return cantidad[True]
 
@@ -59,7 +59,7 @@ class Carcasa:
 class Empresa:
 
     flag: bool = False
-    
+
     def ingresar_pedidos(self) -> None:
         marca, cantidad = _ingresar()
         self.producto = Carcasa(marca, cantidad)
