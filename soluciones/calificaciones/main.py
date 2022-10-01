@@ -11,6 +11,7 @@ def _crear_estudiante():
     apellido = input("Ingrese el apellido del estudiante: ")
     return id_, nombre, apellido
 
+
 def _agregar_nota():
     id_ = int_input("Ingrese el ID del estudiante: ")
     nota = float_input("Ingresar nota: ")
@@ -22,6 +23,7 @@ def _modificar_nota():
     posicion = int_input("Ingrese la posicion de la nota: ")
     nota = float_input("Ingresar nueva nota: ")
     return id_, posicion, nota
+
 
 def _eliminar_estudiante(data: Data):
     id_ = int_input("Ingrese el ID del estudiante: ")

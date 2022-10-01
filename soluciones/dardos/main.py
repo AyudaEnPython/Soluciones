@@ -9,7 +9,7 @@ MULTIPLIER = {"DOUBLE BULL": 50, "SINGLE BULL": 25, "NULL": 0}
 PlayerData = Dict[str, Union[str, int]]
 
 
-def prod(iterable): # 3.8 > from math import prod
+def prod(iterable):  # 3.8 > from math import prod
     return reduce(lambda x, y: x * y, iterable, 1)
 
 
@@ -37,7 +37,7 @@ def get_names(size: int = 2) -> Tuple[str, str]:
 
 def set_players(names: Tuple[str, str]) -> PlayerData:
     a, b = names
-    suffix = ("", "2") if a[:CHARS] == b[:CHARS] else ("", "") 
+    suffix = ("", "2") if a[:CHARS] == b[:CHARS] else ("", "")
     return [
         {"name": n, "nick": n[:CHARS].upper() + s, "score": INITIAL_SCORE}
         for n, s in zip(names, suffix)
@@ -47,7 +47,7 @@ def set_players(names: Tuple[str, str]) -> PlayerData:
 def calculate_score(data: List[int]) -> int:
     return sum(
         prod(map(int, item.split()))
-        if item not in MULTIPLIER else MULTIPLIER[item] 
+        if item not in MULTIPLIER else MULTIPLIER[item]
         for item in data
     )
 

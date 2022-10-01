@@ -10,7 +10,7 @@ PRECIOS = {
     "Vendas": 500,
     "Aposito": 370,
 }
-IDX = {k:i for i, k in enumerate(PRECIOS.keys())}
+IDX = {k: i for i, k in enumerate(PRECIOS.keys())}
 
 
 def _search(data: List[int], value: int) -> str:
