@@ -29,5 +29,15 @@ creado por la clase Point3D. La coordenada t representa el tiempo, de modo que n
 puede establecerse en un valor negativo. Use la herencia y escriba un programa para
 probar la clase Point4D.
 
+## Ejercicio 5
+
+Cree una clase llamada Curso que tenga variables de instancia título, instructor, precio,
+conferencias, usuarios (tipo de lista), calificaciones, promedio calificacíon.
+Implemente los métodos __str__, nuevo usuario, recibe_string y mostrar detalles.
+De la clase anterior, herede dos clases VideoCourse y PdfCourse.
+La clase VideoCourse tiene la variable de instancia lenght_video y PdfCourse tiene
+páginas de variables de instancia.
+
+
 > __*NOTA*__: Los enunciados de los ejercicios 1, 2 y 3 no son del todo correctos,
 > por lo tanto se opta por cambiar el diseño.
