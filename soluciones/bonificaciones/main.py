@@ -42,7 +42,7 @@ def bonificacion_dia(dia: str) -> int:
 
 def total(tienda: str, monto: int, tipo: str, dia: str) -> float:
     return (
-        bonificacion_tienda(tienda, monto) + 
+        bonificacion_tienda(tienda, monto) +
         bonificacion_especial(tipo) +
         bonificacion_dia(dia)
     )
