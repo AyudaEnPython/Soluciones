@@ -40,7 +40,7 @@ class Person:
 @dataclass
 class Estadisticas:
     personas: List[Person]
-    
+
     def promedio(self):
         return sum([p.edad for p in self.personas]) / len(self.personas)
 
