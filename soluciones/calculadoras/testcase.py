@@ -13,7 +13,7 @@ class Test(TestCase):
 
     def test_operadores(self):
         self.assertDictEqual(
-            {k:v for k, v in zip("+-*/", self.f)}, op
+            {k: v for k, v in zip("+-*/", self.f)}, op
         )
         for operador in "+-*/":
             self.assertIn(operador, op)
