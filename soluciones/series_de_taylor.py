@@ -48,7 +48,7 @@ class Test(unittest.TestCase):
 
     def test_sinx(self):
         self.assertAlmostEqual(math.sin(1), sinx(1), places=N)
-    
+
     def test_cosx(self):
         self.assertAlmostEqual(math.cos(1), cosx(1), places=N)
 
