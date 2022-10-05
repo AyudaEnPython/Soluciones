@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 Crear un módulo que permita leer una cadena que representa los cálculos
-que se deben hace respetando los niveles de los operadores con el 
+que se deben hace respetando los niveles de los operadores con el
 módulo "operadores.py".
 Mínimo debe permitir trabajar con 3 números e imprimir el resultado de
 la operación.
