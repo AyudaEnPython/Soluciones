@@ -4,7 +4,7 @@ import random
 from unittest import main, TestCase
 
 from modelos import Punto
-from utils import crear_coordenadas, mostrar
+from utils import crear_coordenadas
 
 
 class TestCoordenadas(TestCase):
