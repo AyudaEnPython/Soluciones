@@ -62,7 +62,7 @@ class App(BancoMateriales):
             self.load()
         self._estudiantes = estudiantes
         self._materiales = materiales
-    
+
     def registrar_estudiante(self) -> None:
         estudiante = registrar_datos_estudiante(self._estudiantes)
         self._estudiantes[estudiante.codigo] = estudiante
@@ -90,13 +90,13 @@ class App(BancoMateriales):
     def aportantes(self) -> None:
         self._materiales.ver_gestores()
 
-    def save(self) -> None: # 'soluciones/banco_materiales/'
+    def save(self) -> None:  # 'soluciones/banco_materiales/'
         with open('data/materiales.pickle', 'wb') as f:
             pickle.dump(self._materiales, f)
         with open('data/estudiantes.pickle', 'wb') as f:
             pickle.dump(self._estudiantes, f)
 
-    def load(self) -> None: # 'soluciones/banco_materiales/'
+    def load(self) -> None:  # 'soluciones/banco_materiales/'
         with open('data/materiales.pickle', 'rb') as f:
             self._materiales = pickle.load(f)
         with open('data/estudiantes.pickle', 'rb') as f:

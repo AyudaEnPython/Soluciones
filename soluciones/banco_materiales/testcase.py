@@ -4,7 +4,7 @@ TODO: add testcases
 """
 from unittest import main, TestCase
 
-from models import Estudiante, Carrera, Materia, Material, BancoMateriales
+from models import Estudiante, Material, BancoMateriales
 from app import MATERIAS
 
 estudiantes = {

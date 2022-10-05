@@ -59,7 +59,7 @@ class Material:
             f"Carrera: {self.carrera}\n"
             f"Materia: {self.materia}\n"
             f"Calificación: {self.calificacion}\n"
-            f"Titulo: {self.titulo}\n" 
+            f"Titulo: {self.titulo}\n"
             f"Contenido: {self.contenido}\n"
         )
 
@@ -89,7 +89,7 @@ class BancoMateriales:
         for material in self.materiales:
             if material.materia.nombre == materia:
                 print(material.ver_por_materia())
-    
+
     def ver_documento(self, codigo: str) -> None:
         for material in self.materiales:
             if material.codigo == codigo:
@@ -105,7 +105,7 @@ class BancoMateriales:
         for material in self.materiales:
             if material.calificacion >= calificacion:
                 print(material.ver_por_calificacion())
-    
+
     def ver_gestores(self) -> None:
         gestores = set([str(material.gestor) for material in self.materiales])
         for gestor in gestores:
