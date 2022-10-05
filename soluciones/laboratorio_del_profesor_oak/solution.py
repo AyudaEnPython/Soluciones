@@ -1,3 +1,4 @@
+# flake8: noqa
 import sys
 sys.setrecursionlimit(20000)
 
@@ -111,7 +112,7 @@ class Solution:
                 else:
                     high = mid - 1
             return -1
-        
+
         index = binary_search(nombres_ordenados, nombre_a_buscar)
         if index != -1:
             id_ = nombres_ordenados[index][1]
