@@ -39,18 +39,18 @@ class Library:
         if volume.id_ in self.volumes:
             raise ValueError(f"El id {volume.id_} ya existe")
         self.volumes[volume.id_] = volume
-    
+
     def remove(self, id_: str):
         if id_ not in self.volumes:
             raise ValueError(f"El id {id_} no existe")
         del self.volumes[id_]
 
     def save(self):
-        return DataFrame(self.volumes.values()) 
+        return DataFrame(self.volumes.values())
 
 
 if __name__ == "__main__":
-    random_code = lambda: "".join(choices(digits, k=10))
+    random_code = lambda: "".join(choices(digits, k=10))  # noqa: E731
 
     library = Library("AyudaEnPython", "cloud")
     books = ("Core Python", "Modern C++", "Rust in Action")
