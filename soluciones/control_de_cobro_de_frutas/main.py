@@ -1,9 +1,9 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from typing import Dict, List, Tuple
+from typing import Dict, Tuple
 # pip install prototools
 from prototools import float_input, tabulate, menu_input, int_input
-from prototools.utils import text_align, main_loop, ask_to_finish
+from prototools.utils import text_align, ask_to_finish
 
 ARTICULOS: Dict[str, int] = {
     "Tomate": 750,
@@ -22,13 +22,14 @@ def _descuento(monto: int) -> float:
 
 
 def ingresar_pedido() -> Dict[str, int]:
-    data = {k:0 for k in ARTICULOS.keys()}
+    data = {k: 0 for k in ARTICULOS.keys()}
     while True:
         tipo = menu_input(tuple(ARTICULOS.keys()), numbers=True, lang="es")
         cantidad = int_input("Cantidad: ", min=1, lang="es")
         data[tipo] += cantidad
         if not ask_to_finish(lang="es"):
             return data
+
 
 def ingresar_pago(monto: float) -> float:
     print(f"Monto a pagar: $ {monto:.2f}")
@@ -53,7 +54,10 @@ def main():
     print(tabulate(
         [
             ["Articulo", "Cantidad", "Precio", "Subtotal"],
-            *[(k, v, ARTICULOS[k], ARTICULOS[k]*v) for k, v in data.items()],
+            *[
+                (k, str(v), str(ARTICULOS[k]), str(ARTICULOS[k]*v))
+                for k, v in data.items()
+            ],
             ["" for _ in range(4)],
             ["", "", "Subtotal", f"$ {subtotal:.2f}"],
             ["", "", "Descuento", f"$ {descuento:.2f}"],
