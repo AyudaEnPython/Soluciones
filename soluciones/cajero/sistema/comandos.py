@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 from .cuenta import Cuenta
 from .transaccion import Transaccion
@@ -57,6 +57,6 @@ class Transferir(Transaccion):
         self.de_cuenta.retirar(self.monto)
         self.a_cuenta.depositar(self.monto)
         # print(f"Transferido {self.detalles}")
-    
+
     def __repr__(self) -> str:
         return f"Transferido {self.detalles}"

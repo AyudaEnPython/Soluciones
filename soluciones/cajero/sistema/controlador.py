@@ -19,7 +19,7 @@ class BancoControlador:
     def deshacer(self) -> None:
         if self.actual > 0:
             self.actual -= 1
-    
+
     def rehacer(self) -> None:
         if self.actual < len(self.libro):
             self.actual += 1
@@ -27,7 +27,7 @@ class BancoControlador:
     def calcular_balance(self) -> None:
         for transaccion in self.libro[:self.actual]:
             transaccion.ejecutar()
-    
+
     def ver_movimientos(self) -> None:
         for i, transaccion in enumerate(self.libro[-5:], 1):
             print(f"{i}. {transaccion}")

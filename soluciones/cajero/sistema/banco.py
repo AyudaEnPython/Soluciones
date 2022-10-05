@@ -12,7 +12,7 @@ class Banco:
 
     def cuenta(self, numero: str) -> Cuenta:
         return self.cuentas[numero]
-    
+
     def crear_cuenta(self, titular: str, numero: str, clave: str) -> Cuenta:
         cuenta = Cuenta(titular, numero, clave)
         self.cuentas[numero] = cuenta

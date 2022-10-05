@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-# ------------------------ Enunciado Original ------------------------- 
+# ------------------------ Enunciado Original -------------------------
 Se pide desarrollar en Python un programa para la siguiten situación:
 Se trata de desarrollar un sistema que emule el funcionamiento de un
 cajero automático con las siguientes funciones:
@@ -66,7 +66,7 @@ class Cajero:
         self.banco = banco
         self.cuenta = cuenta
         self.controlador = BancoControlador()
-    
+
     def depositar(self) -> None:
         monto = float_input("Monto a depositar: ")
         self.controlador.registrar(Depositar(self.cuenta, monto))
@@ -84,7 +84,7 @@ class Cajero:
     def movimientos(self) -> None:
         self._auto()
         self.controlador.ver_movimientos()
-    
+
     def saldo(self) -> None:
         self._auto()
         print(f"Saldo disponible: ${self.cuenta.balance}")
@@ -97,7 +97,7 @@ class Cajero:
 def main():
     banco = Banco()
     cargar_cuentas(banco)
-    
+
     cuenta = ingresar(banco)
     cajero = Cajero(banco, cuenta)
     menu = Menu("Cajero Automático")
