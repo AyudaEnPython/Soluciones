@@ -74,7 +74,7 @@ class AndroidPhone(Smartphone):
         print("Llamada entrante colgada!")
 
     def marcar(self) -> None:
-        print(f"Marcando numero...")
+        print("Marcando numero...")
 
     def tomar_foto(self) -> None:
         self.camara.capturar_imagen()

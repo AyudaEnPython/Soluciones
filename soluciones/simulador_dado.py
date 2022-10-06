@@ -14,7 +14,7 @@ from typing import Tuple
 
 def lanzar(n: int = 2) -> Tuple[str, int]:
     """Lanza 'n' dados al azar. Devuelve un tupla con la representación
-    de los dados lanzados y la suma de estos. 
+    de los dados lanzados y la suma de estos.
 
     :param n: Número de dados a lanzar, por defecto 2
     :type n: int

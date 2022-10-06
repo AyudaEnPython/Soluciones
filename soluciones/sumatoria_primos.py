@@ -2,9 +2,9 @@
 
 Encontrar la suma de los primos entre a y b.
 """
+import unittest
 from math import sqrt
 from typing import Iterable
-from unittest import main, TestCase
 
 
 # función "es_primo" del repositorio del grupo AyudaEnPython:
@@ -43,13 +43,13 @@ def sumatoria_primos(a: int, b: int) -> int:
     return sum(i for i in range(a, b + 1) if es_primo(i))
 
 
-def main_():
+def main():
     a = int(input("a: "))
     b = int(input("b: "))
     print(sumatoria_primos(a, b))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_sumatoria_primos(self):
         self.assertEqual(sumatoria_primos(1, 10), 17)
@@ -58,5 +58,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run the tests
-    main_()
+    # unittest.main() # uncomment/comment to run the tests
+    main()

@@ -17,7 +17,7 @@ def start_app(app_name: str) -> None:
 def write_to_app(txt: str) -> None:
     time.sleep(1)
     typewrite(BAR, 0.09)
-    press("enter") 
+    press("enter")
     typewrite(txt, 0.2)
     press("enter")
     typewrite(BAR, 0.09)

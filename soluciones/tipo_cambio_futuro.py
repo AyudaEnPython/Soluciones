@@ -41,8 +41,8 @@ Ejemplo estimación tipo de cambio:
     | = 20.4833 * 1.0217 = 20.9272                       |
     +----------------------------------------------------+
 """
+import unittest
 from dataclasses import dataclass
-from unittest import main, TestCase
 # pip install prototools
 from prototools import float_input, Menu
 
@@ -87,7 +87,7 @@ def dias_futuro(conversor: Conversor) -> None:
     print(conversor.calcular())
 
 
-def main_loop():
+def main():
     conversor = Conversor(20.4833, 4.25, 0.25, 200)
     menu = Menu("Tipo de cambio en el futuro")
     menu.add_options(
@@ -98,12 +98,12 @@ def main_loop():
     menu.run()
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_cambio_a_futuro(self):
         self.assertEqual(cambio_a_futuro(20.4833, 4.25, 0.25, 200), 20.9272)
 
 
 if __name__ == '__main__':
-    # main() # uncomment and comment the next line to run tests
-    main_loop()
+    # unittest.main() # uncomment/comment to run tests
+    main()
