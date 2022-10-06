@@ -36,7 +36,10 @@ class Guerrero:
 class Arena:
     guerreros: List[Guerrero] = field(default_factory=list)
 
-    def _set_turno(self, guerreros: Tuple[Guerrero, Guerrero]) -> Tuple[Guerrero, Guerrero]:
+    def _set_turno(
+        self,
+        guerreros: Tuple[Guerrero, Guerrero]
+    ) -> Tuple[Guerrero, Guerrero]:
         a, b = guerreros
         if a.velocidad < b.velocidad:
             a, b = b, a

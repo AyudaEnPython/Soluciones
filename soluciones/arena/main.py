@@ -6,7 +6,7 @@ from prototools import Menu, int_input, str_input, textbox
 
 
 class Game(Menu):
-    
+
     def __init__(self, arena: Arena):
         super().__init__()
         self.arena = arena

@@ -1,6 +1,5 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from turtle import st
 from typing import List, Dict
 
 FICHERO: str = "script.py"

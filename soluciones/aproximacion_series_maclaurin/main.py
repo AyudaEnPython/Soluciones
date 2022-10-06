@@ -38,7 +38,7 @@ def _f(f, a, b, n):
         t.append(round(k, 2))
         k += h
     for i in t:
-        print(f"x: {i:>4}  f({i:>4.1f}) -> {f(i):>6.2f}")    
+        print(f"x: {i:>4}  f({i:>4.1f}) -> {f(i):>6.2f}")
 
 
 @dataclass
