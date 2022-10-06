@@ -15,7 +15,7 @@ class ArregloDinamico:
     :_capacidad type: int
     :param _factor: factor de redimensionamiento
     :_factor type: int
-    :param _A: arreglo 
+    :param _A: arreglo
     :_A type: POINTER(py_object)
     """
 
@@ -45,7 +45,7 @@ class ArregloDinamico:
 
     def append(self, obj: py_object) -> None:
         """Agrega un elemento al final del arreglo
-        
+
         :param obj: elemento a agregar
         :obj type: py_object
         """
@@ -56,7 +56,7 @@ class ArregloDinamico:
 
     def insert(self, k: int, obj: py_object) -> None:
         """Inserta un elemento en la posición k
-        
+
         :param k: posición del elemento
         :k type: int
         :param obj: elemento a insertar
