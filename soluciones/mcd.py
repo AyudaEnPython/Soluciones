@@ -4,7 +4,7 @@ Escribe un programa que calcula el máximo común divisor (MCD) de dos
 números naturales. El MCD de dos números, es el número más grande que
 los divide a los dos.
 """
-from unittest import main, TestCase
+import unittest
 
 
 def mcd_recursivo(a: int, b: int) -> int:
@@ -54,7 +54,7 @@ def mcd_for(a: int, b: int) -> int:
     return 1
 
 
-def main_(): # comment/uncomment to swtiches between mcd versions
+def main():  # comment/uncomment to swtiches between mcd versions
     a = int(input('a: '))
     b = int(input('a: '))
     mcd = mcd_recursivo(a, b)
@@ -63,7 +63,7 @@ def main_(): # comment/uncomment to swtiches between mcd versions
     print(f'MCD de {a} y {b} es {mcd}')
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     data = (
         ((6, 9), 3),
@@ -81,5 +81,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    #main() # uncomment this line and comment the next one to run tests
-    main_()
+    # unittest.main()  # uncomment/comment to run tests
+    main()

@@ -74,7 +74,7 @@ def mcm_while(a: int, b: int) -> int:
     return c
 
 
-def main(): # comment/uncomment to swtiches between mcm versions
+def main():  # comment/uncomment to swtiches between mcm versions
     a = int(input('a: '))
     b = int(input('a: '))
     # mcm = mcm_usando_mcd(a, b)
@@ -111,5 +111,5 @@ class Test(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    # unittest.main() # uncomment this line and comment the next one to run tests
+    # unittest.main()  # uncomment/comment to run tests
     main()
