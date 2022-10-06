@@ -6,7 +6,7 @@ from typing import Dict
 from prototools import int_input
 
 MIN, MAX = 0, 20
-MENSAJES : Dict[str, str] = {
+MENSAJES: Dict[str, str] = {
     "end": "¡LO LOGRASTE! Usaste {} intentos",
     "low": "¡Ups! Estás por debajo",
     "high": "¡Ups! Te pasaste",

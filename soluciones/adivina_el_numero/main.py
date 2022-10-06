@@ -17,7 +17,7 @@ while True:
     intentos += 1
     if numero_ingresado == 0:
         print(
-            f"No lo lograste a pesar de tratar {intentos} veces. " 
+            f"No lo lograste a pesar de tratar {intentos} veces. "
             "Mas suerte para otra vez"
         )
         break
