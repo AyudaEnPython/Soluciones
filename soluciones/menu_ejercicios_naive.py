@@ -22,12 +22,12 @@ def _data():
 
 
 def es_primo(n):
-        if 1 < n < 4:
-            return True
-        elif n < 2 or not n % 2:
-            return False
-        impares = range(3, int(sqrt(n) + 1), 2)
-        return not any(not n % i for i in impares)
+    if 1 < n < 4:
+        return True
+    elif n < 2 or not n % 2:
+        return False
+    impares = range(3, int(sqrt(n) + 1), 2)
+    return not any(not n % i for i in impares)
 
 
 def primos(a, b):
@@ -68,11 +68,11 @@ def mcd():
 
 def promedio_temperaturas():
     R = ("norte", "centro", "occidente", "sur", "pacifico", "caribe")
-    d = {k:[randint(10, 34) for _ in range(12)] for k in R}
-    pa = lambda d: {k: round(sum(v) / len(v), 2) for k, v in d.items()}
-    mt = lambda d: {k: min(v) for k, v in d.items()}
-    la = lambda d: {k: (min(v), max(v)) for k, v in d.items()}
-    mpa = lambda d, r: max(r, key=d.get)
+    d = {k: [randint(10, 34) for _ in range(12)] for k in R}
+    pa = lambda d: {k: round(sum(v) / len(v), 2) for k, v in d.items()}  # noqa: E731, E501
+    mt = lambda d: {k: min(v) for k, v in d.items()}  # noqa: E731
+    la = lambda d: {k: (min(v), max(v)) for k, v in d.items()}  # noqa: E731
+    mpa = lambda d, r: max(r, key=d.get)  # noqa: E731
     a = pa(d)
     m = mt(d)
     li = la(d)

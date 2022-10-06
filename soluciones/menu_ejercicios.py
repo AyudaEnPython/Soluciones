@@ -14,7 +14,11 @@ https://github.com/AyudaEnPython/Soluciones/blob/main/soluciones/promedio_temper
 # pip install prototools
 from prototools import Menu
 
-import serie_fibonacci, sumatoria_primos, primos_gemelos, mcd, promedio_temperaturas
+import serie_fibonacci
+import sumatoria_primos
+import primos_gemelos
+import mcd
+import promedio_temperaturas
 
 
 def main():
