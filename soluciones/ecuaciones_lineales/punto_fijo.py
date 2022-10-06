@@ -36,9 +36,9 @@ def punto_fijo(
 class Test(unittest.TestCase):
 
     def test_punto_fijo(self):
-        f = lambda x: x**2 - 5*x + 2
-        g = lambda x: -2 / (x - 5)
-        self.assertAlmostEqual(punto_fijo(g, 1), 0.4384471871911695)
+        # f = lambda x: x**2 - 5*x + 2  # noqa: E731
+        f = lambda x: -2 / (x - 5)  # noqa: E731
+        self.assertAlmostEqual(punto_fijo(f, 1), 0.4384471871911695)
 
 
 if __name__ == "__main__":

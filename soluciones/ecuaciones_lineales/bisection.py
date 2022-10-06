@@ -47,8 +47,7 @@ def bisection(
 class Test(unittest.TestCase):
 
     def test_bisection(self):
-        f = lambda x: x**3 - 1
-        df = lambda x: 3*x**2
+        f = lambda x: x**3 - 1  # noqa: E731
         self.assertAlmostEqual(bisection(f, -5, 5), 1.0000000149011612)
 
 

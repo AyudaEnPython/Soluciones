@@ -12,7 +12,7 @@ def f_(f: FuncionReal, x: float) -> float:
 
 
 def f__(f: FuncionReal, x: float) -> float:
-    return (f_(f, x + H) - f_(f, x)) / H 
+    return (f_(f, x + H) - f_(f, x)) / H
 
 
 def halley(
@@ -47,7 +47,7 @@ def halley(
 class Test(unittest.TestCase):
 
     def test_halley(self):
-        f = lambda x: x**2 - 5*x + 2
+        f = lambda x: x**2 - 5*x + 2  # noqa: E731
         self.assertAlmostEqual(halley(f, 1), 0.4384471871911695)
 
 

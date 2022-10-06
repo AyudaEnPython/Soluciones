@@ -45,8 +45,7 @@ def falsa_posicion(
 class Test(unittest.TestCase):
 
     def test_falsa_posicion(self):
-        f = lambda x: x**2 - 5*x + 2
-        df = lambda x: 2*x - 5
+        f = lambda x: x**2 - 5*x + 2  # noqa: E731
         self.assertAlmostEqual(falsa_posicion(f, 0.4, 0.5), 0.4384471871911695)
 
 

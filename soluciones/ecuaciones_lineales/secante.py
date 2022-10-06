@@ -35,7 +35,7 @@ def secante(
 class Test(unittest.TestCase):
 
     def test_secante(self):
-        f = lambda x: 8*x - 2 * exp(-x)
+        f = lambda x: 8*x - 2 * exp(-x)  # noqa: E731
         self.assertAlmostEqual(secante(f, 1, 3, 2), 0.2139409276214589)
 
 

@@ -13,7 +13,7 @@ def f_(f: FuncionReal, x: float) -> float:
 
 
 def f__(f: FuncionReal, x: float) -> float:
-    return (f_(f, x + H) - f_(f, x)) / H 
+    return (f_(f, x + H) - f_(f, x)) / H
 
 
 def laguerre(
@@ -49,7 +49,7 @@ def laguerre(
 class Test(unittest.TestCase):
 
     def test_laguerre(self):
-        f = lambda x: 144 - 352.8*x + 324.8*x**2 - 147*x**3 + 35*x**4 - 4.2*x**5 + 0.2*x**6
+        f = lambda x: 144 - 352.8*x + 324.8*x**2 - 147*x**3 + 35*x**4 - 4.2*x**5 + 0.2*x**6  # noqa: E731, E501
         self.assertAlmostEqual(
             laguerre(f, 10, 6),
             6.000000012018115,
