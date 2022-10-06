@@ -9,7 +9,7 @@ from utils import load_data
 
 
 def _informacion():
-    data = load_data("data.json") #soluciones/aereolinea/data.json
+    data = load_data("data.json")  # soluciones/aereolinea/data.json
     avion = Avion(
         data["avion"]["modelo"],
         data["avion"]["fabricante"],

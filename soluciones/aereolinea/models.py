@@ -39,7 +39,7 @@ class Avion:
             if pasajero_existente.dni == pasajero.dni:
                 return False
         return True
-    
+
     def buscar_pasajero(self, dni: str) -> Optional[Pasajero]:
         for pasajero_existente in self.pasajeros + self.tripulantes:
             if pasajero_existente.dni == dni:
@@ -72,5 +72,5 @@ class Vuelo:
         print(f"Modelo: {self.avion.modelo}")
         print(f"Fabricante: {self.avion.fabricante}")
         print(f"Tripulantes: {self.avion.tripulantes}")
-        print(f"Lista de asajeros: ")
+        print("Lista de asajeros: ")
         self.avion.mostrar_pasajeros()
