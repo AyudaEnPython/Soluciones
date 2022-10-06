@@ -8,7 +8,7 @@ class DniException(Exception):
 
 def validar(dni: str) -> str:
     """Valida un DNI
-    
+
     :param dni: DNI a validar
     :dni type: str
     :return: DNI validado
@@ -22,16 +22,16 @@ def validar(dni: str) -> str:
 
 
 class Persona:
-    
+
     def __init__(self, nombre: str, apellido: str, dni: str) -> None:
         self.nombre = nombre
         self.apellido = apellido
         self.__dni = validar(dni)
-    
+
     @property
     def dni(self) -> str:
         return self.__dni
-    
+
     @dni.setter
     def dni(self, dni: str) -> None:
         self.__dni = validar(dni)
