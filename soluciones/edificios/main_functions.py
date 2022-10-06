@@ -1,4 +1,5 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
+# flake8: noqa
 
 # 10                                                                           P   P   P
 #  9                                                                           P   P   P
@@ -10,7 +11,7 @@
 #  3   X   X   X   X   S   S   S   M   M   M   M   M                           P   P   P
 #  2   X   X   X   X   S   S   S   M   M   M   M   M   A   A   A   A   A       P   P   P
 #  1   X   X   X   X   S   S   S   M   M   M   M   M   A   A   A   A   A       P   P   P
-# 00  01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  19  20  21  
+# 00  01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  19  20  21
 
 """
 from prototools import show_matrix
