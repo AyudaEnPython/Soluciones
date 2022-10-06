@@ -10,7 +10,7 @@ secuencia:
 # ---------------------------------------------------------------------
 NOTE: la secuencia para n = 10 es: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 """
-from unittest import main, TestCase
+import unittest
 from typing import Generator, List
 
 
@@ -62,20 +62,23 @@ def fibonacci_binet(n: int) -> List[int]:
     # ]
 
 
-def main_(): # comment/uncomment to switch between while and for versions
+def main():  # comment/uncomment to switch between while and for versions
     n = int(input("Ingrese la cantidad de elementos de la secuencia: "))
     print(", ".join(str(x) for x in fibonacci_while(n)))
     # print(", ".join(str(x) for x in fibonacci_for(n)))
     # print(", ".join(str(x) for x in fibonacci_binet(n)))
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_functions(self):
         for function in (fibonacci_while, fibonacci_for, fibonacci_binet):
-            self.assertEqual(list(function(10)), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
+            self.assertEqual(
+                list(function(10)),
+                [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+            )
 
 
 if __name__ == "__main__":
-    # main() # uncomment this line and comment the next one to run the tests
-    main_()
+    # unittest.main() # uncomment/comment to run the tests
+    main()
