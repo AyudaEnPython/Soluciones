@@ -50,7 +50,9 @@ class Test(TestCase):
         self.assertEqual(eliminar([1, 2, 3, 4, 5, 6]), [1, 2, 4, 5, 6])
         self.assertEqual(eliminar(["1", "2", "3"]), ["1", "3"])
         self.assertEqual(eliminar(["a", "b", "c", "d"]), ["a", "c", "d"])
-        self.assertEqual(eliminar(["a", "b", "c", "d", "e"]), ["a", "b", "d", "e"])
+        self.assertEqual(
+            eliminar(["a", "b", "c", "d", "e"]), ["a", "b", "d", "e"]
+        )
 
 
 if __name__ == "__main__":
