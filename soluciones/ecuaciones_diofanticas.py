@@ -11,8 +11,8 @@ El programa debe:
 
 TODO: add docstrings and more testcases.
 """
+import unittest
 from typing import Tuple
-from unittest import main, TestCase
 # pip install prototools
 from prototools import main_loop
 # https://github.com/AyudaEnPython/Soluciones/blob/main/soluciones/mcd.py
@@ -51,7 +51,7 @@ def ex_mcd(a: int, b: int) -> Tuple[int, int, int]:
 
 
 def dio_all(a: int, b: int, c: int, n: int = 2) -> None:
-    (x0, y0) = dio(a, b, c) 
+    (x0, y0) = dio(a, b, c)
     d = mcd_while(a, b)
     p = a // d
     q = b // d
@@ -61,13 +61,13 @@ def dio_all(a: int, b: int, c: int, n: int = 2) -> None:
         print(x, y)
 
 
-def main_(): 
+def main():
     a, b, c = [int(x) for x in input("> ").split(",")]
-    #print(dio(a, b, c)) # uncomment/comment to switch versions
+    # print(dio(a, b, c))  # uncomment/comment to switch versions
     dio_all(a, b, c)
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_mcd_while(self):
         self.assertEqual(mcd_while(121, 11), 11)
@@ -78,5 +78,5 @@ class Test(TestCase):
 
 
 if __name__ == '__main__':
-    #main() # uncomment this line and comment the next one to run tests
-    main_loop(main_)
+    # unittest.main()  # uncomment / comment to run tests
+    main_loop(main)

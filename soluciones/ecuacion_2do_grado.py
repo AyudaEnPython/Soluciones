@@ -6,9 +6,9 @@ from unittest import main, TestCase
 
 
 def solve(
-    a: Union[int, float], 
-    b: Union[int, float], 
-    c: Union[int, float]
+    a: Union[int, float],
+    b: Union[int, float],
+    c: Union[int, float],
 ) -> Tuple[float, float]:
     """Resuelve ecuaciones de 2do grado.
 
