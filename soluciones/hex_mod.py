@@ -5,7 +5,7 @@ from unittest import main, TestCase
 
 def solucion(source: str, target: str, steps: int = 6, take: int = 2) -> str:
     """Toma una cantidad determinada de valores de una cadena fuente
-    y las inserta en un número determinado de posiciones de la cadena 
+    y las inserta en un número determinado de posiciones de la cadena
     destino.
 
     :param source: Cadena de texto fuente de la cual tomar valores
@@ -27,10 +27,10 @@ def solucion(source: str, target: str, steps: int = 6, take: int = 2) -> str:
 
     .. note:: Cambiar el nombre de la función a uno mas apropiado
     """
-    return "".join(
-        [target[pos*steps:pos*steps+steps] + source[pos*take:pos*take+take]
-        for pos in range(len(target)//steps)]
-    )
+    return "".join([
+        target[pos*steps:pos*steps+steps] + source[pos*take:pos*take+take]
+        for pos in range(len(target)//steps)
+    ])
 
 
 class Test(TestCase):
@@ -39,11 +39,15 @@ class Test(TestCase):
         self.assertEqual(
             solucion(
                 "0000fe0f90af6e2fd04e000000000000",
-                ("000000ffffffd7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7"
-                "d7d7d7d7d7d7000000000000000000000000000000000000")
+                (
+                    "000000ffffffd7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7"
+                    "d7d7d7d7d7d7000000000000000000000000000000000000"
+                ),
             ),
-            ("00000000ffffff00d7d7d7fed7d7d70fd7d7d790d7d7d7afd7d7d76ed7d7d72f"
-            "d7d7d7d0d7d7d74e000000000000000000000000000000000000000000000000")
+            (
+                "00000000ffffff00d7d7d7fed7d7d70fd7d7d790d7d7d7afd7d7d76ed7d7d72f"  # noqa: E501
+                "d7d7d7d0d7d7d74e000000000000000000000000000000000000000000000000"  # noqa: E501
+            ),
         )
         self.assertEqual(
             solucion("F7E24E", "00AFEA55E97A", steps=4, take=2),

@@ -32,7 +32,7 @@ def hexcolors_alt(size: int) -> List[str]:
 
 
 def main():
-    colors = hexacolors(10) # or hexacolors_alt(10)
+    colors = hexacolors(10)  # or hexacolors_alt(10)
     print(colors)
 
 

@@ -9,7 +9,7 @@ from pilas import Pila
 
 class Hanoi:
 
-    def __init__(self, discos, l, m, r) -> None:
+    def __init__(self, discos, l, m, r) -> None:  # noqa: E741
         self.discos = discos
         self.torres = {
             l: Pila(),
@@ -19,11 +19,11 @@ class Hanoi:
         for i in range(discos, 0, -1):
             self.torres[l].push(i)
 
-    def mover_disco(self, l, r):
+    def mover_disco(self, l, r):  # noqa: E741
         self.torres[r].push(self.torres[l].pop())
         print(f"{r} -> {l}")
 
-    def mover_torre(self, n, l, m, r):
+    def mover_torre(self, n, l, m, r):  # noqa: E741
         if n >= 1:
             self.mover_torre(n - 1, l, r, m)
             self.mover_disco(l, r)
