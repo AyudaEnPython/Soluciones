@@ -18,14 +18,14 @@ división con restas sucesivas:
     |     6   |    3    |    1    |         |
     |     3   |    3    |         |         |
     |     0   |         |         |         |
-    +---------+---------+---------+---------+                           
+    +---------+---------+---------+---------+
 
 el resultado de esto:    4     2
 el residuo es :          0     1
 # ---------------------------------------------------------------------
 """
+import unittest
 from typing import Tuple
-from unittest import main, TestCase
 
 
 def solver(a: int, b: int) -> Tuple[int, int]:
@@ -50,14 +50,14 @@ def ingresar_numeros() -> Tuple[int, int]:
     return a, b
 
 
-def main_():
+def main():
     a, b = ingresar_numeros()
     resultado, residuo = solver(a, b)
     print(f"El cociente: {resultado}")
     print(f"El residuo es: {residuo}")
 
 
-class Test(TestCase):
+class Test(unittest.TestCase):
 
     def test_solver(self):
         self.assertEqual(solver(12, 3), (4, 0))
@@ -65,5 +65,5 @@ class Test(TestCase):
 
 
 if __name__ == "__main__":
-    main() # uncomment this line and comment the next one to run tests
-    #main_()
+    # unittest.main()  # uncomment/comment to run tests
+    main()
