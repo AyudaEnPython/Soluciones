@@ -25,7 +25,7 @@ def descomponer_r(n):
     if n <= 1:
         return f"{n}"
     else:
-        #print(f"{descomponer_r(n-1)} + {descomponer_r(n-2)}")
+        # print(f"{descomponer_r(n-1)} + {descomponer_r(n-2)}")
         return f"{descomponer_r(n-1)} + 1"
 
 
