@@ -17,13 +17,13 @@ def f(direction: int = -1) -> None:
     def update(angle):
         line.set_data([angle, angle], [0, 1])
         return line,
-    
+
     fig = plt.figure()
-    ax = fig.gca(projection = 'polar')
+    ax = fig.gca(projection='polar')
     fig.canvas.set_window_title('Ayuda en Python')
     ax.set_theta_zero_location('N')
     ax.set_theta_direction(direction)
-    line, = ax.plot([],[], lw=2)
+    line, = ax.plot([], [], lw=2)
     fr = np.linspace(0, 2*np.pi, 120)
     fig.canvas.draw()
     FuncAnimation(fig, update, frames=fr, blit=True, interval=10)
@@ -31,5 +31,5 @@ def f(direction: int = -1) -> None:
 
 
 if __name__ == '__main__':
-    f(-1) # Sentido horario
-    f(1)  # Sentido antihorario
+    f(-1)  # Sentido horario
+    f(1)   # Sentido antihorario

@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-Dado el polinomio: 
+Dado el polinomio:
     y = x^4 - 3x^2 + 2
 
 Calcular el valor de y para valores de x que varían en el rango
@@ -19,7 +19,7 @@ def f(x: float) -> float:
 
 
 def main():
-    puntos = [x*H for x in range(MIN*10, MAX*10 + 1)]
+    puntos = [x * H for x in range(MIN*10, MAX*10 + 1)]
     for punto in puntos:
         print(f"f({punto:.2f}) -> {f(punto):.2f}")
     plt.plot(puntos, [f(x) for x in puntos])

@@ -2,7 +2,7 @@
 
 Crear una función que represente gráficamente esta expresión:
 
-    sin(2π*f_1*t) + sin(2π*f_2*t) 
+    sin(2π*f_1*t) + sin(2π*f_2*t)
 
 Siendo f_1 y f_2 argumentos de entrada (por defecto 10 y 100) y
 t ∈ [0, 0.5]. Además, debe mostrar:
