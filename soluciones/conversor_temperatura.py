@@ -21,9 +21,9 @@ def main():
     menu = Menu("Conversor de Temperatura")
     menu.add_options(
         ("Fahrenheit a Celsius",
-        lambda: datos("Temperatura (°F): ", fahrenheit_to_celsius)),
+            lambda: datos("Temperatura (°F): ", fahrenheit_to_celsius)),
         ("Celsius a Fahrenheit",
-        lambda: datos("Temperatura (°C): ", celsius_to_fahrenheit)),
+            lambda: datos("Temperatura (°C): ", celsius_to_fahrenheit)),
     )
     menu.run()
 
