@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 from tkinter import (
-    Label, Entry, Button, Tk, Radiobutton, messagebox, IntVar, ttk, Frame
+    Label, Entry, Button, Radiobutton, messagebox, IntVar, ttk, Frame
 )
 
 
@@ -21,9 +21,9 @@ class UiMainWindow(Frame):
         self.edad = Entry(self)
         self.edad.grid(row=1, column=1, padx=5)
         Label(self, text="Inscribió la cédula?").grid(row=2, column=0)
-        self.si = Radiobutton(self, text="Si", variable= self.v, value=1)
+        self.si = Radiobutton(self, text="Si", variable=self.v, value=1)
         self.si.grid(row=3, column=0)
-        self.no = Radiobutton(self, text="No", variable= self.v, value=0)
+        self.no = Radiobutton(self, text="No", variable=self.v, value=0)
         self.no.grid(row=3, column=1)
         ttk.Separator(self, orient="horizontal").grid(
             row=4, column=0, columnspan=2, sticky="ew", pady=10)
@@ -33,8 +33,7 @@ class UiMainWindow(Frame):
         self.limpiar.grid(row=5, column=1)
         ttk.Separator(self, orient="horizontal").grid(
             row=6, column=0, columnspan=2, sticky="ew", pady=10)
-        Label(self, text="Ayuda en Python").grid(row=8, column=1, sticky="e"
-        )
+        Label(self, text="Ayuda en Python").grid(row=8, column=1, sticky="e")
 
 
 class App(UiMainWindow):
@@ -48,7 +47,7 @@ class App(UiMainWindow):
     def f(self) -> None:
         nombre = self.nombre.get()
         edad = int(self.edad.get())
-        if (18 <= edad <=70) and self.v.get():
+        if (18 <= edad <= 70) and self.v.get():
             messagebox.showinfo(message=f"{nombre}, puedes votar")
         else:
             messagebox.showerror(message=f"{nombre}, no puedes votar")
