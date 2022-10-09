@@ -6,7 +6,7 @@ TODO: add testcases later...
 
 class Node:
 
-    def __init__(self, data = None) -> None:
+    def __init__(self, data=None) -> None:
         self.data = data
         self.next = self
 
@@ -53,7 +53,7 @@ class CircularList:
             self.head = None
             self.count = 0
         before = self.head
-        for _ in range(self.count -1 if index -1 == -1 else index -1):
+        for _ in range(self.count - 1 if index - 1 == -1 else index - 1):
             before = before.next
         after = before.next.next
         before.next = after
