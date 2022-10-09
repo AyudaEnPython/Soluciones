@@ -15,10 +15,10 @@ while True:
         print("Error: debe ingresar un número entero")
         continue
 
-k = n 
+k = n
 x = 0
 while k != 0:
-    x = 10*x + k%10
+    x = 10 * x + k % 10
     k //= 10
 
 if x == n:

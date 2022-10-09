@@ -24,6 +24,8 @@ while True:
         print("El numero es primo")
     else:
         print("El numero no es primo")
-    opcion = input("Ingrese 's' para salir, para continuar presione cualquier tecla: ")
+    opcion = input(
+        "Ingrese 's' para salir, para continuar presione cualquier tecla: "
+    )
     if opcion == 's':
         break
