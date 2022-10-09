@@ -14,7 +14,7 @@ f = lambda x, y, z, r: x*40 + y*4 + z*.4 + r  # noqa: E731
 def maximizar(n: int) -> Tuple[int, int, int]:
     x, r = divmod(n, 40)
     y, r = divmod(r, 4)
-    z, r = divmod(r, .4) 
+    z, r = divmod(r, .4)
     return x, y, z, r
 
 
