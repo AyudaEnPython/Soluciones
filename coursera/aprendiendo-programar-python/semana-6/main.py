@@ -41,7 +41,7 @@ if __name__ == "__main__":
         69, 43, 17, 4, 31, 10, 6, 52, 67, 8, 25, 2, 50, 75, 24, 89, 44, 5
     ]
     colores_1 = ['rojo', 'rojo', 'azul', 'azul']
-    colores_2 =  [
+    colores_2 = [
         'verde', 'rojo', 'azul', 'amarillo', 'verde', 'verde', 'azul',
         'rojo', 'azul', 'rojo', 'azul', 'verde', 'verde', 'azul',
         'amarillo', 'azul', 'amarillo', 'rojo', 'rojo', 'azul',
