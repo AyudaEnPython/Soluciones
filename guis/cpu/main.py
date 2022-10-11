@@ -12,7 +12,7 @@ def cpu_percent():
 
 class CpuUsage(Frame):
 
-    def __init__(self, master, points):  
+    def __init__(self, master, points):
         super().__init__(master)
         self.figure = Figure(figsize=(5, 5), dpi=100)
         self.ax = self.figure.add_subplot(111)

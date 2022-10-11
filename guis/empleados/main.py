@@ -13,7 +13,7 @@ class App(Frame):
         self.sistema = Sistema()
         self._widgets()
         self._layouts()
-    
+
     def _widgets(self):
         for i, label in enumerate((
             "Nombre",

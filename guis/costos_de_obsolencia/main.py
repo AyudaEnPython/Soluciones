@@ -37,11 +37,11 @@ Realizar la representación grafica comparativa en columnas.
         |     |
     P   |     |       |           |
     R   |     | *     |   |       |   |
-    E   | |   | * |   | * |   |   | * | 
+    E   | |   | * |   | * |   |   | * |
     C   | | * | * |	  | * |   | * | * | *
     I   | | * | * | * | * | * | * | * | *
     O   | | * | * | * | * | * | * | * | *
-        | | * | * | * | * | * | * | * | *  
+        | | * | * | * | * | * | * | * | *
         +--------------------------------->
             P R O D U C T O S
 
@@ -97,17 +97,17 @@ class App(Frame):
         self.btn_result = Button(
             self.root,
             text="Calcular",
-            command= lambda: self._get_data(),
+            command=lambda: self._get_data(),
         )
         self.brn_clear = Button(
             self.root,
             text="Limpiar",
-            command= lambda: self._clear_data(),
+            command=lambda: self._clear_data(),
         )
         self.btn_plot = Button(
             self.root,
             text="Mostrar comparativa",
-            command= lambda: plot_comparativa(
+            command=lambda: plot_comparativa(
                 self.initial_serie, self.final_serie,
             )
         )
@@ -115,8 +115,8 @@ class App(Frame):
     def layout(self):
         for i in range(8):
             self.entries[i+1].grid(row=i, column=1, padx=5, pady=5)
-        self.btn_result.grid(row=8, column=0, padx=5,pady=5, sticky="ew")
-        self.brn_clear.grid(row=8, column=1, padx=5,pady=5, sticky="we")
+        self.btn_result.grid(row=8, column=0, padx=5, pady=5, sticky="ew")
+        self.brn_clear.grid(row=8, column=1, padx=5, pady=5, sticky="we")
         self.btn_plot.grid(row=9, columnspan=2, padx=5, pady=5)
         self.treeview.grid(row=0, rowspan=10, column=2, padx=5, pady=5)
         self.treeview.heading("#0", text="Descripción")

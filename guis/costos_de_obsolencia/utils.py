@@ -26,7 +26,7 @@ def calcular(xs: List[float]) -> Tuple[List[float], List[float]]:
 
 def plot_comparativa(
     serie_inicial: List[float],
-    serie_final: List[float], 
+    serie_final: List[float],
     ancho_barras: float = 0.35,
 ) -> None:
     """Muestra una gráfica comparativa de obsolescencia.
