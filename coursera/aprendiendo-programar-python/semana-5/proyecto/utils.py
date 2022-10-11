@@ -33,7 +33,7 @@ def mostrar_opciones():
 
 
 def mostrar_perfil(
-    nombre, 
+    nombre,
     edad,
     estatura_m,
     estatura_cm,
@@ -50,7 +50,7 @@ def mostrar_perfil(
     print(f"País    : {pais}")
     print(f"Amigos  : {amigos}")
     print(f"Estado  : {estado}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def mostrar_mensaje(origen, destinatario, mensaje):
@@ -59,7 +59,7 @@ def mostrar_mensaje(origen, destinatario, mensaje):
         print(f"{origen} dice: {mensaje}")
     else:
         print(f"{origen} dice: @{destinatario} {mensaje}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def obtener_mensaje():

@@ -7,7 +7,7 @@
 Al leer las líneas del archivo, siempre se leen como últimos caracteres
 algunos caracteres en blancos, como espacios o el caracter cambio de
 línea ("\n"). Esto hace que los nombres de archivos creados incluyan
-estos caracteres adicionales. 
+estos caracteres adicionales.
 
 Utiliza métodos de 'str' para eliminar este tipo de caracteres que
 denominamos "no imprimibles". Es decir, "limpia" toda línea que leas,
@@ -64,13 +64,13 @@ def main():
     bienvenida()
     nombre = obtener_nombre()
     print(f"Hola {nombre}, bienvenido a Mi Red\n")
-    
+
     if existe_archivo(f"{nombre}.user"):
         print(f"Leyendo datos de usuario {nombre} desde archivo.")
         datos = leer_usuario(nombre)
     else:
         print()
-        data = obtener_datos(nombre) 
+        data = obtener_datos(nombre)
         datos = [*list(data), ""]
     print("Muy bien. Estos son los datos de tu perfil.")
     mostrar_perfil(*datos)
@@ -86,10 +86,16 @@ def main():
                 amigo = input("Ingresa el nombre de tu amig@: ")
                 mostrar_mensaje(nombre, amigo, mensaje)
         elif opcion == "3":
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos, estado)
+            mostrar_perfil(
+                nombre, genero, pais, edad,
+                estatura_m, estatura_cm, amigos, estado,
+            )
         elif opcion == "4":
-            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos, estado = obtener_datos(nombre)
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos, estado)
+            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos, estado = obtener_datos(nombre)  # noqa: E501
+            mostrar_perfil(
+                nombre, genero, pais, edad,
+                estatura_m, estatura_cm, amigos, estado,
+            )
         elif opcion == "5":
             usuario = input("Nombre de usuario: ")
             if existe_archivo(f"{usuario}.user"):
