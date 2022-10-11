@@ -38,7 +38,7 @@ class App(Tk):
         self.title("Ayuda en Python")
         self.option = IntVar()
         self.setup_ui()
-    
+
     def setup_ui(self) -> None:
         Label(self, text="Primer cateto").grid(row=0, column=0)
         Label(self, text="Segundo cateto").grid(row=1, column=0)

@@ -32,7 +32,7 @@ class Registro(Frame):
         apellidos = self.apellidos.get()
         empleado = Empleado(cedula, nombres, apellidos)
         empleado.to_db()
-    
+
     def limpiar(self):
         self.cedula.delete(0, "end")
         self.nombres.delete(0, "end")
