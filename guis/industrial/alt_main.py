@@ -61,7 +61,6 @@ class Widget(Frame):
             widget.grid_configure(padx=5, pady=5)
 
     def setup_ui(self):
-        
         Label(self, text="Hora inicial").grid(row=1, column=0, sticky="e")
         self.ent_hora_inicial = Entry(self)
         self.ent_hora_inicial.grid(row=1, column=1)
@@ -111,7 +110,10 @@ class Widget(Frame):
             produccion_total=self.ent_produccion_total.get(),
         )
         self.f = formulario
-        return float(self.f.total_desperdicio), float(self.f.produccion_conforme)
+        return (
+            float(self.f.total_desperdicio),
+            float(self.f.produccion_conforme),
+        )
 
     def informe(self):
         display = Toplevel()

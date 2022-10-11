@@ -146,7 +146,9 @@ class Widget(Frame):
         )
         self.f = formulario
         self.lbl_total_desperdicio.config(text=formulario.total_desperdicio)
-        self.lbl_produccion_conforme.config(text=formulario.produccion_conforme)
+        self.lbl_produccion_conforme.config(
+            text=formulario.produccion_conforme
+        )
         return formulario
 
     def informe(self):
