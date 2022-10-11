@@ -1,8 +1,28 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from PySide2.QtCore import *
-from PySide2.QtGui import *
-from PySide2.QtWidgets import *
+from PySide2.QtCore import (
+    QCoreApplication,
+    QMetaObject,
+    QRect,
+    Qt,
+)
+from PySide2.QtGui import (
+    QFont,
+    QFormLayout,
+    QGroupBox,
+    QPixmap,
+    QStatusBar,
+    QTextBrowser,
+)
+from PySide2.QtWidgets import (
+    QLabel,
+    QLineEdit,
+    QPushButton,
+    QRadioButton,
+    QSpinBox,
+    QVBoxLayout,
+    QWidget,
+)
 
 
 class Ui_MainWindow(object):
@@ -11,14 +31,16 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(582, 530)
-        MainWindow.setStyleSheet(u"QPushButton {\n"
-"  background-color: \"orange\";\n"
-"  color: \"white\";\n"
-"}\n"
-"QPushButton:hover {\n"
-"  background-color:\"white\";\n"
-"  color: \"orange\";\n"
-"}")
+        MainWindow.setStyleSheet(
+            u"QPushButton {\n"
+            "  background-color: \"orange\";\n"
+            "  color: \"white\";\n"
+            "}\n"
+            "QPushButton:hover {\n"
+            "  background-color:\"white\";\n"
+            "  color: \"orange\";\n"
+            "}"
+        )
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.formLayoutWidget = QWidget(self.centralwidget)
@@ -26,8 +48,10 @@ class Ui_MainWindow(object):
         self.formLayoutWidget.setGeometry(QRect(20, 20, 271, 141))
         self.formulario = QFormLayout(self.formLayoutWidget)
         self.formulario.setObjectName(u"formulario")
-        self.formulario.setLabelAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.formulario.setFormAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.formulario.setLabelAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter
+        )
+        self.formulario.setFormAlignment(Qt.AlignHCenter | Qt.AlignTop)
         self.formulario.setContentsMargins(0, 0, 0, 0)
         self.lbl_codigo = QLabel(self.formLayoutWidget)
         self.lbl_codigo.setObjectName(u"lbl_codigo")
@@ -47,14 +71,18 @@ class Ui_MainWindow(object):
         self.lbl_producto = QLabel(self.formLayoutWidget)
         self.lbl_producto.setObjectName(u"lbl_producto")
         self.lbl_producto.setFont(font)
-        self.lbl_producto.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.lbl_producto.setAlignment(
+            Qt.AlignLeading | Qt.AlignLeft | Qt.AlignVCenter
+        )
 
         self.formulario.setWidget(2, QFormLayout.LabelRole, self.lbl_producto)
 
         self.lbl_precio = QLabel(self.formLayoutWidget)
         self.lbl_precio.setObjectName(u"lbl_precio")
         self.lbl_precio.setFont(font)
-        self.lbl_precio.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.lbl_precio.setAlignment(
+            Qt.AlignLeading | Qt.AlignLeft | Qt.AlignVCenter
+        )
 
         self.formulario.setWidget(3, QFormLayout.LabelRole, self.lbl_precio)
 
@@ -139,7 +167,9 @@ class Ui_MainWindow(object):
         self.formLayoutWidget_2.setFont(font2)
         self.resultados = QFormLayout(self.formLayoutWidget_2)
         self.resultados.setObjectName(u"resultados")
-        self.resultados.setLabelAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.resultados.setLabelAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter
+        )
         self.resultados.setContentsMargins(0, 0, 0, 0)
         self.lbl_importe = QLabel(self.formLayoutWidget_2)
         self.lbl_importe.setObjectName(u"lbl_importe")
@@ -151,7 +181,9 @@ class Ui_MainWindow(object):
         self.lbl_descuentos.setObjectName(u"lbl_descuentos")
         self.lbl_descuentos.setFont(font)
 
-        self.resultados.setWidget(1, QFormLayout.LabelRole, self.lbl_descuentos)
+        self.resultados.setWidget(
+            1, QFormLayout.LabelRole, self.lbl_descuentos
+        )
 
         self.lbl_interes = QLabel(self.formLayoutWidget_2)
         self.lbl_interes.setObjectName(u"lbl_interes")
@@ -169,7 +201,9 @@ class Ui_MainWindow(object):
         self.show_importe.setObjectName(u"show_importe")
         self.show_importe.setEnabled(False)
         self.show_importe.setFont(font)
-        self.show_importe.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.show_importe.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter
+        )
 
         self.resultados.setWidget(0, QFormLayout.FieldRole, self.show_importe)
 
@@ -177,15 +211,21 @@ class Ui_MainWindow(object):
         self.show_descuento.setObjectName(u"show_descuento")
         self.show_descuento.setEnabled(False)
         self.show_descuento.setFont(font)
-        self.show_descuento.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.show_descuento.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter
+        )
 
-        self.resultados.setWidget(1, QFormLayout.FieldRole, self.show_descuento)
+        self.resultados.setWidget(
+            1, QFormLayout.FieldRole, self.show_descuento
+        )
 
         self.show_interes = QLineEdit(self.formLayoutWidget_2)
         self.show_interes.setObjectName(u"show_interes")
         self.show_interes.setEnabled(False)
         self.show_interes.setFont(font)
-        self.show_interes.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.show_interes.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter
+        )
 
         self.resultados.setWidget(2, QFormLayout.FieldRole, self.show_interes)
 
@@ -193,7 +233,9 @@ class Ui_MainWindow(object):
         self.show_total.setObjectName(u"show_total")
         self.show_total.setEnabled(False)
         self.show_total.setFont(font)
-        self.show_total.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.show_total.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter
+        )
 
         self.resultados.setWidget(3, QFormLayout.FieldRole, self.show_total)
 
@@ -274,24 +316,76 @@ class Ui_MainWindow(object):
         QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.lbl_codigo.setText(QCoreApplication.translate("MainWindow", u"CODIGO DEL CLIENTE", None))
-        self.lbl_cliente.setText(QCoreApplication.translate("MainWindow", u"NOMBRE DEL CLIENTE", None))
-        self.lbl_producto.setText(QCoreApplication.translate("MainWindow", u"PPRODUCTO", None))
-        self.lbl_precio.setText(QCoreApplication.translate("MainWindow", u"PRECIO", None))
-        self.lbl_cantidad.setText(QCoreApplication.translate("MainWindow", u"CANTIDAD", None))
-        self.btn_calcular.setText(QCoreApplication.translate("MainWindow", u"CALCULAR", None))
-        self.btn_limpiar.setText(QCoreApplication.translate("MainWindow", u"LIMPIAR", None))
-        self.btn_salir.setText(QCoreApplication.translate("MainWindow", u"SALIR", None))
-        self.lbl_importe.setText(QCoreApplication.translate("MainWindow", u"IMPORTE", None))
-        self.lbl_descuentos.setText(QCoreApplication.translate("MainWindow", u"DESCUENTOS", None))
-        self.lbl_interes.setText(QCoreApplication.translate("MainWindow", u"INTER\u00c9S", None))
-        self.lbl_total.setText(QCoreApplication.translate("MainWindow", u"TOTAL", None))
-        self.gbox_interes.setTitle(QCoreApplication.translate("MainWindow", u"TIPO DE CR\u00c9DITO INTER\u00c9S", None))
-        self.rbn_interes_0.setText(QCoreApplication.translate("MainWindow", u"0 D\u00cdAS 0%", None))
-        self.rbn_interes_15.setText(QCoreApplication.translate("MainWindow", u"15 D\u00cdAS 8.5%", None))
-        self.rbn_interes_30.setText(QCoreApplication.translate("MainWindow", u"30 D\u00cdAS 12.5%", None))
-        self.gbox_descuento.setTitle(QCoreApplication.translate("MainWindow", u"TIPO DE CLIENTE DESCUENTO", None))
-        self.rbn_mayorista.setText(QCoreApplication.translate("MainWindow", u"MAYORISTA 4.5%", None))
-        self.rbn_minorista.setText(QCoreApplication.translate("MainWindow", u"MINORISTA 1.9%", None))
+        MainWindow.setWindowTitle(
+            QCoreApplication.translate("MainWindow", u"MainWindow", None)
+        )
+        self.lbl_codigo.setText(
+            QCoreApplication.translate(
+                "MainWindow", u"CODIGO DEL CLIENTE", None
+            )
+        )
+        self.lbl_cliente.setText(
+            QCoreApplication.translate(
+                "MainWindow", u"NOMBRE DEL CLIENTE", None
+            )
+        )
+        self.lbl_producto.setText(
+            QCoreApplication.translate("MainWindow", u"PPRODUCTO", None)
+        )
+        self.lbl_precio.setText(
+            QCoreApplication.translate("MainWindow", u"PRECIO", None)
+        )
+        self.lbl_cantidad.setText(
+            QCoreApplication.translate("MainWindow", u"CANTIDAD", None)
+        )
+        self.btn_calcular.setText(
+            QCoreApplication.translate("MainWindow", u"CALCULAR", None)
+        )
+        self.btn_limpiar.setText(
+            QCoreApplication.translate("MainWindow", u"LIMPIAR", None)
+        )
+        self.btn_salir.setText(
+            QCoreApplication.translate("MainWindow", u"SALIR", None)
+        )
+        self.lbl_importe.setText(
+            QCoreApplication.translate("MainWindow", u"IMPORTE", None)
+        )
+        self.lbl_descuentos.setText(
+            QCoreApplication.translate("MainWindow", u"DESCUENTOS", None)
+        )
+        self.lbl_interes.setText(
+            QCoreApplication.translate("MainWindow", u"INTER\u00c9S", None)
+        )
+        self.lbl_total.setText(
+            QCoreApplication.translate("MainWindow", u"TOTAL", None)
+        )
+        self.gbox_interes.setTitle(
+            QCoreApplication.translate(
+                "MainWindow", u"TIPO DE CR\u00c9DITO INTER\u00c9S", None
+            )
+        )
+        self.rbn_interes_0.setText(
+            QCoreApplication.translate("MainWindow", u"0 D\u00cdAS 0%", None)
+        )
+        self.rbn_interes_15.setText(
+            QCoreApplication.translate(
+                "MainWindow", u"15 D\u00cdAS 8.5%", None
+            )
+        )
+        self.rbn_interes_30.setText(
+            QCoreApplication.translate(
+                "MainWindow", u"30 D\u00cdAS 12.5%", None
+            )
+        )
+        self.gbox_descuento.setTitle(
+            QCoreApplication.translate(
+                "MainWindow", u"TIPO DE CLIENTE DESCUENTO", None
+            )
+        )
+        self.rbn_mayorista.setText(
+            QCoreApplication.translate("MainWindow", u"MAYORISTA 4.5%", None)
+        )
+        self.rbn_minorista.setText(
+            QCoreApplication.translate("MainWindow", u"MINORISTA 1.9%", None)
+        )
         self.img.setText("")

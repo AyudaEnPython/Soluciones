@@ -43,7 +43,7 @@ class Producto:
         self.total = round(self.precio * self.cantidad, 2)
         self.interes = round(CREDITO[self.credito] * self.total, 2)
         self.descuento = round(TIPO[self.tipo] * self.total, 2)
-    
+
     def calcular_precio(self) -> float:
         return round(
             self.precio * self.cantidad - self.descuento + self.interes,
