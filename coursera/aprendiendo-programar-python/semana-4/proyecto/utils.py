@@ -29,7 +29,15 @@ def mostrar_opciones():
     print("\t0. Salir")
 
 
-def mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos):
+def mostrar_perfil(
+    nombre,
+    genero,
+    pais,
+    edad,
+    estatura_m,
+    estatura_cm,
+    amigos
+):
     print("\n" + BARRA)
     print(f"Nombre  : {nombre}")
     print(f"Género  : {genero}")
@@ -37,7 +45,7 @@ def mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos):
     print(f"Edad    : {edad} años")
     print(f"Estatura: {estatura_m} metros y {estatura_cm} centímetros")
     print(f"Amigos  : {amigos}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def mostrar_mensaje(origen, destinatario, mensaje):
@@ -46,7 +54,7 @@ def mostrar_mensaje(origen, destinatario, mensaje):
         print(f"{origen} dice: {mensaje}")
     else:
         print(f"{origen} dice: @{destinatario} {mensaje}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def obtener_mensaje():

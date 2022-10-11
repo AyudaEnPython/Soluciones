@@ -4,6 +4,7 @@
 #que el código sea más fácil de comprender.
 
 #Recordemos que en este módulo están todos las funciones adicionales que hemos creado.
+# flake8: noqa
 import S5Red2 as Red
 
 Red.mostrar_bienvenida()

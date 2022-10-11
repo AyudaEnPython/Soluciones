@@ -23,7 +23,7 @@ from utils import (
 
 def main():
     bienvenida()
-    nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()
+    nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()  # noqa: E501
     print(
         f"\nMuy bien, {nombre}."
         f"Entonces podemos crear un perfil con estos datos."
@@ -41,10 +41,14 @@ def main():
                 amigo = input("Ingresa el nombre de tu amig@: ")
                 mostrar_mensaje(nombre, amigo, mensaje)
         elif opcion == "3":
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos)
+            mostrar_perfil(
+                nombre, genero, pais, edad, estatura_m, estatura_cm, amigos
+            )
         elif opcion == "4":
-            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos)
+            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()  # noqa: E501
+            mostrar_perfil(
+                nombre, genero, pais, edad, estatura_m, estatura_cm, amigos
+            )
         elif opcion == SALIR:
             print("\nHas decidido salir.")
 

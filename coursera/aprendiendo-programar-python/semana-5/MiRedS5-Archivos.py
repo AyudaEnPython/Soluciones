@@ -33,6 +33,7 @@
 
 
 #Recordemos que en este módulo están todos las funciones adicionales que hemos creado.
+# flake8: noqa
 import S5Red as Red
 #El módulo 'os' nos permitirá consultar si un archivo existe.
 import os
