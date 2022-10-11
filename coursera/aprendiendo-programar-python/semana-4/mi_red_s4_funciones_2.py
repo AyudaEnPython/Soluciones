@@ -37,7 +37,15 @@ def mostrar_opciones():
     print("\t0. Salir")
 
 
-def mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos):
+def mostrar_perfil(
+    nombre,
+    genero,
+    pais,
+    edad,
+    estatura_m,
+    estatura_cm,
+    amigos,
+):
     print("\n" + BARRA)
     print(f"Nombre  : {nombre}")
     print(f"Género  : {genero}")
@@ -45,7 +53,7 @@ def mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos):
     print(f"Edad    : {edad} años")
     print(f"Estatura: {estatura_m} metros y {estatura_cm} centímetros")
     print(f"Amigos  : {amigos}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def mostrar_mensaje(origen, destinatario, mensaje):
@@ -120,7 +128,7 @@ def obtener_opcion():
 
 def main():
     bienvenida()
-    nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()
+    nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()  # noqa: E501
     print(
         f"\nMuy bien, {nombre}."
         f"Entonces podemos crear un perfil con estos datos."
@@ -138,10 +146,14 @@ def main():
                 amigo = input("Ingresa el nombre de tu amig@: ")
                 mostrar_mensaje(nombre, amigo, mensaje)
         elif opcion == "3":
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos)
+            mostrar_perfil(
+                nombre, genero, pais, edad, estatura_m, estatura_cm, amigos
+            )
         elif opcion == "4":
-            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()
-            mostrar_perfil(nombre, genero, pais, edad, estatura_m, estatura_cm, amigos)
+            nombre, genero, pais, edad, estatura_m, estatura_cm, amigos = obtener_datos()  # noqa: E501
+            mostrar_perfil(
+                nombre, genero, pais, edad, estatura_m, estatura_cm, amigos
+            )
         elif opcion == SALIR:
             print("\nHas decidido salir.")
 
