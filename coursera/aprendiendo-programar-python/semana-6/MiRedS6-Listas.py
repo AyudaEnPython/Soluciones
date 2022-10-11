@@ -18,6 +18,7 @@
 
 
 #En este módulo están todos las funciones  que hemos creado hasta ahora
+# flake8: noqa
 import S6Red as Red
 
 

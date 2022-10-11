@@ -1,4 +1,5 @@
 #El módulo 'os' nos permitirá consultar si un archivo existe.
+# flake8: noqa
 import os
 
 def mostrar_bienvenida():
