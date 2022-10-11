@@ -37,21 +37,21 @@ class App(Frame):
     def header_widgets(self):
         Label(
             self.frm_header, text="Registro de datos", bg="gray22", fg="white",
-            font=("Rockwell",15,"bold"),
+            font=("Rockwell", 15, "bold"),
         ).grid(row=0, column=0)
         Label(
             self.frm_datos, text="Agregar nuevos datos", bg="navy", fg="white",
-            font=("Rockwell",13,"bold"),
+            font=("Rockwell", 13, "bold"),
         ).grid(row=0, column=0, columnspan=2)
         for i, label in enumerate(LABELS):
             Label(
                 self.frm_datos, text=label.title(), bg="navy", fg="white",
-                font=("Rockwell",12,"bold"),
+                font=("Rockwell", 12, "bold"),
             ).grid(row=i+1, column=0, sticky="e", pady=15)
-            entry = Entry(self.frm_datos, font=("Arial",12))
+            entry = Entry(self.frm_datos, font=("Arial", 12))
             entry.grid(row=i+1, column=1, sticky="w", padx=5)
             self.entries[label] = entry
-    
+
     def control_widgets(self):
         Label(self.frm_control, text="Control", fg="white", bg="black").grid(
             columnspan=3, row=0, column=0, pady=1, padx=4,
@@ -65,7 +65,7 @@ class App(Frame):
         Button(self.frm_control, text="Mostrar").grid(
             row=2, column=0, sticky="ew", pady=5, padx=5
         )
-    
+
     def viewer_widgets(self):
         self.table = ttk.Treeview(self.frm_viewer, height=21)
         x = Scrollbar(
@@ -80,8 +80,12 @@ class App(Frame):
         self.table.configure(xscrollcommand=x.set, yscrollcommand=y.set)
         self.table["columns"] = LABELS[1:]
         for i, label in enumerate(LABELS):
-            self.table.column(f"#{i}", minwidth=100, width=115, anchor="center")
-            self.table.heading(f"#{i}", text=label.title(), anchor="center")
+            self.table.column(
+                f"#{i}", minwidth=100, width=115, anchor="center"
+            )
+            self.table.heading(
+                f"#{i}", text=label.title(), anchor="center"
+            )
         style = ttk.Style(self.frm_viewer)
         style.theme_use("alt")
         style.configure(".", font=("Helvetica", 12, "bold"), foreground="red2")
@@ -94,9 +98,9 @@ class App(Frame):
         style.map(
             "Treeview",
             background=[("selected", "green2")],
-            foreground=[("selected","black")],
+            foreground=[("selected", "black")],
         )
-    
+
     def run(self):
         self.root.title("Registro de datos")
         self.root.geometry("900x500")

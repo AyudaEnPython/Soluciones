@@ -19,7 +19,7 @@ TERMINALES = len(DB)
 
 
 def ping(hostname):
-    try: 
+    try:
         stdout = subprocess.Popen(["ping", "-n", "1", hostname]).wait()
         if stdout == 0:
             return "Conectado"

@@ -1,7 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 import pandas as pd
-from dataclasses import dataclass
 from dataclasses import dataclass, field, asdict
 from tkinter import Frame, Tk, Label, Entry, Button
 
@@ -14,7 +13,7 @@ class Reporte:
     precio: float = field(default=0.0)
     descuento: float = field(default=0.0)
     total: float = field(default=0.0)
-    
+
     def calcular_total(self):
         self.total = self.precio - self.descuento
 
@@ -23,7 +22,7 @@ class Reporte:
 
 
 class App(Frame):
-    
+
     def __init__(self):
         self.root = Tk()
 
@@ -34,7 +33,8 @@ class App(Frame):
 
     def widgets(self):
         for i, label in enumerate(
-            ("Proveedor", "Cliente", "Servicio", "Precio", "Descuento")):
+            ("Proveedor", "Cliente", "Servicio", "Precio", "Descuento")
+        ):
             Label(self.root, text=label).grid(row=i, column=0, sticky="e")
         self.txt_proveedor = Entry(self.root)
         self.txt_cliente = Entry(self.root)

@@ -32,7 +32,7 @@ def draw_matrix(matrix: List[List[float]]) -> None:
 class Matrix:
     m: int
     n: int
-    
+
     def __post_init__(self) -> None:
         self.arr = [
             [randint(MIN, MAX) for _ in range(self.n)] for _ in range(self.m)
@@ -56,7 +56,7 @@ class Display(Frame):
     def __init__(self, master) -> None:
         super().__init__(master)
         self.setup_ui()
-    
+
     def setup_ui(self):
         self.upper = Text(self, width=40, height=12)
         self.upper.pack(side="top", fill="both", expand=True)
@@ -75,7 +75,7 @@ class Display(Frame):
 
     def clear(self, pos: str) -> None:
         if pos == "upper":
-            self.upper.delete("1.0", "end") 
+            self.upper.delete("1.0", "end")
         elif pos == "lower":
             self.lower.delete("1.0", "end")
 
@@ -98,7 +98,9 @@ class App(Tk):
         Label(self.left, text="N").grid(row=1, column=0)
         self.n = Entry(self.left, width=3)
         self.n.grid(row=1, column=1)
-        self.create_matrix = Button(self.left, text="Crear", command=self.create)
+        self.create_matrix = Button(
+            self.left, text="Crear", command=self.create
+        )
         self.create_matrix.grid(row=2, columnspan=2)
         self.combo = ttk.Combobox(
             self.left, values=tuple(ACTION.keys()), state="readonly"

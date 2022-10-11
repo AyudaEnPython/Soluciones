@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 # ------------------------ Enunciado Original -------------------------
-Usando tkinter implementar. Un sensor de temperatura de un criadero de 
+Usando tkinter implementar. Un sensor de temperatura de un criadero de
 truchas, toma lecturas de agua (grados centígrados) y el nivel de ruido
 (decibelios) todos lo meses y los almacena en una matriz de orden 12x2.
 Construyda un programa que determine mensualmente los valores promedios

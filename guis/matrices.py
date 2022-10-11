@@ -33,7 +33,7 @@ MIN, MAX = 0, 50
 class Matrix:
     m: int
     n: int
-    
+
     def __post_init__(self) -> None:
         self.arr = np.random.randint(MIN, MAX, size=(self.m, self.n))
         self.copy = self.arr.copy()
@@ -66,7 +66,7 @@ class App(Frame):
         self.matrix = None
         self.widgets()
         self.layout()
-    
+
     def widgets(self) -> None:
         self.lbl_m = Label(self.root, text="M")
         self.lbl_n = Label(self.root, text="N")
