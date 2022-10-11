@@ -14,9 +14,9 @@ SALIR = "0"
 TITULO = """
               _                  __
    ____ ___  (_)  ________  ____/ /
-  / __ `__ \/ /  / ___/ _ \/ __  /
+  / __ `__ \\/ /  / ___/ _ \\/ __  /
  / / / / / / /  / /  /  __/ /_/ /
-/_/ /_/ /_/_/  /_/   \___/\__,_/
+/_/ /_/ /_/_/  /_/   \\___/\\__,_/
 """
 BARRA = "-" * SIZE
 
@@ -41,7 +41,7 @@ def mostrar_perfil(nombre, edad, estatura_m, estatura_cm, amigos):
     print(f"Edad    : {edad} años")
     print(f"Estatura: {estatura_m} metros y {estatura_cm} centímetros")
     print(f"Amigos  : {amigos}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def mostrar_mensaje(origen, destinatario, mensaje):
@@ -50,7 +50,7 @@ def mostrar_mensaje(origen, destinatario, mensaje):
         print(f"{origen} dice: {mensaje}")
     else:
         print(f"{origen} dice: @{destinatario} {mensaje}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def obtener_mensaje():

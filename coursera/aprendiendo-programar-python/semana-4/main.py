@@ -1,6 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 
+
 # Pregunta 1
 def mcd(n1, n2):
     while n2 != 0:
@@ -42,6 +43,6 @@ def panprimo(n):
 if __name__ == "__main__":
     assert mcd(10, 15) == 5
     assert exponente(65) == 6
-    assert panprimo(2424643) == False
-    assert panprimo(1234567890) == False
-    assert panprimo(10123485769) == True
+    assert panprimo(2424643) is False
+    assert panprimo(1234567890) is False
+    assert panprimo(10123485769) is True

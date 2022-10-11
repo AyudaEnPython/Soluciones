@@ -12,6 +12,7 @@
 #del perfil del usuario, habrás notado que tienes que escribir de nuevo el código necesario
 #con un print por cada dato. El código se vería como está más abajo.
 
+# flake8: noqa
 
 print("Bienvenido a ... ")
 print("""

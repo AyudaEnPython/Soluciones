@@ -3,6 +3,9 @@
 #Vamos a crear un nuevo archivo .py y copiaremos en él todas las funciones que hemos definido.
 #Llamaremos a este archivo S4Red.py. Luego, para poder utilizar estas funciones dentro de nuestro archivo
 #principal, utilizaremos la instrucción import.
+
+# flake8: noqa
+
 import S4Red as Red
 
 #Aquí empieza el programa principal.

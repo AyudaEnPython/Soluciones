@@ -7,6 +7,8 @@
 #3. El código para mostrar el perfil del usuario
 #4. El código para mostrar un mensaje en pantalla
 
+# flake8: noqa
+
 def mostrar_bienvenida():
     print("Bienvenido a ... ")
     print("""

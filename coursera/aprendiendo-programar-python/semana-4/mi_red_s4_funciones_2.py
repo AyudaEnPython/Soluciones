@@ -16,9 +16,9 @@ SALIR = "0"
 TITULO = """
               _                  __
    ____ ___  (_)  ________  ____/ /
-  / __ `__ \/ /  / ___/ _ \/ __  /
+  / __ `__ \\/ /  / ___/ _ \\/ __  /
  / / / / / / /  / /  /  __/ /_/ /
-/_/ /_/ /_/_/  /_/   \___/\__,_/
+/_/ /_/ /_/_/  /_/   \\___/\\__,_/
 """
 BARRA = "-" * SIZE
 
@@ -54,7 +54,7 @@ def mostrar_mensaje(origen, destinatario, mensaje):
         print(f"{origen} dice: {mensaje}")
     else:
         print(f"{origen} dice: @{destinatario} {mensaje}")
-    print(BARRA +"\n")
+    print(BARRA + "\n")
 
 
 def obtener_mensaje():

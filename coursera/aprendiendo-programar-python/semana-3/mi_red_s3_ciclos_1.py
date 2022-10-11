@@ -15,16 +15,15 @@ modificar su nombre en el perfil.
 
 NOTE: refactored.
 """
-# flake8: noqa
 
 CURRENT_YEAR = 2022
 SIZE = 70
 TITULO = """
               _                  __
    ____ ___  (_)  ________  ____/ /
-  / __ `__ \/ /  / ___/ _ \/ __  /
+  / __ `__ \\/ /  / ___/ _ \\/ __  /
  / / / / / / /  / /  /  __/ /_/ /
-/_/ /_/ /_/_/  /_/   \___/\__,_/
+/_/ /_/ /_/_/  /_/   \\___/\\__,_/
 """
 
 print("Bienvenido a ...")
