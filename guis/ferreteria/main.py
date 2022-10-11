@@ -45,7 +45,7 @@ class App(Tk):
         Label(self.top, text="Telefono").grid(row=1, column=2)
         ttk.Separator(
             self.top, orient="horizontal"
-        ).grid(row=2, columnspan= 4, sticky="ew", pady=10)
+        ).grid(row=2, columnspan=4, sticky="ew", pady=10)
         for i, text in enumerate(["Producto", "Precio", "Cantidad"]):
             Label(self.left, text=text).grid(row=i, column=0)
         self.dni = Entry(self.top)

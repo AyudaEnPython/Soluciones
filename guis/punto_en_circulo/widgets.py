@@ -8,7 +8,7 @@ class Form(Frame):
     def __init__(self, master=None) -> None:
         super().__init__(master)
         self.setup_ui()
-    
+
     def setup_ui(self) -> None:
         self.circulo = ttk.LabelFrame(self, text="Circulo")
         self.circulo.grid(rowspan=2, column=0, padx=10, pady=10)

@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
-TODO: needs some work due to poor details in the exercise. 
+TODO: needs some work due to poor details in the exercise.
 """
 from dataclasses import dataclass, field
 from tkinter import Frame, Label, Tk, Entry
