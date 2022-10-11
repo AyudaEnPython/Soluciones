@@ -28,7 +28,6 @@ NOTE: If you are making the Fibonacci sequence for n numbers, you
 should use n<=1 condition as the base case.
 """
 
-n = int(input())
 
 def fib(n):
     if n <= 1:
@@ -36,5 +35,7 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
+
+n = int(input())
 for i in range(n):
     print(fib(i))

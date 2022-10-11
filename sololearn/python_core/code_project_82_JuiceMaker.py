@@ -20,6 +20,7 @@ operator and return the resulting object.
 
 
 class Juice:
+
     def __init__(self, name, capacity):
         self.name = name
         self.capacity = capacity
@@ -28,7 +29,7 @@ class Juice:
         return Juice(
             self.name + "&" + other.name, self.capacity + other.capacity
         )
-    
+
     def __str__(self):
         return f"{self.name} ({str(self.capacity)}L)"
 
