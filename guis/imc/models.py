@@ -21,10 +21,10 @@ class Persona:
     def categoria_imc(self) -> str:
         imc = round(self.peso / (self.altura ** 2), 2)
         categories = {
-            imc < 18.5       : "Bajo peso",
-            18.5 <= imc < 25 : "Normal",
-            25 <= imc < 30   : "Sobrepeso",
-            30 < imc         : "Obesidad",
+            imc < 18.5: "Bajo peso",
+            18.5 <= imc < 25: "Normal",
+            25 <= imc < 30: "Sobrepeso",
+            30 < imc: "Obesidad",
         }
         return categories[True]
 
