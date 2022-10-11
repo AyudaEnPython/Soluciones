@@ -19,7 +19,7 @@ def mayor(datos):
 def f():
     text_boxes[0].delete(1.0, "end")
     a, b, c = entries[0].get(), entries[1].get(), entries[2].get()
-    vacunas = {k:v for k, v in zip(MARCAS, (int(a), int(b), int(c)))}
+    vacunas = {k: v for k, v in zip(MARCAS, (int(a), int(b), int(c)))}
     mas_aplicada = mayor(vacunas)
     for marcas in MARCAS:
         text_boxes[0].insert(

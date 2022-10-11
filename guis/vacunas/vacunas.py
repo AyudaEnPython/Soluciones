@@ -40,7 +40,7 @@ class Vacunas:
     def f(self):
         self.text_box.delete(1.0, "end")
         a, b, c = self.pfizer.get(), self.moderna.get(), self.aztra.get()
-        vacunas = {k:v for k, v in zip(self.MARCAS, (int(a), int(b), int(c)))}
+        vacunas = {k: v for k, v in zip(self.MARCAS, (int(a), int(b), int(c)))}
         mas_aplicada = self.mayor(vacunas)
         for marcas in self.MARCAS:
             self.text_box.insert(
