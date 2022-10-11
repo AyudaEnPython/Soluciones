@@ -15,6 +15,8 @@ modificar su nombre en el perfil.
 
 NOTE: refactored.
 """
+# flake8: noqa
+
 CURRENT_YEAR = 2022
 SIZE = 70
 SALIR = 0

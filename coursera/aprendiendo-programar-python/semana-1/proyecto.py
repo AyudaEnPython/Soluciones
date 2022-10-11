@@ -2,6 +2,7 @@
 
 NOTE: http://www.network-science.de/ascii/
 """
+# flake8: noqa
 
 print("Bienvenido a ... ")
 print("""              _                  __

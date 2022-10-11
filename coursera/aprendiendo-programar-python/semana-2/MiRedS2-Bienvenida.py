@@ -32,6 +32,8 @@
 # cambios de línea que ocurran en el código se considerarán como parte del string.
 # Si no estás convencido, prueba el funcionamiento reemplazando los delimitadores por "
 
+# flake8: noqa
+
 print("Bienvenido a ... ")
 print("""
               _                  __

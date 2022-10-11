@@ -40,9 +40,9 @@ if __name__ == "__main__":
     assert sueldo("Externo") == 50
     assert exponenciacion(4) == 64
     assert exponenciacion(3) == 9
-    assert es_primo(3) == True
-    assert es_primo(5) == True
-    assert es_primo(13) == True
-    assert es_primo(1) == False
-    assert es_primo(10) == False
-    assert es_primo(33) == False
+    assert es_primo(3) is True
+    assert es_primo(5) is True
+    assert es_primo(13) is True
+    assert es_primo(1) is False
+    assert es_primo(10) is False
+    assert es_primo(33) is False

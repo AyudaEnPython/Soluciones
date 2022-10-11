@@ -16,6 +16,7 @@
 
 ############################################################
 # Bienvenida
+# flake8: noqa
 
 print("Bienvenido a ... ")
 print("""

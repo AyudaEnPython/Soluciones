@@ -10,6 +10,8 @@ tantas líneas de código como creas necesario.
 
 NOTE: refactored.
 """
+# flake8: noqa
+
 CURRENT_YEAR = 2022
 SIZE = 70
 TITULO = """

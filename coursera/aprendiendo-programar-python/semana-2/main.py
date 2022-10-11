@@ -23,7 +23,7 @@ def xor(a, b):
 if __name__ == "__main__":
     assert imc(80, 1.80) == 24.691358024691358
     assert velocidad(0.01, 1) == "La velocidad es 36.0 km/h o 10.0 m/s"
-    assert xor(True, True) == False
-    assert xor(False, True) == True
-    assert xor(True, False) == True
-    assert xor(False, False) == False
+    assert xor(True, True) is False
+    assert xor(False, True) is True
+    assert xor(True, False) is True
+    assert xor(False, False) is False
