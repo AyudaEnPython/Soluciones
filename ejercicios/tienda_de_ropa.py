@@ -1,7 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 
 # ------------------------- Enunciado Original ------------------------
-Crea un programa en python para resolver el siguiente problemaLuis
+Crea un programa en python para resolver el siguiente problema. Luis
 fue a una tienda de ropa a comprar unos zapatos, un pantalón y una
 camisa. El necesita saber cuánto es el total que debe pagar por la
 comprar de los 30 numero de artículos. La tienda tiene una promoción
