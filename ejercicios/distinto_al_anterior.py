@@ -14,7 +14,9 @@ Escriba un número distinto a 10: 10
 Escriba un número distinto de 10: 9
 Gracias por su colaboración.
 
-NOTE: el ejemplo del enunciado no muestra la sumatoria.
+NOTE: el ejemplo del enunciado no muestra la sumatoria y sugiere
+    delegar demasiadas responsabilidades a una sola función. Se opta
+    por modificar esas partes.
 """
 
 
