@@ -1,0 +1,18 @@
+[
+    {
+        "postId": 100,
+        "id": 12,
+        "name": "id albore ex et quam laborum",
+        "email": "foobar@ayudaenpython.com",
+        "body": "bar",
+        "userId": 1
+    },
+    {
+        "postId": 101,
+        "id": 13,
+        "name": "id albore ex et quam laborum",
+        "email": "foobar2@ayudaenpython.com",
+        "body": "bar",
+        "userId": 2
+    }
+]

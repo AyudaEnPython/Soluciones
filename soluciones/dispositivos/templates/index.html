@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+  <title>Ayuda en Python</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row align-items-center vh-100">
+      <div class="col-6 mx-auto">
+        <form>
+          <div class="form-group mb-2">
+            <input type="search" class="form-control" placeholder="Rango de IP (e.j.: 192.X.X.1/24)">
+          </div>
+          <div class="form-group mb-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        <h1>Dispositivos conectados a la Red</h1>
+          <table class="table">
+            <tr>
+              <td>ID</td>
+              <td colspan="2">IP</td>
+            </tr>
+            {% for result in results %}
+            <tr>
+              <td><p name="result">{{ result["id"] }}</p></td>
+              <td>{{ result["ip"] }}</td>
+              <td>
+                <a class="btn btn-primary" href="{{url_for('get_results', result=result['id'])}}">
+                  Informes
+                </a>
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+          </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

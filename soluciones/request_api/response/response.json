@@ -1,0 +1,7 @@
+{
+    "method": "DELETE",
+    "url": "https://jsonplaceholder.typicode.com/posts/1",
+    "status": 200,
+    "type": "application/json",
+    "encoding": "utf-8"
+}
