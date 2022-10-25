@@ -54,7 +54,7 @@ def calcular_estado(mensaje, promedio):
 
 
 def almacenar_resultados(materia, notas):
-    mensaje = materia + " - " 
+    mensaje = materia + " - "
     mensaje += ", ".join(
         f"nota {i}: {nota}" for i, nota in enumerate(notas, 1)
     )
