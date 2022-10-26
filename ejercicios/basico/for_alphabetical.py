@@ -8,6 +8,7 @@ string "alphabetical", and print out the characters p, b, i, l one by
 one while looping.
 """
 
-word = "alphabetical"
+# word = input()
+word = "alphabetical"  # print(*word[2::3], sep="\n")
 for i in range(2, len(word), 3):
     print(word[i])
