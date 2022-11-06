@@ -44,6 +44,10 @@ def arcsinx(x, n=N):
     )
 
 
+def atan(x, n=N):  # |x| < 1
+    return sum(((-1)**k * x**(2*k + 1)) / (2*k + 1) for k in range(n))
+
+
 class Test(unittest.TestCase):
 
     def test_sinx(self):
@@ -60,6 +64,10 @@ class Test(unittest.TestCase):
     def test_arcsinx(self):
         self.assertAlmostEqual(math.asin(0.5), arcsinx(0.5), delta=0.001)
         self.assertAlmostEqual(math.asin(1), arcsinx(1), delta=0.18)
+    
+    def test_atan(self):
+        self.assertAlmostEqual(math.atan(0.5), atan(0.5), delta=0.001)
+        self.assertAlmostEqual(math.atan(0.1), atan(0.1), delta=0.001)
 
 
 if __name__ == "__main__":
