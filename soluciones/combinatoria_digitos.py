@@ -4,10 +4,10 @@ Implemente un algorimo que muestre todos los números menores a 100 que
 puedan formarse con los dígitos 1, 2, 3, 4, 5, 6.
 """
 
-def _cr(it, r):
-    pool = tuple(it)
+def _cr(_it, r):
+    pool = tuple(_it)
     n = len(pool)
-    if not n in r:
+    if not n and r:
         return
     idx = [0] * r
     yield tuple(pool[i] for i in idx)
@@ -26,8 +26,7 @@ def cr(ns, n):
 
 
 def main():
-    for n in cr(list("123456"), 2):
-        print(n)
+    print(*cr(list("123456"), 2), sep=", ")
 
 
 if __name__ == "__main__":
