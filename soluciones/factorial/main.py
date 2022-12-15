@@ -19,6 +19,15 @@ def factorial_sequential(n: int) -> int:
     return result
 
 
+def factoriaL_sequential_while(n: int) -> int:
+    result = 1
+    x = 1
+    while x <= n:
+        result *= x
+        x += 1
+    return result
+
+
 def factorial_recursive(n: int, d: Dict[int, int] = {0: 1}) -> int:
     if n not in d:
         d[n] = n * factorial_recursive(n - 1, d)
@@ -42,6 +51,7 @@ class Test(unittest.TestCase):
 
     def test_sequential(self):
         self.assertEqual(factorial_sequential(5), 120)
+        self.assertEqual(factoriaL_sequential_while(5), 120)
 
     def test_recursive(self):
         self.assertEqual(factorial_recursive(5), 120)
