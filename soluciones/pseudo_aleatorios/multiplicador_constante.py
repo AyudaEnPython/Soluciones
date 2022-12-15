@@ -6,6 +6,7 @@ import math
 # pip install prototools
 from prototools import time_functions
 
+
 def int_len(x):
     return int(math.log10(x)) + 1
 
