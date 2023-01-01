@@ -27,11 +27,23 @@ ser multado o no.
 <tbody>
   <tr>
     <td>Entrada</td>
-    <td>El programa recibirá 3 parámetros:<br>- La distancia en metros que separa dos cámaras<br>- La velocidad máxima permitida en ese tramo en km/h<br>- El tiempo en segundos que tarda el conductor en<br>&nbsp;&nbsp;recorrer el trayecto</td>
+    <td>
+      El programa recibirá 3 parámetros:<br>
+      - La distancia en metros que separa dos cámaras<br>
+      - La velocidad máxima permitida en ese tramo en km/h<br>
+      - El tiempo en segundos que tarda el conductor en<br>&nbsp;&nbsp;recorrer el trayecto
+    </td>
   </tr>
   <tr>
     <td>Salida</td>
-    <td>El programa imprimirá una línea indicando si el conductor<br>debe ser multado o no. Se debe considerar lo siguiente:<br>- Imprimirá "OK" si el conductor no superó la velocidad<br>&nbsp;&nbsp;máxima.<br>- Imprimirá "MULTA" si se superó la velocidad máxima en<br>&nbsp;&nbsp;menos de un 20% de la velocidad permitida.<br>- Imprimirá "CURSO SENSIBILIZACION" si la velocidad<br>&nbsp;&nbsp;fue superada en un 20% o más de la velocidad permitida.<br>&nbsp;&nbsp;En este caso además de la multa deberá realizar un curso<br>&nbsp;&nbsp;sensibilización.<br>- Debido a que los sistemas pueden fallar y registrar valores<br>&nbsp;&nbsp;errados (por ejemplo, indicando que el tiempo que ha<br>&nbsp;&nbsp;tardado el conductor es negativo). En esos casos, se<br>&nbsp;&nbsp;deberá imprimir "ERROR".</td>
+    <td>
+      El programa imprimirá una línea indicando si el conductor<br>
+      debe ser multado o no. Se debe considerar lo siguiente:<br>
+      - Imprimirá "OK" si el conductor no superó la velocidad<br>&nbsp;&nbsp;máxima.<br>
+      - Imprimirá "MULTA" si se superó la velocidad máxima en<br>&nbsp;&nbsp;menos de un 20% de la velocidad permitida.<br>
+      - Imprimirá "CURSO SENSIBILIZACION" si la velocidad<br>&nbsp;&nbsp;fue superada en un 20% o más de la velocidad permitida.<br>&nbsp;&nbsp;En este caso además de la multa deberá realizar un curso<br>&nbsp;&nbsp;sensibilización.<br>
+      - Debido a que los sistemas pueden fallar y registrar valores<br>&nbsp;&nbsp;errados (por ejemplo, indicando que el tiempo que ha<br>&nbsp;&nbsp;tardado el conductor es negativo). En esos casos, se<br>&nbsp;&nbsp;deberá imprimir "ERROR".
+    </td>
   </tr>
 </tbody>
 </table>
