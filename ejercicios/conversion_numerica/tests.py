@@ -10,6 +10,7 @@ tests = (
     ("34526", 8, {2: "11100101010110", 8: "34526", 16: "3956"}),
 )
 
+
 class Test(unittest.TestCase):
 
     def test_convert(self):
