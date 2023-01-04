@@ -18,7 +18,7 @@ realizar las conversiones numéricas dadas en el punto 1 del Taller
 
 
 def ascii_value(c):
-    if (c >= '0' and c <= '9'):
+    if (c >= "0" and c <= "9"):
         return ord(c) - 48
     else:
         return ord(c) - 65  + 10
