@@ -27,10 +27,14 @@ def digit_value_alt(n):
 f = lambda g, n: g(str(n))
 
 
-if __name__ == "__main__":
+def main():
     n = int(input("n: "))
     menor, mayor = digit_value(n)
     print(f"Dígito mayor: {mayor}")
     print(f"Dígito mayor: {f(max, n)}")
     print(f"Dígito menor: {menor}")
     print(f"Dígito menor: {f(min, n)}")
+
+
+if __name__ == "__main__":
+    main()
