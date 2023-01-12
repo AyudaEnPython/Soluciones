@@ -28,3 +28,6 @@ for letter in text:
     else:
         dict[letter] += 1
 print(dict)
+
+# oneliner
+# print({letter: text.count(letter) for letter in text})
