@@ -1,3 +1,4 @@
+## Flatten a list
 
 Nicola likes to categorize all sorts of things. He categorized a series
 of numbers and as the result of his efforts, a simple sequence of

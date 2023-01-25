@@ -1,5 +1,3 @@
-# Missions
-
 ## Multiply (Intro)
 
 Write a function that will receive 2 numbers as input and it should return the
