@@ -33,6 +33,8 @@ print("\n".join(
     for r in registro
 ))
 
+print("-"*45)
+
 output = [
     [nombre, round(mean(notas), 1), max(notas), min(notas)]
     for (nombre, notas) in registro
