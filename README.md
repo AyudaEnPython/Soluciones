@@ -23,6 +23,7 @@ Conforme se vayan agregando más soluciones, la estructura del repositorio irá 
 - [Revisiones](https://github.com/AyudaEnPython/Revisiones): Repositorio de revisiones de código
 - [Retos](https://github.com/AyudaEnPython/Retos): Repositorio de retos
 - [Proyectos](https://github.com/AyudaEnPython/Proyectos): Repositorio de Proyectos
+- [Prompting](https://github.com/AyudaEnPython/Prompting): Repositorio de Promptings
 
 ## Herramientas
 
