@@ -59,8 +59,8 @@
    | :---------: | :----------------: |
    | Menos de 11 | S/. 2.5 por punto  |
    |   11 a 13   | S/. 5.0 por punto  |
-   |   14 a 13   | S/. 7.5 por punto  |
-   |   17 a 13   | S/. 10.0 por punto |
+   |   14 a 16   | S/. 7.5 por punto  |
+   |   17 a 19   | S/. 10.0 por punto |
    |     20      | S/. 12.5 por punto |
 
    Dados los minutos de tardanzay el número de observaciones de un empleado, diseñe un programa que determine el puntaje por puntualidad, el puntaje por rendimiento, el puntaje total y la bonificación que le corresponde.
@@ -72,3 +72,7 @@
    1/2, 4/4, 7/6, 10/8, ...
 
    > [Ir a la solución](./sol_04.py)
+
+---
+
+> ****NOTA****: En el ejericio 2 hay un error en el enunciado.
