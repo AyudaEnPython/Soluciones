@@ -14,6 +14,8 @@
 
    > [Ir a la solución](./sol_01.py)
 
+   > [Solución alternativa](./alt/sol_01.py)
+
 2. (4 puntos) En una provincia los límites de velocidad son los siguientes:
 
    - Menos de 60 Km/h - Velocidad permitida
@@ -30,6 +32,8 @@
    - Más de 100 Km/h - S/.3700.00
 
    > [Ir a la solución](./sol_02.py)
+
+   > [Solución alternativa](./alt/sol_02.py)
 
 3. (7 puntos) Una empresa evalúa a sus empleados bajo dos criterios: puntualidad y rendimieno. En cada caso el empleado recibe un puntaje que va de 1 a 10, de acuerdo a los siguientes criterios:
 
@@ -67,11 +71,15 @@
 
    > [Ir a la solución](./sol_03.py)
 
+   > [Solución alternativa](./alt/sol_03.py)
+
 4. (5 puntos) Diseñe un programa que imprima y sume n términos de la siguiente serie. Los términos serán mostrados en una columna a razón de un término por fila.
 
    1/2, 4/4, 7/6, 10/8, ...
 
    > [Ir a la solución](./sol_04.py)
+
+   > [Solución alternativa](./alt/sol_04.py)
 
 ---
 
