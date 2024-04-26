@@ -9,8 +9,6 @@ bonificacion = 0
 tardanzas = int(input("Número de tardanzas: "))
 observaciones = int(input("Número de tardanzas: "))
 
-
-
 if tardanzas < 1:
     puntualidad = 10
 elif 1 <= tardanzas <= 2:  # elif tardanzas == 1 or tardanzas == 2:
