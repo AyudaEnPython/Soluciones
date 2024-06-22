@@ -29,23 +29,23 @@ El curso se divide en cuatro módulos:
   - 2.6. Sección 6 - [Interacción con el usuario](modulo-02/2-6.md)
   - 2.7. Finalización del Módulo 2 - [Quiz del Módulo](modulo-02/2-7.md)
 - PE3: Módulo 3. Valores Booleanos, Ejecucción Condicional, Bucles, Listas y su procesamiento, Operaciones Lógicas y de Bit a Bit
-  - 3.1. Sección 1 - Cómo tomar decisiones en Python
-  - 3.2. Sección 2 - Bucles en Python
-  - 3.3. Sección 3 - Operadores lógicos y operaciones
-  - 3.4. Sección 4 - Listas
-  - 3.5. Sección 5 - Ordenamiento de listas: Algoritmo Burbuja
-  - 3.6. Sección 6 - Operaciones con listas
-  - 3.7. Sección 7 - Aplicaciones avanzadas de listas
-  - 3.8. Finalización del Módulo 3 - Prueba del Módulo
+  - 3.1. Sección 1 - [Cómo tomar decisiones en Python](modulo-03/3-1.md)
+  - 3.2. Sección 2 - [Bucles en Python](modulo-03/3-2.md)
+  - 3.3. Sección 3 - [Operadores lógicos y operaciones](modulo-03/3-3.md)
+  - 3.4. Sección 4 - [Listas](modulo-03/3-4.md)
+  - 3.5. Sección 5 - [Ordenamiento de listas: Algoritmo Burbuja](modulo-03/3-5.md)
+  - 3.6. Sección 6 - [Operaciones con listas](modulo-03/3-6.md)
+  - 3.7. Sección 7 - [Aplicaciones avanzadas de listas](modulo-03/3-7.md)
+  - 3.8. Finalización del Módulo 3 - [Prueba del Módulo](modulo-03/3-8.md)
 - PE4: Módulo 4. Funciones, Tuplas, Diccionarios, Excepciones y Procesamiento de Datos
-  - 4.1. Sección 1 - Funciones
-  - 4.2. Sección 2 - Cómo se comunican las funciones con su entorno
-  - 4.4. Sección 3 - Devolviendo el resultado de una función
-  - 4.3. Sección 4 - Alcances de Python
-  - 4.5. Sección 5 - Creación de funciones con múltiples parámetros
-  - 4.6. Sección 6 - Tuplas y diccionarios
-  - 4.7. Sección 7 - Excepciones
-  - 4.8. Finalización del Módulo 4 - Prueba del Módulo
+  - 4.1. Sección 1 - [Funciones](modulo-04/4-1.md)
+  - 4.2. Sección 2 - [Cómo se comunican las funciones con su entorno](modulo-04/4-2.md)
+  - 4.4. Sección 3 - [Devolviendo el resultado de una función](modulo-04/4-3.md)
+  - 4.3. Sección 4 - [Alcances de Python](modulo-04/4-4.md)
+  - 4.5. Sección 5 - [Creación de funciones con múltiples parámetros](modulo-04/4-5.md)
+  - 4.6. Sección 6 - [Tuplas y diccionarios](modulo-04/4-6.md)
+  - 4.7. Sección 7 - [Excepciones](modulo-04/4-7.md)
+  - 4.8. Finalización del Módulo 4 - [Prueba del Módulo](modulo-04/4-8.md)
 - Fundamentos de Python 1 (PE1) Examen Final del Curso
 
 ---
