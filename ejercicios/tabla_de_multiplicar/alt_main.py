@@ -1,6 +1,7 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
 from typing import List
+# pip install prototools
 from prototools import main_loop, int_input, textbox, tabulate
 
 
