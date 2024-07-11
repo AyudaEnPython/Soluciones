@@ -21,8 +21,9 @@ def show(n: int, c: int) -> None:
 
 
 def main():
-    show(1, 5)
-    show(6, 5)
+    show(1, 4)
+    show(5, 4)
+    show(9, 4)
 
 
 if __name__ == "__main__":
