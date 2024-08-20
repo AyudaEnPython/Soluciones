@@ -21,3 +21,5 @@ devuelve True si esa cadena de caracteres corresponde con un número romano y
 falso en caso contrario. Después, modifca el método para que lance un error en
 el caso de que el valor que nos pasan por parámetro no se corresponde con el
 patrón de un número romano.
+
+> **NOTA**: Se opta por cambiar todo.

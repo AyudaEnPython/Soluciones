@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AyudaEnPython | Roman Numerals</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+  <py-config>
+    [[fetch]]
+    files = ['models.py']
+  </py-config>
+  <py-script>
+  from pyscript import when, display, document
+  from models import Number
+
+  @when("click", "#clear_button")
+  def clear_all(event):
+      document.getElementById("x").value = ""
+      document.getElementById("y").value = ""
+      document.getElementById("result").innerHTML = "</br>"
+
+  @when("click", "#show_button")
+  def click_handler(event):
+      x = document.getElementById("x").value
+      y = document.getElementById("y").value
+      try:
+          x, y = Number(x), Number(y)
+          document.getElementById("result").innerHTML = f"{x + y}"
+      except Exception as e:
+          document.getElementById("result").innerHTML = f"Error: {e}"
+  </py-script>
+  <div class="hero fullscreen bg-yellow-200">
+    <div class="hero-body">
+      <div class="mx-auto">
+        <h1 class="title uppercase text-indigo-600">Roman numerals</h1>
+        <h3 class="subtitle text-gray-600">AyudaEnPython</h3>
+        <div class="form-group">
+          <label class="form-group-label">x</label>
+          <input type="text" id="x" class="form-group-input" placeholder="Enter a number"/>
+        </div>
+        <div class="form-group">
+          <label class="form-group-label">y</label>
+          <input type="text" id="y" class="form-group-input" placeholder="Enter a number"/>
+        </div>
+        <div class="u-center u-gap-2">
+          <button class="btn-light" id="show_button">Show</button>
+          <button class="btn-light" id="clear_button">Clear All</button>
+        </div>
+        <div class="u-round-xs u-shadow-xl p-3 bg-indigo-200">
+          <div class="u-flex u-justify-center u-gap-2">
+            <div class="text-indigo-600 font-semibold tracking-looser" id="result"></br></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
