@@ -16,7 +16,8 @@ Repositorio de soluciones de la comunidad [Ayuda en Python](https://www.facebook
 
 Conforme se vayan agregando más soluciones, la estructura del repositorio irá cambiando.
 
-> **_Nota_**: Algunas soluciones han sido movidas a otros repositorios (revisar los enlaces).
+> [!NOTE]
+> Algunas soluciones han sido movidas a otros repositorios (revisar los enlaces).
 
 ## Repositorios
 
