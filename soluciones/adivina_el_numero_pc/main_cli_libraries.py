@@ -1,6 +1,4 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
-
-NOTE: Revisar las notas del README
 """
 from prototools import clear_screen, Menu, menu_input, textbox
 from prototools.components import Box, render

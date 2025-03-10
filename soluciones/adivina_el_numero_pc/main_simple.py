@@ -1,6 +1,4 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
-
-NOTE: Revisar las notas del README
 """
 
 MENSAJE = "Tu número es"
