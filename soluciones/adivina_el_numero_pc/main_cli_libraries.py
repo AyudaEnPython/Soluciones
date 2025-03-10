@@ -1,5 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
+# pip install prototools
 from prototools import clear_screen, Menu, menu_input, textbox
 from prototools.components import Box, render
 from prototools.colorize import magenta, cyan, yellow
