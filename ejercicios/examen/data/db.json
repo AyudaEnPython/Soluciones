@@ -1,0 +1,13 @@
+[
+    ["Astarion", 239, "Rogue", "Elf", 3, true],
+    ["Shadowheart", 40, "Cleric", "Half-Elf", 5, true],
+    ["Wyll", 25, "Warlock", "Human", 2, false],
+    ["Gale", 35, "Wizard", "Human", 5, true],
+    ["Karlach", 32, "Barbarian", "Tiefling", 6, false],
+    ["Lae'zel", 20, "Fighter", "Githyanki", 4, true],
+    ["Jaheira", 150, "Druid", "Half-Elf", 6, false],
+    ["Halsin", 350, "Druid", "Elf", 7, false],
+    ["Minsc", 130, "Ranger", "Human", 5, false],
+    ["Minthara", 250, "Paladin", "Drow", 8, false],
+    ["Dark Urge", 30, "Sorcerer", "Dragonborn", 1, false]
+]
