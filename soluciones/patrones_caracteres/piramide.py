@@ -27,7 +27,7 @@ def draw(n: int = 5, c: str = "* ") -> None:
         print(" "*(n - i) + c*i)
 
 
-def draw_onliner(n: int = 5, c: str = "* ") -> None:
+def draw_onliner(n: int = 5, c: str = "* ") -> str:
     """Imprime una pirámide
 
     :param n: Altura máxima de la pirámide
